@@ -4,8 +4,8 @@ package io.battlerune;
 /**
  * Hard-coding for all custom interfaces.
  *
- * @author Daniel <- pleb niqqa.
- * @Edited Greatly by Adam_#6723 //testcommit
+ * @author Daniel <- pleb niqqa. 
+ * @Edited Greatly by Adam_#6723 //testcommit 2
  */
 public class CustomInterface extends RSInterface {
 
