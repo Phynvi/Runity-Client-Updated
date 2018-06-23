@@ -369,11 +369,77 @@ public class RSInterface {
 		itemHoverBox(textDrawingAreas);
 		opponentStats(textDrawingAreas);
 		achievementPopup(textDrawingAreas);
+		examineTab(textDrawingAreas);
 		refer(textDrawingAreas);
 		newAchievementTab(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
 
+	public static void examineTab(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(52100);
+		
+		addSprite(52101, 0, "/ExamineTab/SPRITE");
+		
+		addContainer(52102, 0, 1, 80, 30, 2, 100, false, false, false, null, null, null, null, null);		
+		
+		addText(52113, "", tda, 2, 0xff8a1f, false, true);
+		addText(52114, "Item Bonuses", tda, 2, 0xff8a1f, false, true);
+		addText(52128, "Attack", tda, 2, 0xff8a1f, false, true);
+		addText(52129, "Defence", tda, 2, 0xff8a1f, false, true);
+		addText(52130, "Other Bonuses", tda, 2, 0xff8a1f, false, true);
+		addText(52143, "", tda, 2, 0xff8a1f, false, true);
+		
+		addText(52144, "Strength", tda, 1, 0xff8a1f, false, true);
+		addText(52145, "Prayer", tda, 1, 0xff8a1f, false, true);
+		
+		int y = 142;
+		for(int i = 0; i < 9; i++) {
+			addText(52103 + i, "", tda, 1,  0xff8a1f, false, true);
+		}
+		
+		int yy = 116;
+		String[] text = {"Stab", "Slash", "Crush", "Magic", "Range"};
+		
+		for(int i = 0; i < 5; i++) {
+			addText(52131 + i, text[i], tda, 1,  0xff8a1f, false, true);
+		}
+		
+		int yyy = 116;
+		for(int i = 0; i < 5; i++) {
+			addText(52138 + i, text[i], tda, 1,  0xff8a1f, false, true);
+		}
+		
+		tab.totalChildren(29);
+		int childNum = 0;
+		setBounds(52101, 75, 20, childNum++, tab);
+		setBounds(52102, 104, 71, childNum++, tab);
+		setBounds(52113, 108, 118, childNum++, tab);
+		setBounds(52114, 309, 70, childNum++, tab);
+		setBounds(52128, 279, 94, childNum++, tab);
+		setBounds(52129, 369, 94, childNum++, tab);
+		setBounds(52130, 306, 213, childNum++, tab);
+		setBounds(52143, 152, 84, childNum++, tab);
+		setBounds(52144, 269, 235, childNum++, tab);
+		setBounds(52145, 269, 250, childNum++, tab);
+		
+		for(int i = 0; i < 9; i++) {
+			setBounds(52103 + i, 106, y, childNum++, tab);
+			y += 15;
+		}
+
+		for(int i = 0; i < 5; i++) {
+			setBounds(52131 + i, 269, yy, childNum++, tab);
+			yy += 15;
+		}
+		
+		for(int i = 0; i < 5; i++) {
+			setBounds(52138 + i, 356, yyy, childNum++, tab);
+			yyy += 15;
+		}
+		
+	}
+
+	
 	public static void newAchievementTab(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(37300);
 		String dir = "/NewAch/SPRITE";
