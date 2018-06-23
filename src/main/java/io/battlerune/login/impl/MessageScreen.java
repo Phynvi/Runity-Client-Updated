@@ -24,12 +24,12 @@ public class MessageScreen extends LoginComponent {
 		Client.spriteCache.get(678).drawTransparentSprite((Client.frameWidth / 2) - (Client.spriteCache.get(57).width / 2), (Client.frameHeight / 2) - (Client.spriteCache.get(57).height / 2), client.loginTick);
 
         /* Box */
-		Raster.fillRectangle(175, 215, 425, 100, 0x382A2A, 150);
-		Raster.drawRectangle(175, 215, 425, 100, 0xB62626);
+		Raster.fillRectangle(175, 215, 425, 100, 0x1F1D19, 150);
+		Raster.drawRectangle(175, 215, 425, 100, 0x3d3427);
 
         /* Messages */
-		client.boldText.drawCenteredText(0xF54949, centerX + 5, "BattleRune", centerY - 115, true);
-		client.regularText.drawCenteredText(0xD4A190, centerX + 5, "Error Message", centerY - 95, true);
+		client.boldText.drawCenteredText(0xff9040, centerX + 5, "Runity", centerY - 115, true);
+		client.regularText.drawCenteredText(0xB7B7B7, centerX + 5, "Error Message", centerY - 95, true);
 		if (client.loginMessage2.length() == 0) {
 			client.regularText.drawCenteredText(0xE56161, centerX + 5, client.loginMessage1, centerY + 20, true);
 		} else {

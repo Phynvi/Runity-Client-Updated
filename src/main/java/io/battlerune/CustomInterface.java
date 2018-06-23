@@ -113,14 +113,14 @@ public class CustomInterface extends RSInterface {
         stopBotting(textDrawingAreas);
     }
 	
-	public static void presets2(TextDrawingArea[] tda) {
+    public static void presets2(TextDrawingArea[] tda) {
         RSInterface tab = addInterface(42500);
         String dir = "/Preset/SPRITE";
         addSprite(42501, 0, dir);
         addHoverButton(42502, dir, 1, 16, 16, "Close", -1, 42503, 1);
         addHoveredButton(42503, dir, 2, 16, 16, 42504);
         addText(42505, "Presets", tda, 2, 0xFFA500, true, true);
-        addChar(42506, 150);
+        addChar(42506, 150, 0, 600, 328);
         addText(42550, "Default:", tda, 1, 0xff9040, true, true);
         addText(42551, "Gear:", tda, 1, 0xff9040, true, true);
         addText(42591, "Custom:", tda, 1, 0xff9040, true, true);
@@ -5357,5 +5357,21 @@ public class CustomInterface extends RSInterface {
         tab.child(1, 49502, 1, 26); //Button
         tab.child(2, 49503, 1, 26); //Hover*/
     }
-
+    public static void addChar(int ID, int rotation1, int rotation2, int zoom, int contentType) {
+        RSInterface t = interfaceCache[ID] = new RSInterface();
+        t.interfaceId = ID;
+        t.parentID = ID;
+        t.type = 6;
+        t.atActionType = 0;
+        t.contentType = contentType;
+        t.width = 136;
+        t.height = 168;
+        //t.aByte254 = 0;
+       // t.mOverInterToTrigger = 0;
+        t.modelZoom = zoom;
+        t.modelRotation1 = rotation1;
+        t.modelRotation2 = rotation2;
+        t.anInt257 = -1;
+        t.anInt258 = -1;
+    }
 }
