@@ -1,0 +1,67 @@
+import java.sql.Wrapper
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+mainClassName = "com.osroyale.Client"
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+task wrapper(type: org.gradle.api.tasks.wrapper.Wrapper) {
+    gradleVersion = '4.6'
+}
+
+task min(type:Exec) {
+    commandLine 'java', '-jar', 'allatori/allatori.jar', 'allatori.xml'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+shadowJar {
+    baseName = 'client-raw'
+    classifier = null
+    version = null
+}
+
+task obfusticate(type:Exec) {
+    commandLine 'java', '-jar', 'allatori/allatori.jar', 'allatori/config.xml'
+}
+
+task osroyale {
+    doLast {
+        println("Client has been successfully built to build/libs/OSR_Client.jar")
+    }
+}
+
+obfusticate.dependsOn shadowJar
+obfusticate.mustRunAfter shadowJar
+
+osroyale.dependsOn shadowJar
+osroyale.dependsOn obfusticate
+osroyale.mustRunAfter obfusticate
