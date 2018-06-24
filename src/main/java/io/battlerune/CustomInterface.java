@@ -4608,7 +4608,7 @@ public class CustomInterface extends RSInterface {
     }
 
 
-     private static void informationTab(TextDrawingArea tda[]) {
+        private static void informationTab(TextDrawingArea tda[]) {
         RSInterface rsinterface = addInterface(29400);
         String dir = "Quest/SPRITE";
         addSprite(29401, 2, dir);
@@ -4681,12 +4681,11 @@ public class CustomInterface extends RSInterface {
         int amountOfLines = 35;
         scrollInterface.totalChildren(amountOfLines);
         for (int i = 0; i < amountOfLines; i++) {
-            addHoverText(29451 + i, "", "", tda, 2, 0xecc636, 0xecc636, false, true, 168);
+            addHoverText(29451 + i, "", "", tda, 0, 0xD46E08, 0xD46E08, false, true, 168);
             scrollInterface.child(i, 29451 + i, -1, y);
             y += 18;
         }
     }
-
 
     private static void achievementTab(TextDrawingArea tda[]) {
         RSInterface rsinterface = addInterface(35000);
