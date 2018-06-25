@@ -748,8 +748,8 @@ itemDef.originalModelColors[0] = 34770;
                 itemDef.name = "Home teleport";
                 break;
             case 20527:
-                itemDef.name = "Near Reality tokens";
-                itemDef.description = "The main currency for NR.";
+                itemDef.name = "Donate Pet tokens";
+                itemDef.description = "Used to purchase from the Donator Pet Store";
                 itemDef.stackable = true;
                 break;
                 

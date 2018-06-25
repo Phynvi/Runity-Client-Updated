@@ -4625,7 +4625,7 @@ public class CustomInterface extends RSInterface {
         addHoveredButton(29424, dir, 1, 88, 22, 29425);
         addHoverButton(29426, dir, 0, 88, 22, "View NPC Drop", -1, 29427, 1);
         addHoveredButton(29427, dir, 1, 88, 22, 29428);
-        addHoverButton(29429, dir, 0, 88, 22, "Start Slayer", -1, 29430, 1);
+        addHoverButton(29429, dir, 0, 88, 22, "View Preset Interface!", -1, 29430, 1);
         addHoveredButton(29430, dir, 1, 88, 22, 29431);
         addHoverButton(29432, dir, 0, 88, 22, "View Bosses", -1, 29433, 1);
         addHoveredButton(29433, dir, 1, 88, 22, 29434);

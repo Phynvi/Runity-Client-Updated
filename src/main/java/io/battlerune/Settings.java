@@ -24,7 +24,7 @@ public final class Settings {
 	static boolean PROFANITY_FILTER;
 
 	static boolean HD_MINIMAP;
-	static boolean TWEENING;
+	static boolean TWEENING = true;
 	static boolean GROUND_DECORATIONS = true;
 	static boolean CUSTOM_LIGHTING;
 	private static boolean MIPMAPPING;
@@ -39,7 +39,7 @@ public final class Settings {
 	static boolean SPECIAL_ATTACK_ORB = true;
 	static boolean ATTACK_PRIORITY = true;
 	static boolean WIDGET = true;
-	static boolean MINIMAP_RANK;
+	static boolean MINIMAP_RANK = true;
 	static boolean ROOF = true;
 	static boolean MOVING_TEXTURE = true;
 	static boolean NOTIFICATION_FEED = true;

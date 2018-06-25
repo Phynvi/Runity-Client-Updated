@@ -15,24 +15,6 @@ public enum SettingData implements SettingsAction<Client> {
 	//            SNOW = !SNOW;
 	//        }
 	//    },
-	GROUND_TEXTURES_SETTING("Ground Decorations") {
-		@Override
-		public String name(Client client) {
-			return Settings.GROUND_DECORATIONS + setting;
-		}
-
-		@Override
-		public boolean status() {
-			return Settings.GROUND_DECORATIONS;
-		}
-
-		@Override
-		public void handle(Client client) {
-			Settings.GROUND_DECORATIONS = !Settings.GROUND_DECORATIONS;
-			client.loadingStage = 1;
-			client.minimapImage.method343();
-		}
-	},
 	ITEM_HOVER_INFO("Item tooltip hovers") {
 		@Override
 		public String name(Client client) {
