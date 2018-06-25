@@ -140,6 +140,31 @@ public class Client extends GameApplet {
             }
         }
     }
+    
+    private void method38() {
+        for (int i = -1; i < playerCount; i++) {
+            int j;
+            if (i == -1)
+                j = myPlayerIndex;
+            else
+                j = playerIndices[i];
+            Player player = playerArray[j];
+            if (player != null && player.textCycle > 0) {
+                player.textCycle--;
+                if (player.textCycle == 0)
+                    player.textSpoken = null;
+            }
+        }
+        for (int k = 0; k < npcCount; k++) {
+            int l = npcIndices[k];
+            Npc npc = npcs[l];
+            if (npc != null && npc.textCycle > 0) {
+                npc.textCycle--;
+                if (npc.textCycle == 0)
+                    npc.textSpoken = null;
+            }
+        }
+    }
     public int getItemHoverX(boolean inventory, int dx, boolean check) {
         int x = super.mouseX - dx;
         int width = RSInterface.interfaceCache[23021].width;
@@ -3025,7 +3050,7 @@ public class Client extends GameApplet {
         }
     }
 
-    private void textSpokenEvent() {
+/*    private void textSpokenEvent() {
         for (int i = -1; i < playerCount; i++) {
             int j;
             if (i == -1)
@@ -3041,6 +3066,7 @@ public class Client extends GameApplet {
 
                 if (player.textCycle == 0)
                     player.textSpoken = null;
+                continue;
                 System.out.println("Player count " + playerCount +  " New message - " + player.textSpoken + " cycle - " + player.textCycle);
             }
         }
@@ -3056,7 +3082,7 @@ public class Client extends GameApplet {
                     npc.textSpoken = null;
             }
         }
-    }
+    }*/
 
     private void calcCameraPos() {
         int i = anInt1098 * 128 + 64;
@@ -3985,7 +4011,8 @@ public class Client extends GameApplet {
         method115();
         method114();
         method95();
-        textSpokenEvent();
+        method38();
+        //textSpokenEvent();
         tickDelta++;
         if (crossType != 0) {
             crossIndex += 20;
