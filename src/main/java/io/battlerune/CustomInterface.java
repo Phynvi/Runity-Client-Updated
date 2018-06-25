@@ -4608,7 +4608,7 @@ public class CustomInterface extends RSInterface {
     }
 
 
-     private static void informationTab(TextDrawingArea tda[]) {
+        private static void informationTab(TextDrawingArea tda[]) {
         RSInterface rsinterface = addInterface(29400);
         String dir = "Quest/SPRITE";
         addSprite(29401, 2, dir);
@@ -4686,7 +4686,6 @@ public class CustomInterface extends RSInterface {
             y += 18;
         }
     }
-
 
     private static void achievementTab(TextDrawingArea tda[]) {
         RSInterface rsinterface = addInterface(35000);

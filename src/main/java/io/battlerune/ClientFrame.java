@@ -1,16 +1,27 @@
 package io.battlerune;
 
-import io.battlerune.osbuddy.CalcSubClass;
-import io.battlerune.osbuddy.ComponentResizer;
-import io.battlerune.osbuddy.parser.OSBHighscoresParser;
-
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
-import javax.swing.plaf.ColorUIResource;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Desktop;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Insets;
+import java.awt.KeyboardFocusManager;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionAdapter;
+import java.awt.event.MouseMotionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -18,6 +29,30 @@ import java.text.NumberFormat;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
+
+import javax.imageio.ImageIO;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
+import javax.swing.JProgressBar;
+import javax.swing.JTextField;
+import javax.swing.KeyStroke;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.UIDefaults;
+import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import javax.swing.plaf.ColorUIResource;
+
+import io.battlerune.osbuddy.CalcSubClass;
+import io.battlerune.osbuddy.ComponentResizer;
+import io.battlerune.osbuddy.parser.OSBHighscoresParser;
 
 /**
  * Creates a new user interface to render the client
@@ -120,7 +155,7 @@ public class ClientFrame extends Client {
     public static void load() {
         //TODO Better means grabbing from site takes too long
         try {
-            ICON = ImageIO.read(ClientFrame.class.getResource("/osb/title_icon.png"));
+            ICON = ImageIO.read(ClientFrame.class.getResource("/images/title_icon.png"));
             LOGO = ImageIO.read(ClientFrame.class.getResource("/images/logo.png"));
             BG = ImageIO.read(ClientFrame.class.getResource("/images/bg.png"));
             BUTTON_IMAGE = ImageIO.read(ClientFrame.class.getResource("/images/button.png"));
