@@ -62,10 +62,10 @@ public class Configuration {
     };
 
     /** The left nav bar links. */
-    public static final String[] LEFT_NAV_LINKS = {"https://www.osroyale.com", "https://www.osroyale.com/community", "https://discord.me/osroyale"};
+    public static final String[] LEFT_NAV_LINKS = {"https://www.runity.io", "https://www.runity.io/community", "https://discord.me/runity"};
 
     /** The right nav bar links. */
-    public static final String[] RIGHT_NAV_LINKS = {"https://www.osroyale.com/vote", "https://www.osroyale.com/store/", "https://www.osroyale.com/highscores/"};
+    public static final String[] RIGHT_NAV_LINKS = {"https://www.runity.io/vote", "https://www.runity.io/store/", "https://www.runity.io/highscores/"};
 
     /** The IP address client will be connecting to. */
     public static Connection CONNECTION = Connection.ECONOMY;

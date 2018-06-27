@@ -686,7 +686,7 @@ public class CustomInterface extends RSInterface {
     public static void welcome(TextDrawingArea[] TDA) {
         RSInterface rsinterface = addInterface(450);
         addSprite(21300, 778);
-        addHoverButton(21301, 298, 367, 45, "Enter Near Reality", -1, 21302, 1);
+        addHoverButton(21301, 298, 367, 45, "Enter Runity", -1, 21302, 1);
         addHoveredButton(21302, 779, 367, 45, 21303);
         addHoverButton(21304, 298, 172, 28, "View Latest Announcements", -1, 21305, 1);
         addHoveredButton(21305, 780, 172, 28, 21306);
@@ -694,13 +694,13 @@ public class CustomInterface extends RSInterface {
         addHoveredButton(21308, 780, 172, 28, 21309);
         //addHead(21310, 35, 35, 2500);
         addHead(21342, 2, 306, 588, 35, 35, 900);
-        addText(21311, "WELCOME TO Near Reality!", 0xE9EBC5, true, true, 52, TDA, 3);
+        addText(21311, "WELCOME TO Runity!", 0xE9EBC5, true, true, 52, TDA, 3);
         addText(21312, "CLICK HERE TO PLAY", 0x008DFF, true, true, 52, TDA, 3);
         addText(21313, "View Latest Announcement", 0xC9C2BF, true, true, 52, TDA, 1);
         addText(21314, "View Latest Update", 0xC9C2BF, true, true, 52, TDA, 1);
-        addText(21315, "Near Reality is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
-        addText(21316, "Near Reality is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
-        addText(21317, "Near Reality is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
+        addText(21315, "Runity is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
+        addText(21316, "Runity is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
+        addText(21317, "Runity is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
         addText(21318, "You last logged in from 127.0.0.1", 0xEBCD96, true, true, 52, TDA, 0);
         addMarqueeText(21319, 0xEBCD96, true, 52, 3, TDA);
         addText(21320, "Bank pin line 1", 0xC9C2BF, false, true, 52, TDA, 0);
@@ -3267,7 +3267,7 @@ public class CustomInterface extends RSInterface {
     public static void starter(TextDrawingArea[] daniel) {
         RSInterface Interface = addInterface(57500);
         addSprite(57501, 275);
-        addText(57502, "Near Reality Account Setup", 0xff9933, true, true, 52, daniel, 2);
+        addText(57502, "Runity Account Setup", 0xff9933, true, true, 52, daniel, 2);
         addText(57503, "Mode Description:", 0xff9933, true, true, 52, daniel, 2);
         addText(57504, "Description line here (57504)", 0xff9933, true, true, 52, daniel, 0);
         addText(57505, "Description line here (57505)", 0xff9933, true, true, 52, daniel, 0);
@@ -3813,7 +3813,7 @@ public class CustomInterface extends RSInterface {
         addSprite(interfaceId + 1, Client.spriteCache.get(192));
         addHoverButton(interfaceId + 2, 24, 15, 15, "Close", 250, interfaceId + 3, 3);
         addHoveredButton(interfaceId + 3, 25, 15, 15, interfaceId + 4);
-        addText(interfaceId + 5, "The Bank of Near Reality", tda, 2, 0xFF981F, true, true);
+        addText(interfaceId + 5, "The Bank of Runity", tda, 2, 0xFF981F, true, true);
         addConfigButton(interfaceId + 6, 60_000, 217, 218, 32, 20, "Toggle Insert/Swap", 1, 5, 304);
         addConfigButton(interfaceId + 7, 60_000, 219, 220, 32, 20, "Toggle Note/Un-note", 1, 5, 115);
         addHoverButton(interfaceId + 8, 221, 35, 25, "Deposit Inventory", -1, interfaceId + 9, 1);
@@ -4160,7 +4160,7 @@ public class CustomInterface extends RSInterface {
     private static void clanChat(TextDrawingArea[] tda) {
         RSInterface rsinterface = addInterface(33500);
         addSprite(33501, 67);
-        addText(33502, "Near Reality", tda, 3, 0xDE8B0D, true, true);
+        addText(33502, "Runity", tda, 3, 0xDE8B0D, true, true);
         addSprite(33503, 68);
         addHoverButton(33507, 834, 20, 20, "Join clan", -1, 33508, 1);
         addHoveredButton(33508, 835, 20, 20, 33509);
@@ -4614,7 +4614,7 @@ public class CustomInterface extends RSInterface {
         addSprite(29401, 2, dir);
         addSprite(29402, 64);
         addText(29403, "", tda, 2, 0xecc636, true, true);
-        addHoverText(29404, "www.Near Reality.io", "Visit website", tda, 3, 0xC47423, true, true, 168);
+        addHoverText(29404, "www.Runity.io", "Visit website", tda, 3, 0xC47423, true, true, 168);
         addHoverButton(29410, 292, 18, 18, "Daily Achievements", -1, 29411, 1);
         addHoveredButton(29411, 293, 18, 18, 29412);
         addHoverButton(29413, 294, 18, 18, "View Quests", -1, 29414, 1);
