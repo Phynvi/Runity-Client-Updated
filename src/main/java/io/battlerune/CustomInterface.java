@@ -135,7 +135,7 @@ public class CustomInterface extends RSInterface {
         for (int i = 0; i < 9; i++) {
             addHoverButton(42507 + i, dir, 4 + i, 60, 57, "Spawn", -1, 42520 + i, 1);
             addHoveredButton(42520 + i, dir, 12 + i, 60, 57, 42530 + i);
-            addText(42540 + i, "Preset", tda, 0, 0xFFA500, true, true);
+            addText(42540 + i, "", tda, 0, 0xFFA500, true, true);
             tab.child(5 + i, 42507 + i, xx+x, yy+y);
             tab.child(14 + i, 42520 + i, xx+x, yy+y);
             tab.child(23 + i, 42540 + i, xx+x+30, yy+y + 61);
@@ -151,7 +151,7 @@ public class CustomInterface extends RSInterface {
         for (int i = 0; i < 8; i++) {
             addHoverButton(42552 + i, dir, 21, 137, 27, "Spawn", -1, 42562 + i, 1);
             addHoveredButton(42562 + i, dir, 22, 137, 27, 42572 + i);
-            addText(42582 + i, "Slot: "+i, tda, 0, 0xFFA500, true, true);
+            addText(42582 + i, "Empty Preset: "+i, tda, 0, 0xFFA500, true, true);
             tab.child(34 + i, 42552 + i, xx+x, yy+y);
             tab.child(42 + i, 42562 + i, xx+x, yy+y);
             tab.child(50 + i, 42582 + i, xx+x+68, yy+y + 7);
@@ -4632,7 +4632,7 @@ public class CustomInterface extends RSInterface {
 
         addText(29435, "Achievements", tda, 0, 0xecc636, true, true);
         addText(29436, "NPC Drops", tda, 0, 0xecc636, true, true);
-        addText(29437, "Start Slayer", tda, 0, 0xecc636, true, true);
+        addText(29437, "Presets", tda, 0, 0xecc636, true, true);
         addText(29438, "Bosses", tda, 0, 0xecc636, true, true);
         addText(29439, "Money Making Guide", tda, 0, 0xecc636, true, true);
         
