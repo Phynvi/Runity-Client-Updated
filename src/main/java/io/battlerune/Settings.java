@@ -8,7 +8,7 @@ import static io.battlerune.Configuration.CHAR_PATH;
 /**
  * Handles the customizable settings for the client.
  *
- * @author Daniel /
+ * @author Daniel /.
  */
 public final class Settings {
 	private final static String FILE_NAME = "settings.dat";
