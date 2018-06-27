@@ -24,12 +24,12 @@ public final class Settings {
 	static boolean PROFANITY_FILTER;
 
 	static boolean HD_MINIMAP;
-	static boolean TWEENING = false;
+	static boolean TWEENING;
 	static boolean GROUND_DECORATIONS = true;
 	static boolean CUSTOM_LIGHTING;
 	private static boolean MIPMAPPING;
 	static boolean FOG;
-	static boolean SMOOTH_SHADING = false;
+	static boolean SMOOTH_SHADING;
 	static boolean SNOW;
 	static boolean PARTICLES = true;
 
@@ -55,7 +55,7 @@ public final class Settings {
 	static boolean SHIFT_DROP = true;
 	static boolean DRAW_ITEM_HOVERS = true;
 	static boolean DRAW_OPPONENT_STATS = true;
-	static boolean SPEC_BUTTON = false;
+	static boolean SPEC_BUTTON;
 
 	static int COUNTER_SIZE = 1;
 	static int COUNTER_COLOR = 0xffffff;
