@@ -24,12 +24,12 @@ public final class Settings {
 	static boolean PROFANITY_FILTER;
 
 	static boolean HD_MINIMAP;
-	static boolean TWEENING = true;
+	static boolean TWEENING = false;
 	static boolean GROUND_DECORATIONS = true;
 	static boolean CUSTOM_LIGHTING;
 	private static boolean MIPMAPPING;
 	static boolean FOG;
-	static boolean SMOOTH_SHADING = true;
+	static boolean SMOOTH_SHADING = false;
 	static boolean SNOW;
 	static boolean PARTICLES = true;
 
