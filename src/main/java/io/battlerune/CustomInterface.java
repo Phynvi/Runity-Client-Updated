@@ -1443,11 +1443,10 @@ public class CustomInterface extends RSInterface {
         addText(58517, "Skilling", 0xff9933, true, true, -1, tda, 0);
         addText(58518, "Miscellaneous", 0xff9933, true, true, -1, tda, 0);
         addSprite(58519, 529);
-        addText(58520, "Claim to fame:", 0xff9933, false, true, -1, tda, 1);
-        addText(58521, "Name:", 0xff9933, false, true, -1, tda, 1);
-        addText(58522, "Date:", 0xff9933, false, true, -1, tda, 1);
-        addText(58523, "0/35 Remaining", 0xff9933, true, true, -1, tda, 0);
-        fame.totalChildren(23);
+        addText(58520, "Player Rank", 0xff9933, false, true, -1, tda, 1);
+        addText(58521, "Player Name", 0xff9933, false, true, -1, tda, 1);
+        addText(58522, "Kills", 0xff9933, false, true, -1, tda, 1);
+        fame.totalChildren(22);
         fame.child(0, 58501, 40, 23);
         fame.child(1, 58502, 435, 33);
         fame.child(2, 58503, 435, 33);
@@ -1467,10 +1466,9 @@ public class CustomInterface extends RSInterface {
         fame.child(16, 58518, 410, 67);
         fame.child(17, 58519, 46, 91);
         fame.child(18, 58520, 70, 94);
-        fame.child(19, 58521, 250, 94);
+        fame.child(19, 58521, 180, 94);
         fame.child(20, 58522, 345, 94);
         fame.child(21, 58530, -78, 112);
-        fame.child(22, 58523, 385, 35);
         RSInterface scrollbar = addTabInterface(58530);
         scrollbar.width = 518;
         scrollbar.height = 192;
@@ -1481,12 +1479,12 @@ public class CustomInterface extends RSInterface {
         for (int index = 0; index < amount; index += 4) {
             int id = sprite % 2 == 0 ? 527 : 528;
             addSprite(58532 + index, id);
-            addText(58532 + (index + 1), "itemId: " + (58532 + (index + 1)), tda, 0, 0xFFB83F, false, true);
-            addText(58532 + (index + 2), "itemId: " + (58532 + (index + 2)), tda, 0, 0xff9933, false, true);
-            addText(58532 + (index + 3), "itemId: " + (58532 + (index + 3)), tda, 0, 0xFFB83F, false, true);
+            addText(58532 + (index + 1), "", tda, 0, 0xFFB83F, false, true); // player name
+            addText(58532 + (index + 2), "", tda, 0, 0xff9933, false, true); // player rank
+            addText(58532 + (index + 3), "", tda, 0, 0xFFB83F, false, true); // player kills
             scrollbar.child(child++, 58532 + index, 125, y);
-            scrollbar.child(child++, 58532 + (index + 1), 160, y + 12);
-            scrollbar.child(child++, 58532 + (index + 2), 330, y + 12);
+            scrollbar.child(child++, 58532 + (index + 1), 150, y + 12);
+            scrollbar.child(child++, 58532 + (index + 2), 260, y + 12);
             scrollbar.child(child++, 58532 + (index + 3), 425, y + 12);
             y += 34;
             sprite++;
