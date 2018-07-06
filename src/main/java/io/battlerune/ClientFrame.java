@@ -1,27 +1,16 @@
 package io.battlerune;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Desktop;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Insets;
-import java.awt.KeyboardFocusManager;
-import java.awt.Point;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionAdapter;
-import java.awt.event.MouseMotionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import io.battlerune.osbuddy.CalcSubClass;
+import io.battlerune.osbuddy.ComponentResizer;
+import io.battlerune.osbuddy.parser.OSBHighscoresParser;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import javax.swing.plaf.ColorUIResource;
+import java.awt.*;
+import java.awt.event.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -29,30 +18,6 @@ import java.text.NumberFormat;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
-
-import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.JProgressBar;
-import javax.swing.JTextField;
-import javax.swing.KeyStroke;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.UIDefaults;
-import javax.swing.UIManager;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
-import javax.swing.plaf.ColorUIResource;
-
-import io.battlerune.osbuddy.CalcSubClass;
-import io.battlerune.osbuddy.ComponentResizer;
-import io.battlerune.osbuddy.parser.OSBHighscoresParser;
 
 /**
  * Creates a new user interface to render the client
@@ -699,7 +664,7 @@ public class ClientFrame extends Client {
         button_8.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-               CalcSubClass calc = new CalcSubClass();
+                CalcSubClass calc = new CalcSubClass();
                 calc.pack();
                 System.out.println("Calculator JFrame extended. its ugly ik :(");
             }
@@ -898,33 +863,6 @@ public class ClientFrame extends Client {
         menuPanel.add(titleBar_title);
 
         compCoords = null;
-        titleBar.addMouseListener(new MouseListener() {
-            public void mouseReleased(MouseEvent e) {
-                compCoords = null;
-            }
-
-            public void mousePressed(MouseEvent e) {
-                compCoords = e.getPoint();
-            }
-
-            public void mouseExited(MouseEvent e) {
-            }
-
-            public void mouseEntered(MouseEvent e) {
-            }
-
-            public void mouseClicked(MouseEvent e) {
-            }
-        });
-        titleBar.addMouseMotionListener(new MouseMotionListener() {
-            public void mouseMoved(MouseEvent e) {
-            }
-
-            public void mouseDragged(MouseEvent e) {
-                Point currCoords = e.getLocationOnScreen();
-                setLocation(currCoords.x - compCoords.x, currCoords.y - compCoords.y);
-            }
-        });
 
 //        addListeners();
 
@@ -1249,3 +1187,437 @@ public class ClientFrame extends Client {
     }
 }
 //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * BACKUP OF CLIENTFRAME.JAVA
+ * 
+ * 
+*/
+
+
+/*
+package io.battlerune;
+
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
+
+
+import java.awt.*;
+import java.awt.event.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
+
+import static io.battlerune.Utility.launchURL;
+
+public class ClientFrame extends Client {
+
+    private static final long serialVersionUID = 1L;
+
+    public JFrame frame;
+
+    private JPanel gamePanel;
+
+    private JPanel menuPanel;
+
+    private int leftHovers = -1;
+    private int rightHovers = -1;
+
+    private static Image LOGO;
+    private Image scaledLogo = /*LOGO.getScaledInstance(220, 53, Image.SCALE_SMOOTH) null;
+
+    private static Image BG;
+    private Image scaledBG;
+
+    private static Image BUTTON_IMAGE;
+    private static Image BUTTON_HOVER_IMAGE;
+
+    private static Image ICON;
+
+    private static final int TEXT_COLOR = 0x805334;
+
+    private String[] leftLabels = {"Website", "Community", "Discord"};
+    private String[] rightLabels = {"Vote", "Store", "Hiscores"};
+
+
+    ClientFrame() {
+        try {
+            initializeUserInterface();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public static void load() {
+        try {
+            System.out.println(ClientFrame.class.getResource("./images/icon.png"));
+            ICON = ImageIO.read(ClientFrame.class.getResourceAsStream("/images/icon.png"));
+            LOGO = ImageIO.read(ClientFrame.class.getResourceAsStream(("/images/logo.png")));
+            BG = ImageIO.read(ClientFrame.class.getResourceAsStream(("/images/bg.png")));
+            BUTTON_IMAGE = ImageIO.read(ClientFrame.class.getResourceAsStream(("/images/button.png")));
+            BUTTON_HOVER_IMAGE = ImageIO.read(ClientFrame.class.getResourceAsStream(("/images/hover.png")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void initializeUserInterface() {
+        try {
+            JPopupMenu.setDefaultLightWeightPopupEnabled(true);
+            UIManager.put("InternalFrame.activeTitleBackground", new ColorUIResource(Color.black));
+            UIManager.put("InternalFrame.activeTitleForeground", new ColorUIResource(Color.WHITE));
+            UIManager.put("InternalFrame.titleFont", new Font("Dialog", Font.PLAIN, 11));
+
+          
+            frame = new JFrame(Configuration.NAME + " - The ultimate OS experience");
+            frame.setLayout(new BorderLayout());
+            frame.setResizable(false);
+            frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            frame.setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
+            frame.setFocusTraversalKeys(KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
+
+            Set<KeyStroke> forwardKeys = new HashSet<KeyStroke>(1);
+            forwardKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_TAB, InputEvent.CTRL_MASK));
+            setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, forwardKeys);
+
+            Set<KeyStroke> backwardKeys = new HashSet<KeyStroke>(1);
+            backwardKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_TAB, InputEvent.SHIFT_MASK | InputEvent.CTRL_MASK));
+            setFocusTraversalKeys(KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, backwardKeys);
+
+        
+            int width = 765;
+            int height = 503;
+            Insets insets = getInsets();
+            frame.setSize(width + insets.left + insets.right, height + insets.top + insets.bottom);
+          
+            frame.setLocationRelativeTo(null);
+
+    
+            frame.addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowClosing(WindowEvent we) {
+                    String options[] = {"Yes", "No"};
+                    int userPrompt = JOptionPane.showOptionDialog(null, "Are you sure you wish to exit?", Configuration.NAME, JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[1]);
+                    if (userPrompt == JOptionPane.YES_OPTION) {
+                        Settings.save();
+                        System.exit(0);
+                    }
+                }
+
+                @Override
+                public void windowGainedFocus(WindowEvent e) {
+                    getGamePanel().requestFocusInWindow();
+                    getGamePanel().requestFocus();
+                }
+
+            });
+
+            if (ICON != null) {
+                frame.setIconImage(ICON);
+            }
+
+
+            initializeMenuBar();
+
+           
+            initializeGamePanel();
+
+          
+            frame.setFocusable(false);
+
+     
+            frame.pack();
+
+        
+            frame.setVisible(true);
+
+            init();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void initializeGamePanel() {
+
+      
+        setGamePanel(new JPanel());
+
+        getGamePanel().setLayout(new BorderLayout());
+
+
+        getGamePanel().add(this);
+
+        Dimension dimension = new Dimension(765, 503);
+        getGamePanel().setPreferredSize(dimension);
+        getGamePanel().setSize(dimension);
+
+   
+        getGamePanel().setFocusable(false);
+
+       
+        getGamePanel().requestFocus();
+
+        getGamePanel().setFocusTraversalKeysEnabled(false);
+
+        getGamePanel().setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
+        getGamePanel().setFocusTraversalKeys(KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
+
+     
+        frame.getContentPane().add(getGamePanel(), BorderLayout.CENTER);
+    }
+
+    private void initializeMenuBar() {
+
+      
+        menuPanel = new JPanel();
+
+   
+     
+        menuPanel.setFocusable(false);
+
+       
+        menuPanel.setFocusTraversalKeysEnabled(false);
+
+        menuPanel.setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
+        menuPanel.setFocusTraversalKeys(KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
+
+      menuPanel = new JPanel() {
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            public void paintComponent(Graphics g) {
+                int x = (this.getWidth() / 2 - (765 / 2)) + 2;
+                int x2 = (this.getWidth() / 2 - 79) + (765 / 2);
+                g.setColor(new Color(0x221F19));
+                scaledBG = BG.getScaledInstance(this.getWidth(), 55, Image.SCALE_SMOOTH);
+                g.drawImage(scaledBG, 0, 0, null);
+                g.drawImage(scaledLogo, this.getWidth() / 2 - 115, 2, null);
+
+              
+                int[] TEXT_LEFT_POSITION_X = {7, 14, 22};
+                int[] TEXT_RIGHT_POSITION_X = {7, 16, 22};
+
+                for (int i = 0; i < 3; i++) {
+                    g.setFont(new Font("Verdana", Font.PLAIN, 12));
+                    g.drawImage(leftHovers == i ? BUTTON_IMAGE : BUTTON_HOVER_IMAGE, x + (78 * i), 19, null);
+                    g.drawImage(rightHovers == i ? BUTTON_IMAGE : BUTTON_HOVER_IMAGE, x2 - (78 * i), 19, null);
+
+                    drawCenteredString(g, leftLabels[i], (x + 32) + (70 * i) + TEXT_LEFT_POSITION_X[i], 34, TEXT_COLOR);
+                    drawCenteredString(g, rightLabels[i], (x2 + 45) - (70 * i) - TEXT_RIGHT_POSITION_X[i], 34, TEXT_COLOR);
+                    //                    if (leftHovers == i) {
+                    //                        menuPanel.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                    //                        drawTooltip(g, leftTooltips[i], x + (67 * i) + random(6), 15 - random(6));
+                    //                    }
+                    //                    if (rightHovers == i) {
+                    //                        int xOffset = 0;
+                    //                        if (rightHovers == 1) {
+                    //                            xOffset += 100;
+                    //                        } else if (rightHovers == 0) {
+                    //                            xOffset += 175;
+                    //                        }
+                    //                        menuPanel.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                    //                        drawTooltip(g, rightTooltips[i], x2 - xOffset - (67 * i) + random(6), 15 - random(6));
+                    //                    }
+                }
+            }
+        };
+
+
+        NavListener navListener = new NavListener(menuPanel);
+        menuPanel.addMouseMotionListener(navListener);
+        menuPanel.addMouseListener(navListener);
+        menuPanel.setPreferredSize(new Dimension(765, 0));
+        menuPanel.setMinimumSize(new Dimension(765, 0));
+        frame.getContentPane().add(menuPanel, BorderLayout.NORTH);
+    }
+
+    public static int random(int range) {
+        return (int) (java.lang.Math.random() * (range + 1));
+    }
+
+    private void drawTooltip(Graphics g, String text, int x, int y) {
+        g.setColor(new Color(0xFFFFA0));
+        g.fillRect(x, y, g.getFontMetrics().stringWidth(text) + 5, 15);
+        g.setColor(Color.BLACK);
+        g.drawRect(x, y, g.getFontMetrics().stringWidth(text) + 5, 15);
+        g.setColor(Color.BLACK);
+        g.drawString(text, x + 2, y + 12);
+    }
+
+    private void drawCenteredString(Graphics g, String text, int x, int y, int color) {
+        int width = g.getFontMetrics().stringWidth(text);
+        g.setColor(Color.BLACK);
+        g.drawString(text, x - width / 2 + 2, y + 2);
+        g.setColor(new Color(color));
+        g.drawString(text, x - width / 2, y);
+    }
+
+
+    void resize(ScreenMode frameMode, int width, int height) {
+        try {
+            if (frameMode == ScreenMode.FIXED) {
+                width = 765;
+                height = 503;
+            } else if (frameMode == ScreenMode.RESIZABLE) {
+                width = width;
+                height = height;
+            } else {
+                width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+                height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+            }
+
+            Dimension dimension = new Dimension(width, height);
+
+            gamePanel.setPreferredSize(dimension);
+
+            frame.setSize(dimension);
+            frame.setMinimumSize(dimension);
+
+            Insets insets = frame.getInsets();
+            int widthModifier = 0 + insets.left + insets.right;
+            int heightModifier = menuPanel.getHeight();
+            if (frameMode != ScreenMode.FULLSCREEN) {
+                frame.setBounds(0, 0, width + widthModifier, height + heightModifier);
+            }
+
+            super.myWidth = width;
+            super.myHeight = height;
+
+            frame.setResizable(frameMode == ScreenMode.RESIZABLE);
+            if (frameMode == ScreenMode.FIXED) {
+                frame.pack();
+            }
+            frame.setLocationRelativeTo(null);
+            frame.requestFocus();
+            frame.toFront();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private JPanel getGamePanel() {
+        return gamePanel;
+    }
+
+    private void setGamePanel(JPanel gamePanel) {
+        this.gamePanel = gamePanel;
+    }
+
+    public JPanel getMenuPanel() {
+        return menuPanel;
+    }
+
+    public void setTitle(String title) {
+        frame.setTitle(title);
+    }
+
+    public JFrame getFrame() {
+        return frame;
+    }
+
+    private final class NavListener extends MouseAdapter {
+
+        private final JPanel panel;
+
+        NavListener(JPanel panel) {
+            this.panel = panel;
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+            int x_left = (panel.getWidth() / 2 - (765 / 2));
+            int x_right = (panel.getWidth() / 2) + (765 / 2) + 2;
+            int leftPos = (e.getX() - x_left) / 72;
+            int rightPos = (e.getX() - x_right) / 72;
+            if (rightPos == -1) {
+                rightPos = 1;
+            } else if (rightPos == -2) {
+                rightPos = 2;
+            }
+            if (leftPos != leftHovers) {
+                leftHovers = leftPos;
+                panel.repaint();
+            } else if (rightPos != rightHovers) {
+                rightHovers = rightPos;
+                panel.repaint();
+            }
+        }
+
+        @Override
+        public void mouseMoved(MouseEvent e) {
+            int x_left = (panel.getWidth() / 2 - (765 / 2));
+            int x_right = (panel.getWidth() / 2) + (765 / 2) + 2;
+            int leftPos = (e.getX() - x_left) / 72;
+            int rightPos = (e.getX() - x_right) / 72;
+            if (rightPos == -1) {
+                rightPos = 1;
+            } else if (rightPos == -2) {
+                rightPos = 2;
+            }
+            if (leftPos != leftHovers) {
+                leftHovers = leftPos;
+                panel.repaint();
+            } else if (rightPos != rightHovers) {
+                rightHovers = rightPos;
+                panel.repaint();
+            }
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+            int leftPos = leftHovers;
+            int rightPos = rightHovers;
+            leftHovers = -1;
+            rightHovers = -1;
+            if (leftPos != leftHovers) {
+                panel.repaint();
+            } else if (rightPos != rightHovers) {
+                panel.repaint();
+            }
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+            if (SwingUtilities.isLeftMouseButton(e)) {
+                int x_left = (panel.getWidth() / 2 - (765 / 2));
+                int x_right = (panel.getWidth() / 2) + (765 / 2) + 2;
+                int tabs_left = (e.getX() - x_left) / 72;
+                int tabs_right = (e.getX() - x_right) / 72;
+                if (tabs_right == -1) {
+                    tabs_right = 1;
+                } else if (tabs_right == -2) {
+                    tabs_right = 2;
+                }
+                if (tabs_left > -1 && tabs_left < Configuration.LEFT_NAV_LINKS.length) {
+                    launchURL(Configuration.LEFT_NAV_LINKS[tabs_left]);
+                } else if (tabs_right > -1 && tabs_right < Configuration.RIGHT_NAV_LINKS.length) {
+                    launchURL(Configuration.RIGHT_NAV_LINKS[tabs_right]);
+                }
+            }
+        }
+    }
+}
+*/

@@ -1,7 +1,15 @@
 package io.battlerune.login.impl;
 
 
-import io.battlerune.*;
+import io.battlerune.AccountData;
+import io.battlerune.AccountManager;
+import io.battlerune.Client;
+import io.battlerune.Configuration;
+import io.battlerune.Connection;
+import io.battlerune.Raster;
+import io.battlerune.Settings;
+import io.battlerune.StringUtils;
+import io.battlerune.Utility;
 import io.battlerune.login.LoginComponent;
 import io.battlerune.login.ScreenType;
 
@@ -238,12 +246,12 @@ public class MainScreen extends LoginComponent {
                 Raster.drawRectangle(xPos, 374, Client.spriteCache.get(accountData.avatar).width,Client.spriteCache.get(accountData.avatar).height, frameColor);
                 int rank = (accountData.rank - 1);
                 String name = accountData.username;
-                if (rank <= -1) {
-                    client.newSmallFont.drawCenteredString(Utility.formatName(name), xPos + 30, 455);
-                } else {
-                    client.newSmallFont.drawCenteredString("<img=" + rank + ">", centerX - 145, yPos + 13);
-                    client.newSmallFont.drawCenteredString("<col=ffffff>" + Utility.formatName(name.toLowerCase()), xPos + 30, 455);
-                }
+//                if (rank <= -1) {
+//                    client.newSmallFont.drawCenteredString(Utility.formatName(name), xPos + 30, 455);
+//                } else {
+//                    client.newSmallFont.drawCenteredString((rank <= -1 ? Utility.formatName(name) : "<img=" + rank + ">"), centerX - 145, yPos + 13);
+                    client.newSmallFont.drawCenteredString((rank <= -1 ? "" : "<img=" + rank + ">") + "<col=ffffff>" + Utility.formatName(name.toLowerCase()), xPos + 30, 455);
+//                }
                 if (client.mouseInRegion(xPos - 25, 435, xPos + 136, 458)) {
                     Raster.drawRectangle(xPos  - 30, 438, Client.spriteCache.get(676).width, Client.spriteCache.get(676).height, 0x1F1D19);
                     Raster.fillRectangle(xPos  - 30, 438, Client.spriteCache.get(676).width, Client.spriteCache.get(676).height, 0x1F1D19, 50);
