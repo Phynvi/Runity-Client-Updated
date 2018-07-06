@@ -372,7 +372,181 @@ public class RSInterface {
 		examineTab(textDrawingAreas);
 		refer(textDrawingAreas);
 		newAchievementTab(textDrawingAreas);
+		achievementTest(textDrawingAreas);
+		bossMinigame(textDrawingAreas);
+		petInterface(textDrawingAreas);
 		aMRUNodes_238 = null;
+	}
+	
+	
+	public static void bossMinigame(TextDrawingArea[] tda) {
+		RSInterface tab = RSInterface.addInterface(32000);
+//		addText(12504, "Achievement Diary", tda, 2, 0xff9933, false, true);
+		addText(32002,  "Current Wave:", 0xffcccc, false, true, 52, tda, 2);
+		addText(32003,  "0", 0xff6666, false, true, 52, tda, 2);
+		addText(32004,  "Waves Left:", 0xffcccc, false, true, 52, tda, 2);
+		addText(32005,  "0", 0xff6666, false, true, 52, tda, 2);
+		addText(32006,  "Total Points:", 0xffcccc, false, true, 52, tda, 2);
+		addText(32007,  "0", 0xff6666, false, true, 52, tda, 2);
+		RSInterface.addSprite(32001, 0, "Interfaces/ChampionsScroll/MINIGAME");
+
+		setChildren(7, tab);
+
+		setBounds(32001, 2, 255, 0, tab);
+		setBounds(32002, 346, 266, 1, tab);
+		setBounds(32003, 466, 266, 2, tab);
+		setBounds(32004, 346, 286, 3, tab);
+		setBounds(32005, 466, 286, 4, tab);
+		setBounds(32006, 346, 306, 5, tab);
+		setBounds(32007, 466, 306, 6, tab);
+	}
+
+	private static void petInterface(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(15500);
+
+		setChildren(21, tab);
+
+		int frame = 0;
+
+		addSprite(15501, 0, "Interfaces/Pet/SPRITE");
+		setBounds(15501, 81, 20, frame++, tab);
+
+		addButton(15502, 1, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15502, 91, 99, frame++, tab);
+		addButton(15503, 2, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15503, 159, 99, frame++, tab);
+		addButton(15504, 3, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15504, 227, 99, frame++, tab);
+		addButton(15505, 4, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15505, 295, 99, frame++, tab);
+		addButton(15506, 5, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15506, 363, 99, frame++, tab);
+
+		addButton(15507, 6, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15507, 91, 152, frame++, tab);
+		addButton(15508, 7, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15508, 159, 152, frame++, tab);
+		addButton(15509, 8, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15509, 227, 152, frame++, tab);
+		addButton(15510, 9, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15510, 295, 152, frame++, tab);
+		addButton(15511, 10, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15511, 363, 152, frame++, tab);
+
+		addButton(15512, 11, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15512, 91, 205, frame++, tab);
+		addButton(15513, 12, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15513, 159, 205, frame++, tab);
+		addButton(15514, 13, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15514, 227, 205, frame++, tab);
+		addButton(15515, 14, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15515, 295, 205, frame++, tab);
+		addButton(15516, 15, "Interfaces/Pet/SPRITE", "Select", 256);
+		setBounds(15516, 363, 205, frame++, tab);
+
+		addButton(15517, 16, "Interfaces/Pet/SPRITE", "Buy back pet", 256);
+		setBounds(15517, 163, 278, frame++, tab);
+
+		addHoverButton(15518, "game/interface/CLOSE", 1, 0, 0, "Close", 0, 15519, 3);
+		addHoveredButton(15519, "game/interface/CLOSE", 2, 16, 16, 0);
+		setBounds(15518, 406, 31, frame++, tab);
+		setBounds(15519, 406, 31, frame++, tab);
+
+
+		addText(15520, "15521", tda, 2, 0xFFFFFF, false, true, -1, 2);
+		setBounds(15520, 260, 260, frame++, tab);
+		// addButton(15518, 17, "Interfaces/Pet/SPRITE", "Buy pet", 256);
+		// setBounds(15518, 297, 243, frame++, tab);
+
+	}
+
+	
+	
+
+	
+	public static void achievementTest(TextDrawingArea[] tda) {
+		RSInterface interface_ = addTabInterface(12500);
+		RSInterface scrolls = addTabInterface(12505);
+		scrolls.width = 165;
+		scrolls.height = 226;
+		scrolls.scrollMax = 227;
+		addSprite(12501, 1606);
+		addHoverButton(12502, 1609, 18, 18, "View Quests", -1, 12503, 1);
+		addHoveredButton(12503, 1610, 18, 18, 12499);
+		addText(12504, "Achievement Diary", tda, 2, 0xff9933, false, true);
+		addDiarySlot(12506, tda, "Ardougne");
+		addDiarySlot(12516, tda, "PvP");
+		addDiarySlot(12526, tda, "Boss achievements");
+		int intChild = 0;
+		int intChild2 = 0;
+		interface_.totalChildren(5);
+		interface_.child(intChild++, 12502, 171, 5);
+		interface_.child(intChild++, 12503, 171, 5);
+		interface_.child(intChild++, 12504, 9, 5);
+		interface_.child(intChild++, 12505, 8, 25);
+		interface_.child(intChild++, 12501, 6, 25);
+		scrolls.totalChildren(3);
+		scrolls.child(intChild2++, 12506, 6, 7);
+		scrolls.child(intChild2++, 12516, 6, 35);
+		scrolls.child(intChild2++, 12526, 6, 63);
+	}
+	
+	public static void addDiarySlot(int id, TextDrawingArea[] tda, String name) {
+		RSInterface widget = addTabInterface(id);
+		addHoverButton(id + 1, 1607, 151, 27, "View Diary Journal", -1, id + 2, 1);
+		addHoveredButton(id + 2, 1608, 151, 27, 12498);
+		addText(id + 3, name, tda, 0, 0xffff00, false, true);
+		addText(id + 4, "42/42", tda, 0, 0xffff00, true, true);
+		addPixels(id + 5, 0xd43c00, 8, 5, 0, 35, true);
+		addPixels(id + 6, 0xd34f00, 17, 5, 0, 35, true);
+		addPixels(id + 7, 0xd34f00, 26, 5, 0, 35, true);
+		addPixels(id + 8, 0x37b514, 35, 5, 0, 35, true);
+		int chatboxChild = 0;
+		widget.totalChildren(8);
+		widget.child(chatboxChild++, id+1, 0, 0);
+		widget.child(chatboxChild++, id+2, 0, 0);
+		widget.child(chatboxChild++, id+3, 2, 2);
+		widget.child(chatboxChild++, id+4, 136, 2);
+		widget.child(chatboxChild++, id+5, 4, 18);
+		widget.child(chatboxChild++, id+6, 40, 18);
+		widget.child(chatboxChild++, id+7, 76, 18);
+		widget.child(chatboxChild++, id+8, 112, 18);
+	}
+	public static final int TYPE_RECTANGLE = 3;
+	public int defaultHoverColor;
+	public int secondaryHoverColor;
+	public int secondaryColor;
+	public boolean filled;
+
+
+	public static void addPixels(int id, int color, int width, int height, int alpha, boolean filled) {
+		RSInterface rsi = addInterface(id);
+		rsi.type = TYPE_RECTANGLE;
+		rsi.opacity = (byte) alpha;
+		rsi.textColor = color;
+		rsi.defaultHoverColor = color;
+		rsi.secondaryHoverColor = color;
+		rsi.secondaryColor = color;
+		rsi.filled = filled;
+		rsi.width = width;
+		rsi.height = height;
+	}
+
+	public static void addPixels(int id, int color, int hoverColor, int width, int height, int alpha, boolean filled) {
+		RSInterface rsi = addInterface(id);
+		rsi.type = TYPE_RECTANGLE;
+		rsi.opacity = (byte) alpha;
+		rsi.textColor = color;
+		rsi.textColor = color;
+		rsi.defaultHoverColor = color;
+		rsi.secondaryHoverColor = color;
+		rsi.secondaryColor = color;
+		rsi.filled = filled;
+		rsi.width = width;
+		rsi.height = height;
+		rsi.contentType = 0;
+		rsi.atActionType = 1;
+		rsi.hoverType = id;
 	}
 
 	public static void examineTab(TextDrawingArea[] tda) {
@@ -439,6 +613,14 @@ public class RSInterface {
 		
 	}
 
+
+	
+	
+public static void AchievementDirectory(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(37700);
+		String dir = "/AchDir/SPRITE";
+		addSprite(37703, 0, dir);
+}
 	
 	public static void newAchievementTab(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(37300);
@@ -2042,6 +2224,29 @@ public class RSInterface {
 		tab.enabledSprite = Client.spriteCache.get(sid);
 		tab.width = tab.disabledSprite.width;
 		tab.height = tab.enabledSprite.height;
+		tab.tooltip = tooltip;
+	}
+	
+	
+	public Sprite sprite1;
+	public Sprite sprite2;
+	
+
+
+
+	public static void addButton(int id, int sid, String spriteName, String tooltip, int alpha) {
+		RSInterface tab = interfaceCache[id] = new RSInterface();
+		tab.interfaceId = id;
+		tab.parentID = id;
+		tab.type = 5;
+		tab.atActionType = 1;
+		tab.contentType = 0;
+		tab.alpha = alpha;
+		tab.hoverType = 52;
+		tab.sprite1 = imageLoader(sid, spriteName);
+		tab.sprite2 = imageLoader(sid, spriteName);
+		tab.width = tab.sprite1.width;
+		tab.height = tab.sprite1.height;
 		tab.tooltip = tooltip;
 	}
 

@@ -29,7 +29,8 @@ public final class Sprite extends Raster {
 	private String name;
 
 	public int raster[];
-
+	public int imageWidth;
+	public int imageHeight;
 	public int width;
 	public int height;
 	int offsetX;
