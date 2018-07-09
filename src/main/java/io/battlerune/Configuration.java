@@ -29,7 +29,7 @@ public class Configuration {
     static boolean CLIENT_DATA = false;
 
     /** State of client being in debug mode. */
-    public static boolean DEBUG_MODE = true;
+    public static boolean DEBUG_MODE = false;
 
     /** Debug the interfaces. */
     static boolean DEBUG_INTERFACES = false;

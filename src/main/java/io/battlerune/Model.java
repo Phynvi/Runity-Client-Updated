@@ -1,5 +1,7 @@
 package io.battlerune;
 
+import java.util.ArrayList;
+
 public class Model extends Renderable {
 
 	public static void nullLoader() {
@@ -720,6 +722,84 @@ public class Model extends Renderable {
 			return false;
 		} else {
 			return true;
+		}
+	}
+	public static void printModelColours(Model model) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		for (int i : model.anIntArray1640) {
+			list.add(i);
+		}
+		ArrayList<Integer> done = new ArrayList<Integer>();
+		for (Integer i : list) {
+			if (done.contains(i))
+				continue;
+			int amt = 0;
+			for (Integer j : list) {
+				if (j.intValue() == i.intValue())
+					amt++;
+			}
+			System.out.println(i + " on " + amt + " faces");
+			done.add(i);
+		}
+	}
+	
+	public int anIntArray1650[];
+	
+	public int anIntArray1653[];
+	public int anIntArray1654[];
+	public int anIntArray1657[];
+
+	public int anIntArray1651;
+	public int anIntArray1652;
+	public int anIntArray1649;
+	
+	public void setTexture(int fromColor, int tex) {
+		printModelColours(this);
+		int foundAmt = 0;
+		int set2 = 0;
+		for (int i = 0; i < anIntArray1640.length; i++)
+			if (fromColor == anIntArray1640[i])
+				foundAmt++;
+		anInt1642 = foundAmt;
+		if (anIntArray1637 == null)
+			anIntArray1637 = new int[foundAmt];
+		if (anIntArray1650 == null)
+			anIntArray1650 = new int[foundAmt];
+		anIntArray1653 = new int[foundAmt];
+		anIntArray1654 = new int[foundAmt];
+		anIntArray1657 = new int[foundAmt];
+		int assigned = 0;
+		for (int i = 0; i < anInt1630; i++) {
+			if (fromColor == anIntArray1650[i]) {
+				anIntArray1650[i] = tex;
+				anIntArray1637[i] = 3 + set2;
+				set2 += 4;
+				anIntArray1653[assigned] = anIntArray1631[i];
+				anIntArray1654[assigned] = anIntArray1632[i];
+				anIntArray1657[assigned] = anIntArray1633[i];
+				assigned++;
+			}
+		}
+	}
+	
+	public void setTexture(int tex) {
+		anInt1652 = anInt1630;
+		int set2 = 0;
+		if (anIntArray1637 == null)
+			anIntArray1637 = new int[anInt1630];
+		if (anIntArray1650 == null)
+			anIntArray1650 = new int[anInt1630];
+		anIntArray1653 = new int[anInt1630];
+		anIntArray1654 = new int[anInt1630];
+		anIntArray1657 = new int[anInt1630];
+
+		for (int i = 0; i < anInt1630; i++) {
+			anIntArray1650[i] = tex;
+			anIntArray1637[i] = 3 + set2;
+			set2 += 4;
+			anIntArray1653[i] = anIntArray1631[i];
+			anIntArray1654[i] = anIntArray1632[i];
+			anIntArray1657[i] = anIntArray1633[i];
 		}
 	}
 

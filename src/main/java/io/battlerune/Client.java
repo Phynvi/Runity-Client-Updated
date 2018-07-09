@@ -8737,7 +8737,7 @@ public class Client extends GameApplet {
             mapDotClan = new Sprite(streamLoader_2, "mapdots", 5);
             scrollBar1 = new Sprite(streamLoader_2, "scrollbar", 0);
             scrollBar2 = new Sprite(streamLoader_2, "scrollbar", 1);
-//            repackCacheIndex(1);
+//              repackCacheIndex(1);
 //            repackCacheIndex(2);
 //            repackCacheIndex(4);
             prepareGameFrame();
@@ -8865,8 +8865,8 @@ public class Client extends GameApplet {
 
 
     public String indexLocation(int cacheIndex, int index) {
-//        return Utility.findcachedir() + "/index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
-        return "C:/Users/Daniel/Desktop/index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
+        return Utility.findcachedir() + "/index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
+//        return "C:/Users/Daniel/Desktop/index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
 
         // return "C:/Users/evan__000/Desktop/RSPS/Data/OSRS/118 data/index" +
         // cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
