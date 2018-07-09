@@ -320,6 +320,16 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
+        case 5020:
+        	itemDef.name = "1Bil Ticket";
+        	itemDef.itemActions = new String[5];
+        	itemDef.itemActions[0] = "Claim";
+        	break;
+        case 5021:
+        	itemDef.name = "500Mil Ticket";
+        	itemDef.itemActions = new String[5];
+        	itemDef.itemActions[0] = "Claim";
+        	break;
 		case 22099:
 			itemDef.name = "Dragon Slayer Boots";
 			itemDef.modelID = 25007;
