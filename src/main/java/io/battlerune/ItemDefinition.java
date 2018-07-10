@@ -781,7 +781,24 @@ public final class ItemDefinition {
 			itemDef.modifiedModelColors[0] = 528;
 			itemDef.originalModelColors[0] = 257770;
 			break;
-		case 34:
+		case 17804:
+			itemDef.name = "Zaros godsword";
+			itemDef.modelZoom = 1957;
+			itemDef.modelID = 9004;
+			itemDef.maleWield = 9004;
+			itemDef.femaleWield = 9004;
+			itemDef.modelZoom = 1957;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 484;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 1250000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.itemActions[2] = "Dismantle";
 			break;
 		case 21227:
 			itemDef.itemActions = new String[5];

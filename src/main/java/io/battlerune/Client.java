@@ -8737,7 +8737,7 @@ public class Client extends GameApplet {
             mapDotClan = new Sprite(streamLoader_2, "mapdots", 5);
             scrollBar1 = new Sprite(streamLoader_2, "scrollbar", 0);
             scrollBar2 = new Sprite(streamLoader_2, "scrollbar", 1);
-//              repackCacheIndex(1);
+             repackCacheIndex(1);
 //            repackCacheIndex(2);
 //            repackCacheIndex(4);
             prepareGameFrame();

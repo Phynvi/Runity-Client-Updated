@@ -621,6 +621,12 @@ public static void AchievementDirectory(TextDrawingArea[] tda) {
 		String dir = "/AchDir/SPRITE";
 		addSprite(37703, 0, dir);
 }
+
+public static void CursePrayers(TextDrawingArea[] tda) {
+	RSInterface tab = addInterface(42300);
+	String dir = "/Prayer/PRAYER";
+	addSprite(42300, 0, dir);
+}
 	
 	public static void newAchievementTab(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(37300);
