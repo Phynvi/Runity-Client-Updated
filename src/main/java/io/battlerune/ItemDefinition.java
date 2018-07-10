@@ -268,7 +268,13 @@ public final class ItemDefinition {
 		/* Customs added here? */
 
 		switch (i) {
-
+		
+		case 10028:
+			itemDef.name = "Starter Box";
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[0] = "Open";
+            break;
+			
 		case 21777:
 			itemDef.name = "Dragon Slayer Helm";
 			itemDef.modelID = 25001;
@@ -774,6 +780,8 @@ public final class ItemDefinition {
 			itemDef.modifiedModelColors = new int[2];
 			itemDef.modifiedModelColors[0] = 528;
 			itemDef.originalModelColors[0] = 257770;
+			break;
+		case 34:
 			break;
 		case 21227:
 			itemDef.itemActions = new String[5];
