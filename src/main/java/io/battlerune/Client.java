@@ -8890,7 +8890,7 @@ public class Client extends GameApplet {
         } catch (Exception e) {
             System.out.println("Error packing cache index " + cacheIndex + ".");
         }
-        System.out.println("Finished repacking " + cacheIndex + ".");
+        System.out.println("Finished repacking Index" + cacheIndex + ".");
     }
 
     public byte[] fileToByteArray(int cacheIndex, int index) {

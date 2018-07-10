@@ -800,6 +800,24 @@ public final class ItemDefinition {
 			itemDef.itemActions[1] = "Wield";
 			itemDef.itemActions[2] = "Dismantle";
 			break;
+			
+		case 11063:
+			itemDef.name = "Toxic Glaive";
+		    itemDef.modelZoom = 1579;
+		    itemDef.modelOffset1 = -4;
+		    itemDef.modelOffset2 = 0;
+		    itemDef.modelRotationY = 533;
+		    itemDef.modelRotationX = 333;
+		    itemDef.modelID = 24005;
+		    itemDef.maleWield = 24004;
+		    itemDef.femaleWield = 24004;
+		    itemDef.itemActions = new String[5];
+		    itemDef.itemActions[1] = "Wield";
+			itemDef.value = 1250000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+			
 		case 21227:
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wield";
