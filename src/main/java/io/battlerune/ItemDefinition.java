@@ -269,6 +269,9 @@ public final class ItemDefinition {
 
 		switch (i) {
 		
+		/** START OF CUSTOMS **/
+
+		
 		case 10028:
 			itemDef.name = "Starter Box";
             itemDef.itemActions = new String[5];
@@ -416,6 +419,77 @@ public final class ItemDefinition {
 			itemDef.value = 270000;
 			break;
 
+			
+		case 3273:
+			itemDef.name = "Ice katana";
+			itemDef.description = "Runity's ninjas only";
+			itemDef.modelID = 25054;
+			itemDef.maleWield = 25054;
+			itemDef.femaleWield = 25054;
+			itemDef.modelZoom = 2105;
+			itemDef.modelRotationY = 431;
+			itemDef.modelRotationX = 768;
+			itemDef.modelOffset1 = 9;
+			itemDef.modelOffset2 = 1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 24000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+			
+		case 3274:
+			itemDef.name = "Phoenix bow";
+			itemDef.modelID = 25059;
+			itemDef.maleWield = 25060;
+			itemDef.femaleWield = 25060;
+			itemDef.modelZoom = 2000;
+			itemDef.modelRotationY = 720;
+			itemDef.modelRotationX = 1500;
+			itemDef.modelOffset1 = -3;
+			itemDef.modelOffset2 = 1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 90000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+			
+		case 3275:
+			itemDef.name = "King Black Dragon Platebody";
+			itemDef.modelID = 25057;
+			itemDef.maleWield = 25057;
+			itemDef.femaleWield = 25057;
+			itemDef.modelZoom = 1250;
+			itemDef.modelRotationY = 488;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 0;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 2000000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+			
+		case 3276:
+
+			break;
+			
+			
+		case 12898:
+			itemDef.name = "Anti-santa box.";
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[0] = "Open";
+			itemDef.description = "Dayum dude, you got the big stacks in the bank!";
+			itemDef.value = 0;
+			break;
+			
+			/** END OF CUSTOMS **/
+			
 		case 21795:
 			itemDef.name = "Imbued zamorak cape";
 			itemDef.modelID = 34166;
