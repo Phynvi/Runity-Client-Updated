@@ -3897,15 +3897,9 @@ public class CustomInterface extends RSInterface {
         addText(56006, "Guide Style:", tda, 1, 0xFF9900, true, true);
         addText(56007, "Difficulty:", tda, 1, 0xFF9900, true, true);
         addText(56008, "Amount Earned:", tda, 1, 0xFF9900, true, true);
-        addInputField(56010, 15, 0xFF981F, "Search for Guide:", 121, 23, false, false, "[A-Za-z0-9 ]");
-        addInputField(56011, 7, 0xFF981F, "Simulation amount (Hours)", 100, 20, false, false, "[0-9]");
-        addDropdownMenu(56011, 136, 0, false, true, Dropdown.DEFAULT, "easy", "medium", "hard", "very hard", "elite");
-        addText(56012, "Guide info",  0xff9933, true, true, -1, tda, 0); //test
-        addText(56013, "Question mark?", 0xFF981F, true, true, -1, tda, 1); //question mark1.
-        addText(56014, "Question mark 2?", 0xFF981F, true, true, -1, tda, 1);//question mark2.
-        addText(56017, "Guide info 2",  0xff9933, true, true, -1, tda, 0); //test2
+        addText(56012, "",  0xff9933, true, true, -1, tda, 0); //test
 
-        tab.totalChildren(15);
+        tab.totalChildren(10);
         tab.child(0, 56001, 45, 23);
         tab.child(1, 56002, 435, 33);
         tab.child(2, 56003, 435, 33);
@@ -3913,14 +3907,9 @@ public class CustomInterface extends RSInterface {
         tab.child(4, 56006, 320, 65);
         tab.child(5, 56007, 320, 80);
         tab.child(6, 56008, 320, 95);
-        tab.child(7, 56010, 58, 273);
-        tab.child(8, 56015, 198, 117);
-        tab.child(9, 56050, -65, 60);
-        tab.child(10, 56011, 50, 28);
-        tab.child(11, 56012, 317, 135);
-        tab.child(12, 56013, 317, 115);
-        tab.child(13, 56014, 317, 210);
-        tab.child(14, 56017, 317, 230);
+        tab.child(7, 56015, 198, 117);
+        tab.child(8, 56050, -65, 60);
+        tab.child(9, 56012, 317, 118);
 
         RSInterface scrollInterface = addTabInterface(56015);
         scrollInterface.scrollPosition = 0;
@@ -3928,9 +3917,16 @@ public class CustomInterface extends RSInterface {
         scrollInterface.width = 238;
         scrollInterface.height = 180;
         scrollInterface.scrollMax = 500;
-        scrollInterface.totalChildren(1);
+        scrollInterface.totalChildren(51);
         addContainer(56016, 0, 6, 10, 8, 12, 100, false, true, true, null, null, null, null, null);
         scrollInterface.child(0, 56016, 3, 3);
+        int y = 0;
+        for (int i = 0, child = 0; i < 50; i++) {
+            addText(56017 + i, "", 0xff9933, true, true, -1, tda, 0);
+            scrollInterface.child(child++, 56017 + i, 122, y + 20);
+            y += 15;
+        }
+        
         RSInterface scrollInterface3 = addTabInterface(56050);
         scrollInterface3.scrollPosition = 0;
         scrollInterface3.contentType = 0;
@@ -3938,13 +3934,13 @@ public class CustomInterface extends RSInterface {
         scrollInterface3.height = 205;
         scrollInterface3.scrollMax = 500;
         scrollInterface3.totalChildren(50);
-        int y = 0;
+        int yy = 0;
         for (int i = 0, child = 0; i < 50; i++) {
             addHoverText(56051 + i, "", "View Guide: ",tda, 0, 0xBD7E42, false, true, 130);
             //            addHoverText(58051 + (i + 1), "", "View teleport", tda, 0, 0xff9933, false, true, 150);
 
-            scrollInterface3.child(child++, 56051 + i, 125, y + 5);
-            y += 15;
+            scrollInterface3.child(child++, 56051 + i, 125, yy + 5);
+            yy += 15;
         }
     }
 
