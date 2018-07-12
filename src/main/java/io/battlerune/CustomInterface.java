@@ -3883,7 +3883,7 @@ public class CustomInterface extends RSInterface {
 
     /**
      * Player Guide
-     * @author Adam trinity/Live:nrpker7839/RSPS Hobo yt.
+     * @author Adam_#6723
      */
 
 
@@ -3900,8 +3900,12 @@ public class CustomInterface extends RSInterface {
         addInputField(56010, 15, 0xFF981F, "Search for Guide:", 121, 23, false, false, "[A-Za-z0-9 ]");
         addInputField(56011, 7, 0xFF981F, "Simulation amount (Hours)", 100, 20, false, false, "[0-9]");
         addDropdownMenu(56011, 136, 0, false, true, Dropdown.DEFAULT, "easy", "medium", "hard", "very hard", "elite");
-  
-        tab.totalChildren(11);
+        addText(56012, "Guide info",  0xff9933, true, true, -1, tda, 0); //test
+        addText(56013, "Question mark?", 0xFF981F, true, true, -1, tda, 1); //question mark1.
+        addText(56014, "Question mark 2?", 0xFF981F, true, true, -1, tda, 1);//question mark2.
+        addText(56017, "Guide info 2",  0xff9933, true, true, -1, tda, 0); //test2
+
+        tab.totalChildren(15);
         tab.child(0, 56001, 45, 23);
         tab.child(1, 56002, 435, 33);
         tab.child(2, 56003, 435, 33);
@@ -3913,6 +3917,11 @@ public class CustomInterface extends RSInterface {
         tab.child(8, 56015, 198, 117);
         tab.child(9, 56050, -65, 60);
         tab.child(10, 56011, 50, 28);
+        tab.child(11, 56012, 317, 135);
+        tab.child(12, 56013, 317, 115);
+        tab.child(13, 56014, 317, 210);
+        tab.child(14, 56017, 317, 230);
+
         RSInterface scrollInterface = addTabInterface(56015);
         scrollInterface.scrollPosition = 0;
         scrollInterface.contentType = 0;
@@ -3931,7 +3940,9 @@ public class CustomInterface extends RSInterface {
         scrollInterface3.totalChildren(50);
         int y = 0;
         for (int i = 0, child = 0; i < 50; i++) {
-            addHoverText(56051 + i, "Guide Name", "View Guide: ", tda, 0, 0xFFB83F, 0xFFFFFF, false, true, 160);
+            addHoverText(56051 + i, "", "View Guide: ",tda, 0, 0xBD7E42, false, true, 130);
+            //            addHoverText(58051 + (i + 1), "", "View teleport", tda, 0, 0xff9933, false, true, 150);
+
             scrollInterface3.child(child++, 56051 + i, 125, y + 5);
             y += 15;
         }
