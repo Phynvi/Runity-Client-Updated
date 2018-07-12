@@ -3900,6 +3900,7 @@ public class CustomInterface extends RSInterface {
         addInputField(56010, 15, 0xFF981F, "Search for Guide:", 121, 23, false, false, "[A-Za-z0-9 ]");
         addInputField(56011, 7, 0xFF981F, "Simulation amount (Hours)", 100, 20, false, false, "[0-9]");
         addDropdownMenu(56011, 136, 0, false, true, Dropdown.DEFAULT, "easy", "medium", "hard", "very hard", "elite");
+  
         tab.totalChildren(11);
         tab.child(0, 56001, 45, 23);
         tab.child(1, 56002, 435, 33);
@@ -3930,7 +3931,7 @@ public class CustomInterface extends RSInterface {
         scrollInterface3.totalChildren(50);
         int y = 0;
         for (int i = 0, child = 0; i < 50; i++) {
-            addHoverText(56051 + i, "", "", tda, 0, 0xFFB83F, 0xFFFFFF, false, true, 160);
+            addHoverText(56051 + i, "Guide Name", "View Guide: ", tda, 0, 0xFFB83F, 0xFFFFFF, false, true, 160);
             scrollInterface3.child(child++, 56051 + i, 125, y + 5);
             y += 15;
         }
