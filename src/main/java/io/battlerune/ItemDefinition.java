@@ -277,6 +277,121 @@ public final class ItemDefinition {
             itemDef.itemActions = new String[5];
             itemDef.itemActions[0] = "Open";
             break;
+            
+		case 13189:
+			itemDef.name = "KBD Helm";
+			itemDef.modelID = 27001;
+			itemDef.maleWield = 27001;
+			itemDef.femaleWield = 27001;
+			itemDef.modelZoom = 789;
+			itemDef.modelRotationY = 135;
+			itemDef.modelRotationX = 123;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 0;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 150000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+			
+			
+		case 13299:
+			itemDef.name = "KBD Platebody";
+			itemDef.modelID = 27002 ;
+			itemDef.maleWield = 27002 ;
+			itemDef.femaleWield = 27002 ;
+			itemDef.modelZoom = 1250;
+			itemDef.modelRotationY = 488;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 0;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 2000000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+		break;
+		case 13206:
+			itemDef.name = "KBD Platelegs";
+			itemDef.modelID = 27003 ;
+			itemDef.maleWield = 27003 ;
+			itemDef.femaleWield = 27003 ;
+			itemDef.modelZoom = 1740;
+			itemDef.modelRotationY = 444;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = -8;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 6;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+			
+		case 13300:
+			itemDef.name = "KBD Boots";
+			itemDef.modelID = 27004 ;
+			itemDef.maleWield = 27004 ;
+			itemDef.femaleWield = 27004 ;
+			itemDef.modelZoom = 724;
+			itemDef.modelRotationY = 171;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = -7;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 289010;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+			
+		case 15177:
+			itemDef.name = "KBD Gloves";
+			itemDef.modelID = 27005 ;
+			itemDef.maleWield = 27005 ;
+			itemDef.femaleWield = 27005 ;
+			itemDef.modelZoom = 789;
+			itemDef.modelRotationY = 609;
+			itemDef.modelRotationX = 111;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = -1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 100000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+			
+			
+		case 10577:
+			itemDef.name = "KBD Sword";
+			itemDef.modelID = 27006   ;
+			itemDef.maleWield = 27006   ;
+			itemDef.femaleWield = 27006   ;
+			itemDef.modelZoom = 860;
+			itemDef.modelRotationY = 100;
+			itemDef.modelRotationX = 1348;
+			itemDef.modelOffset1 = -13;
+			itemDef.modelOffset2 = -2;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 0;
+			itemDef.modifiedModelColors = new int[1];
+			itemDef.modifiedModelColors[0] = 61;
+			itemDef.originalModelColors = new int[1];
+			itemDef.originalModelColors[0] = 36133;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+			
+			
 			
 		case 21777:
 			itemDef.name = "Dragon Slayer Helm";
@@ -510,8 +625,7 @@ public final class ItemDefinition {
 			itemDef.originalModelColors[1] = 12;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-			break;
-
+			break;		
 		case 13190:
 			itemDef.name = "$10 Donator bond";
 			itemDef.itemActions = new String[5];

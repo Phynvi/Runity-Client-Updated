@@ -93,53 +93,63 @@ public class Client extends GameApplet {
 
 
     public void updateItemHoverInterface(ItemDefinition def) {
-        if (itemHover > 0 && def != null) {
-            RSInterface.interfaceCache[23002].disabledMessage = def.name;
-            if (ItemStats.itemstats[itemHover] != null) {
-                if (ItemStats.itemstats[itemHover].type == 1) {
-                    RSInterface.interfaceCache[23006].disabledMessage = "";
-                    String bonus = "";
-                    for (int i = 0; i < 5; ++i) {
-                        if (ItemStats.itemstats[itemHover].attackBonus[i] > 0)
-                            bonus = "+";
-                        else
-                            bonus = "";
-                        RSInterface.interfaceCache[23006].disabledMessage += "@whi@"+bonus+""+ItemStats.itemstats[itemHover].attackBonus[i]+"\\n";
-                    }
-                    RSInterface.interfaceCache[23007].disabledMessage = "";
-                    for (int i = 0; i < 5; ++i) {
-                        if (ItemStats.itemstats[itemHover].defenceBonus[i] > 0)
-                            bonus = "+";
-                        else
-                            bonus = "";
-                        RSInterface.interfaceCache[23007].disabledMessage += "@whi@"+bonus+""+ItemStats.itemstats[itemHover].defenceBonus[i]+"\\n";
-                    }
-                    RSInterface.interfaceCache[23010].disabledMessage = "@whi@"+ (ItemStats.itemstats[itemHover].strengthBonus > 0 ? "+" : "") +""+ItemStats.itemstats[itemHover].strengthBonus+"\\n@whi@"+ (ItemStats.itemstats[itemHover].prayerBonus > 0 ? "+" : "") +""+ItemStats.itemstats[itemHover].prayerBonus+"";
-                    RSInterface.interfaceCache[23021].height = 28;
-                    RSInterface.interfaceCache[23021].width = 145;
-                    RSInterface.interfaceCache[23020].childX[1] = 80;
-                    RSInterface.interfaceCache[23022].disabledMessage = "Press CTRL to view stats";
-                    RSInterface.interfaceCache[23022].centerText = false;
-                    RSInterface.interfaceCache[23020].childX[2] = 10;
-                } else {
-                    RSInterface.interfaceCache[23021].height = 28;
-                    int width = newSmallFont.getTextWidth(def.name) + 8;
-                    if (width < 58)
-                        width = 58;
-                    RSInterface.interfaceCache[23021].width = width;
-                    RSInterface.interfaceCache[23020].childX[1] = 8 + (width / 2);
-                    RSInterface.interfaceCache[23020].childX[2] = 8 + (width / 2);
-                    RSInterface.interfaceCache[23022].disabledMessage = "@whi@Heals: @gre@"+ItemStats.itemstats[itemHover].healAmount;
-                    RSInterface.interfaceCache[23022].centerText = true;
-                }
-            } else {
-                RSInterface.interfaceCache[23021].height = 16;
-                RSInterface.interfaceCache[23021].width = newSmallFont.getTextWidth(def.name) + 8;
-                RSInterface.interfaceCache[23020].childX[1] = 8 + (RSInterface.interfaceCache[23021].width / 2);
-                RSInterface.interfaceCache[23022].disabledMessage = "";
-            }
-        }
-    }
+    	String action = "";
+    	        if (itemHover > 0 && def != null) {
+    				if (def.itemActions != null) {
+    	            action = def.itemActions[1] == null ? "Use" : def.itemActions[1];
+    	            /*for (int i = 0; i <= def.itemActions.length; i++) {
+    	                if (def.itemActions[i] != null) {
+    	                    action = def.itemActions[i];
+    	                    continue;
+    	                }
+    	            }*/
+    			}
+    	            RSInterface.interfaceCache[23002].disabledMessage = "@whi@" + action + " @lre@" + def.name;
+    	            if (ItemStats.itemstats[itemHover] != null) {
+    	                if (ItemStats.itemstats[itemHover].type == 1) {
+    	                    RSInterface.interfaceCache[23006].disabledMessage = "";
+    	                    String bonus = "";
+    	                    for (int i = 0; i < 5; ++i) {
+    	                        if (ItemStats.itemstats[itemHover].attackBonus[i] > 0)
+    	                            bonus = "+";
+    	                        else
+    	                            bonus = "";
+    	                        RSInterface.interfaceCache[23006].disabledMessage += "@whi@"+bonus+""+ItemStats.itemstats[itemHover].attackBonus[i]+"\\n";
+    	                    }
+    	                    RSInterface.interfaceCache[23007].disabledMessage = "";
+    	                    for (int i = 0; i < 5; ++i) {
+    	                        if (ItemStats.itemstats[itemHover].defenceBonus[i] > 0)
+    	                            bonus = "+";
+    	                        else
+    	                            bonus = "";
+    	                        RSInterface.interfaceCache[23007].disabledMessage += "@whi@"+bonus+""+ItemStats.itemstats[itemHover].defenceBonus[i]+"\\n";
+    	                    }
+    	                    RSInterface.interfaceCache[23010].disabledMessage = "@whi@"+ (ItemStats.itemstats[itemHover].strengthBonus > 0 ? "+" : "") +""+ItemStats.itemstats[itemHover].strengthBonus+"\\n@whi@"+ (ItemStats.itemstats[itemHover].prayerBonus > 0 ? "+" : "") +""+ItemStats.itemstats[itemHover].prayerBonus+"";
+    	                    RSInterface.interfaceCache[23021].height = 28;
+    	                    RSInterface.interfaceCache[23021].width = 145;
+    	                    RSInterface.interfaceCache[23020].childX[1] = 80;
+    	                    RSInterface.interfaceCache[23022].disabledMessage = "@whi@Press " + "@lre@CTRL" +"@whi@ to view stats";
+    	                    RSInterface.interfaceCache[23022].centerText = false;
+    	                    RSInterface.interfaceCache[23020].childX[2] = 10;
+    	                } else {
+    	                    RSInterface.interfaceCache[23021].height = 28;
+    	                    int width = newSmallFont.getTextWidth(def.name) + newSmallFont.getTextWidth(action) + 8;
+    	                    if (width < 58)
+    	                        width = 58;
+    	                    RSInterface.interfaceCache[23021].width = width;
+    	                    RSInterface.interfaceCache[23020].childX[1] = 8 + (width / 2);
+    	                    RSInterface.interfaceCache[23020].childX[2] = 8 + (width / 2);
+    	                    RSInterface.interfaceCache[23022].disabledMessage = "@whi@Heals: @gre@"+ItemStats.itemstats[itemHover].healAmount;
+    	                    RSInterface.interfaceCache[23022].centerText = true;
+    	                }
+    	            } else {
+    	                RSInterface.interfaceCache[23021].height = 16;
+    	                RSInterface.interfaceCache[23021].width = newSmallFont.getTextWidth(def.name)+ newSmallFont.getTextWidth(action) + 8;
+    	                RSInterface.interfaceCache[23020].childX[1] = 8 + (RSInterface.interfaceCache[23021].width / 2);
+    	                RSInterface.interfaceCache[23022].disabledMessage = "";
+    	            }
+    	        }
+    	    }
     
     private void method38() {
         for (int i = -1; i < playerCount; i++) {
@@ -8737,7 +8747,7 @@ public class Client extends GameApplet {
             mapDotClan = new Sprite(streamLoader_2, "mapdots", 5);
             scrollBar1 = new Sprite(streamLoader_2, "scrollbar", 0);
             scrollBar2 = new Sprite(streamLoader_2, "scrollbar", 1);
-//             repackCacheIndex(1);
+            //repackCacheIndex(1);
 //            repackCacheIndex(2);
 //            repackCacheIndex(4);
             prepareGameFrame();
