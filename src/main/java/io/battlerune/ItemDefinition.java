@@ -268,16 +268,15 @@ public final class ItemDefinition {
 		/* Customs added here? */
 
 		switch (i) {
-		
+
 		/** START OF CUSTOMS **/
 
-		
 		case 10028:
 			itemDef.name = "Starter Box";
-            itemDef.itemActions = new String[5];
-            itemDef.itemActions[0] = "Open";
-            break;
-            
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
+			break;
+
 		case 13189:
 			itemDef.name = "KBD Helm";
 			itemDef.modelID = 27001;
@@ -295,13 +294,12 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-			
-			
+
 		case 13299:
 			itemDef.name = "KBD Platebody";
-			itemDef.modelID = 27002 ;
-			itemDef.maleWield = 27002 ;
-			itemDef.femaleWield = 27002 ;
+			itemDef.modelID = 27002;
+			itemDef.maleWield = 27002;
+			itemDef.femaleWield = 27002;
 			itemDef.modelZoom = 1250;
 			itemDef.modelRotationY = 488;
 			itemDef.modelRotationX = 0;
@@ -313,12 +311,12 @@ public final class ItemDefinition {
 			itemDef.value = 2000000;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-		break;
+			break;
 		case 13206:
 			itemDef.name = "KBD Platelegs";
-			itemDef.modelID = 27003 ;
-			itemDef.maleWield = 27003 ;
-			itemDef.femaleWield = 27003 ;
+			itemDef.modelID = 27003;
+			itemDef.maleWield = 27003;
+			itemDef.femaleWield = 27003;
 			itemDef.modelZoom = 1740;
 			itemDef.modelRotationY = 444;
 			itemDef.modelRotationX = 0;
@@ -331,12 +329,12 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-			
+
 		case 13300:
 			itemDef.name = "KBD Boots";
-			itemDef.modelID = 27004 ;
-			itemDef.maleWield = 27004 ;
-			itemDef.femaleWield = 27004 ;
+			itemDef.modelID = 27004;
+			itemDef.maleWield = 27004;
+			itemDef.femaleWield = 27004;
 			itemDef.modelZoom = 724;
 			itemDef.modelRotationY = 171;
 			itemDef.modelRotationX = 0;
@@ -349,12 +347,12 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-			
+
 		case 15177:
 			itemDef.name = "KBD Gloves";
-			itemDef.modelID = 27005 ;
-			itemDef.maleWield = 27005 ;
-			itemDef.femaleWield = 27005 ;
+			itemDef.modelID = 27005;
+			itemDef.maleWield = 27005;
+			itemDef.femaleWield = 27005;
 			itemDef.modelZoom = 789;
 			itemDef.modelRotationY = 609;
 			itemDef.modelRotationX = 111;
@@ -367,13 +365,12 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-			
-			
+
 		case 10577:
 			itemDef.name = "KBD Sword";
-			itemDef.modelID = 27006   ;
-			itemDef.maleWield = 27006   ;
-			itemDef.femaleWield = 27006   ;
+			itemDef.modelID = 27006;
+			itemDef.maleWield = 27006;
+			itemDef.femaleWield = 27006;
 			itemDef.modelZoom = 860;
 			itemDef.modelRotationY = 100;
 			itemDef.modelRotationX = 1348;
@@ -390,9 +387,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wield";
 			break;
-			
-			
-			
+
 		case 21777:
 			itemDef.name = "Dragon Slayer Helm";
 			itemDef.modelID = 25001;
@@ -409,7 +404,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-			
+
 		case 22123:
 			itemDef.name = "Dragon Slayer Platebody";
 			itemDef.modelID = 25003;
@@ -426,7 +421,7 @@ public final class ItemDefinition {
 			itemDef.value = 2000000;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-		break;
+			break;
 		case 21954:
 			itemDef.name = "Dragon Slayer Platelegs";
 			itemDef.modelID = 25005;
@@ -444,16 +439,16 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-        case 5020:
-        	itemDef.name = "1Bil Ticket";
-        	itemDef.itemActions = new String[5];
-        	itemDef.itemActions[0] = "Claim";
-        	break;
-        case 5021:
-        	itemDef.name = "500Mil Ticket";
-        	itemDef.itemActions = new String[5];
-        	itemDef.itemActions[0] = "Claim";
-        	break;
+		case 5020:
+			itemDef.name = "1Bil Ticket";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Claim";
+			break;
+		case 5021:
+			itemDef.name = "500Mil Ticket";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Claim";
+			break;
 		case 22099:
 			itemDef.name = "Dragon Slayer Boots";
 			itemDef.modelID = 25007;
@@ -478,7 +473,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-			
+
 		case 22301:
 			itemDef.name = "Zaros Helmet";
 			itemDef.modelID = 25010;
@@ -496,7 +491,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-			
+
 		case 22304:
 			itemDef.name = "Zaros Platebody";
 			itemDef.modelID = 25012;
@@ -514,7 +509,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-			
+
 		case 22307:
 			itemDef.name = "Zaros Platelegs";
 			itemDef.modelID = 25014;
@@ -534,7 +529,25 @@ public final class ItemDefinition {
 			itemDef.value = 270000;
 			break;
 
-			
+		case 15011:
+			itemDef.name = "Zaros Scythe";
+			itemDef.modelID = 10000;
+			itemDef.maleWield = 10001;
+			itemDef.femaleWield = 10001;
+			itemDef.modelZoom = 1579;
+			itemDef.modelRotationY = 533;
+			itemDef.modelRotationX = 333;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = 0;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 10000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+
 		case 3273:
 			itemDef.name = "Ice katana";
 			itemDef.description = "Runity's ninjas only";
@@ -553,7 +566,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wield";
 			break;
-			
+
 		case 3274:
 			itemDef.name = "Phoenix bow";
 			itemDef.modelID = 25059;
@@ -571,7 +584,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wield";
 			break;
-			
+
 		case 3275:
 			itemDef.name = "King Black Dragon Platebody";
 			itemDef.modelID = 25057;
@@ -589,21 +602,213 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
-			
+
 		case 3276:
 
 			break;
+
+		case 15300:
+			itemDef.name = "Runity Wing Boots";
+			itemDef.description = "You are now hired.";
+			itemDef.modelID = 14623;
+			itemDef.maleWield = 14623;
+			itemDef.femaleWield = 14623;
+			itemDef.modelRotationY = 209;
+			itemDef.modelRotationX = 239;
+			itemDef.modelZoom = 928;
+			itemDef.modelOffset1 = -5;
+			itemDef.modelOffset2 = -5;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			break;
 			
+		case 15307:
+		      itemDef.name = "Lime Wing Boots";
+		      itemDef.description = "Mysterious boots made of lime...";
+				itemDef.modelZoom = 825;
+				itemDef.modelOffset1 = -5;
+				itemDef.modelOffset2 = -5;
+				itemDef.modelRotationY = 209;
+				itemDef.modelRotationX = 239;
+				itemDef.modelID = 14623;
+				itemDef.maleWield = 14623;
+				itemDef.femaleWield = 14623;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.stackable = false;
+		      itemDef.modifiedModelColors = new int[1];
+		      itemDef.originalModelColors = new int[1];
+		      itemDef.modifiedModelColors[0] = 8334;
+		      itemDef.originalModelColors[0] = 17350;
+			break;
+		case 10860:
+		      itemDef.name = "@har@L@bla@e@whi@g@har@e@bla@n@whi@d@har@a@bla@r@whi@y@lre@ Wing @har@b@bla@o@whi@o@har@t@bla@s";
+		      itemDef.description = "Mysterious boots made for legends...";
+				itemDef.modelZoom = 769;
+				itemDef.modelOffset1 = -1;
+				itemDef.modelOffset2 = -5;
+				itemDef.modelRotationY = 119;
+				itemDef.modelRotationX = 169;
+				itemDef.modelID = 14623;
+				itemDef.maleWield = 14623;
+				itemDef.femaleWield = 14623;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.stackable = false;
+		      itemDef.modifiedModelColors = new int[1];
+		      itemDef.originalModelColors = new int[1];
+		      itemDef.modifiedModelColors[0] = 8334;
+		      itemDef.originalModelColors[0] = 9528;
+			break;
 			
+		case 10861:
+		      itemDef.name = "Icy Wing Boots";
+		      itemDef.description = "Mysterious boots made for legends...";
+				itemDef.modelZoom = 769;
+				itemDef.modelOffset1 = -1;
+				itemDef.modelOffset2 =  -5;
+				itemDef.modelRotationY = 119;
+				itemDef.modelRotationX = 169;
+				itemDef.modelID = 14623;
+				itemDef.maleWield = 14623;
+				itemDef.femaleWield = 14623;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.stackable = false;
+		      itemDef.modifiedModelColors = new int[1];
+		      itemDef.originalModelColors = new int[1];
+		      itemDef.modifiedModelColors[0] = 8334;
+		      itemDef.originalModelColors[0] = 32703;
+			break;
+			
+
 		case 12898:
 			itemDef.name = "Anti-santa box.";
-            itemDef.itemActions = new String[5];
-            itemDef.itemActions[0] = "Open";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
 			itemDef.description = "Dayum dude, you got the big stacks in the bank!";
 			itemDef.value = 0;
 			break;
 			
+
+		case 15301:
+			itemDef.name = "Bandos spear";
+			itemDef.description = "New bandos item";
+			itemDef.modelRotationY = 269;
+			itemDef.modelRotationX = 1940;
+			itemDef.modelZoom = 2000;
+			itemDef.modelOffset1 = 23;
+			itemDef.modelOffset2 = 27;
+			itemDef.modelID = 14077;
+			itemDef.maleWield = 14077;
+			itemDef.femaleWield = 14077;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			break;
+		case 15302:
+			itemDef.name = "Mod Cape";
+			itemDef.description = "For the trusted";
+			itemDef.modelZoom = 1579;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = 0;
+			itemDef.modelRotationY = 533;
+			itemDef.modelRotationX = 333;
+			itemDef.modelID = 14126;
+			itemDef.maleWield = 14126;
+			itemDef.femaleWield = 14126;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			break;
+		case 15303:
+			itemDef.name = "Administrator cape";
+			itemDef.description = "For the loyal";
+			itemDef.modelZoom = 1579;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = 0;
+			itemDef.modelRotationY = 533;
+			itemDef.modelRotationX = 333;
+			itemDef.modelID = 14128;
+			itemDef.maleWield = 14128;
+			itemDef.femaleWield = 14128;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			break;
+		case 15304:
+			itemDef.name = "Owner cape";
+			itemDef.description = "Thank you for donating! The most powerful cape in game ;)";
+			itemDef.modelZoom = 2086;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = 25;
+			itemDef.modelRotationY = 333;
+			itemDef.modelRotationX = 1030;
+			itemDef.modelID = 25040;
+			itemDef.maleWield = 25040;
+			itemDef.femaleWield = 25040;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[2] = "Teleport";
+			itemDef.stackable = false;
+			break;
+			
+		case 15308:
+			itemDef.name = "Rainbow Boots";
+			itemDef.description = "Funky colors.";
+			itemDef.modelID = 16831;
+			itemDef.maleWield = 16831;
+			itemDef.femaleWield = 16831;
+			itemDef.modelRotationY = 533;
+			itemDef.modelRotationX = 333;
+			itemDef.modelZoom = 1579;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = 0;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			break;
+			
+		case 15309:
+			itemDef.name = "Rainbow Gnome Scarf";
+			itemDef.description = "Funky colors, to keep you warm.";
+			itemDef.modelID = 16829;
+			itemDef.maleWield = 16830;
+			itemDef.femaleWield = 16830;
+			itemDef.modelRotationY = 533;
+			itemDef.modelRotationX = 333;
+			itemDef.modelZoom = 1579;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = 0;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			break;
+			
+		case 15310:
+			itemDef.name = "Adam's Dildo";
+			itemDef.description = "I go hard when I use this.";
+			itemDef.modelID = 20;
+			itemDef.maleWield = 20;
+			itemDef.femaleWield = 20;
+			itemDef.modelRotationY = 533;
+			itemDef.modelRotationX = 333;
+			itemDef.modelZoom = 1579;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = 0;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			break;
+
+		
 			/** END OF CUSTOMS **/
+
+			
+			
+			
+			
 			
 		case 21795:
 			itemDef.name = "Imbued zamorak cape";
@@ -625,7 +830,7 @@ public final class ItemDefinition {
 			itemDef.originalModelColors[1] = 12;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-			break;		
+			break;
 		case 13190:
 			itemDef.name = "$10 Donator bond";
 			itemDef.itemActions = new String[5];
@@ -988,24 +1193,22 @@ public final class ItemDefinition {
 			itemDef.itemActions[1] = "Wield";
 			itemDef.itemActions[2] = "Dismantle";
 			break;
-			
+
 		case 11063:
 			itemDef.name = "Toxic Glaive";
-		    itemDef.modelZoom = 1579;
-		    itemDef.modelOffset1 = -4;
-		    itemDef.modelOffset2 = 0;
-		    itemDef.modelRotationY = 533;
-		    itemDef.modelRotationX = 333;
-		    itemDef.modelID = 24005;
-		    itemDef.maleWield = 24004;
-		    itemDef.femaleWield = 24004;
-		    itemDef.itemActions = new String[5];
-		    itemDef.itemActions[1] = "Wield";
-			itemDef.value = 1250000;
+			itemDef.modelZoom = 1579;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = 0;
+			itemDef.modelRotationY = 533;
+			itemDef.modelRotationX = 333;
+			itemDef.modelID = 24005;
+			itemDef.maleWield = 24004;
+			itemDef.femaleWield = 24004;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wield";
+			itemDef.value = 1250000;
 			break;
-			
+
 		case 21227:
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wield";

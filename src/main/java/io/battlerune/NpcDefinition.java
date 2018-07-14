@@ -78,6 +78,16 @@ public final class NpcDefinition {
             case 2462:
                 entityDef.actions = new String[5];
                 entityDef.actions[0] = "Open";
+                break; 
+            case 7836:
+                entityDef.name = "Mini Corporeal Beast";
+                entityDef.combatLevel = 785;
+                entityDef.walkingAnimation = 1684;
+                entityDef.standingAnimation = 1678;
+                entityDef.actions = new String[5];
+                entityDef.actions[1] = "Attack";
+                entityDef.modelId = new int[1];
+                entityDef.modelId[0] = 11056;
                 break;
             case 3216:
                 entityDef.name = "Melee store";
