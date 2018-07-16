@@ -271,10 +271,1076 @@ public final class ItemDefinition {
 
 		/** START OF CUSTOMS **/
 
-		case 10028:
-			itemDef.name = "Starter Box";
+		case 11642:
+			itemDef.modelID = 47000;// 86252;
+			itemDef.maleWield = 47001;// 86253;
+			itemDef.femaleWield = 47001;// 86253;
+			itemDef.name = "@bla@Based God's@bla@@red@ Katana@red@";
+			itemDef.description = "Katana.";
+			itemDef.modelZoom = 2100;
+			itemDef.modelRotationY = 336;
+			itemDef.modelRotationX = 336;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = 17;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
-			itemDef.itemActions[0] = "Open";
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			break;
+
+		case 17153:
+			itemDef.modelID = 47002;
+			itemDef.description = "";
+			itemDef.name = "Lava Torva Platebody";
+			itemDef.modelZoom = 1513;
+			itemDef.modelRotationY = 566;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = -8;
+			itemDef.maleWield = 47003;
+			itemDef.femaleWield = 47003;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[2] = "Check-charges";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 17154:
+			itemDef.modelID = 47004;
+
+			itemDef.description = "";
+			itemDef.name = "Lava Torva Full Helm";
+			itemDef.modelZoom = 928;
+			itemDef.modelRotationY = 406;
+			itemDef.modelRotationX = 2041;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = -5;
+			itemDef.maleWield = 47005;
+			itemDef.femaleWield = 47005;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 17155:
+			itemDef.modelID = 47006;
+
+			itemDef.description = "";
+			itemDef.name = "Lava Torva Platelegs";
+			itemDef.modelZoom = 1550;
+			itemDef.modelRotationY = 344;
+			itemDef.modelRotationX = 186;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = 11;
+			itemDef.maleWield = 47007;
+			itemDef.femaleWield = 47007;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[2] = "Check-charges";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+
+		case 17156:
+			itemDef.modelID = 47008;
+
+			itemDef.description = "";
+			itemDef.name = "Death Gloves";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47009;
+			itemDef.femaleWield = 47009;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 17157:
+			itemDef.modelID = 47010;
+
+			itemDef.description = "";
+			itemDef.name = "Death Full Helm";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47011;
+			itemDef.femaleWield = 47011;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 17158:
+			itemDef.modelID = 47012;
+
+			itemDef.description = "";
+			itemDef.name = "Death Boots";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47012;
+			itemDef.femaleWield = 47012;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 17159:
+			itemDef.modelID = 47013;
+
+			itemDef.description = "";
+			itemDef.name = "Death Platelegs";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47014;
+			itemDef.femaleWield = 47014;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 17160:
+			itemDef.modelID = 47015;
+			itemDef.description = "Soulflare";
+			itemDef.name = "Soulflare";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47016;
+			itemDef.femaleWield = 47016;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17161:
+			itemDef.modelID = 47017;
+
+			itemDef.description = "Minigun";
+			itemDef.name = "Minigun";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47018;
+			itemDef.femaleWield = 47018;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17162:
+			itemDef.modelID = 47019;
+
+			itemDef.description = "";
+			itemDef.name = "Death Platebody";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47020;
+			itemDef.femaleWield = 47020;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+
+		case 17163:
+			itemDef.modelID = 47021;
+
+			itemDef.description = "";
+			itemDef.name = "Raptor Helm";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47022;
+			itemDef.femaleWield = 47022;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17164:
+			itemDef.modelID = 47023;
+
+			itemDef.description = "";
+			itemDef.name = "Raptor Platebody";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47024;
+			itemDef.femaleWield = 47024;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17165:
+			itemDef.modelID = 47025;
+
+			itemDef.description = "";
+			itemDef.name = "Raptor Platelegs";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47026;
+			itemDef.femaleWield = 47026;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17166:
+			itemDef.modelID = 47027;
+
+			itemDef.description = "";
+			itemDef.name = "Flame Raptor Helm";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47028;
+			itemDef.femaleWield = 47028;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17167:
+			itemDef.modelID = 47029;
+
+			itemDef.description = "";
+			itemDef.name = "Flame Raptor Platebody";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47030;
+			itemDef.femaleWield = 47030;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17168:
+			itemDef.modelID = 47031;
+
+			itemDef.description = "";
+			itemDef.name = "Flame Raptor Platelegs";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47032;
+			itemDef.femaleWield = 47032;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+
+		case 17172:
+			itemDef.modelID = 47033;
+
+			itemDef.description = "";
+			itemDef.name = "Legion Helm";
+
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47033;
+			itemDef.femaleWield = 47033;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 17173:
+			itemDef.modelID = 47034;
+
+			itemDef.description = "";
+			itemDef.name = "Legion Platebody";
+
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47034;
+			itemDef.femaleWield = 47034;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 17174:
+			itemDef.modelID = 47035;
+
+			itemDef.description = "";
+			itemDef.name = "Legion Platelegs";
+
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47035;
+			itemDef.femaleWield = 47035;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 17175:
+			itemDef.modelID = 47036;
+
+			itemDef.description = "";
+			itemDef.name = "Corrupt Torva Boots";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47036;
+			itemDef.femaleWield = 47036;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17176:
+			itemDef.modelID = 47037;
+
+			itemDef.description = "";
+			itemDef.name = "Corrupt Torva Gloves";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47037;
+			itemDef.femaleWield = 47037;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17177:
+			itemDef.modelID = 47038;
+
+			itemDef.description = "";
+			itemDef.name = "Corrupt Torva Helm";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47038;
+			itemDef.femaleWield = 47038;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17178:
+			itemDef.modelID = 47039;
+
+			itemDef.description = "";
+			itemDef.name = "Corrupt Torva Platebody";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47039;
+			itemDef.femaleWield = 47039;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17179:
+			itemDef.modelID = 47040;
+
+			itemDef.description = "";
+			itemDef.name = "Corrupt Torva Platelegs";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1827;
+			itemDef.modelRotationY = 512;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 4;
+			itemDef.maleWield = 47040;
+			itemDef.femaleWield = 47040;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17180:
+			itemDef.modelID = 47041;
+
+			itemDef.description = "";
+			itemDef.name = "Corrupt Whip";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47041;
+			itemDef.femaleWield = 47041;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+		case 17181:
+			itemDef.modelID = 47042;
+
+			itemDef.description = "";
+			itemDef.name = "Corrupt Torva Wings";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47042;
+			itemDef.femaleWield = 47042;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
+
+		case 19914:
+			itemDef.modelID = 46000;
+			itemDef.description = "";
+			itemDef.name = "Imperial Helm";
+			itemDef.modelZoom = 720;
+			itemDef.modelRotationY = 2005;
+			itemDef.modelRotationX = 121;
+			itemDef.modelOffset1 = 0;
+			itemDef.femaleWield = 46001;
+			itemDef.maleWield = 46001;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 19917:
+			itemDef.modelID = 46002;
+			itemDef.description = "";
+			itemDef.name = "Imperial platebody";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 46003;
+			itemDef.femaleWield = 46003;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+		case 19920:
+			itemDef.modelID = 46004;
+			itemDef.description = "";
+			itemDef.name = "Imperial Platelegs";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.femaleWield = 46005;
+			itemDef.maleWield = 46005;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.stackable = false;
+			break;
+
+		case 20250:
+			itemDef.modelID = 55057;
+			itemDef.name = "@red@Amer@whi@ican @blu@Whip";
+			itemDef.description = "It's a american whip.";
+			itemDef.modelZoom = 900;
+			itemDef.modelRotationY = 324;
+			itemDef.modelRotationX = 1808;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = 3;
+			itemDef.maleWield = 55058;
+			itemDef.femaleWield = 55058;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 20251:
+			itemDef.modelID = 55055;
+			itemDef.name = "@red@American @whi@Torva @blu@platelegs";
+			itemDef.description = "It's a set of american torva platelegs.";
+			itemDef.modelZoom = 1740;
+			itemDef.modelRotationY = 474;
+			itemDef.modelRotationX = 2045;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = -5;
+			itemDef.maleWield = 55056;
+			itemDef.femaleWield = 55056;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 20252:
+			itemDef.modelID = 55053;
+			itemDef.name = "@red@American @whi@Torva @blu@Fullhelm";
+			itemDef.description = "It's a american torva fullhelm.";
+			itemDef.modelZoom = 676;
+			itemDef.modelRotationY = 0;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 3;
+			itemDef.modelOffset2 = -14;
+			itemDef.maleWield = 55054;
+			itemDef.femaleWield = 55054;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 20253:
+			itemDef.modelID = 55051;
+			itemDef.name = "@red@American @whi@Torva @blu@Platebody";
+			itemDef.description = "It's a american torva platebody.";
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = -8;
+			itemDef.modelZoom = 1513;
+			itemDef.modelRotationY = 566;
+			itemDef.modelRotationX = 0;
+			itemDef.maleWield = 55052;
+			itemDef.femaleWield = 55052;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 14556:
+			itemDef.name = "@red@Amer@whi@ican @blu@Gloves";
+			itemDef.description = "It's a pair of american gloves.";
+			itemDef.modelZoom = 592;
+			itemDef.modelRotationY = 323;
+			itemDef.modelRotationX = 1710;
+			itemDef.modelOffset1 = 3;
+			itemDef.modelOffset2 = 5;
+			itemDef.modelID = 65532;
+			itemDef.maleWield = 65533;
+			itemDef.femaleWield = 65533;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 14557:
+			itemDef.name = "@red@Amer@whi@ican @blu@Boots";
+			itemDef.description = "It's a pair of american boots.";
+			itemDef.modelID = 65531;
+			itemDef.modelZoom = 855;
+			itemDef.modelRotationY = 215;
+			itemDef.modelRotationX = 94;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = -32;
+			itemDef.maleWield = 65530;
+			itemDef.femaleWield = 65530;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.description = "Some boots.";
+			break;
+		case 14558:
+			itemDef.modelID = 65534;
+			itemDef.name = "@red@Amer@whi@ican @blu@Wings";
+			itemDef.description = "It's a pair of american wings.";
+			itemDef.modelZoom = 1700;
+			itemDef.modelRotationY = 500;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -6;
+			itemDef.modelOffset2 = 1;
+			itemDef.maleWield = 65394;
+			itemDef.femaleWield = 65394;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 3086:
+			itemDef.modelID = 65375;
+			itemDef.name = "American Bones";
+			itemDef.description = "Bones";
+			itemDef.modelZoom = 1410;
+			itemDef.modelOffset1 = 2;
+			itemDef.modelRotationX = 368;
+			itemDef.modelRotationY = 400;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { "Bury", null, null, null, "Drop" };
+			break;
+
+		case 13689:
+			itemDef.modelID = 45000;
+			itemDef.name = "Silver Chain";
+			itemDef.description = "Silver Chain";
+			itemDef.modelZoom = 620;
+			itemDef.modelOffset2 = 16;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelRotationX = 68;
+			itemDef.modelRotationY = 424;
+			itemDef.maleWield = 283;
+			itemDef.femaleWield = 283;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
+			break;
+		case 13690:
+			itemDef.modelID = 45001; // 2807;
+			itemDef.name = "American torva pet";
+			itemDef.description = "American torva pet";
+			itemDef.modelZoom = 1250;
+			itemDef.modelOffset2 = 5;
+			itemDef.modelOffset1 = -3;
+			itemDef.modelRotationX = 0;
+			itemDef.modelRotationY = 320;
+			itemDef.groundActions = new String[] { null, null, "Pick Up", null, null };
+			itemDef.itemActions = new String[] { "Summon", null, null, null, "Drop" };
+			break;
+
+		case 13686:
+			itemDef.modelID = 47349;
+			itemDef.name = "Magma shield";
+			itemDef.description = "kiteshield";
+			itemDef.modelZoom = 1450;
+			itemDef.modelOffset2 = -14;
+			itemDef.modelOffset1 = -6;
+			itemDef.modelRotationX = 1825;
+			itemDef.modelRotationY = 344;
+			itemDef.maleWield = 17120;
+			itemDef.femaleWield = 17120;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
+			break;
+		case 13687:
+			itemDef.modelID = 2838;
+			itemDef.name = "Magma battleaxe";
+			itemDef.description = "Magma battleaxe";
+			itemDef.modelZoom = 1660;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelRotationX = 2020;
+			itemDef.modelRotationY = 420;
+			itemDef.maleWield = 3902;
+			itemDef.femaleWield = 3902;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
+			break;
+
+		case 11609:
+			itemDef.modelID = 65211;
+			itemDef.name = "Bullets";
+			itemDef.description = "Bullets";
+			itemDef.modelZoom = 720;
+			itemDef.modelOffset2 = 5;
+			itemDef.modelOffset1 = 3;
+			itemDef.modelRotationX = 117;
+			itemDef.modelRotationY = 477;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
+			itemDef.stackable = true;
+			break;
+		case 6508:
+			itemDef.modelID = 2426;
+			itemDef.name = "Mega Mystery Box";
+			itemDef.description = "Mega Mystery box";
+			itemDef.modelZoom = 1180;
+			itemDef.modelOffset2 = -14;
+			itemDef.modelRotationX = 172;
+			itemDef.modelRotationY = 160;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { "Open", null, null, null, null };
+			itemDef.originalModelColors = new int[] { 12, 6, 63 };
+			itemDef.modifiedModelColors = new int[] { 22410, 926, 2999 };
+			itemDef.stackable = true;
+			break;
+		case 20690:
+			itemDef.modelID = 65526;
+			itemDef.name = "Darth Maul Whip";
+			itemDef.description = "It's a darth maul whip.";
+			itemDef.modelZoom = 900;
+			itemDef.modelRotationY = 324;
+			itemDef.modelRotationX = 1808;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = 3;
+			itemDef.maleWield = 65527;
+			itemDef.femaleWield = 65527;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 14581:
+			itemDef.modelID = 65524;
+			itemDef.name = "Darth Maul Torva Platelegs";
+			itemDef.description = "It's a set of darth maul torva platelegs.";
+			itemDef.modelZoom = 1740;
+			itemDef.modelRotationY = 474;
+			itemDef.modelRotationX = 2045;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = -5;
+			itemDef.maleWield = 65525;
+			itemDef.femaleWield = 65525;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 14582:
+			itemDef.modelID = 65522;
+			itemDef.name = "Darth Maul Torva Fullhelm";
+			itemDef.description = "It's a darth maul torva fullhelm.";
+			itemDef.modelZoom = 676;
+			itemDef.modelRotationY = 0;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 3;
+			itemDef.modelOffset2 = -14;
+			itemDef.maleWield = 65523;
+			itemDef.femaleWield = 65523;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 14583:
+			itemDef.modelID = 65516;
+			itemDef.name = "Darth Maul Torva Platebody";
+			itemDef.description = "It's a darth maul torva platebody.";
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = -8;
+			itemDef.modelZoom = 1513;
+			itemDef.modelRotationY = 566;
+			itemDef.modelRotationX = 0;
+			itemDef.maleWield = 65517;
+			itemDef.femaleWield = 65517;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 14584:
+			itemDef.name = "Darth Maul Gloves";
+			itemDef.description = "It's a pair of darth maul gloves.";
+			itemDef.modelZoom = 592;
+			itemDef.modelRotationY = 323;
+			itemDef.modelRotationX = 1710;
+			itemDef.modelOffset1 = 3;
+			itemDef.modelOffset2 = 5;
+			itemDef.modelID = 65521;
+			itemDef.maleWield = 65520;
+			itemDef.femaleWield = 65520;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 14585:
+			itemDef.name = "Darth Maul Boots";
+			itemDef.description = "It's a pair of darth maul boots.";
+			itemDef.modelID = 65519;
+			itemDef.modelZoom = 855;
+			itemDef.modelRotationY = 215;
+			itemDef.modelRotationX = 94;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = -32;
+			itemDef.maleWield = 65518;
+			itemDef.femaleWield = 65518;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.description = "Some boots.";
+			break;
+		case 14586:
+			itemDef.modelID = 65529;
+			itemDef.name = "Darth Maul Wings";
+			itemDef.description = "It's a pair of darth maul wings.";
+			itemDef.modelZoom = 1700;
+			itemDef.modelRotationY = 500;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -6;
+			itemDef.modelOffset2 = 1;
+			itemDef.maleWield = 65528;
+			itemDef.femaleWield = 65528;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+
+		case 14587:
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.modifiedModelColors[0] = 933;
+			itemDef.originalModelColors[0] = 7849;
+			itemDef.modelID = 2537;
+			itemDef.modelZoom = 540;
+			itemDef.modelRotationY = 72;
+			itemDef.modelRotationX = 136;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.maleWield = -1;
+			itemDef.femaleWield = -1;
+			itemDef.name = "Gold santa hat";
+			itemDef.description = "It's a gold santa hat.";
+			break;
+		case 14588:
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.modifiedModelColors[0] = 926;
+			itemDef.originalModelColors[0] = 7849;
+			itemDef.modelID = 2635;
+			itemDef.modelZoom = 440;
+			itemDef.modelRotationY = 121;
+			itemDef.modelRotationX = 1845;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 1;
+			itemDef.maleWield = -1;
+			itemDef.femaleWield = -1;
+			itemDef.name = "Gold partyhat";
+			itemDef.description = "It's a gold partyhat.";
+			break;
+
+		case 14589:
+			itemDef.modelID = 32565;
+			itemDef.name = "Staff of gods";
+			itemDef.description = "godly staff";
+			itemDef.modelZoom = 1874;
+			itemDef.modelOffset2 = 2;
+			itemDef.modelOffset1 = -3;
+			itemDef.modelRotationX = 1499;
+			itemDef.modelRotationY = 292;
+			itemDef.maleWield = 32566;
+			itemDef.femaleWield = 2493;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
+			itemDef.stackable = false;
+
+			break;
+
+		case 13207:
+			itemDef.modelID = 65448;
+			itemDef.name = "Purgatory Offhand";
+			itemDef.description = "It's a purgatory offhand.";
+			itemDef.modelZoom = 1519;
+			itemDef.modelRotationY = 595;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.maleWield = 65447;
+			itemDef.femaleWield = 65447;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
+			itemDef.stackable = false;
+			break;
+		case 13209:
+			itemDef.modelID = 65462;
+			itemDef.name = "Purgatory Full Helmet";
+			itemDef.description = "It's a purgatory full helmet.";
+			itemDef.modelZoom = 1000;
+			itemDef.modelRotationY = 595;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.maleWield = 65461;
+			itemDef.femaleWield = 65461;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
+			itemDef.stackable = false;
+			break;
+		case 13210:
+			itemDef.modelID = 65460;
+			itemDef.name = "Purgatory Platebody";
+			itemDef.description = "It's a purgatory platebody.";
+			itemDef.modelZoom = 1400;
+			itemDef.modelRotationY = 595;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.maleWield = 65459;
+			itemDef.femaleWield = 65459;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
+			itemDef.stackable = false;
+			break;
+		case 13212:
+			itemDef.modelID = 65458;
+			itemDef.name = "Purgatory Platelegs";
+			itemDef.description = "It's a pair of purgatory platelegs.";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 595;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.maleWield = 65457;
+			itemDef.femaleWield = 65457;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
+			itemDef.stackable = false;
+			break;
+		case 13213:
+			itemDef.modelID = 65455;
+			itemDef.name = "Purgatory Boots";
+			itemDef.description = "It's a pair of purgatory boots.";
+			itemDef.modelZoom = 855;
+			itemDef.modelRotationY = 215;
+			itemDef.modelRotationX = 94;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = -32;
+			itemDef.maleWield = 65455;
+			itemDef.femaleWield = 65455;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
+			itemDef.stackable = false;
+			break;
+		case 13214:
+			itemDef.modelID = 65454;
+			itemDef.name = "Purgatory Gauntlets";
+			itemDef.description = "It's a pair of purgatory gauntlets.";
+			itemDef.modelZoom = 592;
+			itemDef.modelRotationY = 323;
+			itemDef.modelRotationX = 1710;
+			itemDef.modelOffset1 = 3;
+			itemDef.modelOffset2 = 5;
+			itemDef.maleWield = 65453;
+			itemDef.femaleWield = 65453;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
+			itemDef.stackable = false;
+			break;
+		case 13661:
+			itemDef.modelID = 65452;
+			itemDef.name = "Purgatory Wings";
+			itemDef.description = "It's a pair of purgatory wings.";
+			itemDef.modelZoom = 1519;
+			itemDef.modelRotationY = 595;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.maleWield = 65451;
+			itemDef.femaleWield = 65451;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
+			itemDef.stackable = false;
+			break;
+		case 13662:
+			itemDef.modelID = 65450;
+			itemDef.name = "Purgatory Longsword";
+			itemDef.description = "It's a purgatory longsword.";
+			itemDef.modelZoom = 1519;
+			itemDef.modelRotationY = 595;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.maleWield = 65449;
+			itemDef.femaleWield = 65449;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
+			itemDef.stackable = false;
 			break;
 
 		case 13189:
@@ -293,6 +1359,12 @@ public final class ItemDefinition {
 			itemDef.value = 150000;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
+			break;
+
+		case 10028:
+			itemDef.name = "Starter Box";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
 			break;
 
 		case 13299:
@@ -403,6 +1475,28 @@ public final class ItemDefinition {
 			itemDef.anInt191 = 128;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
+			break;
+
+		case 13208:
+			itemDef.modelID = 65504;
+			itemDef.maleWield = 65204; // done
+			itemDef.femaleWield = 65204;
+			itemDef.modelZoom = 2022;
+			itemDef.name = "Malevolent 2H Sword";
+			itemDef.description = "It's a Malevolent 2H Sword.";
+			itemDef.modelZoom = 2022;
+			itemDef.modelRotationY = 636;
+			itemDef.modelRotationX = 1065;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 3;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 220000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.stackable = false;
+
 			break;
 
 		case 22123:
@@ -622,66 +1716,65 @@ public final class ItemDefinition {
 			itemDef.itemActions[1] = "Wear";
 			itemDef.stackable = false;
 			break;
-			
+
 		case 15307:
-		      itemDef.name = "Lime Wing Boots";
-		      itemDef.description = "Mysterious boots made of lime...";
-				itemDef.modelZoom = 825;
-				itemDef.modelOffset1 = -5;
-				itemDef.modelOffset2 = -5;
-				itemDef.modelRotationY = 209;
-				itemDef.modelRotationX = 239;
-				itemDef.modelID = 14623;
-				itemDef.maleWield = 14623;
-				itemDef.femaleWield = 14623;
-				itemDef.itemActions = new String[5];
-				itemDef.itemActions[1] = "Wear";
-				itemDef.stackable = false;
-		      itemDef.modifiedModelColors = new int[1];
-		      itemDef.originalModelColors = new int[1];
-		      itemDef.modifiedModelColors[0] = 8334;
-		      itemDef.originalModelColors[0] = 17350;
+			itemDef.name = "Lime Wing Boots";
+			itemDef.description = "Mysterious boots made of lime...";
+			itemDef.modelZoom = 825;
+			itemDef.modelOffset1 = -5;
+			itemDef.modelOffset2 = -5;
+			itemDef.modelRotationY = 209;
+			itemDef.modelRotationX = 239;
+			itemDef.modelID = 14623;
+			itemDef.maleWield = 14623;
+			itemDef.femaleWield = 14623;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			itemDef.modifiedModelColors = new int[1];
+			itemDef.originalModelColors = new int[1];
+			itemDef.modifiedModelColors[0] = 8334;
+			itemDef.originalModelColors[0] = 17350;
 			break;
 		case 10860:
-		      itemDef.name = "@har@L@bla@e@whi@g@har@e@bla@n@whi@d@har@a@bla@r@whi@y@lre@ Wing @har@b@bla@o@whi@o@har@t@bla@s";
-		      itemDef.description = "Mysterious boots made for legends...";
-				itemDef.modelZoom = 769;
-				itemDef.modelOffset1 = -1;
-				itemDef.modelOffset2 = -5;
-				itemDef.modelRotationY = 119;
-				itemDef.modelRotationX = 169;
-				itemDef.modelID = 14623;
-				itemDef.maleWield = 14623;
-				itemDef.femaleWield = 14623;
-				itemDef.itemActions = new String[5];
-				itemDef.itemActions[1] = "Wear";
-				itemDef.stackable = false;
-		      itemDef.modifiedModelColors = new int[1];
-		      itemDef.originalModelColors = new int[1];
-		      itemDef.modifiedModelColors[0] = 8334;
-		      itemDef.originalModelColors[0] = 9528;
+			itemDef.name = "@har@L@bla@e@whi@g@har@e@bla@n@whi@d@har@a@bla@r@whi@y@lre@ Wing @har@b@bla@o@whi@o@har@t@bla@s";
+			itemDef.description = "Mysterious boots made for legends...";
+			itemDef.modelZoom = 769;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -5;
+			itemDef.modelRotationY = 119;
+			itemDef.modelRotationX = 169;
+			itemDef.modelID = 14623;
+			itemDef.maleWield = 14623;
+			itemDef.femaleWield = 14623;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			itemDef.modifiedModelColors = new int[1];
+			itemDef.originalModelColors = new int[1];
+			itemDef.modifiedModelColors[0] = 8334;
+			itemDef.originalModelColors[0] = 9528;
 			break;
-			
+
 		case 10861:
-		      itemDef.name = "Icy Wing Boots";
-		      itemDef.description = "Mysterious boots made for legends...";
-				itemDef.modelZoom = 769;
-				itemDef.modelOffset1 = -1;
-				itemDef.modelOffset2 =  -5;
-				itemDef.modelRotationY = 119;
-				itemDef.modelRotationX = 169;
-				itemDef.modelID = 14623;
-				itemDef.maleWield = 14623;
-				itemDef.femaleWield = 14623;
-				itemDef.itemActions = new String[5];
-				itemDef.itemActions[1] = "Wear";
-				itemDef.stackable = false;
-		      itemDef.modifiedModelColors = new int[1];
-		      itemDef.originalModelColors = new int[1];
-		      itemDef.modifiedModelColors[0] = 8334;
-		      itemDef.originalModelColors[0] = 32703;
+			itemDef.name = "Icy Wing Boots";
+			itemDef.description = "Mysterious boots made for legends...";
+			itemDef.modelZoom = 769;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -5;
+			itemDef.modelRotationY = 119;
+			itemDef.modelRotationX = 169;
+			itemDef.modelID = 14623;
+			itemDef.maleWield = 14623;
+			itemDef.femaleWield = 14623;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.stackable = false;
+			itemDef.modifiedModelColors = new int[1];
+			itemDef.originalModelColors = new int[1];
+			itemDef.modifiedModelColors[0] = 8334;
+			itemDef.originalModelColors[0] = 32703;
 			break;
-			
 
 		case 12898:
 			itemDef.name = "Anti-santa box.";
@@ -690,7 +1783,6 @@ public final class ItemDefinition {
 			itemDef.description = "Dayum dude, you got the big stacks in the bank!";
 			itemDef.value = 0;
 			break;
-			
 
 		case 15301:
 			itemDef.name = "Bandos spear";
@@ -753,7 +1845,7 @@ public final class ItemDefinition {
 			itemDef.itemActions[2] = "Teleport";
 			itemDef.stackable = false;
 			break;
-			
+
 		case 15308:
 			itemDef.name = "Rainbow Boots";
 			itemDef.description = "Funky colors.";
@@ -769,7 +1861,7 @@ public final class ItemDefinition {
 			itemDef.itemActions[1] = "Wear";
 			itemDef.stackable = false;
 			break;
-			
+
 		case 15309:
 			itemDef.name = "Rainbow Gnome Scarf";
 			itemDef.description = "Funky colors, to keep you warm.";
@@ -785,7 +1877,7 @@ public final class ItemDefinition {
 			itemDef.itemActions[1] = "Wear";
 			itemDef.stackable = false;
 			break;
-			
+
 		case 15310:
 			itemDef.name = "Adam's Dildo";
 			itemDef.description = "I go hard when I use this.";
@@ -802,14 +1894,8 @@ public final class ItemDefinition {
 			itemDef.stackable = false;
 			break;
 
-		
-			/** END OF CUSTOMS **/
+		/** END OF CUSTOMS **/
 
-			
-			
-			
-			
-			
 		case 21795:
 			itemDef.name = "Imbued zamorak cape";
 			itemDef.modelID = 34166;
@@ -964,6 +2050,28 @@ public final class ItemDefinition {
 			itemDef.modifiedModelColors = new int[] { 22410, 2999 };
 			itemDef.originalModelColors = new int[] { 115, 61 };
 			break;
+		case 18908:
+			itemDef.modelID = 40920;
+			itemDef.name = "Mystical Spirit Shield";
+			itemDef.description = "It's a mystical spirit shield";
+			itemDef.originalModelColors = new int[] { 32703, 33727, 34751, 35775, 36799, 37823, 38847, 39871, 43967,
+					40895, 41919, 42943 };
+			itemDef.modifiedModelColors = new int[] { 44635, 44612, 44606, 44615, 44641, 44564, 44575, 44618, 105,
+					44603, 44570, 4500 };
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
+			itemDef.maleWield = 40940;
+			itemDef.femaleWield = 40940;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+
 		case 11739:
 			itemDef.name = "Gold mystery box";
 			itemDef.modelID = 2426;
