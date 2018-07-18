@@ -375,9 +375,75 @@ public class RSInterface {
 		achievementTest(textDrawingAreas);
 		bossMinigame(textDrawingAreas);
 		petInterface(textDrawingAreas);
+		teleportButtonThing(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
 	
+	
+	public static void teleportButtonThing(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(45600);
+		addButton(45601, 18, "TeleSexy/SPRITE", "Teleport");
+		RSInterface button = interfaceCache[45601];
+		button.hoverType = 45602;
+		tab.totalChildren(2);
+		tab.child(0, 45601, 10, 10);
+		tab.child(1, 45602, 35, 10);
+		
+		RSInterface popup = addInterface(45602);
+		popup.isMouseoverTriggered = true;
+		addColorBox(45603, 0, 310, 265, 160);
+		addText(45604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
+		addText(45605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
+		addText(45606, "Health:", tda, 0, 0xff9040,  false, true);
+		addText(45607, "Max Hit:", tda, 0, 0xff9040,  false, true);
+		addText(45608, "Weakness:", tda, 0, 0xff9040,  false, true);
+		addText(45609, "Styles:", tda, 0, 0xff9040,  false, true);
+		addText(45610, "252", tda, 0, 0xffffff,  false, true);
+		addText(45611, "280", tda, 0, 0xffffff,  false, true);
+		addText(45612, "23", tda, 0, 0xffffff,  false, true);
+		addText(45613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
+		addText(45614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addNpc(45615, 6593, 2000);
+		addText(45616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
+		addText(45617, "Drops:", tda, 0, 0xff9040,  false, true);
+		popup.totalChildren(16);
+		popup.child(0, 45603, 0, 0);
+		popup.child(1, 45604, 150, 12);
+		popup.child(2, 45605, 165, 45);
+		popup.child(3, 45606, 165, 59);
+		popup.child(4, 45607, 165, 73);
+		popup.child(5, 45608, 165, 87);
+		popup.child(6, 45609, 165, 115);
+		popup.child(7, 45610, 225, 45);
+		popup.child(8, 45611, 225, 59);
+		popup.child(9, 45612, 225, 73);
+		popup.child(10, 45613, 225, 87);
+		popup.child(11, 45614, 225, 115);
+		popup.child(12, 45615, 20, 30);
+		popup.child(13, 45616, 10, 145);
+		popup.child(14, 45617, 10, 217);
+		popup.child(15, 45620, 0, 230);
+		
+		RSInterface items = addInterface(45620);
+		itemGroup(45621, 40, 1, 10, 1);
+		interfaceCache[45621].parentID = items.interfaceId;
+		items.totalChildren(1);
+		items.child(0, 45621, 0, 0);
+		items.width = 310;
+		items.height = 50;
+		setScrollableItems(interfaceCache[45621], BossInformation.LAVA_DRAGONS.loot);
+	}
+	
+	
+	public static void setScrollableItems(RSInterface tab, int[][] loot) {
+		RSInterface parent = interfaceCache[tab.parentID];
+		tab.contentType = 1430;
+		tab.scrollMax = ((loot.length * 32) + (loot.length * tab.invSpritePadX)) - parent.width;
+		for (int i = 0; i < loot.length; ++i) {
+			tab.inv[i] = loot[i][0] + 1;
+			tab.invStackSizes[i] = loot[i][1];
+		}
+	}
 	
 	public static void bossMinigame(TextDrawingArea[] tda) {
 		RSInterface tab = RSInterface.addInterface(32000);
@@ -2217,6 +2283,22 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.tooltip = tooltip;
 	}
 
+	public static void addButton(int id, int sid, String sprite, String tooltip) {
+		RSInterface tab = createInterface(id);
+		tab.interfaceId = id;
+		tab.parentID = id;
+		tab.type = 5;
+		tab.atActionType = 1;
+		tab.contentType = 0;
+		tab.opacity = (byte) 0;
+		tab.hoverType = 52;
+		tab.disabledSprite = imageLoader(sid, sprite);
+		tab.enabledSprite = imageLoader(sid, sprite);
+		tab.width = tab.disabledSprite.width;
+		tab.height = tab.disabledSprite.height;
+		tab.tooltip = tooltip;
+	}
+	
 	public static void addButton(int id, int sid, String tooltip) {
 		RSInterface tab = createInterface(id);
 		tab.interfaceId = id;

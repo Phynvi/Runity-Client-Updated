@@ -192,7 +192,7 @@ public final class ItemDefinition {
 		modelID = 0;
 		name = null;
 		description = null;
-		modifiedModelColors = null;
+		modifiedModelColors = null; //here Adam
 		originalModelColors = null;
 		modelZoom = 2000;
 		modelRotationY = 0;
@@ -270,12 +270,638 @@ public final class ItemDefinition {
 		switch (i) {
 
 		/** START OF CUSTOMS **/
+		case 16628:
+		      itemDef.modelID = 94391;
+		      itemDef.name = "Lava Logs";
+		      itemDef.description = "Hot...hot...hot!!!!";
+		      itemDef.modelZoom = 1180;
+		      itemDef.modelRotationY = 120;
+		      itemDef.modelRotationX = 1852;
+		      itemDef.modelOffset1 = 0;
+		      itemDef.modelOffset2 = -7;
+		      itemDef.anInt167 = 128;
+		      itemDef.anInt192 = 128;
+		      itemDef.anInt191 = 128;
+		      itemDef.value = 160;
+			break;
+		case 16629:
+		      itemDef.modelID = 91844;
+		      itemDef.maleWield = 91845;
+		      itemDef.femaleWield = 91845;
+		      itemDef.itemActions = new String[] { "Wear", "Drop" };
+		      itemDef.description = "WOW! Its a Lava Helmet!";
+		      itemDef.modelZoom = 2100;
+		      itemDef.modelOffset1 = 0;
+		      itemDef.modelOffset2 = 0;
+			break;
+	    case 16630: 
+	    	itemDef.modelID = 91751;
+	    	itemDef.maleWield = 91752;
+	    	itemDef.femaleWield = 91752;
+	        itemDef.itemActions = new String[] {"Wear", "Drop" };
+	        itemDef.description = "WOW! Its on fire!";
+	        itemDef.modelOffset1 = 0;
+	        itemDef.modelOffset2 = 0;
+	        break;
+	        
+	    case 16631: 
+	        itemDef.modelID = 91815;
+	        itemDef.maleWield = 91816;
+	        itemDef.femaleWield = 91816;
+	        itemDef.itemActions = new String[] {"Wield", "Drop" };
+	        itemDef.description = " I can feel the lava flowing.!";
+	        itemDef.modelOffset1 = -1;
+	        itemDef.modelOffset2 = -1;
+	        break;
+	        /* FINISH THIS OFF ADAM
+	    case 22206: 
+	        ItemDef_2.defaultConfig(itemdef, 91819, 91820, 91820, "Lava Platebody");
+	        itemDef.itemActions = new String[] { 0, "Wear", 0, 0, "Drop" };
+	        itemDef.description = "WOW! Its a Lava Platebody!";
+	        itemDef.modelZoom = 1100;
+	        
+
+
+	        itemDef.modelOffset1 = 0;
+	        itemDef.modelOffset2 = 0;
+	        break;
+	      
+	      case 22207: 
+	        ItemDef_2.defaultConfig(itemdef, 91821, 91822, 91822, "Lava Legs");
+	        itemDef.itemActions = new String[] { 0, "Wear", 0, 0, "Drop" };
+	        itemDef.description = "WOW! Its Lava Legs!";
+	        itemDef.modelZoom = 1100;
+	        
+
+
+	        itemDef.modelOffset1 = 0;
+	        itemDef.modelOffset2 = 0;
+	        break;
+	        
+    case 22212: 
+      ItemDef_2.defaultConfig(itemdef, 91831, 91832, "Pink Platebody");
+      itemDef.itemActions = new String[] { 0, "Wear", 0, 0, "Drop" };
+      itemDef.description = "WOW! Its a Lava Platebody!";
+      itemDef.modelZoom = 1100;
+      
+
+
+      itemDef.modelOffset1 = 0;
+      itemDef.modelOffset2 = 0;
+      break;
+    
+    case 22213: 
+      ItemDef_2.defaultConfig(itemdef, 91833, 91834, "Pinks Legs");
+      itemDef.itemActions = new String[] { 0, "Wear", 0, 0, "Drop" };
+      itemDef.description = "WOW! Its Lava Legs!";
+      itemDef.modelZoom = 1100;
+      
+
+
+      itemDef.modelOffset1 = 0;
+      itemDef.modelOffset2 = 0;
+      break;
+	      */
+		
+		 case 13717: 
+		      itemDef.modelID = 40920;
+		      itemDef.name = "Icy Spirit Shield";
+		      itemDef.description = "It's a spirit shield";
+		      itemDef.modifiedModelColors = new int[13];
+		      itemDef.originalModelColors = new int[13];
+		      itemDef.modifiedModelColors[0] = 44635;
+		      itemDef.originalModelColors[0] = 105;
+		      itemDef.modifiedModelColors[1] = 44612;
+		      itemDef.originalModelColors[1] = 105;
+		      itemDef.modifiedModelColors[2] = 44606;
+		      itemDef.originalModelColors[2] = 105;
+		      itemDef.modifiedModelColors[3] = 44615;
+		      itemDef.originalModelColors[3] = 105;
+		      itemDef.modifiedModelColors[4] = 44641;
+		      itemDef.originalModelColors[4] = 105;
+		      itemDef.modifiedModelColors[5] = 44564;
+		      itemDef.originalModelColors[5] = 105;
+		      itemDef.modifiedModelColors[6] = 44575;
+		      itemDef.originalModelColors[6] = 105;
+		      itemDef.modifiedModelColors[7] = 44618;
+		      itemDef.originalModelColors[7] = 105;
+		      itemDef.modifiedModelColors[8] = 105;
+		      itemDef.originalModelColors[8] = 105;
+		      itemDef.modifiedModelColors[9] = 44603;
+		      itemDef.originalModelColors[9] = 105;
+		      itemDef.modifiedModelColors[10] = 44570;
+		      itemDef.originalModelColors[10] = 105;
+		      itemDef.modifiedModelColors[11] = 4500;
+		      itemDef.originalModelColors[11] = 105;
+		      itemDef.modelZoom = 1616;
+		      itemDef.modelRotationY = 396;
+		      itemDef.modelRotationX = 1050;
+		      itemDef.modelOffset2 = -3;
+		      itemDef.modelOffset1 = 4;
+		        itemDef.maleWield = 47047;
+		        itemDef.femaleWield = 47047;
+		      itemDef.groundActions = new String[5];
+		      itemDef.groundActions[2] = "Take";
+		      itemDef.itemActions = new String[5];
+		      itemDef.itemActions[1] = "Wear";
+		      itemDef.itemActions[4] = "Drop";
+		      break;
+		    
+		    case 13718: 
+		      itemDef.modelID = 40920;
+		      itemDef.name = "Lava spirit shield";
+		      itemDef.description = "It's a spirit shield";
+		      itemDef.modifiedModelColors = new int[13];
+		      itemDef.originalModelColors = new int[13];
+		      itemDef.modifiedModelColors[0] = 44635;
+		      itemDef.originalModelColors[0] = 6073;
+		      itemDef.modifiedModelColors[1] = 44612;
+		      itemDef.originalModelColors[1] = 6073;
+		      itemDef.modifiedModelColors[2] = 44606;
+		      itemDef.originalModelColors[2] = 6073;
+		      itemDef.modifiedModelColors[3] = 44615;
+		      itemDef.originalModelColors[3] = 6073;
+		      itemDef.modifiedModelColors[4] = 44641;
+		      itemDef.originalModelColors[4] = 6073;
+		      itemDef.modifiedModelColors[5] = 44564;
+		      itemDef.originalModelColors[5] = 6073;
+		      itemDef.modifiedModelColors[6] = 44575;
+		      itemDef.originalModelColors[6] = 6073;
+		      itemDef.modifiedModelColors[7] = 44618;
+		      itemDef.originalModelColors[7] = 6073;
+		      itemDef.modifiedModelColors[8] = 105;
+		      itemDef.originalModelColors[8] = 105;
+		      itemDef.modifiedModelColors[9] = 44603;
+		      itemDef.originalModelColors[9] = 6073;
+		      itemDef.modifiedModelColors[10] = 44570;
+		      itemDef.originalModelColors[10] = 6073;
+		      itemDef.modifiedModelColors[11] = 4500;
+		      itemDef.originalModelColors[11] = 6073;
+		      itemDef.modelZoom = 1616;
+		      itemDef.modelRotationY = 396;
+		      itemDef.modelRotationX = 1050;
+		      itemDef.modelOffset2 = -3;
+		      itemDef.modelOffset1 = 4;
+		        itemDef.maleWield = 47052;
+		        itemDef.femaleWield = 47052;
+		      itemDef.groundActions = new String[5];
+		      itemDef.groundActions[2] = "Take";
+		      itemDef.itemActions = new String[5];
+		      itemDef.itemActions[1] = "Wear";
+		      itemDef.itemActions[2] = "Inspect";
+		      itemDef.itemActions[4] = "Drop";
+		      break;
+		    
+		    case 13719: 
+		      itemDef.modelID = 40920;
+		      itemDef.name = "Dragonbone spirit shield";
+		      itemDef.description = "It's a spirit shield";
+		      itemDef.modifiedModelColors = new int[13];
+		      itemDef.originalModelColors = new int[13];
+		      itemDef.modifiedModelColors[0] = 44635;
+		      itemDef.originalModelColors[0] = 49950;
+		      itemDef.modifiedModelColors[1] = 44612;
+		      itemDef.originalModelColors[1] = 49950;
+		      itemDef.modifiedModelColors[2] = 44606;
+		      itemDef.originalModelColors[2] = 49950;
+		      itemDef.modifiedModelColors[3] = 44615;
+		      itemDef.originalModelColors[3] = 49950;
+		      itemDef.modifiedModelColors[4] = 44641;
+		      itemDef.originalModelColors[4] = 49950;
+		      itemDef.modifiedModelColors[5] = 44564;
+		      itemDef.originalModelColors[5] = 49950;
+		      itemDef.modifiedModelColors[6] = 44575;
+		      itemDef.originalModelColors[6] = 49950;
+		      itemDef.modifiedModelColors[7] = 44618;
+		      itemDef.originalModelColors[7] = 49950;
+		      itemDef.modifiedModelColors[8] = 105;
+		      itemDef.originalModelColors[8] = 105;
+		      itemDef.modifiedModelColors[9] = 44603;
+		      itemDef.originalModelColors[9] = 49950;
+		      itemDef.modifiedModelColors[10] = 44570;
+		      itemDef.originalModelColors[10] = 49950;
+		      itemDef.modifiedModelColors[11] = 4500;
+		      itemDef.originalModelColors[11] = 49950;
+		      itemDef.modelZoom = 1616;
+		      itemDef.modelRotationY = 396;
+		      itemDef.modelRotationX = 1050;
+		      itemDef.modelOffset2 = -3;
+		      itemDef.modelOffset1 = 4;
+		        itemDef.maleWield = 47051;
+		        itemDef.femaleWield = 47051;
+		      itemDef.groundActions = new String[5];
+		      itemDef.groundActions[2] = "Take";
+		      itemDef.itemActions = new String[5];
+		      itemDef.itemActions[1] = "Wear";
+		      itemDef.itemActions[4] = "Drop";
+		      break;
+		    case 13720: 
+		      itemDef.modelID = 40920;
+		      itemDef.name = "Aqua spirit shield";
+		      itemDef.description = "It's a spirit shield";
+		      itemDef.modifiedModelColors = new int[13];
+		      itemDef.originalModelColors = new int[13];
+		      itemDef.modifiedModelColors[0] = 44635;
+		      itemDef.originalModelColors[0] = 34503;
+		      itemDef.modifiedModelColors[1] = 44612;
+		      itemDef.originalModelColors[1] = 34503;
+		      itemDef.modifiedModelColors[2] = 44606;
+		      itemDef.originalModelColors[2] = 34503;
+		      itemDef.modifiedModelColors[3] = 44615;
+		      itemDef.originalModelColors[3] = 34503;
+		      itemDef.modifiedModelColors[4] = 44641;
+		      itemDef.originalModelColors[4] = 34503;
+		      itemDef.modifiedModelColors[5] = 44564;
+		      itemDef.originalModelColors[5] = 34503;
+		      itemDef.modifiedModelColors[6] = 44575;
+		      itemDef.originalModelColors[6] = 34503;
+		      itemDef.modifiedModelColors[7] = 44618;
+		      itemDef.originalModelColors[7] = 34503;
+		      itemDef.modifiedModelColors[8] = 105;
+		      itemDef.originalModelColors[8] = 105;
+		      itemDef.modifiedModelColors[9] = 44603;
+		      itemDef.originalModelColors[9] = 34503;
+		      itemDef.modifiedModelColors[10] = 44570;
+		      itemDef.originalModelColors[10] = 34503;
+		      itemDef.modifiedModelColors[11] = 4500;
+		      itemDef.originalModelColors[11] = 34503;
+		      itemDef.modelZoom = 1616;
+		      itemDef.modelRotationY = 396;
+		      itemDef.modelRotationX = 1050;
+		      itemDef.modelOffset2 = -3;
+		      itemDef.modelOffset1 = 4;
+		        itemDef.maleWield = 47053;
+		        itemDef.femaleWield = 47053;
+		      itemDef.groundActions = new String[5];
+		      itemDef.groundActions[2] = "Take";
+		      itemDef.itemActions = new String[5];
+		      itemDef.itemActions[1] = "Wear";
+		      itemDef.itemActions[4] = "Drop";
+		      break;
+		    case 13721: 
+		      itemDef.modelID = 47050;
+		      itemDef.name = "Candy spirit shield";
+		      itemDef.description = "It's a spirit shield";
+		      itemDef.modelZoom = 1616;
+		      itemDef.modelRotationY = 396;
+		      itemDef.modelRotationX = 1050;
+		      itemDef.modelOffset2 = -3;
+		      itemDef.modelOffset1 = 4;
+		        itemDef.maleWield = 47047;
+		        itemDef.femaleWield = 47047;
+		      itemDef.groundActions = new String[5];
+		      itemDef.groundActions[2] = "Take";
+		      itemDef.itemActions = new String[5];
+		      itemDef.itemActions[1] = "Wear";
+		      itemDef.itemActions[4] = "Drop";
+		      break;
+		    case 13722: 
+		      itemDef.modelID = 47046;
+		      itemDef.name = "Lava spirit shield";
+		      itemDef.description = "It's a spirit shield";
+		      itemDef.modelZoom = 1616;
+		      itemDef.modelRotationY = 396;
+		      itemDef.modelRotationX = 1050;
+		      itemDef.modelOffset2 = -3;
+		      itemDef.modelOffset1 = 4;
+		        itemDef.maleWield = 47061;
+		        itemDef.femaleWield = 47061;
+		      itemDef.groundActions = new String[5];
+		      itemDef.groundActions[2] = "Take";
+		      itemDef.itemActions = new String[5];
+		      itemDef.itemActions[1] = "Wear";
+		      itemDef.itemActions[4] = "Drop";
+		      break;
+		 
+		case 13723:
+			itemDef.modelID = 40920;
+			itemDef.name = "Mystical Spirit Shield";
+			itemDef.description = "It's a mystical spirit shield";
+			itemDef.originalModelColors = new int[] { 32703, 33727, 34751, 35775, 36799, 37823, 38847, 39871, 43967, 40895,
+					41919, 42943 };
+			itemDef.modifiedModelColors = new int[] { 44635, 44612, 44606, 44615, 44641, 44564, 44575, 44618, 105, 44603,
+					44570, 4500 };
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
+	        itemDef.maleWield = 47047;
+	        itemDef.femaleWield = 47047;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 13724:
+			itemDef.modelID = 40920;
+			itemDef.name = "Deathly Spirit Shield";
+			itemDef.description = "It's a deathly spirit shield";
+			itemDef.modifiedModelColors = new int[13];
+			itemDef.originalModelColors = new int[13];
+			itemDef.modifiedModelColors[0] = 44635;
+			itemDef.originalModelColors[0] = 959;
+			itemDef.modifiedModelColors[1] = 44612;
+			itemDef.originalModelColors[1] = 1983;
+			itemDef.modifiedModelColors[2] = 44606;
+			itemDef.originalModelColors[2] = 3007;
+			itemDef.modifiedModelColors[3] = 44615;
+			itemDef.originalModelColors[3] = 4031;
+			itemDef.modifiedModelColors[4] = 44641;
+			itemDef.originalModelColors[4] = 5055;
+			itemDef.modifiedModelColors[5] = 44564;
+			itemDef.originalModelColors[5] = 6079;
+			itemDef.modifiedModelColors[6] = 44575;
+			itemDef.originalModelColors[6] = 7103;
+			itemDef.modifiedModelColors[7] = 44618;
+			itemDef.originalModelColors[7] = 8127;
+			itemDef.modifiedModelColors[8] = 105;
+			itemDef.originalModelColors[8] = 0;
+			itemDef.modifiedModelColors[9] = 44603;
+			itemDef.originalModelColors[9] = 9151;
+			itemDef.modifiedModelColors[10] = 44570;
+			itemDef.originalModelColors[10] = 11199;
+			itemDef.modifiedModelColors[11] = 4500;
+			itemDef.originalModelColors[11] = 12223;
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
+	        itemDef.maleWield = 47047;
+	        itemDef.femaleWield = 47047;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 13725:
+			itemDef.modelID = 40920;
+			itemDef.name = "Lime Spirit Shield";
+			itemDef.description = "It's a lime spirit shield";
+			itemDef.modifiedModelColors = new int[13];
+			itemDef.originalModelColors = new int[13];
+			itemDef.modifiedModelColors[0] = 44635;
+			itemDef.originalModelColors[0] = 22463;
+			itemDef.modifiedModelColors[1] = 44612;
+			itemDef.originalModelColors[1] = 22463;
+			itemDef.modifiedModelColors[2] = 44606;
+			itemDef.originalModelColors[2] = 22463;
+			itemDef.modifiedModelColors[3] = 44615;
+			itemDef.originalModelColors[3] = 22463;
+			itemDef.modifiedModelColors[4] = 44641;
+			itemDef.originalModelColors[4] = 22463;
+			itemDef.modifiedModelColors[5] = 44564;
+			itemDef.originalModelColors[5] = 22463;
+			itemDef.modifiedModelColors[6] = 44575;
+			itemDef.originalModelColors[6] = 22463;
+			itemDef.modifiedModelColors[7] = 44618;
+			itemDef.originalModelColors[7] = 22463;
+			itemDef.modifiedModelColors[8] = 105;
+			itemDef.originalModelColors[8] = 127;
+			itemDef.modifiedModelColors[9] = 44603;
+			itemDef.originalModelColors[9] = 22463;
+			itemDef.modifiedModelColors[10] = 44570;
+			itemDef.originalModelColors[10] = 22463;
+			itemDef.modifiedModelColors[11] = 4500;
+			itemDef.originalModelColors[11] = 22463;
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
+	        itemDef.maleWield = 47047;
+	        itemDef.femaleWield = 47047;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 13726:
+			itemDef.modelID = 40920;
+			itemDef.name = "Pink Spirit Shield";
+			itemDef.description = "It's a pink spirit shield";
+			itemDef.modifiedModelColors = new int[13];
+			itemDef.originalModelColors = new int[13];
+			itemDef.modifiedModelColors[0] = 44635;
+			itemDef.originalModelColors[0] = 54207;
+			itemDef.modifiedModelColors[1] = 44612;
+			itemDef.originalModelColors[1] = 54207;
+			itemDef.modifiedModelColors[2] = 44606;
+			itemDef.originalModelColors[2] = 54207;
+			itemDef.modifiedModelColors[3] = 44615;
+			itemDef.originalModelColors[3] = 54207;
+			itemDef.modifiedModelColors[4] = 44641;
+			itemDef.originalModelColors[4] = 54207;
+			itemDef.modifiedModelColors[5] = 44564;
+			itemDef.originalModelColors[5] = 54207;
+			itemDef.modifiedModelColors[6] = 44575;
+			itemDef.originalModelColors[6] = 54207;
+			itemDef.modifiedModelColors[7] = 44618;
+			itemDef.originalModelColors[7] = 54207;
+			itemDef.modifiedModelColors[8] = 105;
+			itemDef.originalModelColors[8] = 127;
+			itemDef.modifiedModelColors[9] = 44603;
+			itemDef.originalModelColors[9] = 54207;
+			itemDef.modifiedModelColors[10] = 44570;
+			itemDef.originalModelColors[10] = 54207;
+			itemDef.modifiedModelColors[11] = 4500;
+			itemDef.originalModelColors[11] = 54207;
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
+	        itemDef.maleWield = 47047;
+	        itemDef.femaleWield = 47047;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 13727:
+			itemDef.modelID = 40920;
+			itemDef.name = "Green Spirit Shield";
+			itemDef.description = "It's a green spirit shield";
+			itemDef.modifiedModelColors = new int[13];
+			itemDef.originalModelColors = new int[13];
+			itemDef.modifiedModelColors[0] = 44635;
+			itemDef.originalModelColors[0] = 22425;
+			itemDef.modifiedModelColors[1] = 44612;
+			itemDef.originalModelColors[1] = 22425;
+			itemDef.modifiedModelColors[2] = 44606;
+			itemDef.originalModelColors[2] = 22425;
+			itemDef.modifiedModelColors[3] = 44615;
+			itemDef.originalModelColors[3] = 22425;
+			itemDef.modifiedModelColors[4] = 44641;
+			itemDef.originalModelColors[4] = 22425;
+			itemDef.modifiedModelColors[5] = 44564;
+			itemDef.originalModelColors[5] = 22425;
+			itemDef.modifiedModelColors[6] = 44575;
+			itemDef.originalModelColors[6] = 22425;
+			itemDef.modifiedModelColors[7] = 44618;
+			itemDef.originalModelColors[7] = 22425;
+			itemDef.modifiedModelColors[8] = 105;
+			itemDef.originalModelColors[8] = 127;
+			itemDef.modifiedModelColors[9] = 44603;
+			itemDef.originalModelColors[9] = 22425;
+			itemDef.modifiedModelColors[10] = 44570;
+			itemDef.originalModelColors[10] = 22425;
+			itemDef.modifiedModelColors[11] = 4500;
+			itemDef.originalModelColors[11] = 22425;
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
+	        itemDef.maleWield = 47047;
+	        itemDef.femaleWield = 47047;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 13728:
+			itemDef.modelID = 40920;
+			itemDef.name = "Purple Spirit Shield";
+			itemDef.description = "It's a purple spirit shield";
+			itemDef.modifiedModelColors = new int[13];
+			itemDef.originalModelColors = new int[13];
+			itemDef.modifiedModelColors[0] = 44635;
+			itemDef.originalModelColors[0] = 52127;
+			itemDef.modifiedModelColors[1] = 44612;
+			itemDef.originalModelColors[1] = 52127;
+			itemDef.modifiedModelColors[2] = 44606;
+			itemDef.originalModelColors[2] = 52127;
+			itemDef.modifiedModelColors[3] = 44615;
+			itemDef.originalModelColors[3] = 52127;
+			itemDef.modifiedModelColors[4] = 44641;
+			itemDef.originalModelColors[4] = 52127;
+			itemDef.modifiedModelColors[5] = 44564;
+			itemDef.originalModelColors[5] = 52127;
+			itemDef.modifiedModelColors[6] = 44575;
+			itemDef.originalModelColors[6] = 52127;
+			itemDef.modifiedModelColors[7] = 44618;
+			itemDef.originalModelColors[7] = 52127;
+			itemDef.modifiedModelColors[8] = 105;
+			itemDef.originalModelColors[8] = 127;
+			itemDef.modifiedModelColors[9] = 44603;
+			itemDef.originalModelColors[9] = 52127;
+			itemDef.modifiedModelColors[10] = 44570;
+			itemDef.originalModelColors[10] = 52127;
+			itemDef.modifiedModelColors[11] = 4500;
+			itemDef.originalModelColors[11] = 52127;
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
+	        itemDef.maleWield = 47047;
+	        itemDef.femaleWield = 47047;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		
+	    case 13729: 
+	    	itemDef.modelID = 40920;
+	    	itemDef.name = "Lime Spirit Shield";
+	    	itemDef.description = "It's a spirit shield";
+	    	itemDef.modifiedModelColors = new int[13];
+	    	itemDef.originalModelColors = new int[13];
+	    	itemDef.modifiedModelColors[0] = 44635;
+	    	itemDef.originalModelColors[0] = 17350;
+	    	itemDef.modifiedModelColors[1] = 44612;
+	    	itemDef.originalModelColors[1] = 17350;
+	    	itemDef.modifiedModelColors[2] = 44606;
+	    	itemDef.originalModelColors[2] = 17350;
+	        itemDef.modifiedModelColors[3] = 44615;
+	        itemDef.originalModelColors[3] = 17350;
+	        itemDef.modifiedModelColors[4] = 44641;
+	        itemDef.originalModelColors[4] = 17350;
+	        itemDef.modifiedModelColors[5] = 44564;
+	        itemDef.originalModelColors[5] = 17350;
+	        itemDef.modifiedModelColors[6] = 44575;
+	        itemDef.originalModelColors[6] = 17350;
+	        itemDef.modifiedModelColors[7] = 44618;
+	        itemDef.originalModelColors[7] = 17350;
+	        itemDef.modifiedModelColors[8] = 105;
+	        itemDef.originalModelColors[8] = 105;
+	        itemDef.modifiedModelColors[9] = 44603;
+	        itemDef.originalModelColors[9] = 17350;
+	        itemDef.modifiedModelColors[10] = 44570;
+	        itemDef.originalModelColors[10] = 17350;
+	        itemDef.modifiedModelColors[11] = 4500;
+	        itemDef.originalModelColors[11] = 17350;
+	        itemDef.modifiedModelColors[12] = 936;
+	        itemDef.originalModelColors[12] = 17350;
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
+	        itemDef.maleWield = 47047;
+	        itemDef.femaleWield = 47047;
+	        itemDef.groundActions = new String[5];
+	        itemDef.groundActions[2] = "Take";
+	        itemDef.itemActions = new String[5];
+	        itemDef.itemActions[1] = "Wear";
+	        itemDef.itemActions[4] = "Drop";
+	        break;
+	    case 4062:
+	    	itemDef.name = "Inferno spirit shield";
+	    	itemDef.description = "It's a Inferno spirit shield";
+	    	itemDef.modelID = 56509;
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
+	        itemDef.maleWield = 47047;
+	        itemDef.femaleWield = 47047;
+	    	itemDef.groundActions = new String[5];
+	    	itemDef.groundActions[2] = "Take";
+	    	itemDef.itemActions = new String[5];
+	    	itemDef.itemActions[1] = "Wear";
+	    	itemDef.itemActions[4] = "Drop";
+	        itemDef.groundActions = new String[5];
+	        itemDef.groundActions[2] = "Take";
+	        itemDef.itemActions = new String[5];
+	        itemDef.itemActions[1] = "Wear";
+	        itemDef.itemActions[4] = "Drop";
+	        break;
+		case 17161:
+			itemDef.modelID = 47017;
+
+			itemDef.description = "Minigun";
+			itemDef.name = "Minigun";
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 47018;
+			itemDef.femaleWield = 47018;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Destroy";
+			break;
 
 		case 11642:
 			itemDef.modelID = 47000;// 86252;
 			itemDef.maleWield = 47001;// 86253;
 			itemDef.femaleWield = 47001;// 86253;
-			itemDef.name = "@bla@Based God's@bla@@red@ Katana@red@";
+			itemDef.name = "@bla@Death@bla@@red@ Katana@red@";
 			itemDef.description = "Katana.";
 			itemDef.modelZoom = 2100;
 			itemDef.modelRotationY = 336;
@@ -354,57 +980,55 @@ public final class ItemDefinition {
 			itemDef.description = "";
 			itemDef.name = "Death Gloves";
 			itemDef.modelZoom = 1500;
-			itemDef.modelRotationY = 228;
-			itemDef.modelRotationX = 1830;
-			itemDef.modelOffset1 = 5;
-			itemDef.modelOffset2 = -55;
 			itemDef.maleWield = 47009;
 			itemDef.femaleWield = 47009;
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
-			itemDef.itemActions = new String[5];
-			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			itemDef.stackable = false;
+			itemDef.modelZoom = 830;
+			itemDef.modelRotationY = 536;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 3;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 10000;
 			break;
 		case 17157:
 			itemDef.modelID = 47010;
-
 			itemDef.description = "";
 			itemDef.name = "Death Full Helm";
-			itemDef.modelZoom = 1500;
-			itemDef.modelRotationY = 228;
-			itemDef.modelRotationX = 1830;
-			itemDef.modelOffset1 = 5;
-			itemDef.modelOffset2 = -55;
 			itemDef.maleWield = 47011;
 			itemDef.femaleWield = 47011;
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			itemDef.stackable = false;
 			break;
 		case 17158:
 			itemDef.modelID = 47012;
-
-			itemDef.description = "";
-			itemDef.name = "Death Boots";
-			itemDef.modelZoom = 1500;
-			itemDef.modelRotationY = 228;
-			itemDef.modelRotationX = 1830;
-			itemDef.modelOffset1 = 5;
-			itemDef.modelOffset2 = -55;
 			itemDef.maleWield = 47012;
 			itemDef.femaleWield = 47012;
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
+			itemDef.description = "";
+			itemDef.name = "Death Boots";
+			itemDef.modelZoom = 870;
+			itemDef.modelRotationY = 184;
+			itemDef.modelRotationX = 204;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 250;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			itemDef.stackable = false;
 			break;
+	
 		case 17159:
 			itemDef.modelID = 47013;
 
@@ -442,28 +1066,10 @@ public final class ItemDefinition {
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Destroy";
 			break;
-		case 17161:
-			itemDef.modelID = 47017;
-
-			itemDef.description = "Minigun";
-			itemDef.name = "Minigun";
-			itemDef.stackable = false;
-			itemDef.modelZoom = 1500;
-			itemDef.modelRotationY = 228;
-			itemDef.modelRotationX = 1830;
-			itemDef.modelOffset1 = 5;
-			itemDef.modelOffset2 = -55;
-			itemDef.maleWield = 47018;
-			itemDef.femaleWield = 47018;
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
-			itemDef.itemActions = new String[5];
-			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Destroy";
-			break;
 		case 17162:
 			itemDef.modelID = 47019;
-
+            itemDef.maleWield = 47020;
+            itemDef.femaleWield = 47020;
 			itemDef.description = "";
 			itemDef.name = "Death Platebody";
 			itemDef.modelZoom = 1500;
@@ -471,8 +1077,6 @@ public final class ItemDefinition {
 			itemDef.modelRotationX = 1830;
 			itemDef.modelOffset1 = 5;
 			itemDef.modelOffset2 = -55;
-			itemDef.maleWield = 47020;
-			itemDef.femaleWield = 47020;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
@@ -486,12 +1090,6 @@ public final class ItemDefinition {
 
 			itemDef.description = "";
 			itemDef.name = "Raptor Helm";
-			itemDef.stackable = false;
-			itemDef.modelZoom = 1827;
-			itemDef.modelRotationY = 512;
-			itemDef.modelRotationX = 0;
-			itemDef.modelOffset1 = 0;
-			itemDef.modelOffset2 = 4;
 			itemDef.maleWield = 47022;
 			itemDef.femaleWield = 47022;
 			itemDef.groundActions = new String[5];
@@ -499,6 +1097,17 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Destroy";
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
 			break;
 		case 17164:
 			itemDef.modelID = 47023;
@@ -540,22 +1149,26 @@ public final class ItemDefinition {
 			break;
 		case 17166:
 			itemDef.modelID = 47027;
-
-			itemDef.description = "";
-			itemDef.name = "Flame Raptor Helm";
-			itemDef.stackable = false;
-			itemDef.modelZoom = 1827;
-			itemDef.modelRotationY = 512;
-			itemDef.modelRotationX = 0;
-			itemDef.modelOffset1 = 0;
-			itemDef.modelOffset2 = 4;
 			itemDef.maleWield = 47028;
 			itemDef.femaleWield = 47028;
+			itemDef.description = "";
+			itemDef.name = "Flame Raptor Helm";
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Destroy";
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
 			break;
 		case 17167:
 			itemDef.modelID = 47029;
@@ -578,7 +1191,6 @@ public final class ItemDefinition {
 			break;
 		case 17168:
 			itemDef.modelID = 47031;
-
 			itemDef.description = "";
 			itemDef.name = "Flame Raptor Platelegs";
 			itemDef.stackable = false;
@@ -1736,8 +2348,9 @@ public final class ItemDefinition {
 			itemDef.modifiedModelColors[0] = 8334;
 			itemDef.originalModelColors[0] = 17350;
 			break;
+
 		case 10860:
-			itemDef.name = "@har@L@bla@e@whi@g@har@e@bla@n@whi@d@har@a@bla@r@whi@y@lre@ Wing @har@b@bla@o@whi@o@har@t@bla@s";
+			itemDef.name = "Legendary Wing Boots";
 			itemDef.description = "Mysterious boots made for legends...";
 			itemDef.modelZoom = 769;
 			itemDef.modelOffset1 = -1;
@@ -1844,6 +2457,23 @@ public final class ItemDefinition {
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[2] = "Teleport";
 			itemDef.stackable = false;
+			break;
+			
+		case 3929:
+		      itemDef.modelID = 47057;
+		      itemDef.name = "Owner Cape";
+		      itemDef.description = "It's a " + itemDef.name + ".";
+		      itemDef.modelZoom = 1579;
+		      itemDef.modelOffset1 = -4;
+		      itemDef.modelOffset2 = 0;
+		      itemDef.modelRotationY = 533;
+		      itemDef.modelRotationX = 333;
+		      itemDef.femaleWield = 47058;
+		      itemDef.maleWield = 47058;
+		      itemDef.groundActions = new String[5];
+		      itemDef.groundActions[2] = "Take";
+		      itemDef.itemActions = new String[5];
+		      itemDef.itemActions[1] = "Wear";
 			break;
 
 		case 15308:
@@ -2050,27 +2680,7 @@ public final class ItemDefinition {
 			itemDef.modifiedModelColors = new int[] { 22410, 2999 };
 			itemDef.originalModelColors = new int[] { 115, 61 };
 			break;
-		case 18908:
-			itemDef.modelID = 40920;
-			itemDef.name = "Mystical Spirit Shield";
-			itemDef.description = "It's a mystical spirit shield";
-			itemDef.originalModelColors = new int[] { 32703, 33727, 34751, 35775, 36799, 37823, 38847, 39871, 43967,
-					40895, 41919, 42943 };
-			itemDef.modifiedModelColors = new int[] { 44635, 44612, 44606, 44615, 44641, 44564, 44575, 44618, 105,
-					44603, 44570, 4500 };
-			itemDef.modelZoom = 1616;
-			itemDef.modelRotationY = 396;
-			itemDef.modelRotationX = 1050;
-			itemDef.modelOffset2 = -3;
-			itemDef.modelOffset1 = 4;
-			itemDef.maleWield = 40940;
-			itemDef.femaleWield = 40940;
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
-			itemDef.itemActions = new String[5];
-			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			break;
+	
 
 		case 11739:
 			itemDef.name = "Gold mystery box";
@@ -2593,7 +3203,7 @@ public final class ItemDefinition {
 		anInt204 = noted.anInt204;
 		modelOffset1 = noted.modelOffset1;
 		modelOffset2 = noted.modelOffset2;
-		modifiedModelColors = noted.modifiedModelColors;
+		modifiedModelColors = noted.modifiedModelColors; //here Adam
 		originalModelColors = noted.originalModelColors;
 		ItemDefinition unnoted = lookup(certID);
 		name = unnoted.name;

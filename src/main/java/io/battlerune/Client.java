@@ -79,7 +79,7 @@ public class Client extends GameApplet {
     private Sprite[] specbutton;
     public boolean specActive = false;
     public boolean specButtonHovered = false;
-
+    private RSInterface teleportButton = null;
 
     /**
      * An array containing all the player's experience.
@@ -7828,6 +7828,9 @@ public class Client extends GameApplet {
                 }
             }
         }
+        if (teleportButton != null) {
+        	buildInterfaceMenu(0, teleportButton, super.mouseX, 10, super.mouseY, 0);
+        }
         /*
          * if (frameMode == ScreenMode.FIXED) { if (super.mouseX > 4 &&
          * super.mouseY > 4 && super.mouseX < 516 && super.mouseY < 338) { if
@@ -8747,7 +8750,7 @@ public class Client extends GameApplet {
             mapDotClan = new Sprite(streamLoader_2, "mapdots", 5);
             scrollBar1 = new Sprite(streamLoader_2, "scrollbar", 0);
             scrollBar2 = new Sprite(streamLoader_2, "scrollbar", 1);
-//           repackCacheIndex(1);
+ //         repackCacheIndex(1);
 //            repackCacheIndex(2);
 //            repackCacheIndex(4);
             prepareGameFrame();
@@ -10809,6 +10812,9 @@ public class Client extends GameApplet {
         if (crossType == 2) {
             int offSet = frameMode == ScreenMode.FIXED ? 4 : 0;
             crosses[4 + crossIndex / 100].drawSprite(crossX - 8 - offSet, crossY - 8 - offSet);
+        }
+        if (teleportButton != null) {
+        	drawInterface(0, 10, teleportButton, 0);
         }
         if (anInt1018 != -1) {
             RSInterface rsInterface = RSInterface.interfaceCache[anInt1018];
@@ -13993,7 +13999,19 @@ public class Client extends GameApplet {
     }
 
     private boolean cheapHaxPacket(int id, String text) {
-        if (id == 23050) {
+    	if (id == 45621) {
+    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+    		return true;
+    	}
+    	if (id == 45600) {
+    		int state = Integer.parseInt(text);
+    		if (state == 0) {
+    			teleportButton = null;
+    		} else {
+    			teleportButton = RSInterface.interfaceCache[45600];
+    		}
+    		return true;
+    	} else if (id == 23050) {
             if (text.equals("on")) 			drawOpponentStats = true;
             else if (text.equals("off")) 	drawOpponentStats = false;
             return true;

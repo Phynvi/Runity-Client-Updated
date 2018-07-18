@@ -94,8 +94,8 @@ public class CustomInterface extends RSInterface {
         controlTab(textDrawingAreas);
         customTab(textDrawingAreas);
         donatorTab(textDrawingAreas);
-         clanBank(textDrawingAreas);
-                constructionBuild(textDrawingAreas);
+        clanBank(textDrawingAreas);
+        constructionBuild(textDrawingAreas);
         welcome(textDrawingAreas);
         gameRecords(textDrawingAreas);
         quickCurses(textDrawingAreas);
