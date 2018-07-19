@@ -1,16 +1,30 @@
 package io.battlerune;
 
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Insets;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+import javax.swing.SwingUtilities;
+
 import io.battlerune.login.LoginRenderer;
 import io.battlerune.login.ScreenType;
 import io.battlerune.updater.Updater;
 import io.battlerune.updater.screen.UpdaterRenderer;
-
-import javax.swing.*;
-
-
-import java.applet.Applet;
-import java.awt.*;
-import java.awt.event.*;
 
 public class GameApplet extends Applet implements Runnable, MouseListener, MouseMotionListener, MouseWheelListener, KeyListener, FocusListener, WindowListener {
     private static final long serialVersionUID = 1L;

@@ -1,9 +1,14 @@
 package io.battlerune;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
+import static io.battlerune.ParticleDefinition.RANDOM;
+
+import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -14,7 +19,7 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static io.battlerune.ParticleDefinition.RANDOM;
+import javax.imageio.ImageIO;
 
 /**
  * Handles all utility type methods for the client.

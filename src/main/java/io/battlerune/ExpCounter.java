@@ -1,8 +1,12 @@
 package io.battlerune;
 
 import java.text.NumberFormat;
-import java.util.*;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class ExpCounter {
 	private static final int START_SPRITE = 82;

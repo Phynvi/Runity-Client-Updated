@@ -1,9 +1,12 @@
 package io.battlerune.updater.screen.impl;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+
 import io.battlerune.Client;
 import io.battlerune.updater.screen.UpdateComponent;
-
-import java.awt.*;
 
 public class DefaultUpdateScreen extends UpdateComponent {
 

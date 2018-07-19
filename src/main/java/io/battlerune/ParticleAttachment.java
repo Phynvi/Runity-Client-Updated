@@ -1,6 +1,7 @@
 package io.battlerune;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 class ParticleAttachment {
 	private static final Map<Integer, int[][]> attachments = new HashMap<>();

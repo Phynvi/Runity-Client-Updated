@@ -1,11 +1,12 @@
 package io.battlerune.updater.screen;
 
-import io.battlerune.Client;
-import io.battlerune.Stopwatch;
-
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.concurrent.TimeUnit;
+
+import io.battlerune.Client;
+import io.battlerune.Stopwatch;
 
 /**
  * The Update component class.

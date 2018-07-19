@@ -1,17 +1,18 @@
 package io.battlerune.osbuddy.parser;
 
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+
 import com.google.common.primitives.Doubles;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
 import io.battlerune.Client;
 import io.battlerune.osbuddy.OSBLoader;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
 
 /**
  * @author Ethan Kyle Millard <skype:pumpklins>

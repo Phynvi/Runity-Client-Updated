@@ -1,8 +1,14 @@
 package io.battlerune;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Insets;
+import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
+
+import javax.swing.JFrame;
 
 
 public final class GameWindow extends JFrame {

@@ -1,7 +1,12 @@
 package io.battlerune.login;
 
 
-import io.battlerune.*;
+import io.battlerune.Bubble;
+import io.battlerune.Client;
+import io.battlerune.Configuration;
+import io.battlerune.GraphicsBuffer;
+import io.battlerune.Raster;
+import io.battlerune.Settings;
 import io.battlerune.login.impl.MainScreen;
 import io.battlerune.login.impl.SettingScreen;
 

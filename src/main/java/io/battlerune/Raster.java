@@ -1,6 +1,10 @@
 package io.battlerune;
 
-import java.awt.*;
+import java.awt.AlphaComposite;
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.geom.Arc2D;
 
 public class Raster extends Cacheable {

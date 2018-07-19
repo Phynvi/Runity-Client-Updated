@@ -1,19 +1,36 @@
 package io.battlerune;
 
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import javax.swing.plaf.ColorUIResource;
+import static io.battlerune.Utility.launchURL;
 
-
-import java.awt.*;
-import java.awt.event.*;
-import java.io.FileInputStream;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Insets;
+import java.awt.KeyboardFocusManager;
+import java.awt.Toolkit;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-import static io.battlerune.Utility.launchURL;
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
+import javax.swing.KeyStroke;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.plaf.ColorUIResource;
 
 /**
  * Creates a new user interface to render the client

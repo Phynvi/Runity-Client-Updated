@@ -1,9 +1,13 @@
 package io.battlerune;
 
-import java.io.*;
-import java.nio.file.Paths;
-
 import static io.battlerune.Configuration.CHAR_PATH;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.nio.file.Paths;
 
 /**
  * Handles the customizable settings for the client.

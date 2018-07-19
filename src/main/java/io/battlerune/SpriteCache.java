@@ -1,14 +1,19 @@
 package io.battlerune;
 
-import javax.imageio.ImageIO;
+import static java.nio.file.StandardOpenOption.READ;
+
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.Closeable;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.Arrays;
 
-import static java.nio.file.StandardOpenOption.READ;
+import javax.imageio.ImageIO;
 
 public final class SpriteCache implements Closeable {
 

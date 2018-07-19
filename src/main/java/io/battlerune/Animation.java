@@ -1,7 +1,5 @@
 package io.battlerune;
 
-import java.util.Arrays;
-
 public final class Animation {
 
 

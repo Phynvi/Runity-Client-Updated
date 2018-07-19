@@ -1,12 +1,15 @@
 package io.battlerune.updater.screen.impl;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.util.concurrent.TimeUnit;
+
 import io.battlerune.Client;
 import io.battlerune.Stopwatch;
 import io.battlerune.updater.Updater;
 import io.battlerune.updater.screen.UpdateComponent;
-
-import java.awt.*;
-import java.util.concurrent.TimeUnit;
 
 public class GoodbyeUpdateScreen extends UpdateComponent {
 

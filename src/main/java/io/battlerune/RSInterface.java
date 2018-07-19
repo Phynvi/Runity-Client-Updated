@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import io.battlerune.RSInterface;
-import io.battlerune.TextDrawingArea;
-
 public class RSInterface {
 
 	public RSInterface() {

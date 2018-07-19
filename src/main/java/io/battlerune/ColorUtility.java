@@ -1,6 +1,6 @@
 package io.battlerune;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class ColorUtility {
 	public static int fadeStep = 1;

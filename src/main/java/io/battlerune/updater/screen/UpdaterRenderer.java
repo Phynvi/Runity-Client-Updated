@@ -1,14 +1,16 @@
 package io.battlerune.updater.screen;
 
-import io.battlerune.Client;
-import io.battlerune.GraphicsBuffer;
-import io.battlerune.Raster;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.DataBufferInt;
+
+import javax.swing.Timer;
+
+import io.battlerune.Client;
+import io.battlerune.GraphicsBuffer;
+import io.battlerune.Raster;
 
 /**
  * Handles the rendering of the updater screen.
