@@ -383,11 +383,13 @@ public class RSInterface {
 	public static void teleportButtonThing(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(45600);
 		addButton(45601, 18, "TeleSexy/SPRITE", "Teleport");
+		addText(45622, "Timer", tda, 0, 0xff9040,  false, true);
 		RSInterface button = interfaceCache[45601];
 		button.hoverType = 45602;
-		tab.totalChildren(2);
+		tab.totalChildren(3);
 		tab.child(0, 45601, 10, 10);
 		tab.child(1, 45602, 35, 10);
+		tab.child(2, 45622, 5, 27);
 		
 		RSInterface popup = addInterface(45602);
 		popup.isMouseoverTriggered = true;
@@ -404,8 +406,9 @@ public class RSInterface {
 		addText(45613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
 		addText(45614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
 		addNpc(45615, 6593, 2000);
-		addText(45616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
+		addText(45616, "", tda, 0, 0xff9040,  false, true);
 		addText(45617, "Drops:", tda, 0, 0xff9040,  false, true);
+		
 		popup.totalChildren(16);
 		popup.child(0, 45603, 0, 0);
 		popup.child(1, 45604, 150, 12);
