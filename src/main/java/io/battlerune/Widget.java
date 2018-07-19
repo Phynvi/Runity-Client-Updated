@@ -59,7 +59,8 @@ public class Widget {
 			Raster.drawRectangle(x, y - dy, 65, 22, 0x000000, (alpha - 80) > 0 ? alpha - 80 : 0);
 			sprite.drawSprite1(x + 3, y - dy - sprite.height / 2 + 19 / 2 + 2, alpha);
 
-			Client.instance.newSmallFont.drawCenteredString(Utility.getFormattedTime(widget.seconds), x + 38, y + 16 - dy, 0xFF8C00, 0, textAlpha);
+			Client.instance.newSmallFont.drawCenteredString(Utility.getFormattedTime(widget.seconds), x + 38,
+					y + 16 - dy, 0xFF8C00, 0, textAlpha);
 
 			y -= 24;
 		}
@@ -151,27 +152,27 @@ public class Widget {
 
 	public static void place(int type, int time) {
 		switch (type) {
-			case 1:
-				submit(new Widget(time, 105));
-				break;
-			case 2:
-				submit(new Widget(time, 106));
-				break;
-			case 3:
-				submit(new Widget(time, 107));
-				break;
-			case 4:
-				submit(new Widget(time, 108));
-				break;
-			case 5:
-				submit(new Widget(time, 407));
-				break;
-			case 6:
-				submit(new Widget(time, 458));
-				break;
-			case 7:
-				submit(new Widget(time, 79));
-				break;
+		case 1:
+			submit(new Widget(time, 105));
+			break;
+		case 2:
+			submit(new Widget(time, 106));
+			break;
+		case 3:
+			submit(new Widget(time, 107));
+			break;
+		case 4:
+			submit(new Widget(time, 108));
+			break;
+		case 5:
+			submit(new Widget(time, 407));
+			break;
+		case 6:
+			submit(new Widget(time, 458));
+			break;
+		case 7:
+			submit(new Widget(time, 79));
+			break;
 		}
 	}
 

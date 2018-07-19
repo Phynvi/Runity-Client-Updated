@@ -26,7 +26,7 @@ public final class Graphic {
 	}
 
 	private void decode(Buffer buffer) {
-		while(true) {
+		while (true) {
 			final int opcode = buffer.readUByte();
 
 			if (opcode == 0) {
@@ -37,8 +37,8 @@ public final class Graphic {
 				animationId = buffer.readUShort();
 
 				if (Animation.animations != null) {
-                    aAnimation_407 = Animation.animations[animationId];
-                }
+					aAnimation_407 = Animation.animations[animationId];
+				}
 			} else if (opcode == 4) {
 				resizeX = buffer.readUShort();
 			} else if (opcode == 5) {

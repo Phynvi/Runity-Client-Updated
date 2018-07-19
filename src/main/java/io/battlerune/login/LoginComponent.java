@@ -1,6 +1,5 @@
 package io.battlerune.login;
 
-
 import io.battlerune.Bubble;
 import io.battlerune.Client;
 import io.battlerune.Configuration;
@@ -66,8 +65,10 @@ public abstract class LoginComponent {
 			}
 			int color1 = 0xed2d2d;
 			int color2 = 0x701010;
-			Raster.drawAlphaGradient(0, 0, Client.frameWidth, 25, color1, color2, 205 - (int) (50 * Math.sin(client.announcementFade / 20.0)));
-			client.smallFont.drawText(true, client.announcementMovement, 0xffffff, Configuration.ANNOUNCEMENT[client.announcementTicks], 17);
+			Raster.drawAlphaGradient(0, 0, Client.frameWidth, 25, color1, color2,
+					205 - (int) (50 * Math.sin(client.announcementFade / 20.0)));
+			client.smallFont.drawText(true, client.announcementMovement, 0xffffff,
+					Configuration.ANNOUNCEMENT[client.announcementTicks], 17);
 		}
 	}
 
@@ -95,8 +96,6 @@ public abstract class LoginComponent {
 		} else {
 			Client.spriteCache.get(879).drawTransparentSprite(centerX - 345, centerY + 200, 90);
 		}
-
-
 
 //		String string = client.loginRenderer.getScreen(ScreenType.SETTING) ? "Back" : "Settings";
 //		client.boldText.drawCenteredText(0xFFFFFF, centerX - 312, string, centerY + 221, true);

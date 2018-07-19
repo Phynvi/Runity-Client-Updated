@@ -126,7 +126,9 @@ public class SnowFlake {
 	}
 
 	public boolean touched() {
-		if (Client.instance.inCircle(this.x - (this.radius * 2 - this.radius / 2), this.y - (this.radius * 2 - this.radius / 2), Client.instance.mouseX, Client.instance.mouseY - 54, radius)) {
+		if (Client.instance.inCircle(this.x - (this.radius * 2 - this.radius / 2),
+				this.y - (this.radius * 2 - this.radius / 2), Client.instance.mouseX, Client.instance.mouseY - 54,
+				radius)) {
 			return true;
 		}
 		return false;

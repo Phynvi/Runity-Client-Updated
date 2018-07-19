@@ -59,8 +59,7 @@ public class Stopwatch {
 	}
 
 	private enum State {
-		RUNNING,
-		STOPPED
+		RUNNING, STOPPED
 	}
 
 	public static final class AtomicStopwatch {

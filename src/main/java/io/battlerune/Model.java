@@ -599,7 +599,9 @@ public class Model extends Renderable {
 			for (int face = 0; face < anInt1630; face++) {
 				coordinate = texture_coordinates[face] & 0xff;
 				if (coordinate != 255) {
-					if (((anIntArray1643[coordinate] & 0xffff) == anIntArray1631[face]) && ((anIntArray1644[coordinate] & 0xffff) == anIntArray1632[face]) && ((anIntArray1645[coordinate] & 0xffff) == anIntArray1633[face])) {
+					if (((anIntArray1643[coordinate] & 0xffff) == anIntArray1631[face])
+							&& ((anIntArray1644[coordinate] & 0xffff) == anIntArray1632[face])
+							&& ((anIntArray1645[coordinate] & 0xffff) == anIntArray1633[face])) {
 						texture_coordinates[face] = -1;
 					} else {
 						textured = true;
@@ -724,6 +726,7 @@ public class Model extends Renderable {
 			return true;
 		}
 	}
+
 	public static void printModelColours(Model model) {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		for (int i : model.anIntArray1640) {
@@ -742,9 +745,9 @@ public class Model extends Renderable {
 			done.add(i);
 		}
 	}
-	
+
 	public int anIntArray1650[];
-	
+
 	public int anIntArray1653[];
 	public int anIntArray1654[];
 	public int anIntArray1657[];
@@ -752,7 +755,7 @@ public class Model extends Renderable {
 	public int anIntArray1651;
 	public int anIntArray1652;
 	public int anIntArray1649;
-	
+
 	public void setTexture(int fromColor, int tex) {
 		printModelColours(this);
 		int foundAmt = 0;
@@ -781,7 +784,7 @@ public class Model extends Renderable {
 			}
 		}
 	}
-	
+
 	public void setTexture(int tex) {
 		anInt1652 = anInt1630;
 		int set2 = 0;
@@ -916,7 +919,8 @@ public class Model extends Renderable {
 						}
 						if (coordinate_flag) {
 							if (build.texture_coordinates != null && build.texture_coordinates[face] != -1) {
-								texture_coordinates[anInt1630] = (byte) (build.texture_coordinates[face] + texture_face);
+								texture_coordinates[anInt1630] = (byte) (build.texture_coordinates[face]
+										+ texture_face);
 							} else {
 								texture_coordinates[anInt1630] = -1;
 							}
@@ -1065,7 +1069,8 @@ public class Model extends Renderable {
 
 					if (coordinate_flag) {
 						if (model_1.texture_coordinates != null && model_1.texture_coordinates[anInt1630] != -1)
-							texture_coordinates[anInt1630] = (byte) (model_1.texture_coordinates[anInt1630] + anInt1642);
+							texture_coordinates[anInt1630] = (byte) (model_1.texture_coordinates[anInt1630]
+									+ anInt1642);
 						else
 							texture_coordinates[anInt1630] = -1;
 
@@ -1131,7 +1136,6 @@ public class Model extends Renderable {
 			texture = new short[anInt1630];
 
 			System.arraycopy(model.texture, 0, texture, 0, anInt1630);
-
 
 		} else {
 			texture = model.texture;
@@ -1341,7 +1345,8 @@ public class Model extends Renderable {
 				anInt1650 = i1;
 		}
 		anInt1650 = (int) (Math.sqrt(anInt1650) + 0.98999999999999999D);
-		anInt1653 = (int) (Math.sqrt(anInt1650 * anInt1650 + super.modelHeight * super.modelHeight) + 0.98999999999999999D);
+		anInt1653 = (int) (Math.sqrt(anInt1650 * anInt1650 + super.modelHeight * super.modelHeight)
+				+ 0.98999999999999999D);
 		anInt1652 = anInt1653 + (int) (Math.sqrt(anInt1650 * anInt1650 + anInt1651 * anInt1651) + 0.98999999999999999D);
 	}
 
@@ -1356,7 +1361,8 @@ public class Model extends Renderable {
 				anInt1651 = j;
 		}
 
-		anInt1653 = (int) (Math.sqrt(anInt1650 * anInt1650 + super.modelHeight * super.modelHeight) + 0.98999999999999999D);
+		anInt1653 = (int) (Math.sqrt(anInt1650 * anInt1650 + super.modelHeight * super.modelHeight)
+				+ 0.98999999999999999D);
 		anInt1652 = anInt1653 + (int) (Math.sqrt(anInt1650 * anInt1650 + anInt1651 * anInt1651) + 0.98999999999999999D);
 	}
 
@@ -1470,7 +1476,9 @@ public class Model extends Renderable {
 			if (nextAnimation == null || list2 == null) {
 				for (int i_263_ = 0; i_263_ < currentAnimation.anInt638; i_263_++) {
 					int i_264_ = currentAnimation.transformationIndices[i_263_];
-					method472(list1.transformationType[i_264_], list1.skinList[i_264_], currentAnimation.transformX[i_263_], currentAnimation.transformY[i_263_], currentAnimation.transformZ[i_263_]);
+					method472(list1.transformationType[i_264_], list1.skinList[i_264_],
+							currentAnimation.transformX[i_263_], currentAnimation.transformY[i_263_],
+							currentAnimation.transformZ[i_263_]);
 
 				}
 			} else {
@@ -1574,7 +1582,8 @@ public class Model extends Renderable {
 		if (nextAnim == null) {
 			for (int index = 0; index < currAnim.anInt638; index++) {
 				int anim = currAnim.transformationIndices[index];
-				method472(skinList.transformationType[anim], skinList.skinList[anim], currAnim.transformX[index], currAnim.transformY[index], currAnim.transformZ[index]);
+				method472(skinList.transformationType[anim], skinList.skinList[anim], currAnim.transformX[index],
+						currAnim.transformY[index], currAnim.transformZ[index]);
 			}
 		} else {
 			int currFrameId = 0;
@@ -1666,7 +1675,8 @@ public class Model extends Renderable {
 		anInt1683 = 0;
 		for (int k = 0; k < class36.anInt638; k++) {
 			int l = class36.transformationIndices[k];
-			method472(class18.transformationType[l], class18.skinList[l], class36.transformX[k], class36.transformY[k], class36.transformZ[k]);
+			method472(class18.transformationType[l], class18.skinList[l], class36.transformX[k], class36.transformY[k],
+					class36.transformZ[k]);
 		}
 
 	}
@@ -1697,7 +1707,8 @@ public class Model extends Renderable {
 			for (k1 = class36.transformationIndices[j1]; k1 > i1; i1 = ai[l++])
 				;
 			if (k1 != i1 || class18.transformationType[k1] == 0)
-				method472(class18.transformationType[k1], class18.skinList[k1], class36.transformX[j1], class36.transformY[j1], class36.transformZ[j1]);
+				method472(class18.transformationType[k1], class18.skinList[k1], class36.transformX[j1],
+						class36.transformY[j1], class36.transformZ[j1]);
 		}
 
 		anInt1681 = 0;
@@ -1710,7 +1721,8 @@ public class Model extends Renderable {
 			for (i2 = class36_1.transformationIndices[l1]; i2 > i1; i1 = ai[l++])
 				;
 			if (i2 == i1 || class18.transformationType[i2] == 0)
-				method472(class18.transformationType[i2], class18.skinList[i2], class36_1.transformX[l1], class36_1.transformY[l1], class36_1.transformZ[l1]);
+				method472(class18.transformationType[i2], class18.skinList[i2], class36_1.transformX[l1],
+						class36_1.transformY[l1], class36_1.transformZ[l1]);
 		}
 
 	}
@@ -1882,7 +1894,7 @@ public class Model extends Renderable {
 					anIntArray1640[face] = (short) replace;
 	}
 
-	public void retexture(short found, short replace) {//whjere are these other errors at
+	public void retexture(short found, short replace) {// whjere are these other errors at
 		if (texture != null)
 			for (int face = 0; face < anInt1630; face++)
 				if (texture[face] == found)
@@ -1937,7 +1949,8 @@ public class Model extends Renderable {
 			int l4 = k3 * k4 - j4 * l3;
 			int i5 = l3 * i4 - k4 * j3;
 			int j5;
-			for (j5 = j3 * j4 - i4 * k3; l4 > 8192 || i5 > 8192 || j5 > 8192 || l4 < -8192 || i5 < -8192 || j5 < -8192; j5 >>= 1) {
+			for (j5 = j3 * j4 - i4 * k3; l4 > 8192 || i5 > 8192 || j5 > 8192 || l4 < -8192 || i5 < -8192
+					|| j5 < -8192; j5 >>= 1) {
 				l4 >>= 1;
 				i5 >>= 1;
 			}
@@ -2017,24 +2030,15 @@ public class Model extends Renderable {
 				texture_id = -1;
 			} else {
 				texture_id = texture[j1];
-				/*if (player) {
-					if(anIntArray1639 != null && anIntArray1640 != null) {
-						if(anIntArray1640[j1] == 0 && anIntArray1638[j1] == 0) {
-							if(anIntArray1637[j1] == 2 && texture[j1] == -1) {
-								anIntArray1639[j1] = 255;
-							}
-						}
-					} else if(anIntArray1639 == null) {
-						if(anIntArray1640[j1] == 0 && anIntArray1638[j1] == 0) {
-							if(texture[j1] == -1) {
-								anIntArray1639 = new int[anInt1630];
-								if(anIntArray1637[j1] == 2) {
-									anIntArray1639[j1] = 255;
-								}
-							}
-						}
-					}
-				}*/
+				/*
+				 * if (player) { if(anIntArray1639 != null && anIntArray1640 != null) {
+				 * if(anIntArray1640[j1] == 0 && anIntArray1638[j1] == 0) {
+				 * if(anIntArray1637[j1] == 2 && texture[j1] == -1) { anIntArray1639[j1] = 255;
+				 * } } } else if(anIntArray1639 == null) { if(anIntArray1640[j1] == 0 &&
+				 * anIntArray1638[j1] == 0) { if(texture[j1] == -1) { anIntArray1639 = new
+				 * int[anInt1630]; if(anIntArray1637[j1] == 2) { anIntArray1639[j1] = 255; } } }
+				 * } }
+				 */
 			}
 
 			if (anIntArray1637 == null) {
@@ -2046,7 +2050,8 @@ public class Model extends Renderable {
 				}
 				int hsl = anIntArray1640[j1] & 0xffff;
 				Vertex vertex = super.aClass33Array1425[k1];
-				int light = i + (k * vertex.anInt602 + l * vertex.anInt603 + i1 * vertex.anInt604) / (j * vertex.anInt605);
+				int light = i
+						+ (k * vertex.anInt602 + l * vertex.anInt603 + i1 * vertex.anInt604) / (j * vertex.anInt605);
 				anIntArray1634[j1] = method481(hsl, light, type);
 				vertex = super.aClass33Array1425[i2];
 				light = i + (k * vertex.anInt602 + l * vertex.anInt603 + i1 * vertex.anInt604) / (j * vertex.anInt605);
@@ -2061,7 +2066,8 @@ public class Model extends Renderable {
 				}
 				int hsl = anIntArray1640[j1] & 0xffff;
 				Vertex vertex = super.aClass33Array1425[k1];
-				int light = i + (k * vertex.anInt602 + l * vertex.anInt603 + i1 * vertex.anInt604) / (j * vertex.anInt605);
+				int light = i
+						+ (k * vertex.anInt602 + l * vertex.anInt603 + i1 * vertex.anInt604) / (j * vertex.anInt605);
 				anIntArray1634[j1] = method481(hsl, light, type);
 				vertex = super.aClass33Array1425[i2];
 				light = i + (k * vertex.anInt602 + l * vertex.anInt603 + i1 * vertex.anInt604) / (j * vertex.anInt605);
@@ -2290,13 +2296,16 @@ public class Model extends Renderable {
 					int j5 = (anIntArray1667[l] + anIntArray1667[k1] + anIntArray1667[j2]) / 3 + anInt1653;
 					anIntArrayArray1672[j5][anIntArray1671[j5]++] = k;
 				} else {
-					if (flag1 && method486(anInt1685, anInt1686, anIntArray1666[l], anIntArray1666[k1], anIntArray1666[j2], i3, l3, k4)) {
+					if (flag1 && method486(anInt1685, anInt1686, anIntArray1666[l], anIntArray1666[k1],
+							anIntArray1666[j2], i3, l3, k4)) {
 						anIntArray1688[anInt1687++] = i;
 						flag1 = false;
 					}
-					if ((i3 - l3) * (anIntArray1666[j2] - anIntArray1666[k1]) - (anIntArray1666[l] - anIntArray1666[k1]) * (k4 - l3) > 0) {
+					if ((i3 - l3) * (anIntArray1666[j2] - anIntArray1666[k1])
+							- (anIntArray1666[l] - anIntArray1666[k1]) * (k4 - l3) > 0) {
 						aBooleanArray1664[k] = false;
-						if (i3 < 0 || l3 < 0 || k4 < 0 || i3 > Raster.centerX || l3 > Raster.centerX || k4 > Raster.centerX)
+						if (i3 < 0 || l3 < 0 || k4 < 0 || i3 > Raster.centerX || l3 > Raster.centerX
+								|| k4 > Raster.centerX)
 							aBooleanArray1663[k] = true;
 						else
 							aBooleanArray1663[k] = false;
@@ -2457,30 +2466,30 @@ public class Model extends Renderable {
 					Particle particle = new Particle(def, pos, depth, pid).setColor(startColor);
 					Client.instance.addParticle(particle);
 
-					/*for (int p2 : ParticleDefinition.COLOR_CHANGING_PARTICLES) {
-						if (pid == p2) {
-							int mspercolor = 3000;
-							int ms = (int) (System.currentTimeMillis() % (mspercolor * rainbow.length));
-							int currentcolor = ms / mspercolor;
-							int timepassed = ms % mspercolor;
-							int[] colora = rainbow[currentcolor % rainbow.length];
-							int[] colorb = rainbow[(currentcolor + 1) % rainbow.length];
-							int[] colorc = new int[]{colora[0] + ((colorb[0] - colora[0]) * timepassed / mspercolor), colora[1] + ((colorb[1] - colora[1]) * timepassed / mspercolor), colora[2] + ((colorb[2] - colora[2]) * timepassed / mspercolor),};
-							particle.setColor(getRGBInt(colorc[0], colorc[1], colorc[2]));
-
-						}
-					}*/
+					/*
+					 * for (int p2 : ParticleDefinition.COLOR_CHANGING_PARTICLES) { if (pid == p2) {
+					 * int mspercolor = 3000; int ms = (int) (System.currentTimeMillis() %
+					 * (mspercolor * rainbow.length)); int currentcolor = ms / mspercolor; int
+					 * timepassed = ms % mspercolor; int[] colora = rainbow[currentcolor %
+					 * rainbow.length]; int[] colorb = rainbow[(currentcolor + 1) % rainbow.length];
+					 * int[] colorc = new int[]{colora[0] + ((colorb[0] - colora[0]) * timepassed /
+					 * mspercolor), colora[1] + ((colorb[1] - colora[1]) * timepassed / mspercolor),
+					 * colora[2] + ((colorb[2] - colora[2]) * timepassed / mspercolor),};
+					 * particle.setColor(getRGBInt(colorc[0], colorc[1], colorc[2]));
+					 * 
+					 * } }
+					 */
 				}
 			}
 		}
 	}
 
-	private static int[][] rainbow = new int[][]{{255, 0, 0}, // red
-			{255, 200, 0}, // orange
-			{255, 255, 0}, // yellow
-			{0, 255, 0}, // green
-			{0, 0, 255}, // blue
-			{255, 0, 255}, // purple
+	private static int[][] rainbow = new int[][] { { 255, 0, 0 }, // red
+			{ 255, 200, 0 }, // orange
+			{ 255, 255, 0 }, // yellow
+			{ 0, 255, 0 }, // green
+			{ 0, 0, 255 }, // blue
+			{ 255, 0, 255 }, // purple
 	};
 
 	public static int getRGBInt(int r, int g, int b) {
@@ -2534,17 +2543,34 @@ public class Model extends Renderable {
 				texture_c = anIntArray1645[coordinate];
 			}
 			if (anIntArray1636[i] == -1 || type == 3) {
-				Rasterizer.drawTexturedTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l], anIntArray1665[j], anIntArray1665[k], anIntArray1665[l], anIntArray1634[i], anIntArray1634[i], anIntArray1634[i], anIntArray1668[texture_a], anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k], vertexPerspectiveDepth[l]);
+				Rasterizer.drawTexturedTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l],
+						anIntArray1665[j], anIntArray1665[k], anIntArray1665[l], anIntArray1634[i], anIntArray1634[i],
+						anIntArray1634[i], anIntArray1668[texture_a], anIntArray1668[texture_b],
+						anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
+						anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
+						anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k],
+						vertexPerspectiveDepth[l]);
 			} else {
-				Rasterizer.drawTexturedTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l], anIntArray1665[j], anIntArray1665[k], anIntArray1665[l], anIntArray1634[i], anIntArray1635[i], anIntArray1636[i], anIntArray1668[texture_a], anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k], vertexPerspectiveDepth[l]);
+				Rasterizer.drawTexturedTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l],
+						anIntArray1665[j], anIntArray1665[k], anIntArray1665[l], anIntArray1634[i], anIntArray1635[i],
+						anIntArray1636[i], anIntArray1668[texture_a], anIntArray1668[texture_b],
+						anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
+						anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
+						anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k],
+						vertexPerspectiveDepth[l]);
 			}
 		} else {
 			if (type == 0) {
-				Rasterizer.drawGouraudTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l], anIntArray1665[j], anIntArray1665[k], anIntArray1665[l], anIntArray1634[i], anIntArray1635[i], anIntArray1636[i], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k], vertexPerspectiveDepth[l]);
+				Rasterizer.drawGouraudTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l],
+						anIntArray1665[j], anIntArray1665[k], anIntArray1665[l], anIntArray1634[i], anIntArray1635[i],
+						anIntArray1636[i], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k],
+						vertexPerspectiveDepth[l]);
 				return;
 			}
 			if (type == 1) {
-				Rasterizer.drawFlatTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l], anIntArray1665[j], anIntArray1665[k], anIntArray1665[l], modelIntArray3[anIntArray1634[i]], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k], vertexPerspectiveDepth[l]);
+				Rasterizer.drawFlatTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l], anIntArray1665[j],
+						anIntArray1665[k], anIntArray1665[l], modelIntArray3[anIntArray1634[i]],
+						vertexPerspectiveDepth[j], vertexPerspectiveDepth[k], vertexPerspectiveDepth[l]);
 				return;
 			}
 		}
@@ -2652,20 +2678,32 @@ public class Model extends Renderable {
 						texture_c = anIntArray1645[coordinate];
 					}
 					if (anIntArray1636[i] == -1) {
-						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1634[i], anIntArray1634[i], anIntArray1634[i], anIntArray1668[texture_a], anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1634[i], anIntArray1634[i],
+								anIntArray1634[i], anIntArray1668[texture_a], anIntArray1668[texture_b],
+								anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
+								anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
+								anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1],
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
 					} else {
-						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1], anIntArray1680[2], anIntArray1668[texture_a], anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1],
+								anIntArray1680[2], anIntArray1668[texture_a], anIntArray1668[texture_b],
+								anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
+								anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
+								anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1],
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
 					}
 				} else {
 					if (l7 == 0)
-						Rasterizer.drawGouraudTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1], anIntArray1680[2], 0, 0, 0);
+						Rasterizer.drawGouraudTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1],
+								anIntArray1680[2], 0, 0, 0);
 
 					else if (l7 == 1)
 						Rasterizer.drawFlatTriangle(i7, j7, k7, j3, j4, j5, modelIntArray3[anIntArray1634[i]], 0, 0, 0);
 				}
 			}
 			if (l == 4) {
-				if (j3 < 0 || j4 < 0 || j5 < 0 || j3 > Raster.centerX || j4 > Raster.centerX || j5 > Raster.centerX || anIntArray1678[3] < 0 || anIntArray1678[3] > Raster.centerX)
+				if (j3 < 0 || j4 < 0 || j5 < 0 || j3 > Raster.centerX || j4 > Raster.centerX || j5 > Raster.centerX
+						|| anIntArray1678[3] < 0 || anIntArray1678[3] > Raster.centerX)
 					Rasterizer.aBoolean1462 = true;
 				int type;
 				if (anIntArray1637 == null)
@@ -2681,23 +2719,47 @@ public class Model extends Renderable {
 						texture_c = anIntArray1645[coordinate];
 					}
 					if (anIntArray1636[i] == -1) {
-						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1634[i], anIntArray1634[i], anIntArray1634[i], anIntArray1668[texture_a], anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
-						Rasterizer.drawTexturedTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3], anIntArray1634[i], anIntArray1634[i], anIntArray1634[i], anIntArray1668[texture_a], anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1634[i], anIntArray1634[i],
+								anIntArray1634[i], anIntArray1668[texture_a], anIntArray1668[texture_b],
+								anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
+								anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
+								anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1],
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+						Rasterizer.drawTexturedTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3],
+								anIntArray1634[i], anIntArray1634[i], anIntArray1634[i], anIntArray1668[texture_a],
+								anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a],
+								anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a],
+								anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i],
+								vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
 					} else {
-						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1], anIntArray1680[2], anIntArray1668[texture_a], anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
-						Rasterizer.drawTexturedTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3], anIntArray1680[0], anIntArray1680[2], anIntArray1680[3], anIntArray1668[texture_a], anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1],
+								anIntArray1680[2], anIntArray1668[texture_a], anIntArray1668[texture_b],
+								anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
+								anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
+								anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1],
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+						Rasterizer.drawTexturedTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3],
+								anIntArray1680[0], anIntArray1680[2], anIntArray1680[3], anIntArray1668[texture_a],
+								anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a],
+								anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a],
+								anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i],
+								vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
 						return;
 					}
 				} else {
 					if (type == 0) {
-						Rasterizer.drawGouraudTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1], anIntArray1680[2], 0, 0, 0);
-						Rasterizer.drawGouraudTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3], anIntArray1680[0], anIntArray1680[2], anIntArray1680[3], vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+						Rasterizer.drawGouraudTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1],
+								anIntArray1680[2], 0, 0, 0);
+						Rasterizer.drawGouraudTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3],
+								anIntArray1680[0], anIntArray1680[2], anIntArray1680[3], vertexPerspectiveDepth[i1],
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
 						return;
 					}
 					if (type == 1) {
 						int l8 = modelIntArray3[anIntArray1634[i]];
 						Rasterizer.drawFlatTriangle(i7, j7, k7, j3, j4, j5, l8, 0, 0, 0);
-						Rasterizer.drawFlatTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3], l8, vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+						Rasterizer.drawFlatTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3], l8,
+								vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
 						return;
 					}
 				}

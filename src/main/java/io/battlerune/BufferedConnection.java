@@ -53,7 +53,7 @@ final class BufferedConnection implements Runnable {
 	}
 
 	public void flushInputStream(byte abyte0[], int j) throws IOException {
-		int i = 0;//was parameter
+		int i = 0;// was parameter
 		if (closed)
 			return;
 		int k;

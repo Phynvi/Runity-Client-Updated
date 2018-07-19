@@ -1,6 +1,5 @@
 package io.battlerune;
 
-
 /**
  * Handles the developer terminal console.
  *
@@ -75,7 +74,9 @@ public class Console {
 			Raster.drawPixels(1, 334 - 21, 0, 0xffffff, width);
 			String title = Utility.formatName(Client.instance.myUsername) + "@OSRoyale:";
 			Client.instance.newBoldFont.drawBasicString(title + " ", 5, 334 - 6, 0xACB0B5, 0);
-			Client.instance.newBoldFont.drawBasicString("<col=ffffff>" + consoleInput + (Client.tick % 20 < 10 ? "|" : ""), Client.instance.newBoldFont.getTextWidth(title) + 8, 334 - 5, 0xffffff, 0);
+			Client.instance.newBoldFont.drawBasicString(
+					"<col=ffffff>" + consoleInput + (Client.tick % 20 < 10 ? "|" : ""),
+					Client.instance.newBoldFont.getTextWidth(title) + 8, 334 - 5, 0xffffff, 0);
 			for (int index = 0, messageY = 308; index < 17; index++, messageY -= 18) {
 				String msg = terminal[index];
 				if (msg != null && msg.length() > 0) {
@@ -105,7 +106,6 @@ public class Console {
 		Client.instance.outgoing.writeString(consoleCommand);
 		commandIndex = -1;
 	}
-
 
 	/**
 	 * Handles choosing the developer command.
@@ -157,4 +157,3 @@ public class Console {
 		terminal[0] = message;
 	}
 }
-

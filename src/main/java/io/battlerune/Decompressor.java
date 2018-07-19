@@ -22,8 +22,8 @@ final class Decompressor {
 			}
 			int i1 = ((buffer[0] & 0xff) << 16) + ((buffer[1] & 0xff) << 8) + (buffer[2] & 0xff);
 			int j1 = ((buffer[3] & 0xff) << 16) + ((buffer[4] & 0xff) << 8) + (buffer[5] & 0xff);
-			//if(i1 < 0 || i1 > 0xffffff)
-			//	return null;
+			// if(i1 < 0 || i1 > 0xffffff)
+			// return null;
 			if (j1 <= 0 || (long) j1 > dataFile.length() / 520L)
 				return null;
 			byte abyte0[] = new byte[i1];

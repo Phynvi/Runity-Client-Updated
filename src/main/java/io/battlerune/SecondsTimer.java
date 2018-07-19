@@ -17,8 +17,7 @@ public class SecondsTimer extends Stopwatch {
 	}
 
 	/**
-	 * Constructs a new timer and
-	 * starts it immediately.
+	 * Constructs a new timer and starts it immediately.
 	 *
 	 * @param seconds The amount of seconds to
 	 */
@@ -44,8 +43,7 @@ public class SecondsTimer extends Stopwatch {
 	}
 
 	/**
-	 * Checks if this timer has finished
-	 * counting down, basically reaching 0.
+	 * Checks if this timer has finished counting down, basically reaching 0.
 	 *
 	 * @return true if finished, false otherwise.
 	 */
@@ -54,8 +52,7 @@ public class SecondsTimer extends Stopwatch {
 	}
 
 	/**
-	 * Gets the amount of seconds remaining
-	 * before this timer has reached 0.
+	 * Gets the amount of seconds remaining before this timer has reached 0.
 	 *
 	 * @return The seconds remaining.
 	 */
@@ -64,8 +61,7 @@ public class SecondsTimer extends Stopwatch {
 	}
 
 	/**
-	 * Gets the amount of seconds that have elapsed
-	 * since the timer was started.
+	 * Gets the amount of seconds that have elapsed since the timer was started.
 	 *
 	 * @return The seconds elapsed.
 	 */
@@ -73,4 +69,3 @@ public class SecondsTimer extends Stopwatch {
 		return (int) elapsed() / 1000;
 	}
 }
-

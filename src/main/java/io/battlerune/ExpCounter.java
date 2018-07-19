@@ -27,7 +27,8 @@ public class ExpCounter {
 				lastSkill = skill;
 			}
 			if (xp != 0) {
-				if (currentGain != null && Math.abs(currentGain.getY() - START) <= getSize2(Settings.COUNTER_SIZE).baseCharacterHeight) {
+				if (currentGain != null && Math
+						.abs(currentGain.getY() - START) <= getSize2(Settings.COUNTER_SIZE).baseCharacterHeight) {
 					currentGain.xp += xp;
 					currentGain.addSprite(skill);
 				} else {
@@ -54,9 +55,8 @@ public class ExpCounter {
 			x = 2;
 		}
 
-
 		int backgroundSprite = Settings.COUNTER_PROGRESS ? 451 : 777;
-		Client.spriteCache.get(lastSkill == -1 ? 777: backgroundSprite).drawTransparentSprite(x, 2, 230);
+		Client.spriteCache.get(lastSkill == -1 ? 777 : backgroundSprite).drawTransparentSprite(x, 2, 230);
 		Client.spriteCache.get(81).drawSprite(x + 4, 6);
 
 		if (xpCounter >= 0) {
@@ -85,7 +85,7 @@ public class ExpCounter {
 			if (percentage > 100)
 				percentage = 100;
 
-			if (width > 136)//login and show when it errors
+			if (width > 136)// login and show when it errors
 				width = 136;
 
 			if (width < 0)
@@ -106,12 +106,17 @@ public class ExpCounter {
 				Raster.drawRectangle(mouseX, mouseY + 5, 115, level < 99 ? 80 : 50, 0);
 
 				String skillName = SkillConstants.SKILL_NAMES[lastSkill];
-				Client.instance.newSmallFont.drawBasicString("Skill: @gre@" + skillName, mouseX + Client.instance.newSmallFont.getTextWidth(skillName) - 25, mouseY + 20, 16777215, 1);
-				Client.instance.newSmallFont.drawBasicString("Level: @gre@" + level, mouseX + 3, mouseY + 35, 16777215, 1);
-				Client.instance.newSmallFont.drawBasicString("Exp: @gre@" + nf.format(experience), mouseX + 3, mouseY + 50, 16777215, 1);
+				Client.instance.newSmallFont.drawBasicString("Skill: @gre@" + skillName,
+						mouseX + Client.instance.newSmallFont.getTextWidth(skillName) - 25, mouseY + 20, 16777215, 1);
+				Client.instance.newSmallFont.drawBasicString("Level: @gre@" + level, mouseX + 3, mouseY + 35, 16777215,
+						1);
+				Client.instance.newSmallFont.drawBasicString("Exp: @gre@" + nf.format(experience), mouseX + 3,
+						mouseY + 50, 16777215, 1);
 				if (level < 99) {
-					Client.instance.newSmallFont.drawBasicString("Next Level: @gre@" + nf.format(endExp), mouseX + 3, mouseY + 65, 16777215, 1);
-					Client.instance.newSmallFont.drawBasicString("Exp Left: @gre@" + nf.format(remainder), mouseX + 3, mouseY + 80, 16777215, 1);
+					Client.instance.newSmallFont.drawBasicString("Next Level: @gre@" + nf.format(endExp), mouseX + 3,
+							mouseY + 65, 16777215, 1);
+					Client.instance.newSmallFont.drawBasicString("Exp Left: @gre@" + nf.format(remainder), mouseX + 3,
+							mouseY + 80, 16777215, 1);
 				}
 			}
 		}
@@ -146,12 +151,12 @@ public class ExpCounter {
 						dx += expSprite.sprite.width + 1;
 					}
 					String drop = String.format("<trans=%s>%,d", gain.getAlpha(), gain.getXP());
-					getSize2(Settings.COUNTER_SIZE).drawBasicString(drop, x + dx + 2, (int) (gain.getY() + y) + 14, Settings.COUNTER_COLOR, 0);
+					getSize2(Settings.COUNTER_SIZE).drawBasicString(drop, x + dx + 2, (int) (gain.getY() + y) + 14,
+							Settings.COUNTER_COLOR, 0);
 				}
 			}
 		}
 	}
-
 
 	private static TextDrawingArea getSize(int size) {
 		if (size == 0)

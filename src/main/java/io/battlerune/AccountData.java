@@ -19,13 +19,13 @@ public class AccountData {
 	/** The account avatar. */
 	public int avatar;
 
-	/**  The account rank. */
+	/** The account rank. */
 	public int rank;
 
-	/** The account usage amount.  */
+	/** The account usage amount. */
 	public int uses;
 
-	/** Constructs a new <code>AccountData</code>.  */
+	/** Constructs a new <code>AccountData</code>. */
 	AccountData(String username, String password, String created, int avatar, int rank, int uses) {
 		this.username = username;
 		this.password = password;
@@ -35,13 +35,14 @@ public class AccountData {
 		this.uses = uses;
 	}
 
-	/** Constructs a new <code>AccountData</code>.  */
+	/** Constructs a new <code>AccountData</code>. */
 	AccountData(String username, String password) {
 		this(username, password, Utility.getDate(), 534, -1, 0);
 	}
 
 	@Override
 	public String toString() {
-		return "[Username: " + username + " | Password: " + password + " | Created: " + created + " | Avatar: " + avatar + " | Rank: " + rank + " | Uses: " + uses + "]";
+		return "[Username: " + username + " | Password: " + password + " | Created: " + created + " | Avatar: " + avatar
+				+ " | Rank: " + rank + " | Uses: " + uses + "]";
 	}
 }

@@ -10,7 +10,6 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 
-
 public final class GameWindow extends JFrame {
 
 	private final GameApplet applet;

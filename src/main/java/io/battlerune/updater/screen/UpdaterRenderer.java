@@ -17,69 +17,68 @@ import io.battlerune.Raster;
  */
 public class UpdaterRenderer implements ActionListener {
 
-    /**
-     * The client instance.
-     */
-    private final Client client;
+	/**
+	 * The client instance.
+	 */
+	private final Client client;
 
-    /**
-     * The graphics object to draw to.
-     */
-    private final Graphics graphics;
+	/**
+	 * The graphics object to draw to.
+	 */
+	private final Graphics graphics;
 
-    /**
-     * The screen to render.
-     */
-    public UpdateComponent screen;
+	/**
+	 * The screen to render.
+	 */
+	public UpdateComponent screen;
 
-    private final Timer timer = new Timer(25, this);
+	private final Timer timer = new Timer(25, this);
 
-    /**
-     * Constructs a new {@code UpdateRenderer}.
-     *
-     * @param client the client instance
-     */
-    public UpdaterRenderer(Client client, Graphics graphics) {
-        this.client = client;
-        this.graphics = graphics;
-    }
+	/**
+	 * Constructs a new {@code UpdateRenderer}.
+	 *
+	 * @param client the client instance
+	 */
+	public UpdaterRenderer(Client client, Graphics graphics) {
+		this.client = client;
+		this.graphics = graphics;
+	}
 
-    /**
-     * Sets the next screen.
-     */
-    public void setScreen(UpdateComponent screen) {
-        this.screen = screen;
-        screen.setup(client);
-        int[] raster = ((DataBufferInt) screen.getImage().getRaster().getDataBuffer()).getData();
-        Client.updaterScreenIP = new GraphicsBuffer(765, 503, raster, client.getGameComponent());
-        Client.updaterScreenIP.initDrawingArea();
-        timer.restart();
-    }
+	/**
+	 * Sets the next screen.
+	 */
+	public void setScreen(UpdateComponent screen) {
+		this.screen = screen;
+		screen.setup(client);
+		int[] raster = ((DataBufferInt) screen.getImage().getRaster().getDataBuffer()).getData();
+		Client.updaterScreenIP = new GraphicsBuffer(765, 503, raster, client.getGameComponent());
+		Client.updaterScreenIP.initDrawingArea();
+		timer.restart();
+	}
 
-    private void process() {
-        if (screen != null)
-            screen.process();
-    }
+	private void process() {
+		if (screen != null)
+			screen.process();
+	}
 
-    private void render() {
-        if (screen != null && Client.updaterScreenIP != null) {
-            Raster.reset(new Color(38, 38, 38));
-            screen.render(client);
+	private void render() {
+		if (screen != null && Client.updaterScreenIP != null) {
+			Raster.reset(new Color(38, 38, 38));
+			screen.render(client);
 
-            if (graphics != null)
-                Client.updaterScreenIP.drawGraphics(graphics, 0, 0);
-        }
-    }
+			if (graphics != null)
+				Client.updaterScreenIP.drawGraphics(graphics, 0, 0);
+		}
+	}
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        process();
-        render();
-    }
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		process();
+		render();
+	}
 
-    public void finish() {
-        timer.stop();
-    }
-
+	public void finish() {
+		timer.stop();
+	}
 
 }

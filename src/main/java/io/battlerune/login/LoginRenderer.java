@@ -1,6 +1,5 @@
 package io.battlerune.login;
 
-
 import io.battlerune.Client;
 import io.battlerune.login.impl.MainScreen;
 

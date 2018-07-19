@@ -19,7 +19,8 @@ public final class Npc extends Entity {
 			if (super.anInt1517 >= 0 && super.anInt1517 != super.idleAnimation) {
 				idleAnim = Animation.animations[super.anInt1517].primaryFrames[super.anInt1518];
 			}
-			return definition.method164(idleAnim, currAnim, nextAnim, currCycle, nextCycle, Animation.animations[super.emoteAnimation].interleaveOrder);
+			return definition.method164(idleAnim, currAnim, nextAnim, currCycle, nextCycle,
+					Animation.animations[super.emoteAnimation].interleaveOrder);
 		}
 		if (super.anInt1517 >= 0) {
 			final Animation seq = Animation.animations[super.anInt1517];
@@ -54,7 +55,7 @@ public final class Npc extends Entity {
 				if (spotAnim.resizeX != 128 || spotAnim.resizeY != 128)
 					model_2.method478(spotAnim.resizeX, spotAnim.resizeX, spotAnim.resizeY);
 				model_2.light(64 + spotAnim.ambience, 850 + spotAnim.contrast, -30, -50, -30, true);
-				Model aModel[] = {model, model_2};
+				Model aModel[] = { model, model_2 };
 				model = new Model(aModel);
 			}
 		}

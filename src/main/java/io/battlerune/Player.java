@@ -79,8 +79,8 @@ public final class Player extends Entity {
 			Model spotAnimationModel = spotAnim.getModel();
 
 			/**
-			 * MAKE SURE WE'VE LOADED THE GRAPHIC BEFORE ATTEMPTING TO DO IT.
-			 * Fixes graphics flickering.
+			 * MAKE SURE WE'VE LOADED THE GRAPHIC BEFORE ATTEMPTING TO DO IT. Fixes graphics
+			 * flickering.
 			 */
 			if (Frame.animationlist[spotAnim.aAnimation_407.primaryFrames[0] >> 16].length == 0) {
 				spotAnimationModel = null;
@@ -97,7 +97,7 @@ public final class Player extends Entity {
 				if (spotAnim.resizeX != 128 || spotAnim.resizeY != 128)
 					model_3.method478(spotAnim.resizeX, spotAnim.resizeX, spotAnim.resizeY);
 				model_3.light(64 + spotAnim.ambience, 850 + spotAnim.contrast, -30, -50, -30, true);
-				Model models[] = {animatedModel, model_3};
+				Model models[] = { animatedModel, model_3 };
 				animatedModel = new Model(models);
 			}
 		}
@@ -118,7 +118,7 @@ public final class Player extends Entity {
 					model_1.method473();
 				} else if (super.turnDirection == 1536)
 					model_1.method473();
-				Model models[] = {animatedModel, model_1};
+				Model models[] = { animatedModel, model_1 };
 				animatedModel = new Model(models);
 				if (super.turnDirection == 512)
 					model_1.method473();
@@ -179,7 +179,9 @@ public final class Player extends Entity {
 		if (equip >= 512) {
 			ItemDefinition def = ItemDefinition.lookup(equip - 512);
 			if (maxCapeIds(equip - 512)) {
-				this.maxCapeParticleColor = (def.originalModelColors == null || def.modifiedModelColors == null) ? defaultParticleColor : modelIntArray3[def.originalModelColors[2]];
+				this.maxCapeParticleColor = (def.originalModelColors == null || def.modifiedModelColors == null)
+						? defaultParticleColor
+						: modelIntArray3[def.originalModelColors[2]];
 			}
 
 			if (maxCapeParticleColor == 10000525) {
@@ -187,7 +189,7 @@ public final class Player extends Entity {
 			} else if (maxCapeParticleColor == 3288622) {
 				maxCapeParticleColor = 7622056;
 			}
-			//System.out.println("particle color: "+maxCapeParticleColor);
+			// System.out.println("particle color: "+maxCapeParticleColor);
 		}
 
 		super.idleAnimation = stream.readUShort();
@@ -263,7 +265,8 @@ public final class Player extends Entity {
 	}
 
 	public boolean maxCapeIds(int itemId) {
-		return ((itemId == 21285) || (itemId == 13329) || (itemId == 13280) || (itemId == 13331) || (itemId == 13335) || (itemId == 13337) || (itemId == 13333) || (itemId == 20760));
+		return ((itemId == 21285) || (itemId == 13329) || (itemId == 13280) || (itemId == 13331) || (itemId == 13335)
+				|| (itemId == 13337) || (itemId == 13333) || (itemId == 20760));
 	}
 
 	Model method452() {
@@ -376,7 +379,8 @@ public final class Player extends Entity {
 			model_1 = new Model(j2, aclass30_sub2_sub4_sub6s);
 			for (int j3 = 0; j3 < 5; j3++)
 				if (appearanceColors[j3] != 0) {
-					model_1.recolor(Client.PLAYER_BODY_RECOLOURS[j3][0], Client.PLAYER_BODY_RECOLOURS[j3][appearanceColors[j3]]);
+					model_1.recolor(Client.PLAYER_BODY_RECOLOURS[j3][0],
+							Client.PLAYER_BODY_RECOLOURS[j3][appearanceColors[j3]]);
 					if (j3 == 1)
 						model_1.recolor(Client.anIntArray1204[0], Client.anIntArray1204[appearanceColors[j3]]);
 				}
@@ -456,7 +460,8 @@ public final class Player extends Entity {
 		Model model = new Model(k, aclass30_sub2_sub4_sub6s);
 		for (int j1 = 0; j1 < 5; j1++)
 			if (appearanceColors[j1] != 0) {
-				model.recolor(Client.PLAYER_BODY_RECOLOURS[j1][0], Client.PLAYER_BODY_RECOLOURS[j1][appearanceColors[j1]]);
+				model.recolor(Client.PLAYER_BODY_RECOLOURS[j1][0],
+						Client.PLAYER_BODY_RECOLOURS[j1][appearanceColors[j1]]);
 				if (j1 == 1)
 					model.recolor(Client.anIntArray1204[0], Client.anIntArray1204[appearanceColors[j1]]);
 			}

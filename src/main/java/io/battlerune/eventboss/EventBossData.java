@@ -4,8 +4,8 @@ import io.battlerune.BossDrops;
 
 public enum EventBossData {
 
-	LAVA_DRAGON("Indian", 6593, 252, 280, 23, "Magic, Stab,\\n Range", "Melee,\\n Dragon breath",
-			"This nigger  \\n", BossDrops.LAVA_DRAGON_DROPS);
+	LAVA_DRAGON("Indian", 6593, 252, 280, 23, "Magic, Stab,\\n Range", "Melee,\\n Dragon breath", "This nigger  \\n",
+			BossDrops.LAVA_DRAGON_DROPS);
 
 	private String title;
 	private int npcId;

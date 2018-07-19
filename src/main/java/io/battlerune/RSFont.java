@@ -92,7 +92,8 @@ public class RSFont extends Raster {
 		}
 	}
 
-	private void createPixels(int drawingAreaPixels[], byte charPixels[], int color, int pixel, int offset, int width, int height, int unknown1, int unknown2) {
+	private void createPixels(int drawingAreaPixels[], byte charPixels[], int color, int pixel, int offset, int width,
+			int height, int unknown1, int unknown2) {
 		int l1 = -(width >> 2);
 		width = -(width & 3);
 		for (int i2 = -height; i2 < 0; i2++) {
@@ -198,7 +199,8 @@ public class RSFont extends Raster {
 		}
 	}
 
-	public void drawStringMoveY(String string, int drawX, int drawY, int color, int shadow, int randomMod, int randomMod2) {
+	public void drawStringMoveY(String string, int drawX, int drawY, int color, int shadow, int randomMod,
+			int randomMod2) {
 		if (string != null) {
 			setColorAndShadow(color, shadow);
 			double d = 7.0 - (double) randomMod2 / 8.0;
@@ -344,7 +346,8 @@ public class RSFont extends Raster {
 		anInt4175 = 0;
 	}
 
-	public static int method1014(byte[][] is, byte[][] is_27_, int[] is_28_, int[] is_29_, int[] is_30_, int i, int i_31_) {
+	public static int method1014(byte[][] is, byte[][] is_27_, int[] is_28_, int[] is_29_, int[] is_30_, int i,
+			int i_31_) {
 		int i_32_ = is_28_[i];
 		int i_33_ = i_32_ + is_30_[i];
 		int i_34_ = is_28_[i_31_];
@@ -445,7 +448,7 @@ public class RSFont extends Raster {
 							}
 							if (idx >= 0 && idx < clanImages.length) {
 								Sprite icon = clanImages[idx];
-								icon.drawSprite(drawX, drawY );
+								icon.drawSprite(drawX, drawY);
 								drawX += icon.width + icon.offsetX;
 							}
 						} else if (effect.startsWith(startIconImage)) {
@@ -474,7 +477,8 @@ public class RSFont extends Raster {
 				}
 			}
 
-			if (character == '@' && currentCharacter + 4 < string.length() && string.charAt(currentCharacter + 4) == '@') {
+			if (character == '@' && currentCharacter + 4 < string.length()
+					&& string.charAt(currentCharacter + 4) == '@') {
 				textColor = getColorByName(string.substring(currentCharacter + 1, currentCharacter + 4));
 				currentCharacter += 4;
 				continue;
@@ -485,14 +489,19 @@ public class RSFont extends Raster {
 			if (character != 32) {
 				if (transparency == 256) {
 					if (textShadowColor != -1) {
-						drawCharacter(character, drawX + characterDrawXOffsets[character] + 1, drawY + characterDrawYOffsets[character] + 1, width, height, textShadowColor, true);
+						drawCharacter(character, drawX + characterDrawXOffsets[character] + 1,
+								drawY + characterDrawYOffsets[character] + 1, width, height, textShadowColor, true);
 					}
-					drawCharacter(character, drawX + characterDrawXOffsets[character], drawY + characterDrawYOffsets[character], width, height, textColor, false);
+					drawCharacter(character, drawX + characterDrawXOffsets[character],
+							drawY + characterDrawYOffsets[character], width, height, textColor, false);
 				} else {
 					if (textShadowColor != -1) {
-						drawTransparentCharacter(character, drawX + characterDrawXOffsets[character] + 1, drawY + characterDrawYOffsets[character] + 1, width, height, textShadowColor, transparency, true);
+						drawTransparentCharacter(character, drawX + characterDrawXOffsets[character] + 1,
+								drawY + characterDrawYOffsets[character] + 1, width, height, textShadowColor,
+								transparency, true);
 					}
-					drawTransparentCharacter(character, drawX + characterDrawXOffsets[character], drawY + characterDrawYOffsets[character], width, height, textColor, transparency, false);
+					drawTransparentCharacter(character, drawX + characterDrawXOffsets[character],
+							drawY + characterDrawYOffsets[character], width, height, textColor, transparency, false);
 				}
 			} else if (anInt4178 > 0) {
 				anInt4175 += anInt4178;
@@ -501,7 +510,8 @@ public class RSFont extends Raster {
 			}
 			int lineWidth = characterScreenWidths[character];
 			if (strikethroughColor != -1) {
-				drawHorizontalLine(drawX, strikethroughColor, lineWidth, drawY + (int) ((double) baseCharacterHeight * 0.69999999999999996D));
+				drawHorizontalLine(drawX, strikethroughColor, lineWidth,
+						drawY + (int) ((double) baseCharacterHeight * 0.69999999999999996D));
 			}
 			if (underlineColor != -1) {
 				drawHorizontalLine(drawX, underlineColor, lineWidth, drawY + baseCharacterHeight + 3);
@@ -541,14 +551,21 @@ public class RSFont extends Raster {
 			if (character != 32) {
 				if (transparency == 256) {
 					if (textShadowColor != -1) {
-						drawCharacter(character, (drawX + characterDrawXOffsets[character] + 1 + xOff), (drawY + characterDrawYOffsets[character] + 1 + yOff), width, height, textShadowColor, true);
+						drawCharacter(character, (drawX + characterDrawXOffsets[character] + 1 + xOff),
+								(drawY + characterDrawYOffsets[character] + 1 + yOff), width, height, textShadowColor,
+								true);
 					}
-					drawCharacter(character, drawX + characterDrawXOffsets[character] + xOff, drawY + characterDrawYOffsets[character] + yOff, width, height, textColor, false);
+					drawCharacter(character, drawX + characterDrawXOffsets[character] + xOff,
+							drawY + characterDrawYOffsets[character] + yOff, width, height, textColor, false);
 				} else {
 					if (textShadowColor != -1) {
-						drawTransparentCharacter(character, (drawX + characterDrawXOffsets[character] + 1 + xOff), (drawY + characterDrawYOffsets[character] + 1 + yOff), width, height, textShadowColor, transparency, true);
+						drawTransparentCharacter(character, (drawX + characterDrawXOffsets[character] + 1 + xOff),
+								(drawY + characterDrawYOffsets[character] + 1 + yOff), width, height, textShadowColor,
+								transparency, true);
 					}
-					drawTransparentCharacter(character, drawX + characterDrawXOffsets[character] + xOff, drawY + characterDrawYOffsets[character] + yOff, width, height, textColor, transparency, false);
+					drawTransparentCharacter(character, drawX + characterDrawXOffsets[character] + xOff,
+							drawY + characterDrawYOffsets[character] + yOff, width, height, textColor, transparency,
+							false);
 				}
 			} else if (anInt4178 > 0) {
 				anInt4175 += anInt4178;
@@ -557,7 +574,8 @@ public class RSFont extends Raster {
 			}
 			int i_109_ = characterScreenWidths[character];
 			if (strikethroughColor != -1) {
-				drawHorizontalLine(drawX, strikethroughColor, i_109_, drawY + (int) ((double) baseCharacterHeight * 0.7));
+				drawHorizontalLine(drawX, strikethroughColor, i_109_,
+						drawY + (int) ((double) baseCharacterHeight * 0.7));
 			}
 			if (underlineColor != -1) {
 				drawHorizontalLine(drawX, underlineColor, i_109_, drawY + baseCharacterHeight);
@@ -648,7 +666,8 @@ public class RSFont extends Raster {
 					if (end > -1 && end != currentCharacter + 1 && end < string.length()) {
 						String effect = string.substring(currentCharacter + 1, end);
 
-						if (effect.startsWith(startImage) || effect.startsWith(startClanImage) || effect.startsWith(startIconImage)) {
+						if (effect.startsWith(startImage) || effect.startsWith(startClanImage)
+								|| effect.startsWith(startIconImage)) {
 							finalWidth += 11;
 						}
 
@@ -658,7 +677,8 @@ public class RSFont extends Raster {
 				}
 			}
 
-			if (character == '@' && currentCharacter + 4 < string.length() && string.charAt(currentCharacter + 4) == '@') {
+			if (character == '@' && currentCharacter + 4 < string.length()
+					&& string.charAt(currentCharacter + 4) == '@') {
 				textColor = getColorByName(string.substring(currentCharacter + 1, currentCharacter + 4));
 				currentCharacter += 4;
 				continue;
@@ -698,14 +718,16 @@ public class RSFont extends Raster {
 		}
 	}
 
-	public static void createTransparentCharacterPixels(int[] is, byte[] is_0_, int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
+	public static void createTransparentCharacterPixels(int[] is, byte[] is_0_, int i, int i_1_, int i_2_, int i_3_,
+			int i_4_, int i_5_, int i_6_, int i_7_) {
 		i = ((i & 0xff00ff) * i_7_ & ~0xff00ff) + ((i & 0xff00) * i_7_ & 0xff0000) >> 8;
 		i_7_ = 256 - i_7_;
 		for (int i_8_ = -i_4_; i_8_ < 0; i_8_++) {
 			for (int i_9_ = -i_3_; i_9_ < 0; i_9_++) {
 				if (is_0_[i_1_++] != 0) {
 					int i_10_ = is[i_2_];
-					is[i_2_++] = ((((i_10_ & 0xff00ff) * i_7_ & ~0xff00ff) + ((i_10_ & 0xff00) * i_7_ & 0xff0000)) >> 8) + i;
+					is[i_2_++] = ((((i_10_ & 0xff00ff) * i_7_ & ~0xff00ff) + ((i_10_ & 0xff00) * i_7_ & 0xff0000)) >> 8)
+							+ i;
 				} else {
 					i_2_++;
 				}
@@ -715,7 +737,8 @@ public class RSFont extends Raster {
 		}
 	}
 
-	public void drawTransparentCharacter(int i, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, boolean bool) {
+	public void drawTransparentCharacter(int i, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_,
+			boolean bool) {
 		int i_17_ = i_11_ + i_12_ * width;
 		int i_18_ = width - i_13_;
 		int i_19_ = 0;
@@ -746,11 +769,13 @@ public class RSFont extends Raster {
 			i_18_ += i_23_;
 		}
 		if (i_13_ > 0 && i_14_ > 0) {
-			createTransparentCharacterPixels(pixels, fontPixels[i], i_15_, i_20_, i_17_, i_13_, i_14_, i_18_, i_19_, i_16_);
+			createTransparentCharacterPixels(pixels, fontPixels[i], i_15_, i_20_, i_17_, i_13_, i_14_, i_18_, i_19_,
+					i_16_);
 		}
 	}
 
-	public static void createCharacterPixels(int[] is, byte[] is_24_, int i, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_) {
+	public static void createCharacterPixels(int[] is, byte[] is_24_, int i, int i_25_, int i_26_, int i_27_, int i_28_,
+			int i_29_, int i_30_) {
 		int i_31_ = -(i_27_ >> 2);
 		i_27_ = -(i_27_ & 0x3);
 		for (int i_32_ = -i_28_; i_32_ < 0; i_32_++) {
@@ -819,7 +844,8 @@ public class RSFont extends Raster {
 			i_41_ += i_46_;
 		}
 		if (width > 0 && height > 0) {
-			createCharacterPixels(pixels, fontPixels[character], shadowColor, i_43_, i_40_, width, height, i_41_, i_42_);
+			createCharacterPixels(pixels, fontPixels[character], shadowColor, i_43_, i_40_, width, height, i_41_,
+					i_42_);
 		}
 	}
 

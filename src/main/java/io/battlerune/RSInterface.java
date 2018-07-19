@@ -1,6 +1,5 @@
 package io.battlerune;
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -126,7 +125,8 @@ public class RSInterface {
 	 * @param textDrawingAreas
 	 * @param streamLoader_1
 	 */
-	public static void unpack(StreamLoader streamLoader, TextDrawingArea textDrawingAreas[], StreamLoader streamLoader_1) {
+	public static void unpack(StreamLoader streamLoader, TextDrawingArea textDrawingAreas[],
+			StreamLoader streamLoader_1) {
 		aMRUNodes_238 = new Cache(50000);
 		Buffer stream = new Buffer(streamLoader.getDataForName("data"));
 		int i = -1;
@@ -224,7 +224,8 @@ public class RSInterface {
 						String s1 = stream.readString();
 						if (streamLoader_1 != null && s1.length() > 0) {
 							int i5 = s1.lastIndexOf(",");
-							rsInterface.sprites[j2] = method207(Integer.parseInt(s1.substring(i5 + 1)), streamLoader_1, s1.substring(0, i5));
+							rsInterface.sprites[j2] = method207(Integer.parseInt(s1.substring(i5 + 1)), streamLoader_1,
+									s1.substring(0, i5));
 						}
 					}
 				}
@@ -255,12 +256,14 @@ public class RSInterface {
 			}
 			if (rsInterface.type == 4) {
 				rsInterface.disabledMessage = stream.readString();
-				//rsInterface.disabledMessage = (rsInterface.interfaceId + " " + rsInterface.parentID);
+				// rsInterface.disabledMessage = (rsInterface.interfaceId + " " +
+				// rsInterface.parentID);
 				if (rsInterface.disabledMessage.contains("RuneScape")) {
 					rsInterface.disabledMessage = rsInterface.disabledMessage.replace("RuneScape", Configuration.NAME);
 				}
 				rsInterface.enabledMessage = stream.readString();
-				//rsInterface.enabledMessage = (rsInterface.interfaceId + " " + rsInterface.parentID);
+				// rsInterface.enabledMessage = (rsInterface.interfaceId + " " +
+				// rsInterface.parentID);
 			}
 			if (rsInterface.type == 1 || rsInterface.type == 3 || rsInterface.type == 4)
 				rsInterface.textColor = stream.readInt();
@@ -274,12 +277,14 @@ public class RSInterface {
 				String s = stream.readString();
 				if (streamLoader_1 != null && s.length() > 0) {
 					int i4 = s.lastIndexOf(",");
-					rsInterface.disabledSprite = method207(Integer.parseInt(s.substring(i4 + 1)), streamLoader_1, s.substring(0, i4));
+					rsInterface.disabledSprite = method207(Integer.parseInt(s.substring(i4 + 1)), streamLoader_1,
+							s.substring(0, i4));
 				}
 				s = stream.readString();
 				if (streamLoader_1 != null && s.length() > 0) {
 					int j4 = s.lastIndexOf(",");
-					rsInterface.enabledSprite = method207(Integer.parseInt(s.substring(j4 + 1)), streamLoader_1, s.substring(0, j4));
+					rsInterface.enabledSprite = method207(Integer.parseInt(s.substring(j4 + 1)), streamLoader_1,
+							s.substring(0, j4));
 				}
 			}
 			if (rsInterface.type == 6) {
@@ -339,7 +344,8 @@ public class RSInterface {
 			if (rsInterface.type == 8)
 				rsInterface.disabledMessage = stream.readString();
 
-			if (rsInterface.atActionType == 1 || rsInterface.atActionType == 4 || rsInterface.atActionType == 5 || rsInterface.atActionType == 6) {
+			if (rsInterface.atActionType == 1 || rsInterface.atActionType == 4 || rsInterface.atActionType == 5
+					|| rsInterface.atActionType == 6) {
 				rsInterface.tooltip = stream.readString();
 				if (rsInterface.tooltip.length() == 0) {
 					if (rsInterface.atActionType == 1)
@@ -375,37 +381,36 @@ public class RSInterface {
 		teleportButtonThing(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
-	
-	
+
 	public static void teleportButtonThing(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(45600);
 		addButton(45601, 18, "TeleSexy/SPRITE", "Teleport");
-		addText(45622, "Timer", tda, 0, 0xff9040,  false, true);
+		addText(45622, "Timer", tda, 0, 0xff9040, false, true);
 		RSInterface button = interfaceCache[45601];
 		button.hoverType = 45602;
 		tab.totalChildren(3);
 		tab.child(0, 45601, 10, 10);
 		tab.child(1, 45602, 35, 10);
 		tab.child(2, 45622, 5, 27);
-		
+
 		RSInterface popup = addInterface(45602);
 		popup.isMouseoverTriggered = true;
 		addColorBox(45603, 0, 310, 265, 160);
-		addText(45604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
-		addText(45605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
-		addText(45606, "Health:", tda, 0, 0xff9040,  false, true);
-		addText(45607, "Max Hit:", tda, 0, 0xff9040,  false, true);
-		addText(45608, "Weakness:", tda, 0, 0xff9040,  false, true);
-		addText(45609, "Styles:", tda, 0, 0xff9040,  false, true);
-		addText(45610, "252", tda, 0, 0xffffff,  false, true);
-		addText(45611, "280", tda, 0, 0xffffff,  false, true);
-		addText(45612, "23", tda, 0, 0xffffff,  false, true);
-		addText(45613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
-		addText(45614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addText(45604, "Lava Dragon", tda, 1, 0xff9040, true, true);
+		addText(45605, "Combat Lvl:", tda, 0, 0xff9040, false, true);
+		addText(45606, "Health:", tda, 0, 0xff9040, false, true);
+		addText(45607, "Max Hit:", tda, 0, 0xff9040, false, true);
+		addText(45608, "Weakness:", tda, 0, 0xff9040, false, true);
+		addText(45609, "Styles:", tda, 0, 0xff9040, false, true);
+		addText(45610, "252", tda, 0, 0xffffff, false, true);
+		addText(45611, "280", tda, 0, 0xffffff, false, true);
+		addText(45612, "23", tda, 0, 0xffffff, false, true);
+		addText(45613, "Magic, Stab,\\nRange", tda, 0, 0xffffff, false, true);
+		addText(45614, "Melee,\\nDragon Breath", tda, 0, 0xffffff, false, true);
 		addNpc(45615, 6593, 2000);
-		addText(45616, "", tda, 0, 0xff9040,  false, true);
-		addText(45617, "Drops:", tda, 0, 0xff9040,  false, true);
-		
+		addText(45616, "", tda, 0, 0xff9040, false, true);
+		addText(45617, "Drops:", tda, 0, 0xff9040, false, true);
+
 		popup.totalChildren(16);
 		popup.child(0, 45603, 0, 0);
 		popup.child(1, 45604, 150, 12);
@@ -423,7 +428,7 @@ public class RSInterface {
 		popup.child(13, 45616, 10, 145);
 		popup.child(14, 45617, 10, 217);
 		popup.child(15, 45620, 0, 230);
-		
+
 		RSInterface items = addInterface(45620);
 		itemGroup(45621, 40, 1, 10, 1);
 		interfaceCache[45621].parentID = items.interfaceId;
@@ -433,8 +438,7 @@ public class RSInterface {
 		items.height = 50;
 		setScrollableItems(interfaceCache[45621], BossInformation.LAVA_DRAGONS.loot);
 	}
-	
-	
+
 	public static void setScrollableItems(RSInterface tab, int[][] loot) {
 		RSInterface parent = interfaceCache[tab.parentID];
 		tab.contentType = 1430;
@@ -444,16 +448,16 @@ public class RSInterface {
 			tab.invStackSizes[i] = loot[i][1];
 		}
 	}
-	
+
 	public static void bossMinigame(TextDrawingArea[] tda) {
 		RSInterface tab = RSInterface.addInterface(32000);
 //		addText(12504, "Achievement Diary", tda, 2, 0xff9933, false, true);
-		addText(32002,  "Current Wave:", 0xffcccc, false, true, 52, tda, 2);
-		addText(32003,  "0", 0xff6666, false, true, 52, tda, 2);
-		addText(32004,  "Waves Left:", 0xffcccc, false, true, 52, tda, 2);
-		addText(32005,  "0", 0xff6666, false, true, 52, tda, 2);
-		addText(32006,  "Total Points:", 0xffcccc, false, true, 52, tda, 2);
-		addText(32007,  "0", 0xff6666, false, true, 52, tda, 2);
+		addText(32002, "Current Wave:", 0xffcccc, false, true, 52, tda, 2);
+		addText(32003, "0", 0xff6666, false, true, 52, tda, 2);
+		addText(32004, "Waves Left:", 0xffcccc, false, true, 52, tda, 2);
+		addText(32005, "0", 0xff6666, false, true, 52, tda, 2);
+		addText(32006, "Total Points:", 0xffcccc, false, true, 52, tda, 2);
+		addText(32007, "0", 0xff6666, false, true, 52, tda, 2);
 		RSInterface.addSprite(32001, 0, "Interfaces/ChampionsScroll/MINIGAME");
 
 		setChildren(7, tab);
@@ -518,7 +522,6 @@ public class RSInterface {
 		setBounds(15518, 406, 31, frame++, tab);
 		setBounds(15519, 406, 31, frame++, tab);
 
-
 		addText(15520, "15521", tda, 2, 0xFFFFFF, false, true, -1, 2);
 		setBounds(15520, 260, 260, frame++, tab);
 		// addButton(15518, 17, "Interfaces/Pet/SPRITE", "Buy pet", 256);
@@ -526,10 +529,6 @@ public class RSInterface {
 
 	}
 
-	
-	
-
-	
 	public static void achievementTest(TextDrawingArea[] tda) {
 		RSInterface interface_ = addTabInterface(12500);
 		RSInterface scrolls = addTabInterface(12505);
@@ -556,7 +555,7 @@ public class RSInterface {
 		scrolls.child(intChild2++, 12516, 6, 35);
 		scrolls.child(intChild2++, 12526, 6, 63);
 	}
-	
+
 	public static void addDiarySlot(int id, TextDrawingArea[] tda, String name) {
 		RSInterface widget = addTabInterface(id);
 		addHoverButton(id + 1, 1607, 151, 27, "View Diary Journal", -1, id + 2, 1);
@@ -569,21 +568,21 @@ public class RSInterface {
 		addPixels(id + 8, 0x37b514, 35, 5, 0, 35, true);
 		int chatboxChild = 0;
 		widget.totalChildren(8);
-		widget.child(chatboxChild++, id+1, 0, 0);
-		widget.child(chatboxChild++, id+2, 0, 0);
-		widget.child(chatboxChild++, id+3, 2, 2);
-		widget.child(chatboxChild++, id+4, 136, 2);
-		widget.child(chatboxChild++, id+5, 4, 18);
-		widget.child(chatboxChild++, id+6, 40, 18);
-		widget.child(chatboxChild++, id+7, 76, 18);
-		widget.child(chatboxChild++, id+8, 112, 18);
+		widget.child(chatboxChild++, id + 1, 0, 0);
+		widget.child(chatboxChild++, id + 2, 0, 0);
+		widget.child(chatboxChild++, id + 3, 2, 2);
+		widget.child(chatboxChild++, id + 4, 136, 2);
+		widget.child(chatboxChild++, id + 5, 4, 18);
+		widget.child(chatboxChild++, id + 6, 40, 18);
+		widget.child(chatboxChild++, id + 7, 76, 18);
+		widget.child(chatboxChild++, id + 8, 112, 18);
 	}
+
 	public static final int TYPE_RECTANGLE = 3;
 	public int defaultHoverColor;
 	public int secondaryHoverColor;
 	public int secondaryColor;
 	public boolean filled;
-
 
 	public static void addPixels(int id, int color, int width, int height, int alpha, boolean filled) {
 		RSInterface rsi = addInterface(id);
@@ -617,38 +616,38 @@ public class RSInterface {
 
 	public static void examineTab(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(52100);
-		
+
 		addSprite(52101, 0, "/ExamineTab/SPRITE");
-		
-		addContainer(52102, 0, 1, 80, 30, 2, 100, false, false, false, null, null, null, null, null);		
-		
+
+		addContainer(52102, 0, 1, 80, 30, 2, 100, false, false, false, null, null, null, null, null);
+
 		addText(52113, "", tda, 2, 0xff8a1f, false, true);
 		addText(52114, "Item Bonuses", tda, 2, 0xff8a1f, false, true);
 		addText(52128, "Attack", tda, 2, 0xff8a1f, false, true);
 		addText(52129, "Defence", tda, 2, 0xff8a1f, false, true);
 		addText(52130, "Other Bonuses", tda, 2, 0xff8a1f, false, true);
 		addText(52143, "", tda, 2, 0xff8a1f, false, true);
-		
+
 		addText(52144, "Strength", tda, 1, 0xff8a1f, false, true);
 		addText(52145, "Prayer", tda, 1, 0xff8a1f, false, true);
-		
+
 		int y = 142;
-		for(int i = 0; i < 9; i++) {
-			addText(52103 + i, "", tda, 1,  0xff8a1f, false, true);
+		for (int i = 0; i < 9; i++) {
+			addText(52103 + i, "", tda, 1, 0xff8a1f, false, true);
 		}
-		
+
 		int yy = 116;
-		String[] text = {"Stab", "Slash", "Crush", "Magic", "Range"};
-		
-		for(int i = 0; i < 5; i++) {
-			addText(52131 + i, text[i], tda, 1,  0xff8a1f, false, true);
+		String[] text = { "Stab", "Slash", "Crush", "Magic", "Range" };
+
+		for (int i = 0; i < 5; i++) {
+			addText(52131 + i, text[i], tda, 1, 0xff8a1f, false, true);
 		}
-		
+
 		int yyy = 116;
-		for(int i = 0; i < 5; i++) {
-			addText(52138 + i, text[i], tda, 1,  0xff8a1f, false, true);
+		for (int i = 0; i < 5; i++) {
+			addText(52138 + i, text[i], tda, 1, 0xff8a1f, false, true);
 		}
-		
+
 		tab.totalChildren(29);
 		int childNum = 0;
 		setBounds(52101, 75, 20, childNum++, tab);
@@ -661,57 +660,53 @@ public class RSInterface {
 		setBounds(52143, 152, 84, childNum++, tab);
 		setBounds(52144, 269, 235, childNum++, tab);
 		setBounds(52145, 269, 250, childNum++, tab);
-		
-		for(int i = 0; i < 9; i++) {
+
+		for (int i = 0; i < 9; i++) {
 			setBounds(52103 + i, 106, y, childNum++, tab);
 			y += 15;
 		}
 
-		for(int i = 0; i < 5; i++) {
+		for (int i = 0; i < 5; i++) {
 			setBounds(52131 + i, 269, yy, childNum++, tab);
 			yy += 15;
 		}
-		
-		for(int i = 0; i < 5; i++) {
+
+		for (int i = 0; i < 5; i++) {
 			setBounds(52138 + i, 356, yyy, childNum++, tab);
 			yyy += 15;
 		}
-		
+
 	}
 
-
-	
-	
-public static void AchievementDirectory(TextDrawingArea[] tda) {
+	public static void AchievementDirectory(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(37700);
 		String dir = "/AchDir/SPRITE";
 		addSprite(37703, 0, dir);
-}
+	}
 
-public static void CursePrayers(TextDrawingArea[] tda) {
-	RSInterface tab = addInterface(42300);
-	String dir = "/Prayer/PRAYER";
-	addSprite(42300, 0, dir);
-}
-	
+	public static void CursePrayers(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(42300);
+		String dir = "/Prayer/PRAYER";
+		addSprite(42300, 0, dir);
+	}
+
 	public static void newAchievementTab(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(37300);
 		String dir = "/NewAch/SPRITE";
 		addSprite(37303, 5, dir);
-		addText(37304, "Achievements", tda, 2, 0xff9040,  false, true);
-		addText(37305, "Daily", tda, 0, 0xffffff,  true, true);
+		addText(37304, "Achievements", tda, 2, 0xff9040, false, true);
+		addText(37305, "Daily", tda, 0, 0xffffff, true, true);
 		addHoverButton(37306, dir, 10, 60, 16, "Previous", -1, 37307, 1);
 		addHoveredButton(37307, dir, 11, 60, 16, 37308);
 		addHoverButton(37309, dir, 12, 60, 16, "Next", -1, 37310, 1);
 		addHoveredButton(37310, dir, 13, 60, 16, 37311);
-		addText(37312, "The Week in 00:00:00", tda, 0, 0xff9040,  true, true);
+		addText(37312, "The Week in 00:00:00", tda, 0, 0xff9040, true, true);
 		addHoverButton(37313, dir, 15, 38, 38, "Rewards", -1, 37314, 1);
 		addHoveredButton(37314, dir, 16, 38, 38, 37315);
 		addButton(37316, 309, "Button");
-		
-        addHoverButton(37317, 296, 18, 18, "View information tab", -1, 37318, 1);
-        addHoveredButton(37318, 297, 18, 18, 37319);
-        
+
+		addHoverButton(37317, 296, 18, 18, "View information tab", -1, 37318, 1);
+		addHoveredButton(37318, 297, 18, 18, 37319);
 
 		tab.totalChildren(18);
 		tab.child(0, 37303, 3, 24);
@@ -730,16 +725,14 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.child(13, 37313, 74, 220);
 		tab.child(14, 37314, 74, 220);
 		tab.child(15, 37316, 2, 4);
-        tab.child(16, 37317, 138, 5);
-        tab.child(17, 37318, 138, 5);
-
-
+		tab.child(16, 37317, 138, 5);
+		tab.child(17, 37318, 138, 5);
 
 		RSInterface scroll = addInterface(37330);
 		scroll.totalChildren(50);
 		for (int i = 0; i < 50; ++i) {
 			addHoverText(37331 + i, "", "More Info", tda, 0, 0xff0000, 0xffffff, false, true, 140);
-			interfaceCache[37331 + i].isAchievementText = true;//ugh adam u gave me the wrong ids skid
+			interfaceCache[37331 + i].isAchievementText = true;// ugh adam u gave me the wrong ids skid
 			scroll.child(i, 37331 + i, 3, 2 + (i * 14));
 		}
 
@@ -749,10 +742,10 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 
 		RSInterface hover = addInterface(37400);
 		addOutlinedColorBox(37401, 0x3A3A3A, 136, 50, 200);
-		addText(37402, "Progress:", tda, 1, 0x00c5ff,  true, true);
+		addText(37402, "Progress:", tda, 1, 0x00c5ff, true, true);
 		addSprite(37403, 7, dir);
 		addSprite(37404, 6, dir);
-		addText(37405, "100%", tda, 0, 0xffffff,  true, true);
+		addText(37405, "100%", tda, 0, 0xffffff, true, true);
 		int x = 4, y = 4;
 		hover.totalChildren(5);
 		hover.child(0, 37401, x, y);
@@ -761,6 +754,7 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		hover.child(3, 37404, 16 + x, 29 + y);
 		hover.child(4, 37405, 68 + x, 30 + y);
 	}
+
 	public boolean isAchievementText = false;
 	public int achievementPercent = 0;
 
@@ -781,32 +775,34 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		int x = 10, y = 10;
 		tab.totalChildren(14);
 		tab.child(0, 59101, x, y);
-		tab.child(1, 36002, 464+x, 4+y);
-		tab.child(2, 36003, 464+x, 4+y);
-		tab.child(3, 59105, 243+x, 4+y);
-		tab.child(4, 59115, 13+x, 49+y);
-		tab.child(5, 59106, 106+x, 31+y);
-		tab.child(6, 59108, 81+x, 265+y);
-		tab.child(7, 59109, 319+x, 56+y);
-		tab.child(8, 59110, 387+x, 74+y);
-		tab.child(9, 59095, 345+x, 264+y);
-		tab.child(10, 59096, 345+x, 264+y);
-		tab.child(11, 59098, 395+x, 269+y);
-		tab.child(12, 59099, 338+x, 107+y);
-		tab.child(13, 59093, 331+x, 130+y);
+		tab.child(1, 36002, 464 + x, 4 + y);
+		tab.child(2, 36003, 464 + x, 4 + y);
+		tab.child(3, 59105, 243 + x, 4 + y);
+		tab.child(4, 59115, 13 + x, 49 + y);
+		tab.child(5, 59106, 106 + x, 31 + y);
+		tab.child(6, 59108, 81 + x, 265 + y);
+		tab.child(7, 59109, 319 + x, 56 + y);
+		tab.child(8, 59110, 387 + x, 74 + y);
+		tab.child(9, 59095, 345 + x, 264 + y);
+		tab.child(10, 59096, 345 + x, 264 + y);
+		tab.child(11, 59098, 395 + x, 269 + y);
+		tab.child(12, 59099, 338 + x, 107 + y);
+		tab.child(13, 59093, 331 + x, 130 + y);
 
 		RSInterface scroll = addInterface(59115);
 		scroll.totalChildren(400);
-		int yy = 0; int child = 0; int sprite = 3;
+		int yy = 0;
+		int child = 0;
+		int sprite = 3;
 		for (int i = 0; i < 100; i++) {
 			addHoverButton(59116 + i, dir, sprite, 566, 16, "Select", -1, 59216 + i, 1);
 			addHoveredButton(59216 + i, dir, 4, 566, 16, 59316 + i);
-			addText(59416 + i, ""+(i + 1)+":", tda, 0, 0xffffff, false, true);
+			addText(59416 + i, "" + (i + 1) + ":", tda, 0, 0xffffff, false, true);
 			addText(59516 + i, "Player Name", tda, 0, 0xffffff, false, true);
-			scroll.child(child++, 59116+i, 0, yy);
-			scroll.child(child++, 59216+i, 0, yy);
-			scroll.child(child++, 59416+i, 4, yy + 2);
-			scroll.child(child++, 59516+i, 60, yy + 2);
+			scroll.child(child++, 59116 + i, 0, yy);
+			scroll.child(child++, 59216 + i, 0, yy);
+			scroll.child(child++, 59416 + i, 4, yy + 2);
+			scroll.child(child++, 59516 + i, 60, yy + 2);
 			if (sprite == 3)
 				sprite = 5;
 			else
@@ -819,9 +815,6 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		addInputField(59108, 15, 0xffffff, "Enter name", 140, 24, false);
 
 	}
-
-
-
 
 	public static void achievementPopup(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(36000);
@@ -837,10 +830,10 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		int x = 5, y = 5;
 		tab.totalChildren(23);
 		tab.child(0, 36001, x, y);
-		tab.child(1, 36002, 473+x, 4+y);
-		tab.child(2, 36003, 473+x, 4+y);
-		tab.child(3, 36005, 248+x, 4+y);
-		String[] titles = {"Easy", "Medium", "Hard", "Elite"};
+		tab.child(1, 36002, 473 + x, 4 + y);
+		tab.child(2, 36003, 473 + x, 4 + y);
+		tab.child(3, 36005, 248 + x, 4 + y);
+		String[] titles = { "Easy", "Medium", "Hard", "Elite" };
 		int xx = 8;
 		for (int i = 0; i < 4; i++) {
 			addHoverButton(36006 + i, dir, 3, 120, 22, "View", -1, 36010 + i, 1);
@@ -866,8 +859,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		info.child(0, 36201, 163, 6);
 		info.child(1, 36202, 10, 30);
 		for (int i = 0; i < 6; i++) {
-			addText(36203 + i, "Description #"+i, tda, 0, 0xffffff, false, true);
-			info.child(2 + i, 36203 + i, 10, 55 + (i*13));
+			addText(36203 + i, "Description #" + i, tda, 0, 0xffffff, false, true);
+			info.child(2 + i, 36203 + i, 10, 55 + (i * 13));
 		}
 
 		RSInterface items = addInterface(36220);
@@ -879,12 +872,12 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		items.height = 74;
 		items.scrollMax = 100;
 
-
 		RSInterface scroll = addInterface(36023);
 		scroll.totalChildren(100);
-		for (int j = 0; j < 100; j++) {//this ? yeah
-			addHoverText(36037 + j, "", "Select", tda, 0, 0xff9040, false, true, 112);//how is it possible i removed that thingy
-			scroll.child(j, 36037 + j, 2, 2 + (j*13));
+		for (int j = 0; j < 100; j++) {// this ? yeah
+			addHoverText(36037 + j, "", "Select", tda, 0, 0xff9040, false, true, 112);// how is it possible i removed
+																						// that thingy
+			scroll.child(j, 36037 + j, 2, 2 + (j * 13));
 		}
 		scroll.width = 112;
 		scroll.height = 218;
@@ -898,6 +891,7 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 			f.invStackSizes[i] = 1;
 		}
 	}
+
 	public static void itemGroup(int id, int w, int h, int x, int y) {
 		RSInterface rsi = addInterface(id);
 		rsi.width = w;
@@ -914,65 +908,64 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		rsi.type = 2;
 	}
 
-
 	private static void opponentStats(TextDrawingArea[] tda) {
-        RSInterface tab = addInterface(23050);
-        addColorBox(23051, 0, 131, 114, 150);
-        
-        addText(23052, "Attack:", tda, 0, 0xffffff, false, true);
-        addText(23053, "Strength:", tda, 0, 0xffffff, false, true);
-        addText(23054, "Defence:", tda, 0, 0xffffff, false, true);
-        addText(23055, "Hitpoints:", tda, 0, 0xffffff, false, true);
-        addText(23056, "Ranged:", tda, 0, 0xffffff, false, true);
-        addText(23057, "Magic:", tda, 0, 0xffffff, false, true);
-        addText(23058, "Prayer:", tda, 0, 0xffffff, false, true);
-        
-        addText(23059, "You", tda, 0, 0xf8f107, true, true);
-        addText(23060, "Them", tda, 0, 0xf80707, true, true);
-        addLine(23061, 0xff9040, 19);
-        addLine(23062, 0xff9040, 25);
-        
-        /* Your stats */
-        addText(23063, "99", tda, 0, 0xffffff, true, true);
-        addText(23064, "99", tda, 0, 0xffffff, true, true);
-        addText(23065, "99", tda, 0, 0xffffff, true, true);
-        addText(23066, "99", tda, 0, 0xffffff, true, true);
-        addText(23067, "99", tda, 0, 0xffffff, true, true);
-        addText(23068, "99", tda, 0, 0xffffff, true, true);
-        addText(23069, "99", tda, 0, 0xffffff, true, true);
-        
-        /* Their stats */
-        addText(23070, "99", tda, 0, 0xffffff, true, true);
-        addText(23071, "99", tda, 0, 0xffffff, true, true);
-        addText(23072, "99", tda, 0, 0xffffff, true, true);
-        addText(23073, "99", tda, 0, 0xffffff, true, true);
-        addText(23074, "99", tda, 0, 0xffffff, true, true);
-        addText(23075, "99", tda, 0, 0xffffff, true, true);
-        addText(23076, "99", tda, 0, 0xffffff, true, true);
-        
-        tab.totalChildren(26);
-        tab.child(0, 23051, 0, 0);
-        for (int i = 0; i < 7; ++i) {
-            tab.child(1 + i, 23052 + i, 4, 16 + (i * 13));
-        }
-        tab.child(8, 23059, 75, 2);
-        tab.child(9, 23060, 108, 2);
-        tab.child(10, 23061, 67, 13);
-        tab.child(11, 23062, 96, 13);
-        for (int i = 0; i < 7; ++i) {
-            tab.child(12 + i, 23063 + i, 75, 16 + (i * 13));
-        }
-        for (int i = 0; i < 7; ++i) {
-            tab.child(19 + i, 23070 + i, 108, 16 + (i * 13));
-        }
-        
-    }
+		RSInterface tab = addInterface(23050);
+		addColorBox(23051, 0, 131, 114, 150);
+
+		addText(23052, "Attack:", tda, 0, 0xffffff, false, true);
+		addText(23053, "Strength:", tda, 0, 0xffffff, false, true);
+		addText(23054, "Defence:", tda, 0, 0xffffff, false, true);
+		addText(23055, "Hitpoints:", tda, 0, 0xffffff, false, true);
+		addText(23056, "Ranged:", tda, 0, 0xffffff, false, true);
+		addText(23057, "Magic:", tda, 0, 0xffffff, false, true);
+		addText(23058, "Prayer:", tda, 0, 0xffffff, false, true);
+
+		addText(23059, "You", tda, 0, 0xf8f107, true, true);
+		addText(23060, "Them", tda, 0, 0xf80707, true, true);
+		addLine(23061, 0xff9040, 19);
+		addLine(23062, 0xff9040, 25);
+
+		/* Your stats */
+		addText(23063, "99", tda, 0, 0xffffff, true, true);
+		addText(23064, "99", tda, 0, 0xffffff, true, true);
+		addText(23065, "99", tda, 0, 0xffffff, true, true);
+		addText(23066, "99", tda, 0, 0xffffff, true, true);
+		addText(23067, "99", tda, 0, 0xffffff, true, true);
+		addText(23068, "99", tda, 0, 0xffffff, true, true);
+		addText(23069, "99", tda, 0, 0xffffff, true, true);
+
+		/* Their stats */
+		addText(23070, "99", tda, 0, 0xffffff, true, true);
+		addText(23071, "99", tda, 0, 0xffffff, true, true);
+		addText(23072, "99", tda, 0, 0xffffff, true, true);
+		addText(23073, "99", tda, 0, 0xffffff, true, true);
+		addText(23074, "99", tda, 0, 0xffffff, true, true);
+		addText(23075, "99", tda, 0, 0xffffff, true, true);
+		addText(23076, "99", tda, 0, 0xffffff, true, true);
+
+		tab.totalChildren(26);
+		tab.child(0, 23051, 0, 0);
+		for (int i = 0; i < 7; ++i) {
+			tab.child(1 + i, 23052 + i, 4, 16 + (i * 13));
+		}
+		tab.child(8, 23059, 75, 2);
+		tab.child(9, 23060, 108, 2);
+		tab.child(10, 23061, 67, 13);
+		tab.child(11, 23062, 96, 13);
+		for (int i = 0; i < 7; ++i) {
+			tab.child(12 + i, 23063 + i, 75, 16 + (i * 13));
+		}
+		for (int i = 0; i < 7; ++i) {
+			tab.child(19 + i, 23070 + i, 108, 16 + (i * 13));
+		}
+
+	}
 
 	private static void itemHoverBox(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(23000);
 		addOutlinedColorBox(23001, 0x534a40, 145, 145, 200);
-		addText(23002, "Item name", tda, 0, 0xff9040,  true, true);
-		addText(23003, "Attack", tda, 0, 0xff9040,  false, true);
+		addText(23002, "Item name", tda, 0, 0xff9040, true, true);
+		addText(23003, "Attack", tda, 0, 0xff9040, false, true);
 		addText(23004, "Defence", tda, 0, 0xff9040, false, true);
 		addText(23005, "Stab:\\nSlash:\\nCrush:\\nMagic:\\nRange:", tda, 0, 0xff9040, false, true);
 		addText(23006, "0\\n0\\n0\\n0\\n0", tda, 0, 0xffffff, true, true);
@@ -1008,37 +1001,37 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.child(2, 23022, 2 + x, 14 + y);
 	}
 
-
 	private static void editAncientsTab(TextDrawingArea[] tda) {
 		RSInterface rsi = interfaceCache[12855];
 
-		//Smoke barrage
+		// Smoke barrage
 		rsi.childX[22] = 21;
 		rsi.childY[22] = 154;
 
-		//Shadow barrage
+		// Shadow barrage
 		rsi.childX[30] = 66;
 		rsi.childY[30] = 154;
 
-		//Annakarl teleport
+		// Annakarl teleport
 		rsi.childX[44] = 111;
 		rsi.childY[44] = 154;
 
-		//Annakarl teleport
+		// Annakarl teleport
 		rsi.childX[15] = 153;
 		rsi.childY[15] = 154;
 
-		//Ice barrage
+		// Ice barrage
 		rsi.childX[7] = 21;
 		rsi.childY[7] = 184;
 
-		//Gharrock teleport
+		// Gharrock teleport
 		rsi.childX[46] = 66;
 		rsi.childY[46] = 184;
 
 		extendChildren(rsi, 1);
 
-		addNewSpell(18746, 9075, 564, 558, 0, 0, 0, 30013, 30007, 84, "Teleport to Bounty Target", "A teleportation spell", tda, 850, 850, 2, 2);
+		addNewSpell(18746, 9075, 564, 558, 0, 0, 0, 30013, 30007, 84, "Teleport to Bounty Target",
+				"A teleportation spell", tda, 850, 850, 2, 2);
 
 		rsi.child(74, 18746, 153, 125);
 
@@ -1060,7 +1053,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		System.arraycopy(childY, 0, widget.childY, 0, childY.length - extendBy);
 	}
 
-	public static void addNewSpell(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1, int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int sid2, int suo, int type) {
+	public static void addNewSpell(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1, int rune2,
+			int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int sid2, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.interfaceId = ID;
 		rsInterface.parentID = 1151;
@@ -1176,51 +1170,51 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		RSInterface rsi = RSInterface.interfaceCache[12424];
 		for (int index = 0; index < rsi.children.length; index++) {
 			switch (rsi.children[index]) {
-				case 1185:
-					rsi.childX[33] = 148;
-					rsi.childY[33] = 150;
-					break;
-				case 1183: // wind wave
-					rsi.childX[31] = 76;
-					rsi.childY[31] = 149;
-					break;
-				case 1188: // earth wave
-					rsi.childX[36] = 71;
-					rsi.childY[36] = 172;
-					break;
-				case 1543:
-					rsi.childX[46] = 96;
-					rsi.childY[46] = 173;
-					break;
-				case 1193: // charge
-					rsi.childX[41] = 49;
-					rsi.childY[41] = 198;
-					break;
-				case 12435: // tele other falador
-					rsi.childX[54] = 74;
-					rsi.childY[54] = 198;
-					break;
-				case 12445: // teleblock
-					rsi.childX[55] = 99;
-					rsi.childY[55] = 198;
-					break;
-				case 6003: // lvl 6 enchant
-					rsi.childX[57] = 122;
-					rsi.childY[57] = 198;
-					break;
-				// 150 x is end of the line
-				case 12455: // tele other camelot
-					rsi.childX[56] = 147;
-					rsi.childY[56] = 198;
-					break;
+			case 1185:
+				rsi.childX[33] = 148;
+				rsi.childY[33] = 150;
+				break;
+			case 1183: // wind wave
+				rsi.childX[31] = 76;
+				rsi.childY[31] = 149;
+				break;
+			case 1188: // earth wave
+				rsi.childX[36] = 71;
+				rsi.childY[36] = 172;
+				break;
+			case 1543:
+				rsi.childX[46] = 96;
+				rsi.childY[46] = 173;
+				break;
+			case 1193: // charge
+				rsi.childX[41] = 49;
+				rsi.childY[41] = 198;
+				break;
+			case 12435: // tele other falador
+				rsi.childX[54] = 74;
+				rsi.childY[54] = 198;
+				break;
+			case 12445: // teleblock
+				rsi.childX[55] = 99;
+				rsi.childY[55] = 198;
+				break;
+			case 6003: // lvl 6 enchant
+				rsi.childX[57] = 122;
+				rsi.childY[57] = 198;
+				break;
+			// 150 x is end of the line
+			case 12455: // tele other camelot
+				rsi.childX[56] = 147;
+				rsi.childY[56] = 198;
+				break;
 			}
 		}
 	}
 
 	private static void skills() {
 		int next = 0;
-		int[] ids = new int[]{8, 9, 11, 14, 17, 20, 23};
-		String[] names = new String[]{"Attack", "Hitpoints", "Strength", "Defence", "Ranged", "Prayer", "Magic"};
+		int[] ids = new int[] { 8, 9, 11, 14, 17, 20, 23 };
+		String[] names = new String[] { "Attack", "Hitpoints", "Strength", "Defence", "Ranged", "Prayer", "Magic" };
 		for (int id : ids) {
 			String name = names[next++];
 			int child = interfaceCache[3917].children[id];
@@ -1230,46 +1224,51 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 
 	public static void prayerBook() {
 
-		/*RSInterface rsinterface = interfaceCache[5608];
-
-		//Moves down chivalry
-		rsinterface.childX[50 + BEGIN_READING_PRAYER_INTERFACE] = 4;
-		rsinterface.childY[50 + BEGIN_READING_PRAYER_INTERFACE] = 194;
-
-		rsinterface.childX[51 + BEGIN_READING_PRAYER_INTERFACE] = 11;
-		rsinterface.childY[51 + BEGIN_READING_PRAYER_INTERFACE] = 196;
-
-		rsinterface.childX[63 + BEGIN_READING_PRAYER_INTERFACE] = 7;
-		rsinterface.childY[63 + BEGIN_READING_PRAYER_INTERFACE] = 190;
-
-		//Moves piety to the right
-		setBounds(19827, 41, 194, 52 + BEGIN_READING_PRAYER_INTERFACE, rsinterface);
-
-		rsinterface.childX[53 + BEGIN_READING_PRAYER_INTERFACE] = 43;
-		rsinterface.childY[53 + BEGIN_READING_PRAYER_INTERFACE] = 204;
-		rsinterface.childX[64 + BEGIN_READING_PRAYER_INTERFACE] = 43;
-		rsinterface.childY[64 + BEGIN_READING_PRAYER_INTERFACE] = 190;*/
+		/*
+		 * RSInterface rsinterface = interfaceCache[5608];
+		 * 
+		 * //Moves down chivalry rsinterface.childX[50 + BEGIN_READING_PRAYER_INTERFACE]
+		 * = 4; rsinterface.childY[50 + BEGIN_READING_PRAYER_INTERFACE] = 194;
+		 * 
+		 * rsinterface.childX[51 + BEGIN_READING_PRAYER_INTERFACE] = 11;
+		 * rsinterface.childY[51 + BEGIN_READING_PRAYER_INTERFACE] = 196;
+		 * 
+		 * rsinterface.childX[63 + BEGIN_READING_PRAYER_INTERFACE] = 7;
+		 * rsinterface.childY[63 + BEGIN_READING_PRAYER_INTERFACE] = 190;
+		 * 
+		 * //Moves piety to the right setBounds(19827, 41, 194, 52 +
+		 * BEGIN_READING_PRAYER_INTERFACE, rsinterface);
+		 * 
+		 * rsinterface.childX[53 + BEGIN_READING_PRAYER_INTERFACE] = 43;
+		 * rsinterface.childY[53 + BEGIN_READING_PRAYER_INTERFACE] = 204;
+		 * rsinterface.childX[64 + BEGIN_READING_PRAYER_INTERFACE] = 43;
+		 * rsinterface.childY[64 + BEGIN_READING_PRAYER_INTERFACE] = 190;
+		 */
 
 		addPrayer(28001, "Activate @or1@Preserve", 31, 32, 690, -2, -1, 691, 692, 1, 708, 28003, 55);
-		//setBounds(28001, 153, 158, 0, rsinterface); //Prayer glow sprite
-		//setBounds(28002, 155, 158, 1, rsinterface); //Prayer sprites
+		// setBounds(28001, 153, 158, 0, rsinterface); //Prayer glow sprite
+		// setBounds(28002, 155, 158, 1, rsinterface); //Prayer sprites
 
 		addPrayer(28004, "Activate @or1@Rigour", 31, 32, 690, -3, -5, 693, 694, 1, 710, 28006, 74);
-		//setBounds(28004, 78, 194, 2, rsinterface); //Prayer glow sprite
-		//setBounds(28005, 81, 198, 3, rsinterface); //Prayer sprites
+		// setBounds(28004, 78, 194, 2, rsinterface); //Prayer glow sprite
+		// setBounds(28005, 81, 198, 3, rsinterface); //Prayer sprites
 
 		addPrayer(28007, "Activate @or1@Augury", 31, 32, 690, -3, -5, 695, 696, 1, 712, 28009, 77);
-		//setBounds(28007, 115, 194, 4, rsinterface); //Prayer glow sprite
-		//setBounds(28008, 118, 198, 5, rsinterface); //Prayer sprites
+		// setBounds(28007, 115, 194, 4, rsinterface); //Prayer glow sprite
+		// setBounds(28008, 118, 198, 5, rsinterface); //Prayer sprites
 
 		addPrayerHover(28003, "Level 55\\nPreserve\\nBoosted stats last 50% longer.", -135, -60);
-		//setBounds(28003, 153, 158, 86, rsinterface); //Hover box
+		// setBounds(28003, 153, 158, 86, rsinterface); //Hover box
 
-		addPrayerHover(28006, "Level 74\\nRigour\\nIncreases your Ranged attack\\nby 20% and damage by 23%,\\nand your defence by 25%", -70, -100);
-		//setBounds(28006, 84, 200, 87, rsinterface); //Hover box try change the x values
+		addPrayerHover(28006,
+				"Level 74\\nRigour\\nIncreases your Ranged attack\\nby 20% and damage by 23%,\\nand your defence by 25%",
+				-70, -100);
+		// setBounds(28006, 84, 200, 87, rsinterface); //Hover box try change the x
+		// values
 
-		addPrayerHover(28009, "Level 77\\nAugury\\nIncreases your Magic attack by\\n 25% and your defence by 25%", -110, -100);
-		//setBounds(28009, 120, 198, 88, rsinterface); //Hover box
+		addPrayerHover(28009, "Level 77\\nAugury\\nIncreases your Magic attack by\\n 25% and your defence by 25%", -110,
+				-100);
+		// setBounds(28009, 120, 198, 88, rsinterface); //Hover box
 
 		PrayerSystem.prayerPlacement();
 	}
@@ -1300,8 +1299,6 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		rsi.child(0, interfaceId + 1, 190, 150);
 	}
 
-
-
 	public static void addNpc(int ID, int npcId, int zoom) {
 		RSInterface petCanvas = interfaceCache[ID] = new RSInterface();
 		petCanvas.interfaceId = ID;
@@ -1318,8 +1315,6 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		petCanvas.anInt258 = -1;
 		petCanvas.npcDisplay = npcId;
 	}
-
-
 
 	/* Add Npc */
 	public static void addNpc(int ID) {
@@ -1340,39 +1335,16 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		t.anInt258 = -1;
 	}
 
-	/* Add Head
-	 * HAPPY_JOYFUL(588),
-		CALM_TALK1(589),
-		CALM_TALK2(590),
-		DEFAULT(591),
-		EVIL1(592),
-		EVIL2(593),
-		EVIL3(594),
-		ANNOYED(595),
-		DISTRESSED(596),
-		DISTRESSED2(597),
-		ALMOST_CRYING(598),
-		BOWS_HEAD_SAD(598),
-		DRUNK_LEFT(600),
-		DRUNK_RIGHT(601),
-		NOT_INTERESTED(602),
-		SLEEPY(603),
-		PLAIN_EVIL(604),
-		LAUGH1(605),
-		LAUGH2(606),
-		LAUGH3(607),
-		LAUGH4(608),
-		EVIL_LAUGH(609),
-		SAD(610),
-		MORE_SAD(611),
-		ON_ONE_HAND(612),
-		NEARLY_CRYING(613),
-		ANGRY1(614),
-		ANGRY2(615),
-		ANGRY3(616),
-		ANGRY4(617);
+	/*
+	 * Add Head HAPPY_JOYFUL(588), CALM_TALK1(589), CALM_TALK2(590), DEFAULT(591),
+	 * EVIL1(592), EVIL2(593), EVIL3(594), ANNOYED(595), DISTRESSED(596),
+	 * DISTRESSED2(597), ALMOST_CRYING(598), BOWS_HEAD_SAD(598), DRUNK_LEFT(600),
+	 * DRUNK_RIGHT(601), NOT_INTERESTED(602), SLEEPY(603), PLAIN_EVIL(604),
+	 * LAUGH1(605), LAUGH2(606), LAUGH3(607), LAUGH4(608), EVIL_LAUGH(609),
+	 * SAD(610), MORE_SAD(611), ON_ONE_HAND(612), NEARLY_CRYING(613), ANGRY1(614),
+	 * ANGRY2(615), ANGRY3(616), ANGRY4(617);
 	 *
-	 * */
+	 */
 	static void addHead(int id, int type, int npcId, int animId, int width, int height, int zoom) {
 		RSInterface rsinterface = addTab(id);
 		rsinterface.type = 6;
@@ -1510,8 +1482,6 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.contentType = 0;
 	}
 
-
-
 	public static void addSprite(int id, int spriteId, String spriteName) {
 		RSInterface tab = createInterface(id);
 		tab.interfaceId = id;
@@ -1576,12 +1546,14 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.drawsTransparent = true;
 	}
 
-	static RSInterface addMovingContainer(int id, int width, int height, int xPad, int yPad, int opacity, boolean move, boolean displayAmount, boolean displayExamine, String... actions) {
+	static RSInterface addMovingContainer(int id, int width, int height, int xPad, int yPad, int opacity, boolean move,
+			boolean displayAmount, boolean displayExamine, String... actions) {
 		return addContainer(id, 3, width, height, xPad, yPad, opacity, move, displayAmount, displayExamine, actions);
 	}
 
 	/* Add Container */
-	static RSInterface addContainer(int id, int contentType, int width, int height, int xPad, int yPad, int opacity, boolean move, boolean displayAmount, boolean displayExamine, String... actions) {
+	static RSInterface addContainer(int id, int contentType, int width, int height, int xPad, int yPad, int opacity,
+			boolean move, boolean displayAmount, boolean displayExamine, String... actions) {
 		RSInterface container = addTabInterface(id);
 		container.parentID = id;
 		container.type = 2;
@@ -1604,12 +1576,14 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 	}
 
 	/* Add Container */
-	static RSInterface addContainer(int id, int width, int height, int xPad, int yPad, boolean move, boolean displayAmount, boolean displayExamine, String... actions) {
+	static RSInterface addContainer(int id, int width, int height, int xPad, int yPad, boolean move,
+			boolean displayAmount, boolean displayExamine, String... actions) {
 		return addContainer(id, 0, width, height, xPad, yPad, 0, move, displayAmount, displayExamine, actions);
 	}
 
 	/* Add Container */
-	static RSInterface addContainer(int id, int width, int height, int xPad, int yPad, boolean move, String... actions) {
+	static RSInterface addContainer(int id, int width, int height, int xPad, int yPad, boolean move,
+			String... actions) {
 		return addContainer(id, 0, width, height, xPad, yPad, 0, move, true, true, actions);
 	}
 
@@ -1625,10 +1599,9 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		rsi.type = 4;
 	}
 
-
 	public static void addMarqueeText(int id, int color, boolean shadow, int speed, int font, TextDrawingArea[] TDA) {
 		RSInterface rsinterface = addInterface(id);
-		rsinterface.marqueeMessages = new String[]{"", "", "", "", ""};
+		rsinterface.marqueeMessages = new String[] { "", "", "", "", "" };
 		rsinterface.parentID = id;
 		rsinterface.interfaceId = id;
 		rsinterface.type = 20;
@@ -1645,7 +1618,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		rsinterface.textColor = color;
 	}
 
-	public static void addText(int id, String message, int color, boolean center, boolean shadow, int hoverType, TextDrawingArea[] TDA, int j) {
+	public static void addText(int id, String message, int color, boolean center, boolean shadow, int hoverType,
+			TextDrawingArea[] TDA, int j) {
 		RSInterface RSInterface = addInterface(id);
 		RSInterface.parentID = id;
 		RSInterface.interfaceId = id;
@@ -1664,7 +1638,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		RSInterface.textColor = color;
 	}
 
-	public static void addText(int id, String text, TextDrawingArea tda[], int idx, int color, boolean center, boolean shadow) {
+	public static void addText(int id, String text, TextDrawingArea tda[], int idx, int color, boolean center,
+			boolean shadow) {
 		RSInterface tab = addTabInterface(id);
 		tab.parentID = id;
 		tab.interfaceId = id;
@@ -1686,7 +1661,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.anInt239 = 0;
 	}
 
-	public static void addText(int id, String text, TextDrawingArea tda[], int idx, int color, boolean center, boolean shadow, int contentType, int actionType) {
+	public static void addText(int id, String text, TextDrawingArea tda[], int idx, int color, boolean center,
+			boolean shadow, int contentType, int actionType) {
 		RSInterface tab = addTabInterface(id);
 		tab.parentID = id;
 		tab.interfaceId = id;
@@ -1708,7 +1684,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 	}
 
 	/* Add Hoverable Texts */
-	public static void addHoverText(int id, String text, String tooltip, TextDrawingArea tda[], int idx, int color, boolean centerText, boolean textShadowed, int width) {
+	public static void addHoverText(int id, String text, String tooltip, TextDrawingArea tda[], int idx, int color,
+			boolean centerText, boolean textShadowed, int width) {
 		RSInterface rsinterface = addInterface(id);
 		rsinterface.interfaceId = id;
 		rsinterface.parentID = id;
@@ -1734,7 +1711,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		rsinterface.anInt239 = 0;
 	}
 
-	public static void addHoverText(int id, String text, String tooltip, TextDrawingArea tda[], int idx, int color, int hoverColor, boolean centerText, boolean textShadowed, int width) {
+	public static void addHoverText(int id, String text, String tooltip, TextDrawingArea tda[], int idx, int color,
+			int hoverColor, boolean centerText, boolean textShadowed, int width) {
 		RSInterface rsinterface = addInterface(id);
 		rsinterface.interfaceId = id;
 		rsinterface.parentID = id;
@@ -1758,7 +1736,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 	}
 
 	/* Add Hover Buttons */
-	protected static void addHoverButton(int id, int j, int width, int height, String text, int anInt214, int hoverOver, int aT) {
+	protected static void addHoverButton(int id, int j, int width, int height, String text, int anInt214, int hoverOver,
+			int aT) {
 		RSInterface component = addTabInterface(id);
 		component.interfaceId = id;
 		component.parentID = id;
@@ -1776,7 +1755,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		component.tooltip = text;
 	}
 
-	public static void addHoverButton(int i, String imageName, int j, int width, int height, String text, int contentType, int hoverOver, int aT) {
+	public static void addHoverButton(int i, String imageName, int j, int width, int height, String text,
+			int contentType, int hoverOver, int aT) {
 		RSInterface tab = addTabInterface(i);
 		tab.interfaceId = i;
 		tab.parentID = i;
@@ -1842,11 +1822,16 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 	}
 
 	/* Add Configs */
-	public static void addConfigButton(int identification, int parentIdentification, int enabledSprite, int disabledSprite, int width, int height, String tooltip, int configIdentification, int actionType, int configFrame) {
-		addConfigButton(identification, parentIdentification, enabledSprite, disabledSprite, width, height, tooltip, configIdentification, actionType, configFrame, true);
+	public static void addConfigButton(int identification, int parentIdentification, int enabledSprite,
+			int disabledSprite, int width, int height, String tooltip, int configIdentification, int actionType,
+			int configFrame) {
+		addConfigButton(identification, parentIdentification, enabledSprite, disabledSprite, width, height, tooltip,
+				configIdentification, actionType, configFrame, true);
 	}
 
-	public static void addConfigButton(int identification, int parentIdentification, int disabledSprite, int enabledSprite, int width, int height, String tooltip, int configIdentification, int actionType, int configFrame, boolean updateConfig) {
+	public static void addConfigButton(int identification, int parentIdentification, int disabledSprite,
+			int enabledSprite, int width, int height, String tooltip, int configIdentification, int actionType,
+			int configFrame, boolean updateConfig) {
 		RSInterface Tab = addTabInterface(identification);
 		Tab.parentID = parentIdentification;
 		Tab.interfaceId = identification;
@@ -1894,11 +1879,13 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		widget.disabledSprite = spriteId2 < 0 ? null : Client.spriteCache.get(spriteId2);
 	}
 
-	public static void addConfigButton(int identification, int parent, int bID, int bID2, String bName, int width, int height, String tT, int configID, int aT, int configFrame) {
+	public static void addConfigButton(int identification, int parent, int bID, int bID2, String bName, int width,
+			int height, String tT, int configID, int aT, int configFrame) {
 		addConfigButton(identification, parent, bID, bID2, bName, width, height, tT, configID, aT, configFrame, true);
 	}
 
-	public static void addConfigButton(int identification, int parent, int bID, int bID2, String bName, int width, int height, String tT, int configID, int aT, int configFrame, boolean updateConfig) {
+	public static void addConfigButton(int identification, int parent, int bID, int bID2, String bName, int width,
+			int height, String tT, int configID, int aT, int configFrame, boolean updateConfig) {
 		RSInterface Tab = addTabInterface(identification);
 		Tab.parentID = parent;
 		Tab.interfaceId = identification;
@@ -1960,7 +1947,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		t.anInt258 = -1;
 	}
 
-	public static void addPrayer(int i, int configId, int configFrame, int requiredValues, int spriteID, String prayerName) {
+	public static void addPrayer(int i, int configId, int configFrame, int requiredValues, int spriteID,
+			String prayerName) {
 		RSInterface tab = addTabInterface(i);
 		tab.interfaceId = i;
 		tab.parentID = 5608;
@@ -1982,7 +1970,7 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.scripts[0][1] = configFrame;
 		tab.scripts[0][2] = 0;
 		tab.tooltip = "Toggle@or2@ " + prayerName;
-		//        tab.updateConfig = false;
+		// tab.updateConfig = false;
 		RSInterface tab2 = addTabInterface(i + 1);
 		tab2.interfaceId = i + 1;
 		tab2.parentID = 5608;
@@ -2096,6 +2084,7 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.transparency = transparency;
 		tab.contentType = 0;
 	}
+
 	public static void addColorBox(int id, int color, int width, int height, int transparency) {
 		RSInterface tab = addInterface(id);
 		tab.width = width;
@@ -2187,7 +2176,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		rsi.type = 13;
 	}
 
-	public static void addProgressBar(int id, double percentage, int width, int height, int color, boolean displayPercent) {
+	public static void addProgressBar(int id, double percentage, int width, int height, int color,
+			boolean displayPercent) {
 		RSInterface rsi = addTabInterface(id);
 		rsi.interfaceId = id;
 		rsi.parentID = id;
@@ -2298,7 +2288,7 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.height = tab.disabledSprite.height;
 		tab.tooltip = tooltip;
 	}
-	
+
 	public static void addButton(int id, int sid, String tooltip) {
 		RSInterface tab = createInterface(id);
 		tab.interfaceId = id;
@@ -2314,13 +2304,9 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		tab.height = tab.enabledSprite.height;
 		tab.tooltip = tooltip;
 	}
-	
-	
+
 	public Sprite sprite1;
 	public Sprite sprite2;
-	
-
-
 
 	public static void addButton(int id, int sid, String spriteName, String tooltip, int alpha) {
 		RSInterface tab = interfaceCache[id] = new RSInterface();
@@ -2341,7 +2327,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 	/**
 	 * Adds a config button hover layer.
 	 */
-	public static void addHoverConfigButton(int id, int hoverOver, int disabledID, int enabledID, int width, int height, String tooltip, int[] anIntArray245, int[] anIntArray212, int[][] valueIndexArray) {
+	public static void addHoverConfigButton(int id, int hoverOver, int disabledID, int enabledID, int width, int height,
+			String tooltip, int[] anIntArray245, int[] anIntArray212, int[][] valueIndexArray) {
 		RSInterface rsint = addTabInterface(id);
 		rsint.parentID = id;
 		rsint.interfaceId = id;
@@ -2390,7 +2377,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 	}
 
 	/* Adds Input Field */
-	static void addInputField(int identity, int characterLimit, int color, String text, int width, int height, boolean asterisks, boolean updatesEveryInput, String regex) {
+	static void addInputField(int identity, int characterLimit, int color, String text, int width, int height,
+			boolean asterisks, boolean updatesEveryInput, String regex) {
 		RSInterface field = addFullScreenInterface(identity);
 		field.interfaceId = identity;
 		field.type = 16;
@@ -2407,7 +2395,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		field.inputRegex = regex;
 	}
 
-	public static void addInputField(int identity, int characterLimit, int color, String text, int width, int height, boolean asterisks, boolean updatesEveryInput) {
+	public static void addInputField(int identity, int characterLimit, int color, String text, int width, int height,
+			boolean asterisks, boolean updatesEveryInput) {
 		RSInterface field = addFullScreenInterface(identity);
 		field.interfaceId = identity;
 		field.type = 16;
@@ -2419,11 +2408,12 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		field.textColor = color;
 		field.displayAsterisks = asterisks;
 		field.defaultInputFieldText = text;
-		field.tooltips = new String[]{"Clear", "Edit"};
+		field.tooltips = new String[] { "Clear", "Edit" };
 		field.updatesEveryInput = updatesEveryInput;
 	}
 
-	public static void addInputField(int identity, int characterLimit, int color, String text, int width, int height, boolean asterisks) {
+	public static void addInputField(int identity, int characterLimit, int color, String text, int width, int height,
+			boolean asterisks) {
 		RSInterface field = addFullScreenInterface(identity);
 		field.interfaceId = identity;
 		field.type = 16;
@@ -2435,7 +2425,7 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		field.textColor = color;
 		field.displayAsterisks = asterisks;
 		field.defaultInputFieldText = text;
-		field.tooltips = new String[]{"Clear", "Edit"};
+		field.tooltips = new String[] { "Clear", "Edit" };
 	}
 
 	/* Special Bar */
@@ -2709,7 +2699,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 	}
 
 	/* Lunars */
-	public static void addLunar2RunesSmallBox(int ID, int r1, int r2, int ra1, int ra2, int rune1, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+	public static void addLunar2RunesSmallBox(int ID, int r1, int r2, int ra1, int ra2, int rune1, int lvl, String name,
+			String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.interfaceId = ID;
 		rsInterface.parentID = 1151;
@@ -2766,7 +2757,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		setBounds(ID + 6, 123, 66, 6, INT);
 	}
 
-	public static void addLunar3RunesSmallBox(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1, int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+	public static void addLunar3RunesSmallBox(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
+			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.interfaceId = ID;
 		rsInterface.parentID = 1151;
@@ -2833,7 +2825,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		setBounds(ID + 7, 142, 66, 8, INT);
 	}
 
-	public static void addLunar3RunesBigBox(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1, int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+	public static void addLunar3RunesBigBox(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
+			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.interfaceId = ID;
 		rsInterface.parentID = 1151;
@@ -2900,7 +2893,8 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		setBounds(ID + 7, 142, 79, 8, INT);
 	}
 
-	public static void addLunar3RunesLargeBox(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1, int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+	public static void addLunar3RunesLargeBox(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
+			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.interfaceId = ID;
 		rsInterface.parentID = 1151;
@@ -2985,45 +2979,84 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		drawRune(30014, 593);
 		drawRune(30015, 594);
 		drawRune(30016, 595);
-		addLunar3RunesSmallBox(30017, 9075, 554, 555, 0, 4, 3, 30003, 30004, 64, "Bake Pie", "Bake pies without a stove", TDA, 596, 16, 2);
-		addLunar2RunesSmallBox(30025, 9075, 557, 0, 7, 30006, 65, "Cure Plant", "Cure disease on farming patch", TDA, 597, 4, 2);
-		addLunar3RunesBigBox(30032, 9075, 564, 558, 0, 0, 0, 30013, 30007, 65, "Monster Examine", "Detect the combat statistics of a\\nmonster", TDA, 598, 2, 2);
-		addLunar3RunesSmallBox(30040, 9075, 564, 556, 0, 0, 1, 30013, 30005, 66, "NPC Contact", "Speak with varied NPCs", TDA, 599, 0, 2);
-		addLunar3RunesSmallBox(30048, 9075, 563, 557, 0, 0, 9, 30012, 30006, 67, "Cure Other", "Cure poisoned players", TDA, 600, 8, 2);
-		addLunar3RunesSmallBox(30056, 9075, 555, 554, 0, 2, 0, 30004, 30003, 67, "Humidify", "Fills certain vessels with water", TDA, 601, 0, 5);
-		addLunar3RunesSmallBox(30064, 9075, 563, 557, 1, 0, 1, 30012, 30006, 68, "Moonclan Teleport", "Teleports you to moonclan island", TDA, 602, 0, 5);
-		addLunar3RunesBigBox(30075, 9075, 563, 557, 1, 0, 3, 30012, 30006, 69, "Tele Group Moonclan", "Teleports players to Moonclan\\nisland", TDA, 603, 0, 5);
-		addLunar3RunesSmallBox(30083, 9075, 563, 557, 1, 0, 5, 30012, 30006, 70, "Ourania Teleport", "Teleports you to ourania rune altar", TDA, 604, 0, 5);
-		addLunar3RunesSmallBox(30091, 9075, 564, 563, 1, 1, 0, 30013, 30012, 70, "Cure Me", "Cures Poison", TDA, 605, 0, 5);
-		addLunar2RunesSmallBox(30099, 9075, 557, 1, 1, 30006, 70, "Hunter Kit", "Get a kit of hunting gear", TDA, 606, 0, 5);
-		addLunar3RunesSmallBox(30106, 9075, 563, 555, 1, 0, 0, 30012, 30004, 71, "Waterbirth Teleport", "Teleports you to Waterbirth island", TDA, 607, 0, 5);
-		addLunar3RunesBigBox(30114, 9075, 563, 555, 1, 0, 4, 30012, 30004, 72, "Tele Group Waterbirth", "Teleports players to Waterbirth\\nisland", TDA, 608, 0, 5);
-		addLunar3RunesSmallBox(30122, 9075, 564, 563, 1, 1, 1, 30013, 30012, 73, "Cure Group", "Cures Poison on players", TDA, 609, 0, 5);
-		addLunar3RunesBigBox(30130, 9075, 564, 559, 1, 1, 4, 30013, 30008, 74, "Stat Spy", "Cast on another player to see their\\nskill levels", TDA, 610, 8, 2);
-		addLunar3RunesBigBox(30138, 9075, 563, 554, 1, 1, 2, 30012, 30003, 74, "Barbarian Teleport", "Teleports you to the Barbarian\\noutpost", TDA, 611, 0, 5);
-		addLunar3RunesBigBox(30146, 9075, 563, 554, 1, 1, 5, 30012, 30003, 75, "Tele Group Barbarian", "Teleports players to the Barbarian\\noutpost", TDA, 612, 0, 5);
-		addLunar3RunesSmallBox(30154, 9075, 554, 556, 1, 5, 9, 30003, 30005, 76, "Superglass Make", "Make glass without a furnace", TDA, 613, 16, 2);
-		addLunar3RunesSmallBox(30162, 9075, 563, 555, 1, 1, 3, 30012, 30004, 77, "Khazard Teleport", "Teleports you to Port khazard", TDA, 614, 0, 5);
-		addLunar3RunesSmallBox(30170, 9075, 563, 555, 1, 1, 7, 30012, 30004, 78, "Tele Group Khazard", "Teleports players to Port khazard", TDA, 615, 0, 5);
-		addLunar3RunesBigBox(30178, 9075, 564, 559, 1, 0, 4, 30013, 30008, 78, "Dream", "Take a rest and restore hitpoints 3\\n times faster", TDA, 616, 0, 5);
-		addLunar3RunesSmallBox(30186, 9075, 557, 555, 1, 9, 4, 30006, 30004, 79, "String Jewellery", "String amulets without wool", TDA, 617, 0, 5);
-		addLunar3RunesLargeBox(30194, 9075, 557, 555, 1, 9, 9, 30006, 30004, 80, "Stat Restore Pot\\nShare", "Share a potion with up to 4 nearby\\nplayers", TDA, 618, 0, 5);
-		addLunar3RunesSmallBox(30202, 9075, 554, 555, 1, 6, 6, 30003, 30004, 81, "Magic Imbue", "Combine runes without a talisman", TDA, 619, 0, 5);
-		addLunar3RunesBigBox(30210, 9075, 561, 557, 2, 1, 14, 30010, 30006, 82, "Fertile Soil", "Fertilise a farming patch with super\\ncompost", TDA, 620, 4, 2);
-		addLunar3RunesBigBox(30218, 9075, 557, 555, 2, 11, 9, 30006, 30004, 83, "Boost Potion Share", "Shares a potion with up to 4 nearby\\nplayers", TDA, 621, 0, 5);
-		addLunar3RunesSmallBox(30226, 9075, 563, 555, 2, 2, 9, 30012, 30004, 84, "Fishing Guild Teleport", "Teleports you to the fishing guild", TDA, 622, 0, 5);
-		addLunar3RunesLargeBox(30234, 9075, 563, 555, 1, 2, 13, 30012, 30004, 85, "Tele Group Fishing Guild", "Teleports players to the Fishing\\nGuild", TDA, 623, 0, 5);
-		addLunar3RunesSmallBox(30242, 9075, 557, 561, 2, 14, 0, 30006, 30010, 85, "Plank Make", "Turn Logs into planks", TDA, 624, 16, 5);
-		addLunar3RunesSmallBox(30250, 9075, 563, 555, 2, 2, 9, 30012, 30004, 86, "Catherby Teleport", "Teleports you to Catherby", TDA, 625, 0, 5);
-		addLunar3RunesSmallBox(30258, 9075, 563, 555, 2, 2, 14, 30012, 30004, 87, "Tele Group Catherby", "Teleports players to Catherby", TDA, 626, 0, 5);
-		addLunar3RunesSmallBox(30266, 9075, 563, 555, 2, 2, 7, 30012, 30004, 88, "Ice Plateau Teleport", "Teleports you to Ice Plateau", TDA, 627, 0, 5);
-		addLunar3RunesLargeBox(30274, 9075, 563, 555, 2, 2, 15, 30012, 30004, 89, "Tele Group Ice Plateau", "Teleports players to Ice Plateau", TDA, 628, 0, 5);
-		addLunar3RunesBigBox(30282, 9075, 563, 561, 2, 1, 0, 30012, 30010, 90, "Energy Transfer", "Spend HP and SA energy to\\n give another SA and run energy", TDA, 629, 8, 2);
-		addLunar3RunesBigBox(30290, 9075, 563, 565, 2, 2, 0, 30012, 30014, 91, "Heal Other", "Transfer up to 75% of hitpoints\\n to another player", TDA, 630, 8, 2);
-		addLunar3RunesBigBox(30298, 9075, 560, 557, 2, 1, 9, 30009, 30006, 92, "Vengeance Other", "Allows another player to rebound\\ndamage to an opponent", TDA, 631, 8, 2);
-		addLunar3RunesSmallBox(30306, 9075, 560, 557, 3, 1, 9, 30009, 30006, 93, "Vengeance", "Rebound damage to an opponent", TDA, 632, 0, 5);
-		addLunar3RunesBigBox(30314, 9075, 565, 563, 3, 2, 5, 30014, 30012, 94, "Heal Group", "Transfer up to 75% of hitpoints\\n to a group", TDA, 633, 0, 5);
-		addLunar3RunesBigBox(30322, 9075, 564, 563, 2, 1, 0, 30013, 30012, 95, "Spellbook Swap", "Change to another spellbook for 1\\nspell cast", TDA, 634, 0, 5);
+		addLunar3RunesSmallBox(30017, 9075, 554, 555, 0, 4, 3, 30003, 30004, 64, "Bake Pie",
+				"Bake pies without a stove", TDA, 596, 16, 2);
+		addLunar2RunesSmallBox(30025, 9075, 557, 0, 7, 30006, 65, "Cure Plant", "Cure disease on farming patch", TDA,
+				597, 4, 2);
+		addLunar3RunesBigBox(30032, 9075, 564, 558, 0, 0, 0, 30013, 30007, 65, "Monster Examine",
+				"Detect the combat statistics of a\\nmonster", TDA, 598, 2, 2);
+		addLunar3RunesSmallBox(30040, 9075, 564, 556, 0, 0, 1, 30013, 30005, 66, "NPC Contact",
+				"Speak with varied NPCs", TDA, 599, 0, 2);
+		addLunar3RunesSmallBox(30048, 9075, 563, 557, 0, 0, 9, 30012, 30006, 67, "Cure Other", "Cure poisoned players",
+				TDA, 600, 8, 2);
+		addLunar3RunesSmallBox(30056, 9075, 555, 554, 0, 2, 0, 30004, 30003, 67, "Humidify",
+				"Fills certain vessels with water", TDA, 601, 0, 5);
+		addLunar3RunesSmallBox(30064, 9075, 563, 557, 1, 0, 1, 30012, 30006, 68, "Moonclan Teleport",
+				"Teleports you to moonclan island", TDA, 602, 0, 5);
+		addLunar3RunesBigBox(30075, 9075, 563, 557, 1, 0, 3, 30012, 30006, 69, "Tele Group Moonclan",
+				"Teleports players to Moonclan\\nisland", TDA, 603, 0, 5);
+		addLunar3RunesSmallBox(30083, 9075, 563, 557, 1, 0, 5, 30012, 30006, 70, "Ourania Teleport",
+				"Teleports you to ourania rune altar", TDA, 604, 0, 5);
+		addLunar3RunesSmallBox(30091, 9075, 564, 563, 1, 1, 0, 30013, 30012, 70, "Cure Me", "Cures Poison", TDA, 605, 0,
+				5);
+		addLunar2RunesSmallBox(30099, 9075, 557, 1, 1, 30006, 70, "Hunter Kit", "Get a kit of hunting gear", TDA, 606,
+				0, 5);
+		addLunar3RunesSmallBox(30106, 9075, 563, 555, 1, 0, 0, 30012, 30004, 71, "Waterbirth Teleport",
+				"Teleports you to Waterbirth island", TDA, 607, 0, 5);
+		addLunar3RunesBigBox(30114, 9075, 563, 555, 1, 0, 4, 30012, 30004, 72, "Tele Group Waterbirth",
+				"Teleports players to Waterbirth\\nisland", TDA, 608, 0, 5);
+		addLunar3RunesSmallBox(30122, 9075, 564, 563, 1, 1, 1, 30013, 30012, 73, "Cure Group",
+				"Cures Poison on players", TDA, 609, 0, 5);
+		addLunar3RunesBigBox(30130, 9075, 564, 559, 1, 1, 4, 30013, 30008, 74, "Stat Spy",
+				"Cast on another player to see their\\nskill levels", TDA, 610, 8, 2);
+		addLunar3RunesBigBox(30138, 9075, 563, 554, 1, 1, 2, 30012, 30003, 74, "Barbarian Teleport",
+				"Teleports you to the Barbarian\\noutpost", TDA, 611, 0, 5);
+		addLunar3RunesBigBox(30146, 9075, 563, 554, 1, 1, 5, 30012, 30003, 75, "Tele Group Barbarian",
+				"Teleports players to the Barbarian\\noutpost", TDA, 612, 0, 5);
+		addLunar3RunesSmallBox(30154, 9075, 554, 556, 1, 5, 9, 30003, 30005, 76, "Superglass Make",
+				"Make glass without a furnace", TDA, 613, 16, 2);
+		addLunar3RunesSmallBox(30162, 9075, 563, 555, 1, 1, 3, 30012, 30004, 77, "Khazard Teleport",
+				"Teleports you to Port khazard", TDA, 614, 0, 5);
+		addLunar3RunesSmallBox(30170, 9075, 563, 555, 1, 1, 7, 30012, 30004, 78, "Tele Group Khazard",
+				"Teleports players to Port khazard", TDA, 615, 0, 5);
+		addLunar3RunesBigBox(30178, 9075, 564, 559, 1, 0, 4, 30013, 30008, 78, "Dream",
+				"Take a rest and restore hitpoints 3\\n times faster", TDA, 616, 0, 5);
+		addLunar3RunesSmallBox(30186, 9075, 557, 555, 1, 9, 4, 30006, 30004, 79, "String Jewellery",
+				"String amulets without wool", TDA, 617, 0, 5);
+		addLunar3RunesLargeBox(30194, 9075, 557, 555, 1, 9, 9, 30006, 30004, 80, "Stat Restore Pot\\nShare",
+				"Share a potion with up to 4 nearby\\nplayers", TDA, 618, 0, 5);
+		addLunar3RunesSmallBox(30202, 9075, 554, 555, 1, 6, 6, 30003, 30004, 81, "Magic Imbue",
+				"Combine runes without a talisman", TDA, 619, 0, 5);
+		addLunar3RunesBigBox(30210, 9075, 561, 557, 2, 1, 14, 30010, 30006, 82, "Fertile Soil",
+				"Fertilise a farming patch with super\\ncompost", TDA, 620, 4, 2);
+		addLunar3RunesBigBox(30218, 9075, 557, 555, 2, 11, 9, 30006, 30004, 83, "Boost Potion Share",
+				"Shares a potion with up to 4 nearby\\nplayers", TDA, 621, 0, 5);
+		addLunar3RunesSmallBox(30226, 9075, 563, 555, 2, 2, 9, 30012, 30004, 84, "Fishing Guild Teleport",
+				"Teleports you to the fishing guild", TDA, 622, 0, 5);
+		addLunar3RunesLargeBox(30234, 9075, 563, 555, 1, 2, 13, 30012, 30004, 85, "Tele Group Fishing Guild",
+				"Teleports players to the Fishing\\nGuild", TDA, 623, 0, 5);
+		addLunar3RunesSmallBox(30242, 9075, 557, 561, 2, 14, 0, 30006, 30010, 85, "Plank Make", "Turn Logs into planks",
+				TDA, 624, 16, 5);
+		addLunar3RunesSmallBox(30250, 9075, 563, 555, 2, 2, 9, 30012, 30004, 86, "Catherby Teleport",
+				"Teleports you to Catherby", TDA, 625, 0, 5);
+		addLunar3RunesSmallBox(30258, 9075, 563, 555, 2, 2, 14, 30012, 30004, 87, "Tele Group Catherby",
+				"Teleports players to Catherby", TDA, 626, 0, 5);
+		addLunar3RunesSmallBox(30266, 9075, 563, 555, 2, 2, 7, 30012, 30004, 88, "Ice Plateau Teleport",
+				"Teleports you to Ice Plateau", TDA, 627, 0, 5);
+		addLunar3RunesLargeBox(30274, 9075, 563, 555, 2, 2, 15, 30012, 30004, 89, "Tele Group Ice Plateau",
+				"Teleports players to Ice Plateau", TDA, 628, 0, 5);
+		addLunar3RunesBigBox(30282, 9075, 563, 561, 2, 1, 0, 30012, 30010, 90, "Energy Transfer",
+				"Spend HP and SA energy to\\n give another SA and run energy", TDA, 629, 8, 2);
+		addLunar3RunesBigBox(30290, 9075, 563, 565, 2, 2, 0, 30012, 30014, 91, "Heal Other",
+				"Transfer up to 75% of hitpoints\\n to another player", TDA, 630, 8, 2);
+		addLunar3RunesBigBox(30298, 9075, 560, 557, 2, 1, 9, 30009, 30006, 92, "Vengeance Other",
+				"Allows another player to rebound\\ndamage to an opponent", TDA, 631, 8, 2);
+		addLunar3RunesSmallBox(30306, 9075, 560, 557, 3, 1, 9, 30009, 30006, 93, "Vengeance",
+				"Rebound damage to an opponent", TDA, 632, 0, 5);
+		addLunar3RunesBigBox(30314, 9075, 565, 563, 3, 2, 5, 30014, 30012, 94, "Heal Group",
+				"Transfer up to 75% of hitpoints\\n to a group", TDA, 633, 0, 5);
+		addLunar3RunesBigBox(30322, 9075, 564, 563, 2, 1, 0, 30013, 30012, 95, "Spellbook Swap",
+				"Change to another spellbook for 1\\nspell cast", TDA, 634, 0, 5);
 	}
 
 	public static void constructLunar() {
@@ -3111,16 +3144,17 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		setBounds(30315, 5, 5, 79, Interface);
 	}
 
-	public static void addPrayer(int ID, String tooltip, int w, int h, int glowSprite, int glowX, int glowY, int disabledSprite, int enabledSprite, int config, int configFrame, int hover, int levelRequired) {
+	public static void addPrayer(int ID, String tooltip, int w, int h, int glowSprite, int glowX, int glowY,
+			int disabledSprite, int enabledSprite, int config, int configFrame, int hover, int levelRequired) {
 		RSInterface p = addTabInterface(ID);
 		p.parentID = 5608;
 		p.type = 5;
 		p.atActionType = 4;
 		p.width = w;
 		p.height = h;
-		p.requiredValues = new int[]{1};
-		p.valueCompareType = new int[]{1};
-		p.scripts = new int[][]{{5, configFrame, 0}};
+		p.requiredValues = new int[] { 1 };
+		p.valueCompareType = new int[] { 1 };
+		p.scripts = new int[][] { { 5, configFrame, 0 } };
 		p.tooltip = tooltip;
 		p.disabledMessage = tooltip;
 		p.hoverType = 52;
@@ -3133,13 +3167,13 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		p.atActionType = 0;
 		p.width = w;
 		p.height = h;
-		p.requiredValues = new int[]{levelRequired};
-		p.valueCompareType = new int[]{3};
-		p.scripts = new int[][]{{2, 5, 0}};
+		p.requiredValues = new int[] { levelRequired };
+		p.valueCompareType = new int[] { 3 };
+		p.scripts = new int[][] { { 2, 5, 0 } };
 		p.tooltip = tooltip;
 		p.disabledMessage = tooltip;
-		p.enabledSprite = Client.spriteCache.get(enabledSprite); //imageLoader(disabledSprite, "s");
-		p.disabledSprite = Client.spriteCache.get(disabledSprite); //imageLoader(enabledSprite, "s");
+		p.enabledSprite = Client.spriteCache.get(enabledSprite); // imageLoader(disabledSprite, "s");
+		p.disabledSprite = Client.spriteCache.get(disabledSprite); // imageLoader(enabledSprite, "s");
 		p.hoverType = hover;
 	}
 
@@ -3157,23 +3191,36 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 
 	/* Side Bars */
 	public static void Sidebar0(TextDrawingArea[] tda) {
-		Sidebar0a(1698, 1701, 7499, "Chop", "Hack", "Smash", "Block", 42, 75, 127, 75, 39, 128, 125, 128, 122, 103, 40, 50, 122, 50, 40, 103, tda);
-		Sidebar0a(2276, 2279, 7574, "Stab", "Lunge", "Slash", "Block", 43, 75, 124, 75, 41, 128, 125, 128, 122, 103, 40, 50, 122, 50, 40, 103, tda);
-		Sidebar0a(2423, 2426, 7599, "Chop", "Slash", "Lunge", "Block", 42, 75, 125, 75, 40, 128, 125, 128, 122, 103, 40, 50, 122, 50, 40, 103, tda);
-		Sidebar0a(3796, 3799, 7624, "Pound", "Pummel", "Spike", "Block", 39, 75, 121, 75, 41, 128, 125, 128, 122, 103, 40, 50, 122, 50, 40, 103, tda);
-		Sidebar0a(4679, 4682, 7674, "Lunge", "Swipe", "Pound", "Block", 40, 75, 124, 75, 39, 128, 125, 128, 122, 103, 40, 50, 122, 50, 40, 103, tda);
-		Sidebar0a(4705, 4708, 7699, "Chop", "Slash", "Smash", "Block", 42, 75, 125, 75, 39, 128, 125, 128, 122, 103, 40, 50, 122, 50, 40, 103, tda);
-		Sidebar0a(5570, 5573, 7724, "Spike", "Impale", "Smash", "Block", 41, 75, 123, 75, 39, 128, 125, 128, 122, 103, 40, 50, 122, 50, 40, 103, tda);
-		Sidebar0a(7762, 7765, 7800, "Chop", "Slash", "Lunge", "Block", 42, 75, 125, 75, 40, 128, 125, 128, 122, 103, 40, 50, 122, 50, 40, 103, tda);
-		Sidebar0b(776, 779, "Reap", "Chop", "Jab", "Block", 42, 75, 126, 75, 46, 128, 125, 128, 122, 103, 122, 50, 40, 103, 40, 50, tda);
+		Sidebar0a(1698, 1701, 7499, "Chop", "Hack", "Smash", "Block", 42, 75, 127, 75, 39, 128, 125, 128, 122, 103, 40,
+				50, 122, 50, 40, 103, tda);
+		Sidebar0a(2276, 2279, 7574, "Stab", "Lunge", "Slash", "Block", 43, 75, 124, 75, 41, 128, 125, 128, 122, 103, 40,
+				50, 122, 50, 40, 103, tda);
+		Sidebar0a(2423, 2426, 7599, "Chop", "Slash", "Lunge", "Block", 42, 75, 125, 75, 40, 128, 125, 128, 122, 103, 40,
+				50, 122, 50, 40, 103, tda);
+		Sidebar0a(3796, 3799, 7624, "Pound", "Pummel", "Spike", "Block", 39, 75, 121, 75, 41, 128, 125, 128, 122, 103,
+				40, 50, 122, 50, 40, 103, tda);
+		Sidebar0a(4679, 4682, 7674, "Lunge", "Swipe", "Pound", "Block", 40, 75, 124, 75, 39, 128, 125, 128, 122, 103,
+				40, 50, 122, 50, 40, 103, tda);
+		Sidebar0a(4705, 4708, 7699, "Chop", "Slash", "Smash", "Block", 42, 75, 125, 75, 39, 128, 125, 128, 122, 103, 40,
+				50, 122, 50, 40, 103, tda);
+		Sidebar0a(5570, 5573, 7724, "Spike", "Impale", "Smash", "Block", 41, 75, 123, 75, 39, 128, 125, 128, 122, 103,
+				40, 50, 122, 50, 40, 103, tda);
+		Sidebar0a(7762, 7765, 7800, "Chop", "Slash", "Lunge", "Block", 42, 75, 125, 75, 40, 128, 125, 128, 122, 103, 40,
+				50, 122, 50, 40, 103, tda);
+		Sidebar0b(776, 779, "Reap", "Chop", "Jab", "Block", 42, 75, 126, 75, 46, 128, 125, 128, 122, 103, 122, 50, 40,
+				103, 40, 50, tda);
 		Sidebar0c(425, 428, 7474, "Pound", "Pummel", "Block", 39, 75, 121, 75, 42, 128, 40, 103, 40, 50, 122, 50, tda);
-		Sidebar0c(1749, 1752, 7524, "Accurate", "Rapid", "Longrange", 33, 75, 125, 75, 29, 128, 40, 103, 40, 50, 122, 50, tda);
-		Sidebar0c(1764, 1767, 7549, "Accurate", "Rapid", "Longrange", 33, 75, 125, 75, 29, 128, 40, 103, 40, 50, 122, 50, tda);
-		Sidebar0c(4446, 4449, 7649, "Accurate", "Rapid", "Longrange", 33, 75, 125, 75, 29, 128, 40, 103, 40, 50, 122, 50, tda);
+		Sidebar0c(1749, 1752, 7524, "Accurate", "Rapid", "Longrange", 33, 75, 125, 75, 29, 128, 40, 103, 40, 50, 122,
+				50, tda);
+		Sidebar0c(1764, 1767, 7549, "Accurate", "Rapid", "Longrange", 33, 75, 125, 75, 29, 128, 40, 103, 40, 50, 122,
+				50, tda);
+		Sidebar0c(4446, 4449, 7649, "Accurate", "Rapid", "Longrange", 33, 75, 125, 75, 29, 128, 40, 103, 40, 50, 122,
+				50, tda);
 		Sidebar0c(5855, 5857, 7749, "Punch", "Kick", "Block", 40, 75, 129, 75, 42, 128, 40, 50, 122, 50, 40, 103, tda);
 		Sidebar0c(6103, 6132, 6117, "Bash", "Pound", "Block", 43, 75, 124, 75, 42, 128, 40, 103, 40, 50, 122, 50, tda);
 		Sidebar0c(8460, 8463, 8493, "Jab", "Swipe", "Fend", 46, 75, 124, 75, 43, 128, 40, 103, 40, 50, 122, 50, tda);
-		Sidebar0c(12290, 12293, 12323, "Flick", "Lash", "Deflect", 44, 75, 127, 75, 36, 128, 40, 50, 40, 103, 122, 50, tda);
+		Sidebar0c(12290, 12293, 12323, "Flick", "Lash", "Deflect", 44, 75, 127, 75, 36, 128, 40, 50, 40, 103, 122, 50,
+				tda);
 		Sidebar0d(328, 331, "Bash", "Pound", "Focus", 42, 66, 39, 101, 41, 136, 40, 120, 40, 50, 40, 85, tda);
 
 		RSInterface rsi = addInterface(19300);
@@ -3187,7 +3234,9 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		rsi.textColor = 0xff981f;
 	}
 
-	public static void Sidebar0a(int id, int id2, int id3, String text1, String text2, String text3, String text4, int str1x, int str1y, int str2x, int str2y, int str3x, int str3y, int str4x, int str4y, int img1x, int img1y, int img2x, int img2y, int img3x, int img3y, int img4x, int img4y, TextDrawingArea[] tda) {
+	public static void Sidebar0a(int id, int id2, int id3, String text1, String text2, String text3, String text4,
+			int str1x, int str1y, int str2x, int str2y, int str3x, int str3y, int str4x, int str4y, int img1x,
+			int img1y, int img2x, int img2y, int img3x, int img3y, int img4x, int img4y, TextDrawingArea[] tda) {
 		RSInterface rsi = addInterface(id);
 		addText(id2, "-2", tda, 3, 0xff981f, true);
 		addText(id2 + 11, text1, tda, 0, 0xff981f, false);
@@ -3242,7 +3291,9 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		}
 	}
 
-	public static void Sidebar0b(int id, int id2, String text1, String text2, String text3, String text4, int str1x, int str1y, int str2x, int str2y, int str3x, int str3y, int str4x, int str4y, int img1x, int img1y, int img2x, int img2y, int img3x, int img3y, int img4x, int img4y, TextDrawingArea[] tda) {
+	public static void Sidebar0b(int id, int id2, String text1, String text2, String text3, String text4, int str1x,
+			int str1y, int str2x, int str2y, int str3x, int str3y, int str4x, int str4y, int img1x, int img1y,
+			int img2x, int img2y, int img3x, int img3y, int img4x, int img4y, TextDrawingArea[] tda) {
 		RSInterface rsi = addInterface(id); // 2423
 		addText(id2, "-2", tda, 3, 0xff981f, true);
 		addText(id2 + 11, text1, tda, 0, 0xff981f, false);
@@ -3294,7 +3345,9 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		}
 	}
 
-	public static void Sidebar0c(int id, int id2, int id3, String text1, String text2, String text3, int str1x, int str1y, int str2x, int str2y, int str3x, int str3y, int img1x, int img1y, int img2x, int img2y, int img3x, int img3y, TextDrawingArea[] tda) {
+	public static void Sidebar0c(int id, int id2, int id3, String text1, String text2, String text3, int str1x,
+			int str1y, int str2x, int str2y, int str3x, int str3y, int img1x, int img1y, int img2x, int img2y,
+			int img3x, int img3y, TextDrawingArea[] tda) {
 		RSInterface rsi = addInterface(id);
 		addText(id2, "-2", tda, 3, 0xff981f, true);
 		addText(id2 + 9, text1, tda, 0, 0xff981f, false);
@@ -3341,7 +3394,9 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 		}
 	}
 
-	public static void Sidebar0d(int id, int id2, String text1, String text2, String text3, int str1x, int str1y, int str2x, int str2y, int str3x, int str3y, int img1x, int img1y, int img2x, int img2y, int img3x, int img3y, TextDrawingArea[] tda) {
+	public static void Sidebar0d(int id, int id2, String text1, String text2, String text3, int str1x, int str1y,
+			int str2x, int str2y, int str3x, int str3y, int img1x, int img1y, int img2x, int img2y, int img3x,
+			int img3y, TextDrawingArea[] tda) {
 		RSInterface rsi = addInterface(id);
 		addText(id2, "-2", tda, 3, 0xff981f, true);
 		addText(id2 + 9, text1, tda, 0, 0xff981f, false);
@@ -3402,13 +3457,15 @@ public static void CursePrayers(TextDrawingArea[] tda) {
 	public RSInterface dropDownOpen;
 	public int dropDownHover = -1;
 
-	//0xFD961E
+	// 0xFD961E
 
-	public static void addDropdownMenu(int identification, int width, int defaultOption, boolean split, boolean center, Dropdown dropdown, String... options) {
+	public static void addDropdownMenu(int identification, int width, int defaultOption, boolean split, boolean center,
+			Dropdown dropdown, String... options) {
 		addDropdownMenu(identification, width, defaultOption, 0xFD961E, split, center, dropdown, options);
 	}
 
-	public static void addDropdownMenu(int identification, int width, int defaultOption, int textColor, boolean split, boolean center, Dropdown dropdown, String... options) {
+	public static void addDropdownMenu(int identification, int width, int defaultOption, int textColor, boolean split,
+			boolean center, Dropdown dropdown, String... options) {
 		RSInterface dropdownMenu = addInterface(identification);
 		dropdownMenu.type = 69;
 		dropdownMenu.atActionType = 69;

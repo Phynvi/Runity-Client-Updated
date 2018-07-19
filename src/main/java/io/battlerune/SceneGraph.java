@@ -107,7 +107,8 @@ final class SceneGraph {
 		}
 	}
 
-	public void method279(int i, int j, int k, int l, int i1, int j1, int k1, int l1, int i2, int j2, int k2, int l2, int i3, int j3, int k3, int l3, int i4, int j4, int k4, int l4) {
+	public void method279(int i, int j, int k, int l, int i1, int j1, int k1, int l1, int i2, int j2, int k2, int l2,
+			int i3, int j3, int k3, int l3, int i4, int j4, int k4, int l4) {
 		if (l == 0) {
 			TileUnderlay class43 = new TileUnderlay(k2, l2, i3, j3, -1, k4, false);
 			for (int i5 = i; i5 >= 0; i5--)
@@ -149,7 +150,8 @@ final class SceneGraph {
 		groundArray[i][j1][k].obj3 = class49;
 	}
 
-	public void method281(int i, int j, Renderable class30_sub2_sub4, int k, Renderable class30_sub2_sub4_1, Renderable class30_sub2_sub4_2, int l, int i1) {
+	public void method281(int i, int j, Renderable class30_sub2_sub4, int k, Renderable class30_sub2_sub4_1,
+			Renderable class30_sub2_sub4_2, int l, int i1) {
 		ItemPile object4 = new ItemPile();
 		object4.aClass30_Sub2_Sub4_48 = class30_sub2_sub4_2;
 		object4.anInt46 = i * 128 + 64;
@@ -175,7 +177,8 @@ final class SceneGraph {
 		groundArray[l][i][i1].obj4 = object4;
 	}
 
-	public void method282(int i, Renderable class30_sub2_sub4, int j, int k, byte byte0, int l, Renderable class30_sub2_sub4_1, int i1, int j1, int k1) {
+	public void method282(int i, Renderable class30_sub2_sub4, int j, int k, byte byte0, int l,
+			Renderable class30_sub2_sub4_1, int i1, int j1, int k1) {
 		if (class30_sub2_sub4 == null && class30_sub2_sub4_1 == null)
 			return;
 		Wall object1 = new Wall();
@@ -195,7 +198,8 @@ final class SceneGraph {
 		groundArray[k1][l][k].obj1 = object1;
 	}
 
-	public void method283(int i, int j, int k, int i1, int j1, int k1, Renderable class30_sub2_sub4, int l1, byte byte0, int i2, int j2) {
+	public void method283(int i, int j, int k, int i1, int j1, int k1, Renderable class30_sub2_sub4, int l1, byte byte0,
+			int i2, int j2) {
 		if (class30_sub2_sub4 == null)
 			return;
 		WallDecoration class26 = new WallDecoration();
@@ -214,7 +218,8 @@ final class SceneGraph {
 		groundArray[i1][l1][j].obj2 = class26;
 	}
 
-	public boolean method284(int i, byte byte0, int j, int k, Renderable class30_sub2_sub4, int l, int i1, int j1, int k1, int l1) {
+	public boolean method284(int i, byte byte0, int j, int k, Renderable class30_sub2_sub4, int l, int i1, int j1,
+			int k1, int l1) {
 		if (class30_sub2_sub4 == null) {
 			return true;
 		} else {
@@ -224,7 +229,8 @@ final class SceneGraph {
 		}
 	}
 
-	public boolean method285(int i, int j, int k, int l, int i1, int j1, int k1, Renderable class30_sub2_sub4, boolean flag) {
+	public boolean method285(int i, int j, int k, int l, int i1, int j1, int k1, Renderable class30_sub2_sub4,
+			boolean flag) {
 		if (class30_sub2_sub4 == null)
 			return true;
 		int l1 = k1 - j1;
@@ -248,11 +254,14 @@ final class SceneGraph {
 		return method287(i, l1, i2, (j2 - l1) + 1, (k2 - i2) + 1, k1, i1, k, class30_sub2_sub4, j, true, l, (byte) 0);
 	}
 
-	public boolean method286(int j, int k, Renderable class30_sub2_sub4, int l, int i1, int j1, int k1, int l1, int i2, int j2, int k2) {
-		return class30_sub2_sub4 == null || method287(j, l1, k2, (i2 - l1) + 1, (i1 - k2) + 1, j1, k, k1, class30_sub2_sub4, l, true, j2, (byte) 0);
+	public boolean method286(int j, int k, Renderable class30_sub2_sub4, int l, int i1, int j1, int k1, int l1, int i2,
+			int j2, int k2) {
+		return class30_sub2_sub4 == null || method287(j, l1, k2, (i2 - l1) + 1, (i1 - k2) + 1, j1, k, k1,
+				class30_sub2_sub4, l, true, j2, (byte) 0);
 	}
 
-	private boolean method287(int i, int j, int k, int l, int i1, int j1, int k1, int l1, Renderable class30_sub2_sub4, int i2, boolean flag, int j2, byte byte0) {
+	private boolean method287(int i, int j, int k, int l, int i1, int j1, int k1, int l1, Renderable class30_sub2_sub4,
+			int i2, boolean flag, int j2, byte byte0) {
 		for (int k2 = j; k2 < j + l; k2++) {
 			for (int l2 = k; l2 < k + i1; l2++) {
 				if (k2 < 0 || l2 < 0 || k2 >= anInt438 || l2 >= anInt439)
@@ -503,19 +512,25 @@ final class SceneGraph {
 					Ground class30_sub3 = groundArray[l1][i2][j2];
 					if (class30_sub3 != null) {
 						Wall class10 = class30_sub3.obj1;
-						if (class10 != null && class10.aClass30_Sub2_Sub4_278 != null && class10.aClass30_Sub2_Sub4_278.aClass33Array1425 != null) {
+						if (class10 != null && class10.aClass30_Sub2_Sub4_278 != null
+								&& class10.aClass30_Sub2_Sub4_278.aClass33Array1425 != null) {
 							method307(l1, 1, 1, i2, j2, (Model) class10.aClass30_Sub2_Sub4_278);
-							if (class10.aClass30_Sub2_Sub4_279 != null && class10.aClass30_Sub2_Sub4_279.aClass33Array1425 != null) {
+							if (class10.aClass30_Sub2_Sub4_279 != null
+									&& class10.aClass30_Sub2_Sub4_279.aClass33Array1425 != null) {
 								method307(l1, 1, 1, i2, j2, (Model) class10.aClass30_Sub2_Sub4_279);
-								method308((Model) class10.aClass30_Sub2_Sub4_278, (Model) class10.aClass30_Sub2_Sub4_279, 0, 0, 0, false);
+								method308((Model) class10.aClass30_Sub2_Sub4_278,
+										(Model) class10.aClass30_Sub2_Sub4_279, 0, 0, 0, false);
 								((Model) class10.aClass30_Sub2_Sub4_279).method480(lightness, contrast, k, i, i1);
 							}
 							((Model) class10.aClass30_Sub2_Sub4_278).method480(lightness, contrast, k, i, i1);
 						}
 						for (int k2 = 0; k2 < class30_sub3.anInt1317; k2++) {
 							StaticObject class28 = class30_sub3.obj5Array[k2];
-							if (class28 != null && class28.aClass30_Sub2_Sub4_521 != null && class28.aClass30_Sub2_Sub4_521.aClass33Array1425 != null) {
-								method307(l1, (class28.anInt524 - class28.anInt523) + 1, (class28.anInt526 - class28.anInt525) + 1, i2, j2, (Model) class28.aClass30_Sub2_Sub4_521);
+							if (class28 != null && class28.aClass30_Sub2_Sub4_521 != null
+									&& class28.aClass30_Sub2_Sub4_521.aClass33Array1425 != null) {
+								method307(l1, (class28.anInt524 - class28.anInt523) + 1,
+										(class28.anInt526 - class28.anInt525) + 1, i2, j2,
+										(Model) class28.aClass30_Sub2_Sub4_521);
 								((Model) class28.aClass30_Sub2_Sub4_521).method480(lightness, contrast, k, i, i1);
 							}
 						}
@@ -537,22 +552,26 @@ final class SceneGraph {
 	private void method306(int i, int j, Model model, int k) {
 		if (i < anInt438) {
 			Ground class30_sub3 = groundArray[j][i + 1][k];
-			if (class30_sub3 != null && class30_sub3.obj3 != null && class30_sub3.obj3.aClass30_Sub2_Sub4_814.aClass33Array1425 != null)
+			if (class30_sub3 != null && class30_sub3.obj3 != null
+					&& class30_sub3.obj3.aClass30_Sub2_Sub4_814.aClass33Array1425 != null)
 				method308(model, (Model) class30_sub3.obj3.aClass30_Sub2_Sub4_814, 128, 0, 0, true);
 		}
 		if (k < anInt438) {
 			Ground class30_sub3_1 = groundArray[j][i][k + 1];
-			if (class30_sub3_1 != null && class30_sub3_1.obj3 != null && class30_sub3_1.obj3.aClass30_Sub2_Sub4_814.aClass33Array1425 != null)
+			if (class30_sub3_1 != null && class30_sub3_1.obj3 != null
+					&& class30_sub3_1.obj3.aClass30_Sub2_Sub4_814.aClass33Array1425 != null)
 				method308(model, (Model) class30_sub3_1.obj3.aClass30_Sub2_Sub4_814, 0, 0, 128, true);
 		}
 		if (i < anInt438 && k < anInt439) {
 			Ground class30_sub3_2 = groundArray[j][i + 1][k + 1];
-			if (class30_sub3_2 != null && class30_sub3_2.obj3 != null && class30_sub3_2.obj3.aClass30_Sub2_Sub4_814.aClass33Array1425 != null)
+			if (class30_sub3_2 != null && class30_sub3_2.obj3 != null
+					&& class30_sub3_2.obj3.aClass30_Sub2_Sub4_814.aClass33Array1425 != null)
 				method308(model, (Model) class30_sub3_2.obj3.aClass30_Sub2_Sub4_814, 128, 0, 128, true);
 		}
 		if (i < anInt438 && k > 0) {
 			Ground class30_sub3_3 = groundArray[j][i + 1][k - 1];
-			if (class30_sub3_3 != null && class30_sub3_3.obj3 != null && class30_sub3_3.obj3.aClass30_Sub2_Sub4_814.aClass33Array1425 != null)
+			if (class30_sub3_3 != null && class30_sub3_3.obj3 != null
+					&& class30_sub3_3.obj3.aClass30_Sub2_Sub4_814.aClass33Array1425 != null)
 				method308(model, (Model) class30_sub3_3.obj3.aClass30_Sub2_Sub4_814, 128, 0, -128, true);
 		}
 	}
@@ -571,18 +590,33 @@ final class SceneGraph {
 							if (l2 >= 0 && l2 < anInt439 && (!flag || k2 >= k1 || l2 >= i2 || l2 < i1 && k2 != l)) {
 								Ground class30_sub3 = groundArray[j2][k2][l2];
 								if (class30_sub3 != null) {
-									int i3 = (anIntArrayArrayArray440[j2][k2][l2] + anIntArrayArrayArray440[j2][k2 + 1][l2] + anIntArrayArrayArray440[j2][k2][l2 + 1] + anIntArrayArrayArray440[j2][k2 + 1][l2 + 1]) / 4 - (anIntArrayArrayArray440[i][l][i1] + anIntArrayArrayArray440[i][l + 1][i1] + anIntArrayArrayArray440[i][l][i1 + 1] + anIntArrayArrayArray440[i][l + 1][i1 + 1]) / 4;
+									int i3 = (anIntArrayArrayArray440[j2][k2][l2]
+											+ anIntArrayArrayArray440[j2][k2 + 1][l2]
+											+ anIntArrayArrayArray440[j2][k2][l2 + 1]
+											+ anIntArrayArrayArray440[j2][k2 + 1][l2 + 1]) / 4
+											- (anIntArrayArrayArray440[i][l][i1] + anIntArrayArrayArray440[i][l + 1][i1]
+													+ anIntArrayArrayArray440[i][l][i1 + 1]
+													+ anIntArrayArrayArray440[i][l + 1][i1 + 1]) / 4;
 									Wall class10 = class30_sub3.obj1;
-									if (class10 != null && class10.aClass30_Sub2_Sub4_278 != null && class10.aClass30_Sub2_Sub4_278.aClass33Array1425 != null)
-										method308(model, (Model) class10.aClass30_Sub2_Sub4_278, (k2 - l) * 128 + (1 - j) * 64, i3, (l2 - i1) * 128 + (1 - k) * 64, flag);
-									if (class10 != null && class10.aClass30_Sub2_Sub4_279 != null && class10.aClass30_Sub2_Sub4_279.aClass33Array1425 != null)
-										method308(model, (Model) class10.aClass30_Sub2_Sub4_279, (k2 - l) * 128 + (1 - j) * 64, i3, (l2 - i1) * 128 + (1 - k) * 64, flag);
+									if (class10 != null && class10.aClass30_Sub2_Sub4_278 != null
+											&& class10.aClass30_Sub2_Sub4_278.aClass33Array1425 != null)
+										method308(model, (Model) class10.aClass30_Sub2_Sub4_278,
+												(k2 - l) * 128 + (1 - j) * 64, i3, (l2 - i1) * 128 + (1 - k) * 64,
+												flag);
+									if (class10 != null && class10.aClass30_Sub2_Sub4_279 != null
+											&& class10.aClass30_Sub2_Sub4_279.aClass33Array1425 != null)
+										method308(model, (Model) class10.aClass30_Sub2_Sub4_279,
+												(k2 - l) * 128 + (1 - j) * 64, i3, (l2 - i1) * 128 + (1 - k) * 64,
+												flag);
 									for (int j3 = 0; j3 < class30_sub3.anInt1317; j3++) {
 										StaticObject class28 = class30_sub3.obj5Array[j3];
-										if (class28 != null && class28.aClass30_Sub2_Sub4_521 != null && class28.aClass30_Sub2_Sub4_521.aClass33Array1425 != null) {
+										if (class28 != null && class28.aClass30_Sub2_Sub4_521 != null
+												&& class28.aClass30_Sub2_Sub4_521.aClass33Array1425 != null) {
 											int k3 = (class28.anInt524 - class28.anInt523) + 1;
 											int l3 = (class28.anInt526 - class28.anInt525) + 1;
-											method308(model, (Model) class28.aClass30_Sub2_Sub4_521, (class28.anInt523 - l) * 128 + (k3 - j) * 64, i3, (class28.anInt525 - i1) * 128 + (l3 - k) * 64, flag);
+											method308(model, (Model) class28.aClass30_Sub2_Sub4_521,
+													(class28.anInt523 - l) * 128 + (k3 - j) * 64, i3,
+													(class28.anInt525 - i1) * 128 + (l3 - k) * 64, flag);
 										}
 									}
 
@@ -615,7 +649,8 @@ final class SceneGraph {
 							for (int l2 = 0; l2 < i1; l2++) {
 								Vertex class33_2 = model_1.aClass33Array1425[l2];
 								Vertex class33_3 = model_1.aClass33Array1660[l2];
-								if (j2 == ai[l2] && k2 == model_1.anIntArray1629[l2] && i2 == model_1.anIntArray1628[l2] && class33_3.anInt605 != 0) {
+								if (j2 == ai[l2] && k2 == model_1.anIntArray1629[l2] && i2 == model_1.anIntArray1628[l2]
+										&& class33_3.anInt605 != 0) {
 									class33.anInt602 += class33_3.anInt602;
 									class33.anInt603 += class33_3.anInt603;
 									class33.anInt604 += class33_3.anInt604;
@@ -639,11 +674,15 @@ final class SceneGraph {
 		if (l < 3 || !flag)
 			return;
 		for (int k1 = 0; k1 < model.anInt1630; k1++)
-			if (anIntArray486[model.anIntArray1631[k1]] == anInt488 && anIntArray486[model.anIntArray1632[k1]] == anInt488 && anIntArray486[model.anIntArray1633[k1]] == anInt488)
+			if (anIntArray486[model.anIntArray1631[k1]] == anInt488
+					&& anIntArray486[model.anIntArray1632[k1]] == anInt488
+					&& anIntArray486[model.anIntArray1633[k1]] == anInt488)
 				model.anIntArray1637[k1] = -1;
 
 		for (int l1 = 0; l1 < model_1.anInt1630; l1++)
-			if (anIntArray487[model_1.anIntArray1631[l1]] == anInt488 && anIntArray487[model_1.anIntArray1632[l1]] == anInt488 && anIntArray487[model_1.anIntArray1633[l1]] == anInt488)
+			if (anIntArray487[model_1.anIntArray1631[l1]] == anInt488
+					&& anIntArray487[model_1.anIntArray1632[l1]] == anInt488
+					&& anIntArray487[model_1.anIntArray1633[l1]] == anInt488)
 				model_1.anIntArray1637[l1] = -1;
 
 	}
@@ -860,8 +899,7 @@ final class SceneGraph {
 				for (int k2 = -25; k2 < 25; k2++) {
 					for (int i3 = -25; i3 < 25; i3++) {
 						boolean flag1 = false;
-						label0:
-						for (int l3 = -1; l3 <= 1; l3++) {
+						label0: for (int l3 = -1; l3 <= 1; l3++) {
 							for (int j4 = -1; j4 <= 1; j4++) {
 								if (aflag[k1][i2][k2 + l3 + 25 + 1][i3 + j4 + 25 + 1])
 									flag1 = true;
@@ -916,7 +954,7 @@ final class SceneGraph {
 				Rasterizer.depthBuffer = new int[Raster.pixels.length];
 			}
 			for (int index = Rasterizer.depthBuffer.length - 1; index >= 0; index--) {
-				Rasterizer.depthBuffer[index] = 3500;//3500 being the viewing distance
+				Rasterizer.depthBuffer[index] = 3500;// 3500 being the viewing distance
 			}
 		} else if (Rasterizer.depthBuffer != null) {
 			Rasterizer.depthBuffer = null;
@@ -961,7 +999,9 @@ final class SceneGraph {
 				for (int k2 = anInt451; k2 < anInt452; k2++) {
 					Ground class30_sub3 = aclass30_sub3[i2][k2];
 					if (class30_sub3 != null)
-						if (class30_sub3.anInt1321 > i1 || !aBooleanArrayArray492[(i2 - anInt453) + 25][(k2 - anInt454) + 25] && anIntArrayArrayArray440[k1][i2][k2] - l < 2000) {
+						if (class30_sub3.anInt1321 > i1
+								|| !aBooleanArrayArray492[(i2 - anInt453) + 25][(k2 - anInt454) + 25]
+										&& anIntArrayArrayArray440[k1][i2][k2] - l < 2000) {
 							class30_sub3.aBoolean1322 = false;
 							class30_sub3.aBoolean1323 = false;
 							class30_sub3.anInt1325 = 0;
@@ -1091,22 +1131,26 @@ final class SceneGraph {
 					}
 					if (i <= anInt453 && i > anInt449) {
 						Ground class30_sub3_3 = aclass30_sub3[i - 1][j];
-						if (class30_sub3_3 != null && class30_sub3_3.aBoolean1323 && (class30_sub3_3.aBoolean1322 || (class30_sub3_1.anInt1320 & 1) == 0))
+						if (class30_sub3_3 != null && class30_sub3_3.aBoolean1323
+								&& (class30_sub3_3.aBoolean1322 || (class30_sub3_1.anInt1320 & 1) == 0))
 							continue;
 					}
 					if (i >= anInt453 && i < anInt450 - 1) {
 						Ground class30_sub3_4 = aclass30_sub3[i + 1][j];
-						if (class30_sub3_4 != null && class30_sub3_4.aBoolean1323 && (class30_sub3_4.aBoolean1322 || (class30_sub3_1.anInt1320 & 4) == 0))
+						if (class30_sub3_4 != null && class30_sub3_4.aBoolean1323
+								&& (class30_sub3_4.aBoolean1322 || (class30_sub3_1.anInt1320 & 4) == 0))
 							continue;
 					}
 					if (j <= anInt454 && j > anInt451) {
 						Ground class30_sub3_5 = aclass30_sub3[i][j - 1];
-						if (class30_sub3_5 != null && class30_sub3_5.aBoolean1323 && (class30_sub3_5.aBoolean1322 || (class30_sub3_1.anInt1320 & 8) == 0))
+						if (class30_sub3_5 != null && class30_sub3_5.aBoolean1323
+								&& (class30_sub3_5.aBoolean1322 || (class30_sub3_1.anInt1320 & 8) == 0))
 							continue;
 					}
 					if (j >= anInt454 && j < anInt452 - 1) {
 						Ground class30_sub3_6 = aclass30_sub3[i][j + 1];
-						if (class30_sub3_6 != null && class30_sub3_6.aBoolean1323 && (class30_sub3_6.aBoolean1322 || (class30_sub3_1.anInt1320 & 2) == 0))
+						if (class30_sub3_6 != null && class30_sub3_6.aBoolean1323
+								&& (class30_sub3_6.aBoolean1322 || (class30_sub3_1.anInt1320 & 2) == 0))
 							continue;
 					}
 				} else {
@@ -1122,11 +1166,15 @@ final class SceneGraph {
 						method316(i, anInt458, anInt460, class30_sub3_7.aClass40_1312, anInt459, j, anInt461);
 					Wall class10 = class30_sub3_7.obj1;
 					if (class10 != null)
-						class10.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461, class10.anInt274 - anInt455, class10.anInt273 - anInt456, class10.anInt275 - anInt457, class10.uid);
+						class10.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461,
+								class10.anInt274 - anInt455, class10.anInt273 - anInt456, class10.anInt275 - anInt457,
+								class10.uid);
 					for (int i2 = 0; i2 < class30_sub3_7.anInt1317; i2++) {
 						StaticObject class28 = class30_sub3_7.obj5Array[i2];
 						if (class28 != null)
-							class28.aClass30_Sub2_Sub4_521.method443(class28.anInt522, anInt458, anInt459, anInt460, anInt461, class28.anInt519 - anInt455, class28.anInt518 - anInt456, class28.anInt520 - anInt457, class28.uid);
+							class28.aClass30_Sub2_Sub4_521.method443(class28.anInt522, anInt458, anInt459, anInt460,
+									anInt461, class28.anInt519 - anInt455, class28.anInt518 - anInt456,
+									class28.anInt520 - anInt457, class28.uid);
 					}
 
 				}
@@ -1179,13 +1227,19 @@ final class SceneGraph {
 						class30_sub3_1.anInt1325 = 0;
 					}
 					if ((class10_3.orientation & j2) != 0 && !method321(l, i, j, class10_3.orientation))
-						class10_3.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461, class10_3.anInt274 - anInt455, class10_3.anInt273 - anInt456, class10_3.anInt275 - anInt457, class10_3.uid);
+						class10_3.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461,
+								class10_3.anInt274 - anInt455, class10_3.anInt273 - anInt456,
+								class10_3.anInt275 - anInt457, class10_3.uid);
 					if ((class10_3.orientation1 & j2) != 0 && !method321(l, i, j, class10_3.orientation1))
-						class10_3.aClass30_Sub2_Sub4_279.method443(0, anInt458, anInt459, anInt460, anInt461, class10_3.anInt274 - anInt455, class10_3.anInt273 - anInt456, class10_3.anInt275 - anInt457, class10_3.uid);
+						class10_3.aClass30_Sub2_Sub4_279.method443(0, anInt458, anInt459, anInt460, anInt461,
+								class10_3.anInt274 - anInt455, class10_3.anInt273 - anInt456,
+								class10_3.anInt275 - anInt457, class10_3.uid);
 				}
 				if (class26_1 != null && !method322(l, i, j, class26_1.aClass30_Sub2_Sub4_504.modelHeight))
 					if ((class26_1.anInt502 & j2) != 0)
-						class26_1.aClass30_Sub2_Sub4_504.method443(class26_1.anInt503, anInt458, anInt459, anInt460, anInt461, class26_1.anInt500 - anInt455, class26_1.anInt499 - anInt456, class26_1.anInt501 - anInt457, class26_1.uid);
+						class26_1.aClass30_Sub2_Sub4_504.method443(class26_1.anInt503, anInt458, anInt459, anInt460,
+								anInt461, class26_1.anInt500 - anInt455, class26_1.anInt499 - anInt456,
+								class26_1.anInt501 - anInt457, class26_1.uid);
 					else if ((class26_1.anInt502 & 0x300) != 0) {
 						int j4 = class26_1.anInt500 - anInt455;
 						int l5 = class26_1.anInt499 - anInt456;
@@ -1204,26 +1258,36 @@ final class SceneGraph {
 						if ((class26_1.anInt502 & 0x100) != 0 && k10 < k9) {
 							int i11 = j4 + anIntArray463[i8];
 							int k11 = k6 + anIntArray464[i8];
-							class26_1.aClass30_Sub2_Sub4_504.method443(i8 * 512 + 256, anInt458, anInt459, anInt460, anInt461, i11, l5, k11, class26_1.uid);
+							class26_1.aClass30_Sub2_Sub4_504.method443(i8 * 512 + 256, anInt458, anInt459, anInt460,
+									anInt461, i11, l5, k11, class26_1.uid);
 						}
 						if ((class26_1.anInt502 & 0x200) != 0 && k10 > k9) {
 							int j11 = j4 + anIntArray465[i8];
 							int l11 = k6 + anIntArray466[i8];
-							class26_1.aClass30_Sub2_Sub4_504.method443(i8 * 512 + 1280 & 0x7ff, anInt458, anInt459, anInt460, anInt461, j11, l5, l11, class26_1.uid);
+							class26_1.aClass30_Sub2_Sub4_504.method443(i8 * 512 + 1280 & 0x7ff, anInt458, anInt459,
+									anInt460, anInt461, j11, l5, l11, class26_1.uid);
 						}
 					}
 				if (flag1) {
 					GroundDecoration class49 = class30_sub3_1.obj3;
 					if (class49 != null)
-						class49.aClass30_Sub2_Sub4_814.method443(0, anInt458, anInt459, anInt460, anInt461, class49.anInt812 - anInt455, class49.anInt811 - anInt456, class49.anInt813 - anInt457, class49.uid);
+						class49.aClass30_Sub2_Sub4_814.method443(0, anInt458, anInt459, anInt460, anInt461,
+								class49.anInt812 - anInt455, class49.anInt811 - anInt456, class49.anInt813 - anInt457,
+								class49.uid);
 					ItemPile object4_1 = class30_sub3_1.obj4;
 					if (object4_1 != null && object4_1.anInt52 == 0) {
 						if (object4_1.aClass30_Sub2_Sub4_49 != null)
-							object4_1.aClass30_Sub2_Sub4_49.method443(0, anInt458, anInt459, anInt460, anInt461, object4_1.anInt46 - anInt455, object4_1.anInt45 - anInt456, object4_1.anInt47 - anInt457, object4_1.uid);
+							object4_1.aClass30_Sub2_Sub4_49.method443(0, anInt458, anInt459, anInt460, anInt461,
+									object4_1.anInt46 - anInt455, object4_1.anInt45 - anInt456,
+									object4_1.anInt47 - anInt457, object4_1.uid);
 						if (object4_1.aClass30_Sub2_Sub4_50 != null)
-							object4_1.aClass30_Sub2_Sub4_50.method443(0, anInt458, anInt459, anInt460, anInt461, object4_1.anInt46 - anInt455, object4_1.anInt45 - anInt456, object4_1.anInt47 - anInt457, object4_1.uid);
+							object4_1.aClass30_Sub2_Sub4_50.method443(0, anInt458, anInt459, anInt460, anInt461,
+									object4_1.anInt46 - anInt455, object4_1.anInt45 - anInt456,
+									object4_1.anInt47 - anInt457, object4_1.uid);
 						if (object4_1.aClass30_Sub2_Sub4_48 != null)
-							object4_1.aClass30_Sub2_Sub4_48.method443(0, anInt458, anInt459, anInt460, anInt461, object4_1.anInt46 - anInt455, object4_1.anInt45 - anInt456, object4_1.anInt47 - anInt457, object4_1.uid);
+							object4_1.aClass30_Sub2_Sub4_48.method443(0, anInt458, anInt459, anInt460, anInt461,
+									object4_1.anInt46 - anInt455, object4_1.anInt45 - anInt456,
+									object4_1.anInt47 - anInt457, object4_1.uid);
 					}
 				}
 				int k4 = class30_sub3_1.anInt1320;
@@ -1253,7 +1317,8 @@ final class SceneGraph {
 			if (class30_sub3_1.anInt1325 != 0) {
 				boolean flag2 = true;
 				for (int k1 = 0; k1 < class30_sub3_1.anInt1317; k1++) {
-					if (class30_sub3_1.obj5Array[k1].anInt528 == anInt448 || (class30_sub3_1.anIntArray1319[k1] & class30_sub3_1.anInt1325) != class30_sub3_1.anInt1326)
+					if (class30_sub3_1.obj5Array[k1].anInt528 == anInt448 || (class30_sub3_1.anIntArray1319[k1]
+							& class30_sub3_1.anInt1325) != class30_sub3_1.anInt1326)
 						continue;
 					flag2 = false;
 					break;
@@ -1262,7 +1327,9 @@ final class SceneGraph {
 				if (flag2) {
 					Wall class10_1 = class30_sub3_1.obj1;
 					if (!method321(l, i, j, class10_1.orientation))
-						class10_1.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461, class10_1.anInt274 - anInt455, class10_1.anInt273 - anInt456, class10_1.anInt275 - anInt457, class10_1.uid);
+						class10_1.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461,
+								class10_1.anInt274 - anInt455, class10_1.anInt273 - anInt456,
+								class10_1.anInt275 - anInt457, class10_1.uid);
 					class30_sub3_1.anInt1325 = 0;
 				}
 			}
@@ -1271,8 +1338,7 @@ final class SceneGraph {
 					int i1 = class30_sub3_1.anInt1317;
 					class30_sub3_1.aBoolean1324 = false;
 					int l1 = 0;
-					label0:
-					for (int k2 = 0; k2 < i1; k2++) {
+					label0: for (int k2 = 0; k2 < i1; k2++) {
 						StaticObject class28_1 = class30_sub3_1.obj5Array[k2];
 						if (class28_1.anInt528 == anInt448)
 							continue;
@@ -1338,8 +1404,11 @@ final class SceneGraph {
 							break;
 						StaticObject class28_3 = aClass28Array462[l3];
 						class28_3.anInt528 = anInt448;
-						if (!method323(l, class28_3.anInt523, class28_3.anInt524, class28_3.anInt525, class28_3.anInt526, class28_3.aClass30_Sub2_Sub4_521.modelHeight))
-							class28_3.aClass30_Sub2_Sub4_521.method443(class28_3.anInt522, anInt458, anInt459, anInt460, anInt461, class28_3.anInt519 - anInt455, class28_3.anInt518 - anInt456, class28_3.anInt520 - anInt457, class28_3.uid);
+						if (!method323(l, class28_3.anInt523, class28_3.anInt524, class28_3.anInt525,
+								class28_3.anInt526, class28_3.aClass30_Sub2_Sub4_521.modelHeight))
+							class28_3.aClass30_Sub2_Sub4_521.method443(class28_3.anInt522, anInt458, anInt459, anInt460,
+									anInt461, class28_3.anInt519 - anInt455, class28_3.anInt518 - anInt456,
+									class28_3.anInt520 - anInt457, class28_3.uid);
 						for (int k7 = class28_3.anInt523; k7 <= class28_3.anInt524; k7++) {
 							for (int l8 = class28_3.anInt525; l8 <= class28_3.anInt526; l8++) {
 								Ground class30_sub3_22 = aclass30_sub3[k7][l8];
@@ -1384,17 +1453,25 @@ final class SceneGraph {
 			ItemPile object4 = class30_sub3_1.obj4;
 			if (object4 != null && object4.anInt52 != 0) {
 				if (object4.aClass30_Sub2_Sub4_49 != null)
-					object4.aClass30_Sub2_Sub4_49.method443(0, anInt458, anInt459, anInt460, anInt461, object4.anInt46 - anInt455, object4.anInt45 - anInt456 - object4.anInt52, object4.anInt47 - anInt457, object4.uid);
+					object4.aClass30_Sub2_Sub4_49.method443(0, anInt458, anInt459, anInt460, anInt461,
+							object4.anInt46 - anInt455, object4.anInt45 - anInt456 - object4.anInt52,
+							object4.anInt47 - anInt457, object4.uid);
 				if (object4.aClass30_Sub2_Sub4_50 != null)
-					object4.aClass30_Sub2_Sub4_50.method443(0, anInt458, anInt459, anInt460, anInt461, object4.anInt46 - anInt455, object4.anInt45 - anInt456 - object4.anInt52, object4.anInt47 - anInt457, object4.uid);
+					object4.aClass30_Sub2_Sub4_50.method443(0, anInt458, anInt459, anInt460, anInt461,
+							object4.anInt46 - anInt455, object4.anInt45 - anInt456 - object4.anInt52,
+							object4.anInt47 - anInt457, object4.uid);
 				if (object4.aClass30_Sub2_Sub4_48 != null)
-					object4.aClass30_Sub2_Sub4_48.method443(0, anInt458, anInt459, anInt460, anInt461, object4.anInt46 - anInt455, object4.anInt45 - anInt456 - object4.anInt52, object4.anInt47 - anInt457, object4.uid);
+					object4.aClass30_Sub2_Sub4_48.method443(0, anInt458, anInt459, anInt460, anInt461,
+							object4.anInt46 - anInt455, object4.anInt45 - anInt456 - object4.anInt52,
+							object4.anInt47 - anInt457, object4.uid);
 			}
 			if (class30_sub3_1.anInt1328 != 0) {
 				WallDecoration class26 = class30_sub3_1.obj2;
 				if (class26 != null && !method322(l, i, j, class26.aClass30_Sub2_Sub4_504.modelHeight))
 					if ((class26.anInt502 & class30_sub3_1.anInt1328) != 0)
-						class26.aClass30_Sub2_Sub4_504.method443(class26.anInt503, anInt458, anInt459, anInt460, anInt461, class26.anInt500 - anInt455, class26.anInt499 - anInt456, class26.anInt501 - anInt457, class26.uid);
+						class26.aClass30_Sub2_Sub4_504.method443(class26.anInt503, anInt458, anInt459, anInt460,
+								anInt461, class26.anInt500 - anInt455, class26.anInt499 - anInt456,
+								class26.anInt501 - anInt457, class26.uid);
 					else if ((class26.anInt502 & 0x300) != 0) {
 						int l2 = class26.anInt500 - anInt455;
 						int j3 = class26.anInt499 - anInt456;
@@ -1413,20 +1490,28 @@ final class SceneGraph {
 						if ((class26.anInt502 & 0x100) != 0 && l7 >= j6) {
 							int i9 = l2 + anIntArray463[k5];
 							int i10 = i4 + anIntArray464[k5];
-							class26.aClass30_Sub2_Sub4_504.method443(k5 * 512 + 256, anInt458, anInt459, anInt460, anInt461, i9, j3, i10, class26.uid);
+							class26.aClass30_Sub2_Sub4_504.method443(k5 * 512 + 256, anInt458, anInt459, anInt460,
+									anInt461, i9, j3, i10, class26.uid);
 						}
 						if ((class26.anInt502 & 0x200) != 0 && l7 <= j6) {
 							int j9 = l2 + anIntArray465[k5];
 							int j10 = i4 + anIntArray466[k5];
-							class26.aClass30_Sub2_Sub4_504.method443(k5 * 512 + 1280 & 0x7ff, anInt458, anInt459, anInt460, anInt461, j9, j3, j10, class26.uid);
+							class26.aClass30_Sub2_Sub4_504.method443(k5 * 512 + 1280 & 0x7ff, anInt458, anInt459,
+									anInt460, anInt461, j9, j3, j10, class26.uid);
 						}
 					}
 				Wall class10_2 = class30_sub3_1.obj1;
 				if (class10_2 != null) {
-					if ((class10_2.orientation1 & class30_sub3_1.anInt1328) != 0 && !method321(l, i, j, class10_2.orientation1))
-						class10_2.aClass30_Sub2_Sub4_279.method443(0, anInt458, anInt459, anInt460, anInt461, class10_2.anInt274 - anInt455, class10_2.anInt273 - anInt456, class10_2.anInt275 - anInt457, class10_2.uid);
-					if ((class10_2.orientation & class30_sub3_1.anInt1328) != 0 && !method321(l, i, j, class10_2.orientation))
-						class10_2.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461, class10_2.anInt274 - anInt455, class10_2.anInt273 - anInt456, class10_2.anInt275 - anInt457, class10_2.uid);
+					if ((class10_2.orientation1 & class30_sub3_1.anInt1328) != 0
+							&& !method321(l, i, j, class10_2.orientation1))
+						class10_2.aClass30_Sub2_Sub4_279.method443(0, anInt458, anInt459, anInt460, anInt461,
+								class10_2.anInt274 - anInt455, class10_2.anInt273 - anInt456,
+								class10_2.anInt275 - anInt457, class10_2.uid);
+					if ((class10_2.orientation & class30_sub3_1.anInt1328) != 0
+							&& !method321(l, i, j, class10_2.orientation))
+						class10_2.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461,
+								class10_2.anInt274 - anInt455, class10_2.anInt273 - anInt456,
+								class10_2.anInt275 - anInt457, class10_2.uid);
 				}
 			}
 			if (k < anInt437 - 1) {
@@ -1512,41 +1597,50 @@ final class SceneGraph {
 		int l6 = Rasterizer.textureInt2 + (k4 << viewDistance) / j3;
 		Rasterizer.anInt1465 = 0;
 		if ((i6 - k6) * (l5 - l6) - (j6 - l6) * (k5 - k6) > 0) {
-			Rasterizer.aBoolean1462 = i6 < 0 || k6 < 0 || k5 < 0 || i6 > Raster.centerX || k6 > Raster.centerX || k5 > Raster.centerX;
+			Rasterizer.aBoolean1462 = i6 < 0 || k6 < 0 || k5 < 0 || i6 > Raster.centerX || k6 > Raster.centerX
+					|| k5 > Raster.centerX;
 			if (aBoolean467 && method318(anInt468, anInt469, j6, l6, l5, i6, k6, k5)) {
 				anInt470 = j1;
 				anInt471 = k1;
 			}
 			if (class43.anInt720 == -1) {
 				if (class43.anInt718 != 0xbc614e)
-					Rasterizer.drawGouraudTriangle(j6, l6, l5, i6, k6, k5, class43.anInt718, class43.anInt719, class43.anInt717, k3, j3, j2);
+					Rasterizer.drawGouraudTriangle(j6, l6, l5, i6, k6, k5, class43.anInt718, class43.anInt719,
+							class43.anInt717, k3, j3, j2);
 			} else if (!lowMem) {
 				if (class43.aBoolean721)
-					Rasterizer.drawTexturedTriangle(j6, l6, l5, i6, k6, k5, class43.anInt718, class43.anInt719, class43.anInt717, i2, i3, l1, l3, i4, k4, k2, j2, j3, class43.anInt720, k3, j3, j2);
+					Rasterizer.drawTexturedTriangle(j6, l6, l5, i6, k6, k5, class43.anInt718, class43.anInt719,
+							class43.anInt717, i2, i3, l1, l3, i4, k4, k2, j2, j3, class43.anInt720, k3, j3, j2);
 				else
-					Rasterizer.drawTexturedTriangle(j6, l6, l5, i6, k6, k5, class43.anInt718, class43.anInt719, class43.anInt717, l2, l1, i3, j4, k4, i4, k3, j3, j2, class43.anInt720, k3, j3, j2);
+					Rasterizer.drawTexturedTriangle(j6, l6, l5, i6, k6, k5, class43.anInt718, class43.anInt719,
+							class43.anInt717, l2, l1, i3, j4, k4, i4, k3, j3, j2, class43.anInt720, k3, j3, j2);
 			} else {
 				int i7 = anIntArray485[class43.anInt720];
-				Rasterizer.drawGouraudTriangle(j6, l6, l5, i6, k6, k5, method317(i7, class43.anInt718), method317(i7, class43.anInt719), method317(i7, class43.anInt717), k3, j3, j2);
+				Rasterizer.drawGouraudTriangle(j6, l6, l5, i6, k6, k5, method317(i7, class43.anInt718),
+						method317(i7, class43.anInt719), method317(i7, class43.anInt717), k3, j3, j2);
 			}
 		}
 		if ((i5 - k5) * (l6 - l5) - (j5 - l5) * (k6 - k5) > 0) {
-			Rasterizer.aBoolean1462 = i5 < 0 || k5 < 0 || k6 < 0 || i5 > Raster.centerX || k5 > Raster.centerX || k6 > Raster.centerX;
+			Rasterizer.aBoolean1462 = i5 < 0 || k5 < 0 || k6 < 0 || i5 > Raster.centerX || k5 > Raster.centerX
+					|| k6 > Raster.centerX;
 			if (aBoolean467 && method318(anInt468, anInt469, j5, l5, l6, i5, k5, k6)) {
 				anInt470 = j1;
 				anInt471 = k1;
 			}
 			if (class43.anInt720 == -1) {
 				if (class43.anInt716 != 0xbc614e) {
-					Rasterizer.drawGouraudTriangle(j5, l5, l6, i5, k5, k6, class43.anInt716, class43.anInt717, class43.anInt719, k2, j2, j3);
+					Rasterizer.drawGouraudTriangle(j5, l5, l6, i5, k5, k6, class43.anInt716, class43.anInt717,
+							class43.anInt719, k2, j2, j3);
 				}
 			} else {
 				if (!lowMem) {
-					Rasterizer.drawTexturedTriangle(j5, l5, l6, i5, k5, k6, class43.anInt716, class43.anInt717, class43.anInt719, i2, i3, l1, l3, i4, k4, k2, j2, j3, class43.anInt720, k2, j2, j3);
+					Rasterizer.drawTexturedTriangle(j5, l5, l6, i5, k5, k6, class43.anInt716, class43.anInt717,
+							class43.anInt719, i2, i3, l1, l3, i4, k4, k2, j2, j3, class43.anInt720, k2, j2, j3);
 					return;
 				}
 				int j7 = anIntArray485[class43.anInt720];
-				Rasterizer.drawGouraudTriangle(j5, l5, l6, i5, k5, k6, method317(j7, class43.anInt716), method317(j7, class43.anInt717), method317(j7, class43.anInt719), k2, j2, j3);
+				Rasterizer.drawGouraudTriangle(j5, l5, l6, i5, k5, k6, method317(j7, class43.anInt716),
+						method317(j7, class43.anInt717), method317(j7, class43.anInt719), k2, j2, j3);
 			}
 		}
 	}
@@ -1588,22 +1682,39 @@ final class SceneGraph {
 			int i5 = TileOverlay.anIntArray689[j3];
 			int j5 = TileOverlay.anIntArray689[l3];
 			if ((i4 - j4) * (j5 - i5) - (l4 - i5) * (k4 - j4) > 0) {
-				Rasterizer.aBoolean1462 = i4 < 0 || j4 < 0 || k4 < 0 || i4 > Raster.centerX || j4 > Raster.centerX || k4 > Raster.centerX;
+				Rasterizer.aBoolean1462 = i4 < 0 || j4 < 0 || k4 < 0 || i4 > Raster.centerX || j4 > Raster.centerX
+						|| k4 > Raster.centerX;
 				if (aBoolean467 && method318(anInt468, anInt469, l4, i5, j5, i4, j4, k4)) {
 					anInt470 = i;
 					anInt471 = i1;
 				}
 				if (class40.anIntArray682 == null || class40.anIntArray682[j2] == -1) {
 					if (class40.anIntArray676[j2] != 0xbc614e)
-						Rasterizer.drawGouraudTriangle(l4, i5, j5, i4, j4, k4, class40.anIntArray676[j2], class40.anIntArray677[j2], class40.anIntArray678[j2], TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
+						Rasterizer.drawGouraudTriangle(l4, i5, j5, i4, j4, k4, class40.anIntArray676[j2],
+								class40.anIntArray677[j2], class40.anIntArray678[j2], TileOverlay.depthPoint[l2],
+								TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
 				} else if (!lowMem) {
 					if (class40.aBoolean683)
-						Rasterizer.drawTexturedTriangle(l4, i5, j5, i4, j4, k4, class40.anIntArray676[j2], class40.anIntArray677[j2], class40.anIntArray678[j2], TileOverlay.anIntArray690[0], TileOverlay.anIntArray690[1], TileOverlay.anIntArray690[3], TileOverlay.anIntArray691[0], TileOverlay.anIntArray691[1], TileOverlay.anIntArray691[3], TileOverlay.anIntArray692[0], TileOverlay.anIntArray692[1], TileOverlay.anIntArray692[3], class40.anIntArray682[j2], TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
+						Rasterizer.drawTexturedTriangle(l4, i5, j5, i4, j4, k4, class40.anIntArray676[j2],
+								class40.anIntArray677[j2], class40.anIntArray678[j2], TileOverlay.anIntArray690[0],
+								TileOverlay.anIntArray690[1], TileOverlay.anIntArray690[3],
+								TileOverlay.anIntArray691[0], TileOverlay.anIntArray691[1],
+								TileOverlay.anIntArray691[3], TileOverlay.anIntArray692[0],
+								TileOverlay.anIntArray692[1], TileOverlay.anIntArray692[3], class40.anIntArray682[j2],
+								TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
 					else
-						Rasterizer.drawTexturedTriangle(l4, i5, j5, i4, j4, k4, class40.anIntArray676[j2], class40.anIntArray677[j2], class40.anIntArray678[j2], TileOverlay.anIntArray690[l2], TileOverlay.anIntArray690[j3], TileOverlay.anIntArray690[l3], TileOverlay.anIntArray691[l2], TileOverlay.anIntArray691[j3], TileOverlay.anIntArray691[l3], TileOverlay.anIntArray692[l2], TileOverlay.anIntArray692[j3], TileOverlay.anIntArray692[l3], class40.anIntArray682[j2], TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
+						Rasterizer.drawTexturedTriangle(l4, i5, j5, i4, j4, k4, class40.anIntArray676[j2],
+								class40.anIntArray677[j2], class40.anIntArray678[j2], TileOverlay.anIntArray690[l2],
+								TileOverlay.anIntArray690[j3], TileOverlay.anIntArray690[l3],
+								TileOverlay.anIntArray691[l2], TileOverlay.anIntArray691[j3],
+								TileOverlay.anIntArray691[l3], TileOverlay.anIntArray692[l2],
+								TileOverlay.anIntArray692[j3], TileOverlay.anIntArray692[l3], class40.anIntArray682[j2],
+								TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
 				} else {
 					int k5 = anIntArray485[class40.anIntArray682[j2]];
-					Rasterizer.drawGouraudTriangle(l4, i5, j5, i4, j4, k4, method317(k5, class40.anIntArray676[j2]), method317(k5, class40.anIntArray677[j2]), method317(k5, class40.anIntArray678[j2]), TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
+					Rasterizer.drawGouraudTriangle(l4, i5, j5, i4, j4, k4, method317(k5, class40.anIntArray676[j2]),
+							method317(k5, class40.anIntArray677[j2]), method317(k5, class40.anIntArray678[j2]),
+							TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
 				}
 			}
 		}
@@ -1723,8 +1834,7 @@ final class SceneGraph {
 						if (l3 > 50)
 							l3 = 50;
 						boolean flag2 = false;
-						label0:
-						for (int i4 = i3; i4 <= l3; i4++) {
+						label0: for (int i4 = i3; i4 <= l3; i4++) {
 							for (int j4 = i2; j4 <= l2; j4++) {
 								if (!aBooleanArrayArray492[i4][j4])
 									continue;
@@ -1757,7 +1867,10 @@ final class SceneGraph {
 			return true;
 		int i1 = j << 7;
 		int j1 = k << 7;
-		if (method324(i1 + 1, anIntArrayArrayArray440[i][j][k], j1 + 1) && method324((i1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][k], j1 + 1) && method324((i1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][k + 1], (j1 + 128) - 1) && method324(i1 + 1, anIntArrayArrayArray440[i][j][k + 1], (j1 + 128) - 1)) {
+		if (method324(i1 + 1, anIntArrayArrayArray440[i][j][k], j1 + 1)
+				&& method324((i1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][k], j1 + 1)
+				&& method324((i1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][k + 1], (j1 + 128) - 1)
+				&& method324(i1 + 1, anIntArrayArrayArray440[i][j][k + 1], (j1 + 128) - 1)) {
 			anIntArrayArrayArray445[i][j][k] = anInt448;
 			return true;
 		} else {
@@ -1858,7 +1971,10 @@ final class SceneGraph {
 			return false;
 		int i1 = j << 7;
 		int j1 = k << 7;
-		return method324(i1 + 1, anIntArrayArrayArray440[i][j][k] - l, j1 + 1) && method324((i1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][k] - l, j1 + 1) && method324((i1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][k + 1] - l, (j1 + 128) - 1) && method324(i1 + 1, anIntArrayArrayArray440[i][j][k + 1] - l, (j1 + 128) - 1);
+		return method324(i1 + 1, anIntArrayArrayArray440[i][j][k] - l, j1 + 1)
+				&& method324((i1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][k] - l, j1 + 1)
+				&& method324((i1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][k + 1] - l, (j1 + 128) - 1)
+				&& method324(i1 + 1, anIntArrayArrayArray440[i][j][k + 1] - l, (j1 + 128) - 1);
 	}
 
 	private boolean method323(int i, int j, int k, int l, int i1, int j1) {
@@ -1867,7 +1983,10 @@ final class SceneGraph {
 				return false;
 			int k1 = j << 7;
 			int i2 = l << 7;
-			return method324(k1 + 1, anIntArrayArrayArray440[i][j][l] - j1, i2 + 1) && method324((k1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][l] - j1, i2 + 1) && method324((k1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][l + 1] - j1, (i2 + 128) - 1) && method324(k1 + 1, anIntArrayArrayArray440[i][j][l + 1] - j1, (i2 + 128) - 1);
+			return method324(k1 + 1, anIntArrayArrayArray440[i][j][l] - j1, i2 + 1)
+					&& method324((k1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][l] - j1, i2 + 1)
+					&& method324((k1 + 128) - 1, anIntArrayArrayArray440[i][j + 1][l + 1] - j1, (i2 + 128) - 1)
+					&& method324(k1 + 1, anIntArrayArrayArray440[i][j][l + 1] - j1, (i2 + 128) - 1);
 		}
 		for (int l1 = j; l1 <= k; l1++) {
 			for (int j2 = l; j2 <= i1; j2++)
@@ -1975,10 +2094,10 @@ final class SceneGraph {
 	private static int anInt460;
 	private static int anInt461;
 	private static StaticObject[] aClass28Array462 = new StaticObject[100];
-	private static final int[] anIntArray463 = {53, -53, -53, 53};
-	private static final int[] anIntArray464 = {-53, -53, 53, 53};
-	private static final int[] anIntArray465 = {-45, 45, 45, -45};
-	private static final int[] anIntArray466 = {45, 45, -45, -45};
+	private static final int[] anIntArray463 = { 53, -53, -53, 53 };
+	private static final int[] anIntArray464 = { -53, -53, 53, 53 };
+	private static final int[] anIntArray465 = { -45, 45, 45, -45 };
+	private static final int[] anIntArray466 = { 45, 45, -45, -45 };
 	private static boolean aBoolean467;
 	private static int anInt468;
 	private static int anInt469;
@@ -1990,19 +2109,30 @@ final class SceneGraph {
 	private static int anInt475;
 	private static final CullingCluster[] aClass47Array476 = new CullingCluster[500];
 	private static Deque aClass19_477 = new Deque();
-	private static final int[] anIntArray478 = {19, 55, 38, 155, 255, 110, 137, 205, 76};
-	private static final int[] anIntArray479 = {160, 192, 80, 96, 0, 144, 80, 48, 160};
-	private static final int[] anIntArray480 = {76, 8, 137, 4, 0, 1, 38, 2, 19};
-	private static final int[] anIntArray481 = {0, 0, 2, 0, 0, 2, 1, 1, 0};
-	private static final int[] anIntArray482 = {2, 0, 0, 2, 0, 0, 0, 4, 4};
-	private static final int[] anIntArray483 = {0, 4, 4, 8, 0, 0, 8, 0, 0};
-	private static final int[] anIntArray484 = {1, 1, 0, 0, 0, 8, 0, 0, 8};
-	private static final int[] anIntArray485 = {41, 39248, 41, 4643, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 43086, 41, 41, 41, 41, 41, 41, 41, 8602, 41, 28992, 41, 41, 41, 41, 41, 5056, 41, 41, 41, 7079, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 3131, 41, 41, 41};
+	private static final int[] anIntArray478 = { 19, 55, 38, 155, 255, 110, 137, 205, 76 };
+	private static final int[] anIntArray479 = { 160, 192, 80, 96, 0, 144, 80, 48, 160 };
+	private static final int[] anIntArray480 = { 76, 8, 137, 4, 0, 1, 38, 2, 19 };
+	private static final int[] anIntArray481 = { 0, 0, 2, 0, 0, 2, 1, 1, 0 };
+	private static final int[] anIntArray482 = { 2, 0, 0, 2, 0, 0, 0, 4, 4 };
+	private static final int[] anIntArray483 = { 0, 4, 4, 8, 0, 0, 8, 0, 0 };
+	private static final int[] anIntArray484 = { 1, 1, 0, 0, 0, 8, 0, 0, 8 };
+	private static final int[] anIntArray485 = { 41, 39248, 41, 4643, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 43086,
+			41, 41, 41, 41, 41, 41, 41, 8602, 41, 28992, 41, 41, 41, 41, 41, 5056, 41, 41, 41, 7079, 41, 41, 41, 41, 41,
+			41, 41, 41, 41, 41, 3131, 41, 41, 41 };
 	private final int[] anIntArray486;
 	private final int[] anIntArray487;
 	private int anInt488;
-	private final int[][] anIntArrayArray489 = {new int[16], {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1}, {1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0}, {0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1}, {0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0}, {1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1}, {1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1}};
-	private final int[][] anIntArrayArray490 = {{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, {12, 8, 4, 0, 13, 9, 5, 1, 14, 10, 6, 2, 15, 11, 7, 3}, {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0}, {3, 7, 11, 15, 2, 6, 10, 14, 1, 5, 9, 13, 0, 4, 8, 12}};
+	private final int[][] anIntArrayArray489 = { new int[16], { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+			{ 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1 }, { 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 },
+			{ 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1 }, { 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+			{ 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1 }, { 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 }, { 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1 },
+			{ 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1 },
+			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 } };
+	private final int[][] anIntArrayArray490 = { { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 },
+			{ 12, 8, 4, 0, 13, 9, 5, 1, 14, 10, 6, 2, 15, 11, 7, 3 },
+			{ 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 },
+			{ 3, 7, 11, 15, 2, 6, 10, 14, 1, 5, 9, 13, 0, 4, 8, 12 } };
 	private static boolean[][][][] aBooleanArrayArrayArrayArray491 = new boolean[8][32][51][51];
 	private static boolean[][] aBooleanArrayArray492;
 	private static int anInt493;

@@ -112,7 +112,7 @@ final class Censor {
 		method501(ac);
 		method514(ac);
 		for (int j = 0; j < exceptions.length; j++) {
-			for (int k = -1; (k = s2.indexOf(exceptions[j], k + 1)) != -1; ) {
+			for (int k = -1; (k = s2.indexOf(exceptions[j], k + 1)) != -1;) {
 				char ac1[] = exceptions[j].toCharArray();
 				System.arraycopy(ac1, 0, ac, k, ac1.length);
 
@@ -122,7 +122,7 @@ final class Censor {
 		method498(s1.toCharArray(), ac);
 		method499(ac);
 		System.currentTimeMillis();
-		return (new String(ac)).trim(); //xxx chat filter, return s to avoid
+		return (new String(ac)).trim(); // xxx chat filter, return s to avoid
 	}
 
 	private static void method498(char ac[], char ac1[]) {
@@ -157,10 +157,10 @@ final class Censor {
 
 	private static void method501(char ac[]) {
 		char ac1[] = ac.clone();
-		char ac2[] = {'(', 'a', ')'};
+		char ac2[] = { '(', 'a', ')' };
 		method509(null, ac1, ac2);
 		char ac3[] = ac.clone();
-		char ac4[] = {'d', 'o', 't'};
+		char ac4[] = { 'd', 'o', 't' };
 		method509(null, ac3, ac4);
 		for (int i = aCharArrayArray623.length - 1; i >= 0; i--)
 			method502(ac, aCharArrayArray623[i], ac3, ac1);
@@ -260,10 +260,10 @@ final class Censor {
 
 	private static void method505(char ac[]) {
 		char ac1[] = ac.clone();
-		char ac2[] = {'d', 'o', 't'};
+		char ac2[] = { 'd', 'o', 't' };
 		method509(null, ac1, ac2);
 		char ac3[] = ac.clone();
-		char ac4[] = {'s', 'l', 'a', 's', 'h'};
+		char ac4[] = { 's', 'l', 'a', 's', 'h' };
 		method509(null, ac3, ac4);
 		for (int i = 0; i < aCharArrayArray624.length; i++)
 			method506(ac3, aCharArrayArray624[i], anIntArray625[i], ac1, ac);
@@ -604,7 +604,8 @@ final class Censor {
 			if (c2 == 'h')
 				return c1 != '#' ? 0 : 1;
 			if (c2 == 'i')
-				return c1 != 'y' && c1 != 'l' && c1 != 'j' && c1 != '1' && c1 != '!' && c1 != ':' && c1 != ';' && c1 != '|' ? 0 : 1;
+				return c1 != 'y' && c1 != 'l' && c1 != 'j' && c1 != '1' && c1 != '!' && c1 != ':' && c1 != ';'
+						&& c1 != '|' ? 0 : 1;
 			if (c2 == 'j')
 				return 0;
 			if (c2 == 'k')
@@ -620,7 +621,8 @@ final class Censor {
 			if (c2 == 'o') {
 				if (c1 == '0' || c1 == '*')
 					return 1;
-				return (c1 != '(' || c != ')') && (c1 != '[' || c != ']') && (c1 != '{' || c != '}') && (c1 != '<' || c != '>') ? 0 : 2;
+				return (c1 != '(' || c != ')') && (c1 != '[' || c != ']') && (c1 != '{' || c != '}')
+						&& (c1 != '<' || c != '>') ? 0 : 2;
 			}
 			if (c2 == 'p')
 				return 0;
@@ -642,7 +644,8 @@ final class Censor {
 			if (c2 == 'w')
 				return c1 != 'v' || c != 'v' ? 0 : 2;
 			if (c2 == 'x')
-				return (c1 != ')' || c != '(') && (c1 != '}' || c != '{') && (c1 != ']' || c != '[') && (c1 != '>' || c != '<') ? 0 : 2;
+				return (c1 != ')' || c != '(') && (c1 != '}' || c != '{') && (c1 != ']' || c != '[')
+						&& (c1 != '>' || c != '<') ? 0 : 2;
 			if (c2 == 'y')
 				return 0;
 			if (c2 == 'z')
@@ -802,6 +805,7 @@ final class Censor {
 	private static char[][] aCharArrayArray623;
 	private static char[][] aCharArrayArray624;
 	private static int[] anIntArray625;
-	private static final String[] exceptions = {"cook", "cook's", "cooks", "seeks", "sheet", "woop", "woops", "faq", "noob", "noobs"};
+	private static final String[] exceptions = { "cook", "cook's", "cooks", "seeks", "sheet", "woop", "woops", "faq",
+			"noob", "noobs" };
 
 }

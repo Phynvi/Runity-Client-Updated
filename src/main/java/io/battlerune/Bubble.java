@@ -46,48 +46,48 @@ public class Bubble {
 	public void draw(byte state) {
 		if (this != null) {
 			switch (state) {
-				case BUBBLES:
-					this.yPos -= speed;
-					this.xPos += xChange;
-					if (this.yPos < 0 - radius) {
-						radius = (byte) (Math.random() * 60.0d);
-						if (radius < 30) {
-							radius += 15;
-						}
-						xChange = (Math.round(Math.random()) == 1 ? -1 : 1) * (int) Math.round(Math.random());
-						xPos = radius + (int) (Math.random() * (Client.frameWidth - radius));
-						yPos = Client.frameHeight + radius + (int) (Math.random() * (Math.random() * 50.0d));
-						speed = (int) (Math.random() * 3.0d);
-						if (speed == 0) {
-							speed = 1;
-						}
+			case BUBBLES:
+				this.yPos -= speed;
+				this.xPos += xChange;
+				if (this.yPos < 0 - radius) {
+					radius = (byte) (Math.random() * 60.0d);
+					if (radius < 30) {
+						radius += 15;
 					}
-					Raster.drawBubble(this.xPos, this.yPos, (int) this.radius, color, 20);
-					break;
-				case BOUNCING_BALLS:
-					if (!setToRandomY) {
-						yPos = (radius + 1) + (int) (Math.random() * (Client.frameHeight - radius + 1));
-						setToRandomY = true;
+					xChange = (Math.round(Math.random()) == 1 ? -1 : 1) * (int) Math.round(Math.random());
+					xPos = radius + (int) (Math.random() * (Client.frameWidth - radius));
+					yPos = Client.frameHeight + radius + (int) (Math.random() * (Math.random() * 50.0d));
+					speed = (int) (Math.random() * 3.0d);
+					if (speed == 0) {
+						speed = 1;
 					}
-					if (setToRandomY) {
-						if (yPos - radius <= 0) {
-							ySpeed *= -1;
-						}
-						if (yPos + radius >= Client.frameHeight) {
-							ySpeed *= -1;
-						}
+				}
+				Raster.drawBubble(this.xPos, this.yPos, (int) this.radius, color, 20);
+				break;
+			case BOUNCING_BALLS:
+				if (!setToRandomY) {
+					yPos = (radius + 1) + (int) (Math.random() * (Client.frameHeight - radius + 1));
+					setToRandomY = true;
+				}
+				if (setToRandomY) {
+					if (yPos - radius <= 0) {
+						ySpeed *= -1;
+					}
+					if (yPos + radius >= Client.frameHeight) {
+						ySpeed *= -1;
+					}
 
-						if (xPos - radius <= 0) {
-							xSpeed *= -1;
-						}
-						if (xPos + radius >= Client.frameWidth) {
-							xSpeed *= -1;
-						}
+					if (xPos - radius <= 0) {
+						xSpeed *= -1;
 					}
-					yPos += ySpeed;
-					xPos += xSpeed;
-					Raster.drawBubble(this.xPos, this.yPos, (int) this.radius, color, 25);
-					break;
+					if (xPos + radius >= Client.frameWidth) {
+						xSpeed *= -1;
+					}
+				}
+				yPos += ySpeed;
+				xPos += xSpeed;
+				Raster.drawBubble(this.xPos, this.yPos, (int) this.radius, color, 25);
+				break;
 			}
 		}
 	}

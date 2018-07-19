@@ -74,7 +74,7 @@ public class Updater {
 	 * Constructs a new {@link Updater}.
 	 */
 	private Updater() {
-	    /* can't initialize this class. */
+		/* can't initialize this class. */
 	}
 
 	public void setup(Client client) {
@@ -308,7 +308,8 @@ public class Updater {
 		ZipEntry entry;
 		int length;
 		byte[] buffer = new byte[1024];
-		try (ZipInputStream in = new ZipInputStream(new BufferedInputStream(new FileInputStream(source))); ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(target)))) {
+		try (ZipInputStream in = new ZipInputStream(new BufferedInputStream(new FileInputStream(source)));
+				ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(target)))) {
 			while ((entry = in.getNextEntry()) != null) {
 				if (entry.isDirectory())
 					continue;

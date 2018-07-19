@@ -37,7 +37,8 @@ public final class FileUtility {
 		ZipEntry entry;
 		int length;
 		byte[] buffer = new byte[1024];
-		try (ZipInputStream in = new ZipInputStream(new BufferedInputStream(new FileInputStream(source))); ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(target)))) {
+		try (ZipInputStream in = new ZipInputStream(new BufferedInputStream(new FileInputStream(source)));
+				ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(target)))) {
 			while ((entry = in.getNextEntry()) != null) {
 				if (entry.isDirectory())
 					continue;

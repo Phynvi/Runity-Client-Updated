@@ -32,8 +32,8 @@ public class FadingScreen {
 	private boolean stall_flag;
 
 	/**
-	 * Acts as a means to instance the local {@link FadingScreen} object. Since
-	 * the value of state by default is 0, nothing will be drawn on the screen.
+	 * Acts as a means to instance the local {@link FadingScreen} object. Since the
+	 * value of state by default is 0, nothing will be drawn on the screen.
 	 */
 	public FadingScreen() {
 	}
@@ -55,8 +55,8 @@ public class FadingScreen {
 	}
 
 	/**
-	 * Draws the animation on the screen. If the state of the screen is
-	 * currently 0 the animation will not be drawn.
+	 * Draws the animation on the screen. If the state of the screen is currently 0
+	 * the animation will not be drawn.
 	 */
 	public void draw() {
 		if (state == 0) {
@@ -69,8 +69,10 @@ public class FadingScreen {
 
 		if (stall_flag) {
 			Raster.setDrawingArea(0, 0, isFixed ? 512 : Client.frameWidth, isFixed ? 334 : Client.frameHeight);
-			Raster.drawAlphaPixels(0, 0, isFixed ? 512 : Client.frameWidth, isFixed ? 334 : Client.frameHeight, 0x000000, 255, true);
-			Client.instance.newSmallFont.drawCenteredString(text, (isFixed ? 512 : Client.frameWidth) / 2, (isFixed ? 334 : Client.frameHeight) / 2, 0xFFFFFF, 0);
+			Raster.drawAlphaPixels(0, 0, isFixed ? 512 : Client.frameWidth, isFixed ? 334 : Client.frameHeight,
+					0x000000, 255, true);
+			Client.instance.newSmallFont.drawCenteredString(text, (isFixed ? 512 : Client.frameWidth) / 2,
+					(isFixed ? 334 : Client.frameHeight) / 2, 0xFFFFFF, 0);
 			if (stall++ == 25) {
 				state = 0;
 			}
@@ -85,8 +87,10 @@ public class FadingScreen {
 			}
 			if (percentile > -1 && percentile <= 100) {
 				Raster.setDrawingArea(0, 0, isFixed ? 512 : Client.frameWidth, isFixed ? 334 : Client.frameHeight);
-				Raster.drawAlphaPixels(0, 0, isFixed ? 512 : Client.frameWidth, isFixed ? 334 : Client.frameHeight, 0x000000, opacity, true);
-				Client.instance.newSmallFont.drawCenteredString(text, (isFixed ? 512 : Client.frameWidth) / 2, (isFixed ? 334 : Client.frameHeight) / 2, 0xFFFFFF, 0);
+				Raster.drawAlphaPixels(0, 0, isFixed ? 512 : Client.frameWidth, isFixed ? 334 : Client.frameHeight,
+						0x000000, opacity, true);
+				Client.instance.newSmallFont.drawCenteredString(text, (isFixed ? 512 : Client.frameWidth) / 2,
+						(isFixed ? 334 : Client.frameHeight) / 2, 0xFFFFFF, 0);
 				if (percentile == 100) {
 					stall_flag = true;
 				}

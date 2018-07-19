@@ -48,9 +48,11 @@ public class ClientUpdateScreen extends UpdateComponent {
 
 		int messageWidth = getGraphics().getFontMetrics().stringWidth(progress + "%");
 		getGraphics().setColor(Color.BLACK);
-		getGraphics().drawString(progress + "%", (getWidth() - messageWidth) / 2 + 1, getHeight() / 2 + height + height - 6);
+		getGraphics().drawString(progress + "%", (getWidth() - messageWidth) / 2 + 1,
+				getHeight() / 2 + height + height - 6);
 		getGraphics().setColor(Color.DARK_GRAY);
-		getGraphics().drawString(progress + "%", (getWidth() - messageWidth) / 2, getHeight() / 2 + height + height - 7);
+		getGraphics().drawString(progress + "%", (getWidth() - messageWidth) / 2,
+				getHeight() / 2 + height + height - 7);
 	}
 
 }

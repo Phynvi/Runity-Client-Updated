@@ -1,9 +1,7 @@
 package io.battlerune;
 
 public enum PrivacyChatMode {
-	ON(0),
-	FRIENDS_ONLY(1),
-	OFF(2);
+	ON(0), FRIENDS_ONLY(1), OFF(2);
 
 	private final int code;
 

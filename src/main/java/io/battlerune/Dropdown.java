@@ -40,17 +40,17 @@ public enum Dropdown {
 		@Override
 		public void selectOption(int option, Client client, RSInterface rsint) {
 			Client.sendString(rsint.disabledMessage, option);
-			if (option == 0) {//WHITE
+			if (option == 0) {// WHITE
 				Settings.COUNTER_COLOR = 0xFFFFFF;
-			} else if (option == 1) {//CYAN
+			} else if (option == 1) {// CYAN
 				Settings.COUNTER_COLOR = 0x00E5FF;
-			} else if (option == 2) {//LIME
+			} else if (option == 2) {// LIME
 				Settings.COUNTER_COLOR = 0x30C978;
-			} else if (option == 3) {//PINK
+			} else if (option == 3) {// PINK
 				Settings.COUNTER_COLOR = 0xFF66E8;
-			} else if (option == 4) {//RED
+			} else if (option == 4) {// RED
 				Settings.COUNTER_COLOR = 0xFF4545;
-			} else if (option == 5) {//ORANGE
+			} else if (option == 5) {// ORANGE
 				Settings.COUNTER_COLOR = 0xFF9233;
 			}
 		}

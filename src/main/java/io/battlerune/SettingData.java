@@ -4,17 +4,17 @@ package io.battlerune;
  * Holds all the setting data.
  */
 public enum SettingData implements SettingsAction<Client> {
-	//    SNOW_SETTING("Snow") {
-	//        @Override
-	//        public String name(Client client) {
-	//            return SNOW + setting;
-	//        }
+	// SNOW_SETTING("Snow") {
+	// @Override
+	// public String name(Client client) {
+	// return SNOW + setting;
+	// }
 	//
-	//        @Override
-	//        public void handle(Client client) {
-	//            SNOW = !SNOW;
-	//        }
-	//    },
+	// @Override
+	// public void handle(Client client) {
+	// SNOW = !SNOW;
+	// }
+	// },
 	ITEM_HOVER_INFO("Item tooltip hovers") {
 		@Override
 		public String name(Client client) {
@@ -167,17 +167,17 @@ public enum SettingData implements SettingsAction<Client> {
 			Settings.TWEENING = !Settings.TWEENING;
 		}
 	},
-	//    ATTACK_PRIORITY_SETTING("Attack Priority") {
-	//        @Override
-	//        public String name(Client client) {
-	//            return Settings.ATTACK_PRIORITY + setting;
-	//        }
+	// ATTACK_PRIORITY_SETTING("Attack Priority") {
+	// @Override
+	// public String name(Client client) {
+	// return Settings.ATTACK_PRIORITY + setting;
+	// }
 	//
-	//        @Override
-	//        public void handle(Client client) {
-	//            Settings.ATTACK_PRIORITY = !Settings.ATTACK_PRIORITY;
-	//        }
-	//    },
+	// @Override
+	// public void handle(Client client) {
+	// Settings.ATTACK_PRIORITY = !Settings.ATTACK_PRIORITY;
+	// }
+	// },
 	SHIFT_DROP_SETTING("Shift Drop") {
 		@Override
 		public String name(Client client) {

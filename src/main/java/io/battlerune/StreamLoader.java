@@ -48,7 +48,8 @@ final class StreamLoader {
 				if (abyte0 == null)
 					abyte0 = new byte[anIntArray729[k]];
 				if (!aBoolean732) {
-					BZip2Decompressor.method225(abyte0, anIntArray729[k], aByteArray726, anIntArray730[k], anIntArray731[k]);
+					BZip2Decompressor.method225(abyte0, anIntArray729[k], aByteArray726, anIntArray730[k],
+							anIntArray731[k]);
 				} else {
 					System.arraycopy(aByteArray726, anIntArray731[k], abyte0, 0, anIntArray729[k]);
 				}
@@ -85,7 +86,6 @@ final class StreamLoader {
 		if (offset < bytes.length) {
 			throw new IOException("Could not completely read file " + file.getName());
 		}
-
 
 		return bytes;
 	}

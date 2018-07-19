@@ -24,38 +24,32 @@ public class ParticleDefinition {
 	private float sizeStep;
 	private float alphaStep;
 
-	public static final int[] COLOR_CHANGING_PARTICLES = {0};
+	public static final int[] COLOR_CHANGING_PARTICLES = { 0 };
 
-	public static ParticleDefinition[] cache = new ParticleDefinition[]{
-			new ParticleDefinition() {
+	public static ParticleDefinition[] cache = new ParticleDefinition[] { new ParticleDefinition() {
 		{
-			//Completionist Cape
+			// Completionist Cape
 			setStartVelocity(new ParticleVector(0, -1, 0));
 			setEndVelocity(new ParticleVector(0, -1, 0));
 			setGravity(new ParticleVector(0, 2 / 4, 0));
 			setLifeSpan(19);
-			setStartColor(0xffffff);//colour
+			setStartColor(0xffffff);// colour
 			setSpawnRate(4);
-			setStartSize(1.2f);//size
+			setStartSize(1.2f);// size
 			setEndSize(0);
 			setStartAlpha(0.105f);
 			updateSteps();
-			setColorStep(0x000000);//if u want it to fade to something else on the tip
+			setColorStep(0x000000);// if u want it to fade to something else on the tip
 		}
-	}};
+	} };
 
 	/**
-	 * setStartVelocity(new ParticleVector(0, -1, 0));
-	 * setEndVelocity(new ParticleVector(0, -1, 0));
-	 * setGravity(new ParticleVector(0, 2 / 4, 0));
-	 * setLifeSpan(19);
-	 * setStartColor(0xffffff);//colour
-	 * setSpawnRate(4);
-	 * setStartSize(1.2f);//size
-	 * setEndSize(0);
-	 * setStartAlpha(0.095f);
-	 * updateSteps();
-	 * setColorStep(0xB3202A);//if u want it to fade to something else on the tip
+	 * setStartVelocity(new ParticleVector(0, -1, 0)); setEndVelocity(new
+	 * ParticleVector(0, -1, 0)); setGravity(new ParticleVector(0, 2 / 4, 0));
+	 * setLifeSpan(19); setStartColor(0xffffff);//colour setSpawnRate(4);
+	 * setStartSize(1.2f);//size setEndSize(0); setStartAlpha(0.095f);
+	 * updateSteps(); setColorStep(0xB3202A);//if u want it to fade to something
+	 * else on the tip
 	 */
 
 	public final SpawnShape getSpawnedShape() {
@@ -125,15 +119,16 @@ public class ParticleDefinition {
 
 	public final ParticleVector getStartVelocity(int id) {
 		switch (id) {
-			default:
-				return new ParticleVector(this.startVelocity.getX() + randomWithRange(-1, 1), this.startVelocity.getY() + randomWithRange(0, 0), this.startVelocity.getZ() + randomWithRange(-1, 1));
+		default:
+			return new ParticleVector(this.startVelocity.getX() + randomWithRange(-1, 1),
+					this.startVelocity.getY() + randomWithRange(0, 0),
+					this.startVelocity.getZ() + randomWithRange(-1, 1));
 		}
 	}
 
 	public ParticleVector getGravity() {
 		return gravity;
 	}
-
 
 	public void setGravity(ParticleVector gravity) {
 		this.gravity = gravity;

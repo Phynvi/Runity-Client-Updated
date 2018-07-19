@@ -35,11 +35,14 @@ public class Particle {
 	}
 
 	public Particle(ParticleDefinition def, ParticleVector position, int particleDepth, int definitionID) {
-		this(def.getStartColor(), def.getStartSize(), def.getStartVelocity(definitionID).clone(), def.getSpawnedShape().divide(ParticleDefinition.RANDOM).addLocal(position), def.getStartAlpha(), particleDepth);
+		this(def.getStartColor(), def.getStartSize(), def.getStartVelocity(definitionID).clone(),
+				def.getSpawnedShape().divide(ParticleDefinition.RANDOM).addLocal(position), def.getStartAlpha(),
+				particleDepth);
 		this.def = def;
 	}
 
-	public Particle(int color, float size, ParticleVector velocity, ParticleVector position, float alpha, int particleDepth) {
+	public Particle(int color, float size, ParticleVector velocity, ParticleVector position, float alpha,
+			int particleDepth) {
 		this.age = 0;
 		this.dead = false;
 		this.def = null;

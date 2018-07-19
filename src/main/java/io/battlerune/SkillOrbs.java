@@ -31,9 +31,10 @@ public class SkillOrbs {
 			}
 		}
 
-		//Is the bounty hunter interface open? Then the orbs may need to be re-positioned.
-		final boolean blockingInterfaceOpen = /*Client.instance.openWalkableInterface == 23300 */false;
-		boolean hpOverlay = /*Client.instance.shouldDrawCombatBox()*/ false;
+		// Is the bounty hunter interface open? Then the orbs may need to be
+		// re-positioned.
+		final boolean blockingInterfaceOpen = /* Client.instance.openWalkableInterface == 23300 */false;
+		boolean hpOverlay = /* Client.instance.shouldDrawCombatBox() */ false;
 
 		int y = -2;
 		int x = (int) (Client.frameWidth / 3.1) - (totalOrbs * 30);

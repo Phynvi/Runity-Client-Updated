@@ -75,7 +75,7 @@ public class FloorDefinition {
 	}
 
 	private void readValuesUnderlay(ByteBuffer buffer) {
-		for (; ; ) {
+		for (;;) {
 			int opcode = buffer.get();
 			if (opcode == 0) {
 				break;
@@ -88,7 +88,7 @@ public class FloorDefinition {
 	}
 
 	private void readValuesOverlay(ByteBuffer buffer) {
-		for (; ; ) {
+		for (;;) {
 			int opcode = buffer.get();
 			if (opcode == 0) {
 				break;

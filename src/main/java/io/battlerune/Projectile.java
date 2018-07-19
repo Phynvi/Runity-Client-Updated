@@ -34,7 +34,8 @@ final class Projectile extends Renderable {
 		if (!aBoolean1567) {
 			model_1.skin();
 			if (Settings.TWEENING && nextAnimFrameId != -1) {
-				model_1.interpolateFrames(frame, aSpotAnim_1568.aAnimation_407.primaryFrames[nextAnimFrameId], anInt1570, aSpotAnim_1568.aAnimation_407.durations[anInt1569]);
+				model_1.interpolateFrames(frame, aSpotAnim_1568.aAnimation_407.primaryFrames[nextAnimFrameId],
+						anInt1570, aSpotAnim_1568.aAnimation_407.durations[anInt1569]);
 			} else {
 				model_1.method470(frame);
 			}
@@ -63,10 +64,11 @@ final class Projectile extends Renderable {
 	}
 
 	public void method454(int i) {
-		for (anInt1570 += i; anInt1570 > aSpotAnim_1568.aAnimation_407.method258(anInt1569); ) {
+		for (anInt1570 += i; anInt1570 > aSpotAnim_1568.aAnimation_407.method258(anInt1569);) {
 			anInt1570 -= aSpotAnim_1568.aAnimation_407.method258(anInt1569) + 1;
 			anInt1569++;
-			if (anInt1569 >= aSpotAnim_1568.aAnimation_407.frameCount && (anInt1569 < 0 || anInt1569 >= aSpotAnim_1568.aAnimation_407.frameCount)) {
+			if (anInt1569 >= aSpotAnim_1568.aAnimation_407.frameCount
+					&& (anInt1569 < 0 || anInt1569 >= aSpotAnim_1568.aAnimation_407.frameCount)) {
 				anInt1569 = 0;
 				aBoolean1567 = true;
 			}

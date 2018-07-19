@@ -1,6 +1,5 @@
 package io.battlerune.login.impl;
 
-
 import io.battlerune.Client;
 import io.battlerune.Raster;
 import io.battlerune.login.LoginComponent;
@@ -20,14 +19,16 @@ public class MessageScreen extends LoginComponent {
 		refresh(client);
 		load(client, 13);
 
-        /* Background */
-		Client.spriteCache.get(678).drawTransparentSprite((Client.frameWidth / 2) - (Client.spriteCache.get(57).width / 2), (Client.frameHeight / 2) - (Client.spriteCache.get(57).height / 2), client.loginTick);
+		/* Background */
+		Client.spriteCache.get(678).drawTransparentSprite(
+				(Client.frameWidth / 2) - (Client.spriteCache.get(57).width / 2),
+				(Client.frameHeight / 2) - (Client.spriteCache.get(57).height / 2), client.loginTick);
 
-        /* Box */
+		/* Box */
 		Raster.fillRectangle(175, 215, 425, 100, 0x1F1D19, 150);
 		Raster.drawRectangle(175, 215, 425, 100, 0x3d3427);
 
-        /* Messages */
+		/* Messages */
 		client.boldText.drawCenteredText(0xff9040, centerX + 5, "Runity", centerY - 115, true);
 		client.regularText.drawCenteredText(0xB7B7B7, centerX + 5, "Error Message", centerY - 95, true);
 		if (client.loginMessage2.length() == 0) {
@@ -36,15 +37,16 @@ public class MessageScreen extends LoginComponent {
 			client.boldText.drawCenteredText(0xE56161, centerX + 5, client.loginMessage1, centerY + 15, true);
 			client.boldText.drawCenteredText(0xE56161, centerX + 5, client.loginMessage2, centerY + 35, true);
 		}
-		client.boldText.drawCenteredText(0xFFFFFF, centerX + 5, "[ Click anywhere to return to the main screen ]", centerY + 150, true);
+		client.boldText.drawCenteredText(0xFFFFFF, centerX + 5, "[ Click anywhere to return to the main screen ]",
+				centerY + 150, true);
 
-        /* Announcement */
+		/* Announcement */
 		announcement(client);
 
-        /* Bubble */
+		/* Bubble */
 		drawSetting(client);
 
-        /* Drawing */
+		/* Drawing */
 		Client.loginScreenIP.drawGraphics(client.graphics, 0, 0);
 		Raster.reset();
 	}
@@ -54,10 +56,11 @@ public class MessageScreen extends LoginComponent {
 		int centerX = getX();
 		int centerY = getY();
 
-        /* Bubble */
+		/* Bubble */
 		settingButton(client);
 
-		if (client.lastMetaModifier == 1 && client.mouseInRegion(centerX - 381, centerY - 249, centerX + 381, centerY + 245)) {
+		if (client.lastMetaModifier == 1
+				&& client.mouseInRegion(centerX - 381, centerY - 249, centerX + 381, centerY + 245)) {
 			client.loginMessage1 = "";
 			client.loginMessage2 = "";
 			client.loginRenderer.setScreen(new MainScreen());

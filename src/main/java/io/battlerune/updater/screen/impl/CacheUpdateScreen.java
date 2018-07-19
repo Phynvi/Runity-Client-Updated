@@ -59,7 +59,6 @@ public class CacheUpdateScreen extends UpdateComponent {
 		this.progress = progress;
 	}
 
-
 	private void drawProgressBar() {
 		int messageWidth = getGraphics().getFontMetrics().stringWidth("Requesting cache files...");
 		messageWidth += messageWidth / 2 + 5;

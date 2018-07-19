@@ -98,124 +98,124 @@ public final class Settings {
 		client.toggleConfig(892, DISPLAY_PING ? 1 : 0);
 		client.toggleConfig(893, VALUE_ICONS ? 1 : 0);
 
-		//update strings = hitsplit, hp bar, context menu
+		// update strings = hitsplit, hp bar, context menu
 	}
 
 	static void config(Client client, int config) {
 //		System.out.println(config);
 		switch (config) {
-			case 28520:
-				HITSPLAT = 0;
-				client.toggleConfig(888, HITSPLAT);
-				return;
-			case 28521:
-				HITSPLAT = 1;
-				client.toggleConfig(888, HITSPLAT);
-				return;
-			case 28522:
-				HITSPLAT = 2;
-				client.toggleConfig(888, HITSPLAT);
-				return;
-			case 28524:
-				HP_BAR = 0;
-				client.toggleConfig(889, HP_BAR);
-				return;
-			case 28525:
-				HP_BAR = 1;
-				client.toggleConfig(889, HP_BAR);
-				return;
-			case 28526:
-				HP_BAR = 2;
-				client.toggleConfig(889, HP_BAR);
-				return;
-			case 28528:
-				CONTEXT_MENU = 0;
-				client.toggleConfig(890, CONTEXT_MENU);
-				Client.sendString("OSRS\\nMenu", 28532);
-				return;
-			case 28529:
-				CONTEXT_MENU = 1;
-				client.toggleConfig(890, CONTEXT_MENU);
-				Client.sendString("614\\nMenu", 28532);
-				return;
-			case 28530:
-				CONTEXT_MENU = 2;
-				client.toggleConfig(890, CONTEXT_MENU);
-				Client.sendString("634\\nMenu", 28532);
-				return;
-			case 28531:
-				CONTEXT_MENU = 3;
-				client.toggleConfig(890, CONTEXT_MENU);
-				Client.sendString("Custom\\nMenu", 28532);
-				return;
+		case 28520:
+			HITSPLAT = 0;
+			client.toggleConfig(888, HITSPLAT);
+			return;
+		case 28521:
+			HITSPLAT = 1;
+			client.toggleConfig(888, HITSPLAT);
+			return;
+		case 28522:
+			HITSPLAT = 2;
+			client.toggleConfig(888, HITSPLAT);
+			return;
+		case 28524:
+			HP_BAR = 0;
+			client.toggleConfig(889, HP_BAR);
+			return;
+		case 28525:
+			HP_BAR = 1;
+			client.toggleConfig(889, HP_BAR);
+			return;
+		case 28526:
+			HP_BAR = 2;
+			client.toggleConfig(889, HP_BAR);
+			return;
+		case 28528:
+			CONTEXT_MENU = 0;
+			client.toggleConfig(890, CONTEXT_MENU);
+			Client.sendString("OSRS\\nMenu", 28532);
+			return;
+		case 28529:
+			CONTEXT_MENU = 1;
+			client.toggleConfig(890, CONTEXT_MENU);
+			Client.sendString("614\\nMenu", 28532);
+			return;
+		case 28530:
+			CONTEXT_MENU = 2;
+			client.toggleConfig(890, CONTEXT_MENU);
+			Client.sendString("634\\nMenu", 28532);
+			return;
+		case 28531:
+			CONTEXT_MENU = 3;
+			client.toggleConfig(890, CONTEXT_MENU);
+			Client.sendString("Custom\\nMenu", 28532);
+			return;
 		}
 	}
 
-	/** Handles clicking on the settings interface.  */
+	/** Handles clicking on the settings interface. */
 	static boolean click(Client client, int button) {
 //		        System.out.println(button);
 		switch (button) {
-			case 28505:
-				CUSTOM_LIGHTING = !CUSTOM_LIGHTING;
-				graphic(client, CUSTOM_LIGHTING);
-				client.toggleConfig(880, CUSTOM_LIGHTING ? 1 : 0);
-				break;
-			case 28506:
-				if (Client.frameMode == Client.ScreenMode.FIXED) {
-					client.pushMessage("You can't do this while in fixed screen mode!", 0, "");
-				} else {
-					Client.transparentTabArea = !Client.transparentTabArea;
-					client.toggleConfig(881, Client.transparentTabArea ? 1 : 0);
-				}
-				return true;
-			case 28508:
-				if (Client.frameMode == Client.ScreenMode.FIXED) {
-					client.pushMessage("You can't do this while in fixed screen mode!", 0, "");
-				} else {
-					Client.changeChatArea = !Client.changeChatArea;
-					client.toggleConfig(882, Client.changeChatArea ? 1 : 0);
-				}
-				return true;
-			case 28510:
-				if (Client.frameMode == Client.ScreenMode.FIXED) {
-					client.pushMessage("You can't do this while in fixed screen mode!", 0, "");
-				} else {
-					Client.changeTabArea = !Client.changeTabArea;
-					client.toggleConfig(883, Client.changeTabArea ? 1 : 0);
-				}
-				return true;
-			case 28512:
-				STATUS_ORB = !STATUS_ORB;
-				client.toggleConfig(884, STATUS_ORB ? 1 : 0);
-				return true;
-			case 28514:
-				SPECIAL_ATTACK_ORB = !SPECIAL_ATTACK_ORB;
-				client.toggleConfig(885, SPECIAL_ATTACK_ORB ? 1 : 0);
-				return true;
-			case 28516:
-				ROOF = !ROOF;
-				client.toggleConfig(886, ROOF ? 1 : 0);
-				return true;
-			case 28518:
-				DAMAGE_MULTIPLIER = !DAMAGE_MULTIPLIER;
-				client.toggleConfig(887, DAMAGE_MULTIPLIER ? 1 : 0);
-				return true;
-			case 28533:
-				DISPLAY_FPS = !DISPLAY_FPS;
-				client.toggleConfig(891, DISPLAY_FPS ? 1 : 0);
-				return true;
-			case 28535:
-				DISPLAY_PING = !DISPLAY_PING;
-				client.toggleConfig(892, DISPLAY_PING ? 1 : 0);
-				return true;
-			case 28537:
-				VALUE_ICONS = !VALUE_ICONS;
-				client.toggleConfig(893, VALUE_ICONS ? 1 : 0);
-				return true;
-			case 28547:
-			case 56750:
-				client.colorOpen();
-				return true;
+		case 28505:
+			CUSTOM_LIGHTING = !CUSTOM_LIGHTING;
+			graphic(client, CUSTOM_LIGHTING);
+			client.toggleConfig(880, CUSTOM_LIGHTING ? 1 : 0);
+			break;
+		case 28506:
+			if (Client.frameMode == Client.ScreenMode.FIXED) {
+				client.pushMessage("You can't do this while in fixed screen mode!", 0, "");
+			} else {
+				Client.transparentTabArea = !Client.transparentTabArea;
+				client.toggleConfig(881, Client.transparentTabArea ? 1 : 0);
+			}
+			return true;
+		case 28508:
+			if (Client.frameMode == Client.ScreenMode.FIXED) {
+				client.pushMessage("You can't do this while in fixed screen mode!", 0, "");
+			} else {
+				Client.changeChatArea = !Client.changeChatArea;
+				client.toggleConfig(882, Client.changeChatArea ? 1 : 0);
+			}
+			return true;
+		case 28510:
+			if (Client.frameMode == Client.ScreenMode.FIXED) {
+				client.pushMessage("You can't do this while in fixed screen mode!", 0, "");
+			} else {
+				Client.changeTabArea = !Client.changeTabArea;
+				client.toggleConfig(883, Client.changeTabArea ? 1 : 0);
+			}
+			return true;
+		case 28512:
+			STATUS_ORB = !STATUS_ORB;
+			client.toggleConfig(884, STATUS_ORB ? 1 : 0);
+			return true;
+		case 28514:
+			SPECIAL_ATTACK_ORB = !SPECIAL_ATTACK_ORB;
+			client.toggleConfig(885, SPECIAL_ATTACK_ORB ? 1 : 0);
+			return true;
+		case 28516:
+			ROOF = !ROOF;
+			client.toggleConfig(886, ROOF ? 1 : 0);
+			return true;
+		case 28518:
+			DAMAGE_MULTIPLIER = !DAMAGE_MULTIPLIER;
+			client.toggleConfig(887, DAMAGE_MULTIPLIER ? 1 : 0);
+			return true;
+		case 28533:
+			DISPLAY_FPS = !DISPLAY_FPS;
+			client.toggleConfig(891, DISPLAY_FPS ? 1 : 0);
+			return true;
+		case 28535:
+			DISPLAY_PING = !DISPLAY_PING;
+			client.toggleConfig(892, DISPLAY_PING ? 1 : 0);
+			return true;
+		case 28537:
+			VALUE_ICONS = !VALUE_ICONS;
+			client.toggleConfig(893, VALUE_ICONS ? 1 : 0);
+			return true;
+		case 28547:
+		case 56750:
+			client.colorOpen();
+			return true;
 		}
 
 		int base_button = 50301;
@@ -277,7 +277,8 @@ public final class Settings {
 						dir.mkdirs();
 					}
 
-					DataOutputStream out = new DataOutputStream(new FileOutputStream(Paths.get(CHAR_PATH, FILE_NAME).toFile()));
+					DataOutputStream out = new DataOutputStream(
+							new FileOutputStream(Paths.get(CHAR_PATH, FILE_NAME).toFile()));
 
 					out.writeByte(1);
 					out.writeInt(CONTEXT_MENU);
@@ -436,149 +437,148 @@ public final class Settings {
 			}
 
 			DataInputStream in = new DataInputStream(new FileInputStream(file));
-			bust:
-			while (true) {
+			bust: while (true) {
 
 				final int opcode = in.readByte();
 
 				switch (opcode) {
-					case 0:
-						break bust;
-					case 1:
-						CONTEXT_MENU = in.readInt();
-						break;
-					case 2:
-						HITSPLAT = in.readInt();
-						break;
-					case 3:
-						GAMEFRAME = in.readInt();
-						break;
-					case 4:
-						HP_BAR = in.readInt();
-						break;
-					case 5:
-						DAMAGE_MULTIPLIER = in.readBoolean();
-						break;
-					case 6:
-						ENTITY_FEED = in.readBoolean();
-						break;
-					case 7:
-						STATUS_ORB = in.readBoolean();
-						break;
-					case 8:
-						SPECIAL_ATTACK_ORB = in.readBoolean();
-						break;
-					case 9:
-						ATTACK_PRIORITY = in.readBoolean();
-						break;
-					case 10:
-						WIDGET = in.readBoolean();
-						break;
-					case 11:
-						MINIMAP_RANK = in.readBoolean();
-						break;
-					case 12:
-						ROOF = in.readBoolean();
-						break;
-					case 13:
-						MOVING_TEXTURE = in.readBoolean();
-						break;
-					case 14:
-						NOTIFICATION_FEED = in.readBoolean();
-						break;
-					case 15:
-						GROUND_DECORATIONS = in.readBoolean();
-						break;
-					case 16:
-						CUSTOM_LIGHTING = in.readBoolean();
-						break;
-					case 17:
-						HD_MINIMAP = in.readBoolean();
-						break;
-					case 18:
-						MIPMAPPING = in.readBoolean();
-						break;
-					case 19:
-						TWEENING = in.readBoolean();
-						break;
-					case 20:
-						FOG = in.readBoolean();
-						break;
-					case 21:
-						SMOOTH_SHADING = in.readBoolean();
-						break;
-					case 22:
-						COUNTER_SIZE = in.readInt();
-						break;
-					case 23:
-						COUNTER_COLOR = in.readInt();
-						break;
-					case 24:
-						COUNTER_POSITION = in.readInt();
-						break;
-					case 25:
-						COUNTER_GROUP = in.readBoolean();
-						break;
-					case 26:
-						PRIVATE_MESSAGE = in.readInt();
-						break;
-					case 27:
-						PLAYER_TITLE = in.readInt();
-						break;
-					case 28:
-						YELL = in.readInt();
-						break;
-					case 29:
-						DISPLAY_CLAN_TAG = in.readBoolean();
-						break;
-					case 30:
-						DISPLAY_NAMES = in.readBoolean();
-						break;
-					case 31:
-						DISPLAY_KILL_FEED = in.readBoolean();
-						break;
-					case 32:
-						DISPLAY_GROUND_ITEM = in.readBoolean();
-						break;
-					case 33:
-						ITEM_RARITY_COLOR = in.readBoolean();
-						break;
-					case 34:
-						SNOW = in.readBoolean();
-						break;
-					case 35:
-						PARTICLES = in.readBoolean();
-						break;
-					case 36:
-						REMEMBER_ME = in.readBoolean();
-						break;
-					case 37:
-						DRAW_BUBBLE = in.readBoolean();
-						break;
-					case 38:
-						EXPERIENCE_ORBS = in.readBoolean();
-						break;
-					case 39:
-						COUNTER_SPEED = in.readFloat();
-						break;
-					case 40:
-						COUNTER_PROGRESS = in.readBoolean();
-						break;
-					case 41:
-						DRAW_ANNOUNCEMENT = in.readBoolean();
-						break;
-					case 42:
-						DISPLAY_FPS = in.readBoolean();
-						break;
-					case 43:
-						DISPLAY_PING = in.readBoolean();
-						break;
-					case 44:
-						VALUE_ICONS = in.readBoolean();
-						break;
-					case 45:
-						SHIFT_DROP = in.readBoolean();
-						break;
+				case 0:
+					break bust;
+				case 1:
+					CONTEXT_MENU = in.readInt();
+					break;
+				case 2:
+					HITSPLAT = in.readInt();
+					break;
+				case 3:
+					GAMEFRAME = in.readInt();
+					break;
+				case 4:
+					HP_BAR = in.readInt();
+					break;
+				case 5:
+					DAMAGE_MULTIPLIER = in.readBoolean();
+					break;
+				case 6:
+					ENTITY_FEED = in.readBoolean();
+					break;
+				case 7:
+					STATUS_ORB = in.readBoolean();
+					break;
+				case 8:
+					SPECIAL_ATTACK_ORB = in.readBoolean();
+					break;
+				case 9:
+					ATTACK_PRIORITY = in.readBoolean();
+					break;
+				case 10:
+					WIDGET = in.readBoolean();
+					break;
+				case 11:
+					MINIMAP_RANK = in.readBoolean();
+					break;
+				case 12:
+					ROOF = in.readBoolean();
+					break;
+				case 13:
+					MOVING_TEXTURE = in.readBoolean();
+					break;
+				case 14:
+					NOTIFICATION_FEED = in.readBoolean();
+					break;
+				case 15:
+					GROUND_DECORATIONS = in.readBoolean();
+					break;
+				case 16:
+					CUSTOM_LIGHTING = in.readBoolean();
+					break;
+				case 17:
+					HD_MINIMAP = in.readBoolean();
+					break;
+				case 18:
+					MIPMAPPING = in.readBoolean();
+					break;
+				case 19:
+					TWEENING = in.readBoolean();
+					break;
+				case 20:
+					FOG = in.readBoolean();
+					break;
+				case 21:
+					SMOOTH_SHADING = in.readBoolean();
+					break;
+				case 22:
+					COUNTER_SIZE = in.readInt();
+					break;
+				case 23:
+					COUNTER_COLOR = in.readInt();
+					break;
+				case 24:
+					COUNTER_POSITION = in.readInt();
+					break;
+				case 25:
+					COUNTER_GROUP = in.readBoolean();
+					break;
+				case 26:
+					PRIVATE_MESSAGE = in.readInt();
+					break;
+				case 27:
+					PLAYER_TITLE = in.readInt();
+					break;
+				case 28:
+					YELL = in.readInt();
+					break;
+				case 29:
+					DISPLAY_CLAN_TAG = in.readBoolean();
+					break;
+				case 30:
+					DISPLAY_NAMES = in.readBoolean();
+					break;
+				case 31:
+					DISPLAY_KILL_FEED = in.readBoolean();
+					break;
+				case 32:
+					DISPLAY_GROUND_ITEM = in.readBoolean();
+					break;
+				case 33:
+					ITEM_RARITY_COLOR = in.readBoolean();
+					break;
+				case 34:
+					SNOW = in.readBoolean();
+					break;
+				case 35:
+					PARTICLES = in.readBoolean();
+					break;
+				case 36:
+					REMEMBER_ME = in.readBoolean();
+					break;
+				case 37:
+					DRAW_BUBBLE = in.readBoolean();
+					break;
+				case 38:
+					EXPERIENCE_ORBS = in.readBoolean();
+					break;
+				case 39:
+					COUNTER_SPEED = in.readFloat();
+					break;
+				case 40:
+					COUNTER_PROGRESS = in.readBoolean();
+					break;
+				case 41:
+					DRAW_ANNOUNCEMENT = in.readBoolean();
+					break;
+				case 42:
+					DISPLAY_FPS = in.readBoolean();
+					break;
+				case 43:
+					DISPLAY_PING = in.readBoolean();
+					break;
+				case 44:
+					VALUE_ICONS = in.readBoolean();
+					break;
+				case 45:
+					SHIFT_DROP = in.readBoolean();
+					break;
 				}
 			}
 			in.close();

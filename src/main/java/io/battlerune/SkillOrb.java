@@ -38,9 +38,7 @@ public class SkillOrb {
 	/**
 	 * Called upon the player receiving experience.
 	 * <p>
-	 * Resets the attributes of the orb
-	 * to make sure the orb is drawn
-	 * properly.
+	 * Resets the attributes of the orb to make sure the orb is drawn properly.
 	 */
 	public void receivedExperience() {
 		alpha = 255;
@@ -62,8 +60,7 @@ public class SkillOrb {
 	}
 
 	/**
-	 * Draws a tooltip containing information about
-	 * this skill orb.
+	 * Draws a tooltip containing information about this skill orb.
 	 */
 	public void drawTooltip() {
 		NumberFormat nf = NumberFormat.getInstance();
@@ -79,10 +76,15 @@ public class SkillOrb {
 		Raster.drawTransparentBox(mouseX + 1, mouseY + 6, 122, 82, 0x7D5C51, 150);
 		Raster.drawRectangle(mouseX, mouseY + 5, 122, 82, 0x000000);
 
-		Client.instance.newSmallFont.drawBasicString(SkillConstants.SKILL_NAMES[skill], mouseX + Client.instance.newSmallFont.getTextWidth(SkillConstants.SKILL_NAMES[skill]) - 25, mouseY + 20, 16777215, 1);
-		Client.instance.newSmallFont.drawBasicString("Level: @gre@" + Client.instance.maxStats[skill], mouseX + 5, mouseY + 35, 16777215, 1);
-		Client.instance.newSmallFont.drawBasicString("Exp: @gre@" + nf.format(Client.instance.currentExp[skill]), mouseX + 5, mouseY + 50, 16777215, 1);
-		Client.instance.newSmallFont.drawBasicString("Exp Left: @gre@" + nf.format(remainderExp()), mouseX + 5, mouseY + 65, 16777215, 1);
+		Client.instance.newSmallFont.drawBasicString(SkillConstants.SKILL_NAMES[skill],
+				mouseX + Client.instance.newSmallFont.getTextWidth(SkillConstants.SKILL_NAMES[skill]) - 25, mouseY + 20,
+				16777215, 1);
+		Client.instance.newSmallFont.drawBasicString("Level: @gre@" + Client.instance.maxStats[skill], mouseX + 5,
+				mouseY + 35, 16777215, 1);
+		Client.instance.newSmallFont.drawBasicString("Exp: @gre@" + nf.format(Client.instance.currentExp[skill]),
+				mouseX + 5, mouseY + 50, 16777215, 1);
+		Client.instance.newSmallFont.drawBasicString("Exp Left: @gre@" + nf.format(remainderExp()), mouseX + 5,
+				mouseY + 65, 16777215, 1);
 
 		Raster.drawRoundedRectangle(mouseX, mouseY + 70, 121, 15, 0xED4747, 100, true, true);
 
@@ -91,7 +93,8 @@ public class SkillOrb {
 
 		Raster.fillRectangle(mouseX + 2, mouseY + 70, 119, 15, 0xDB2323);
 		Raster.fillRectangle(mouseX + 1, mouseY + 70, percentage, 15, 0x37A351);
-		Client.instance.newSmallFont.drawCenteredString(completion + "% ", mouseX + 118 / 2 + 10, mouseY + 83, 0xFFFFFF, 1);
+		Client.instance.newSmallFont.drawCenteredString(completion + "% ", mouseX + 118 / 2 + 10, mouseY + 83, 0xFFFFFF,
+				1);
 	}
 
 	private int currentLevel() {

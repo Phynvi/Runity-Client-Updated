@@ -147,7 +147,8 @@ public class rsDrawingArea extends Raster {
 				int finalRed = (pixels[currentPixel] >> 16 & 0xff) * realAlpha;
 				int finalGreen = (pixels[currentPixel] >> 8 & 0xff) * realAlpha;
 				int finalBlue = (pixels[currentPixel] & 0xff) * realAlpha;
-				int pixelColor = ((tempRed + finalRed >> 8 << 16) + (tempGreen + finalGreen >> 8 << 8) + (tempblue + finalBlue >> 8));
+				int pixelColor = ((tempRed + finalRed >> 8 << 16) + (tempGreen + finalGreen >> 8 << 8)
+						+ (tempblue + finalBlue >> 8));
 				pixels[currentPixel] = pixelColor;
 				currentPixel += width;
 			}
@@ -284,7 +285,6 @@ public class rsDrawingArea extends Raster {
 		clear();
 	}
 
-
 	public static void drawHorizontalLineAlpha(int i, int i_89_, int i_90_, int i_91_, int i_92_) {
 		if (i_89_ >= topY && i_89_ < bottomY) {
 			if (i < topX) {
@@ -387,7 +387,8 @@ public class rsDrawingArea extends Raster {
 						int i_134_ = (pixels[i_132_] >> 16 & 0xff) * i_118_;
 						int i_135_ = (pixels[i_132_] >> 8 & 0xff) * i_118_;
 						int i_136_ = (pixels[i_132_] & 0xff) * i_118_;
-						int i_137_ = ((i_119_ + i_134_ >> 8 << 16) + (i_120_ + i_135_ >> 8 << 8) + (i_121_ + i_136_ >> 8));
+						int i_137_ = ((i_119_ + i_134_ >> 8 << 16) + (i_120_ + i_135_ >> 8 << 8)
+								+ (i_121_ + i_136_ >> 8));
 						pixels[i_132_++] = i_137_;
 					}
 					i_124_++;
@@ -416,7 +417,8 @@ public class rsDrawingArea extends Raster {
 						int i_142_ = (pixels[i_140_] >> 16 & 0xff) * i_118_;
 						int i_143_ = (pixels[i_140_] >> 8 & 0xff) * i_118_;
 						int i_144_ = (pixels[i_140_] & 0xff) * i_118_;
-						int i_145_ = ((i_119_ + i_142_ >> 8 << 16) + (i_120_ + i_143_ >> 8 << 8) + (i_121_ + i_144_ >> 8));
+						int i_145_ = ((i_119_ + i_142_ >> 8 << 16) + (i_120_ + i_143_ >> 8 << 8)
+								+ (i_121_ + i_144_ >> 8));
 						pixels[i_140_++] = i_145_;
 					}
 					i_124_++;
@@ -486,7 +488,8 @@ public class rsDrawingArea extends Raster {
 		for (int i_166_ = -boxHeight; i_166_ < 0; i_166_++) {
 			int i_167_ = 65536 - i_162_ >> 8;
 			int i_168_ = i_162_ >> 8;
-			int finalColor = (((color & 0xff00ff) * i_167_ + (alpha & 0xff00ff) * i_168_ & ~0xff00ff) + ((color & 0xff00) * i_167_ + (alpha & 0xff00) * i_168_ & 0xff0000)) >>> 8;
+			int finalColor = (((color & 0xff00ff) * i_167_ + (alpha & 0xff00ff) * i_168_ & ~0xff00ff)
+					+ ((color & 0xff00) * i_167_ + (alpha & 0xff00) * i_168_ & 0xff0000)) >>> 8;
 			for (int i_170_ = -boxWidth; i_170_ < 0; i_170_++) {
 				pixels[i_165_++] = finalColor;
 			}

@@ -21,7 +21,9 @@ public final class ResourceProvider extends Provider implements Runnable {
 				int l1 = ((ioBuffer[3] & 0xff) << 8) + (ioBuffer[4] & 0xff);
 				int i2 = ioBuffer[5] & 0xff;
 				current = null;
-				for (OnDemandData onDemandData = (OnDemandData) requested.reverseGetFirst(); onDemandData != null; onDemandData = (OnDemandData) requested.reverseGetNext()) {
+				for (OnDemandData onDemandData = (OnDemandData) requested
+						.reverseGetFirst(); onDemandData != null; onDemandData = (OnDemandData) requested
+								.reverseGetNext()) {
 					if (onDemandData.dataType == l && onDemandData.ID == j1)
 						current = onDemandData;
 					if (current != null)
@@ -188,7 +190,9 @@ public final class ResourceProvider extends Provider implements Runnable {
 
 	public void provide(int i, int j) {
 		synchronized (nodeSubList) {
-			for (OnDemandData onDemandData = (OnDemandData) nodeSubList.reverseGetFirst(); onDemandData != null; onDemandData = (OnDemandData) nodeSubList.reverseGetNext())
+			for (OnDemandData onDemandData = (OnDemandData) nodeSubList
+					.reverseGetFirst(); onDemandData != null; onDemandData = (OnDemandData) nodeSubList
+							.reverseGetNext())
 				if (onDemandData.dataType == i && onDemandData.ID == j)
 					return;
 
@@ -233,7 +237,9 @@ public final class ResourceProvider extends Provider implements Runnable {
 				}
 
 				boolean flag = false;
-				for (OnDemandData onDemandData = (OnDemandData) requested.reverseGetFirst(); onDemandData != null; onDemandData = (OnDemandData) requested.reverseGetNext())
+				for (OnDemandData onDemandData = (OnDemandData) requested
+						.reverseGetFirst(); onDemandData != null; onDemandData = (OnDemandData) requested
+								.reverseGetNext())
 					if (onDemandData.incomplete) {
 						flag = true;
 						onDemandData.loopCycle++;
@@ -244,7 +250,9 @@ public final class ResourceProvider extends Provider implements Runnable {
 					}
 
 				if (!flag) {
-					for (OnDemandData onDemandData_1 = (OnDemandData) requested.reverseGetFirst(); onDemandData_1 != null; onDemandData_1 = (OnDemandData) requested.reverseGetNext()) {
+					for (OnDemandData onDemandData_1 = (OnDemandData) requested
+							.reverseGetFirst(); onDemandData_1 != null; onDemandData_1 = (OnDemandData) requested
+									.reverseGetNext()) {
 						flag = true;
 						onDemandData_1.loopCycle++;
 						if (onDemandData_1.loopCycle > 50) {
@@ -270,7 +278,8 @@ public final class ResourceProvider extends Provider implements Runnable {
 					loopCycle = 0;
 					statusString = "";
 				}
-				if (Client.loggedIn && socket != null && outputStream != null && (anInt1332 > 0 || clientInstance.decompressors[0] == null)) {
+				if (Client.loggedIn && socket != null && outputStream != null
+						&& (anInt1332 > 0 || clientInstance.decompressors[0] == null)) {
 					writeLoopCycle++;
 					if (writeLoopCycle > 500) {
 						writeLoopCycle = 0;
@@ -324,26 +333,27 @@ public final class ResourceProvider extends Provider implements Runnable {
 			return onDemandData;
 		}
 
-			int amountRead = 0;
-			try(GZIPInputStream gzip = new GZIPInputStream(new ByteArrayInputStream(onDemandData.buffer))) {
-				do {
-					if (amountRead == gzipInputBuffer.length) {
-						throw new RuntimeException("buffer overflow!");
-					}
+		int amountRead = 0;
+		try (GZIPInputStream gzip = new GZIPInputStream(new ByteArrayInputStream(onDemandData.buffer))) {
+			do {
+				if (amountRead == gzipInputBuffer.length) {
+					throw new RuntimeException("buffer overflow!");
+				}
 
-					final int read = gzip.read(gzipInputBuffer, amountRead, gzipInputBuffer.length - amountRead);
+				final int read = gzip.read(gzipInputBuffer, amountRead, gzipInputBuffer.length - amountRead);
 
-					if (read == -1) {
-						break;
-					}
+				if (read == -1) {
+					break;
+				}
 
-					amountRead += read;
-				} while (true);
-			} catch (IOException ex) {
-				System.out.println(String.format("Failed to unzip model [id=%d type=%d]", onDemandData.ID,  onDemandData.dataType));
-				ex.printStackTrace();
-				return null;
-			}
+				amountRead += read;
+			} while (true);
+		} catch (IOException ex) {
+			System.out.println(
+					String.format("Failed to unzip model [id=%d type=%d]", onDemandData.ID, onDemandData.dataType));
+			ex.printStackTrace();
+			return null;
+		}
 
 		onDemandData.buffer = new byte[amountRead];
 		System.arraycopy(gzipInputBuffer, 0, onDemandData.buffer, 0, amountRead);
@@ -391,10 +401,12 @@ public final class ResourceProvider extends Provider implements Runnable {
 	private void handleFailed() {
 		uncompletedCount = 0;
 		completedCount = 0;
-		for (OnDemandData onDemandData = (OnDemandData) requested.reverseGetFirst(); onDemandData != null; onDemandData = (OnDemandData) requested.reverseGetNext())
+		for (OnDemandData onDemandData = (OnDemandData) requested
+				.reverseGetFirst(); onDemandData != null; onDemandData = (OnDemandData) requested.reverseGetNext())
 			if (onDemandData.incomplete) {
 				uncompletedCount++;
-				System.out.println("Error: model is incomplete or missing  [ type = " + onDemandData.dataType + "]  [id = " + onDemandData.ID + "]");
+				System.out.println("Error: model is incomplete or missing  [ type = " + onDemandData.dataType
+						+ "]  [id = " + onDemandData.ID + "]");
 			} else
 				completedCount++;
 
@@ -410,7 +422,8 @@ public final class ResourceProvider extends Provider implements Runnable {
 				uncompletedCount++;
 				closeRequest(onDemandData_1);
 				waiting = true;
-				System.out.println("Error: file is missing  [ type = " + onDemandData_1.dataType + "]  [id = " + onDemandData_1.ID + "]");
+				System.out.println("Error: file is missing  [ type = " + onDemandData_1.dataType + "]  [id = "
+						+ onDemandData_1.ID + "]");
 			} catch (Exception _ex) {
 			}
 		}

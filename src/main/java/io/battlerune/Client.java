@@ -13945,7 +13945,7 @@ public class Client extends GameApplet {
 				}
 				opcode = -1;
 				return true;
-				
+
 			case 126:
 				try {
 					String text = incoming.readString();

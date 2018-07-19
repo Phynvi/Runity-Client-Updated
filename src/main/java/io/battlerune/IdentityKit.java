@@ -8,7 +8,7 @@ public final class IdentityKit {
 	private int[] bodyModels;
 	private final int[] originalColors = new int[6];
 	private final int[] replacementColors = new int[6];
-	private final int[] headModels = {-1, -1, -1, -1, -1};
+	private final int[] headModels = { -1, -1, -1, -1, -1 };
 	public boolean validStyle;
 
 	private IdentityKit() {
@@ -37,7 +37,7 @@ public final class IdentityKit {
 	}
 
 	private void decode(Buffer buffer) {
-		while(true) {
+		while (true) {
 			final int opcode = buffer.readUByte();
 
 			if (opcode == 0) {

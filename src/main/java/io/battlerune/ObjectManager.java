@@ -74,7 +74,8 @@ final class ObjectManager {
 					int l13 = 0x10000 / j9;
 					int j15 = (l7 << 8) / j9;
 					int j16 = byte0 + (byte1 * k12 + byte2 * l13 + byte3 * j15) / l3;
-					int j17 = (abyte0[j5 - 1][j4] >> 2) + (abyte0[j5 + 1][j4] >> 3) + (abyte0[j5][j4 - 1] >> 2) + (abyte0[j5][j4 + 1] >> 3) + (abyte0[j5][j4] >> 1);
+					int j17 = (abyte0[j5 - 1][j4] >> 2) + (abyte0[j5 + 1][j4] >> 3) + (abyte0[j5][j4 - 1] >> 2)
+							+ (abyte0[j5][j4 + 1] >> 3) + (abyte0[j5][j4] >> 1);
 					anIntArrayArray139[j5][j4] = j16 - j17;
 				}
 
@@ -139,7 +140,10 @@ final class ObjectManager {
 							k15 -= anIntArray127[k18];
 							k16 -= anIntArray128[k18];
 						}
-						if (k17 >= 1 && k17 < anInt147 - 1 && (!lowMem || (mapTerrainAttributes[0][l6][k17] & 2) != 0 || (mapTerrainAttributes[plane][l6][k17] & 0x10) == 0 && method182(k17, plane, l6) == anInt131)) {
+						if (k17 >= 1 && k17 < anInt147 - 1
+								&& (!lowMem || (mapTerrainAttributes[0][l6][k17] & 2) != 0
+										|| (mapTerrainAttributes[plane][l6][k17] & 0x10) == 0
+												&& method182(k17, plane, l6) == anInt131)) {
 							if (plane < anInt145)
 								anInt145 = plane;
 							int l18 = aByteArrayArrayArray142[plane][l6][k17] & 0xff;
@@ -175,7 +179,9 @@ final class ObjectManager {
 								if (j21 != -1)
 									i22 = Rasterizer.anIntArray1482[method187(k21, 96)];
 								if (i19 == 0) {
-									region.method279(plane, l6, k17, 0, 0, -1, j19, k19, l19, i20, method187(j21, j20), method187(j21, k20), method187(j21, l20), method187(j21, i21), 0, 0, 0, 0, i22, 0);
+									region.method279(plane, l6, k17, 0, 0, -1, j19, k19, l19, i20, method187(j21, j20),
+											method187(j21, k20), method187(j21, l20), method187(j21, i21), 0, 0, 0, 0,
+											i22, 0);
 								} else {
 									int k22 = aByteArrayArrayArray136[plane][l6][k17] + 1;
 									byte byte4 = aByteArrayArrayArray148[plane][l6][k17];
@@ -200,10 +206,14 @@ final class ObjectManager {
 									}
 									fogColorList.add(minimapColor);
 									if (minimapColor == 0x000000 && overlay.anotherRgb != -1) {
-										int newMinimapColor = method177(overlay.anotherHue, overlay.anotherSaturation, overlay.anotherLuminance);
+										int newMinimapColor = method177(overlay.anotherHue, overlay.anotherSaturation,
+												overlay.anotherLuminance);
 										minimapColor = Rasterizer.anIntArray1482[method185(newMinimapColor, 96)];
 									}
-									region.method279(plane, l6, k17, k22, byte4, textureId, j19, k19, l19, i20, method187(j21, j20), method187(j21, k20), method187(j21, l20), method187(j21, i21), method185(j23, j20), method185(j23, k20), method185(j23, l20), method185(j23, i21), i22, minimapColor);
+									region.method279(plane, l6, k17, k22, byte4, textureId, j19, k19, l19, i20,
+											method187(j21, j20), method187(j21, k20), method187(j21, l20),
+											method187(j21, i21), method185(j23, j20), method185(j23, k20),
+											method185(j23, l20), method185(j23, i21), i22, minimapColor);
 								}
 							}
 						}
@@ -248,16 +258,14 @@ final class ObjectManager {
 								;
 							for (; l5 < anInt147 && (anIntArrayArrayArray135[i3][i4][l5 + 1] & i2) != 0; l5++)
 								;
-							label0:
-							for (; i7 > 0; i7--) {
+							label0: for (; i7 > 0; i7--) {
 								for (int j10 = k4; j10 <= l5; j10++)
 									if ((anIntArrayArrayArray135[i7 - 1][i4][j10] & i2) == 0)
 										break label0;
 
 							}
 
-							label1:
-							for (; k8 < l2; k8++) {
+							label1: for (; k8 < l2; k8++) {
 								for (int k10 = k4; k10 <= l5; k10++)
 									if ((anIntArrayArrayArray135[k8 + 1][i4][k10] & i2) == 0)
 										break label1;
@@ -287,16 +295,14 @@ final class ObjectManager {
 								;
 							for (; i6 < anInt146 && (anIntArrayArrayArray135[i3][i6 + 1][k3] & j2) != 0; i6++)
 								;
-							label2:
-							for (; j7 > 0; j7--) {
+							label2: for (; j7 > 0; j7--) {
 								for (int i11 = l4; i11 <= i6; i11++)
 									if ((anIntArrayArrayArray135[j7 - 1][i11][k3] & j2) == 0)
 										break label2;
 
 							}
 
-							label3:
-							for (; l8 < l2; l8++) {
+							label3: for (; l8 < l2; l8++) {
 								for (int j11 = l4; j11 <= i6; j11++)
 									if ((anIntArrayArrayArray135[l8 + 1][j11][k3] & j2) == 0)
 										break label3;
@@ -326,16 +332,14 @@ final class ObjectManager {
 								;
 							for (; i9 < anInt147 && (anIntArrayArrayArray135[i3][i4][i9 + 1] & k2) != 0; i9++)
 								;
-							label4:
-							for (; i5 > 0; i5--) {
+							label4: for (; i5 > 0; i5--) {
 								for (int l11 = k7; l11 <= i9; l11++)
 									if ((anIntArrayArrayArray135[i3][i5 - 1][l11] & k2) == 0)
 										break label4;
 
 							}
 
-							label5:
-							for (; j6 < anInt146; j6++) {
+							label5: for (; j6 < anInt146; j6++) {
 								for (int i12 = k7; i12 <= i9; i12++)
 									if ((anIntArrayArrayArray135[i3][j6 + 1][i12] & k2) == 0)
 										break label5;
@@ -344,7 +348,8 @@ final class ObjectManager {
 
 							if (((j6 - i5) + 1) * ((i9 - k7) + 1) >= 4) {
 								int j12 = anIntArrayArrayArray129[i3][i5][k7];
-								SceneGraph.method277(l2, i5 * 128, j12, j6 * 128 + 128, i9 * 128 + 128, j12, k7 * 128, 4);
+								SceneGraph.method277(l2, i5 * 128, j12, j6 * 128 + 128, i9 * 128 + 128, j12, k7 * 128,
+										4);
 								for (int k13 = i5; k13 <= j6; k13++) {
 									for (int i15 = k7; i15 <= i9; i15++)
 										anIntArrayArrayArray135[i3][k13][i15] &= ~k2;
@@ -359,7 +364,8 @@ final class ObjectManager {
 	}
 
 	private static int method172(int i, int j) {
-		int k = (method176(i + 45365, j + 0x16713, 4) - 128) + (method176(i + 10294, j + 37821, 2) - 128 >> 1) + (method176(i, j, 1) - 128 >> 2);
+		int k = (method176(i + 45365, j + 0x16713, 4) - 128) + (method176(i + 10294, j + 37821, 2) - 128 >> 1)
+				+ (method176(i, j, 1) - 128 >> 2);
 		k = (int) ((double) k * 0.29999999999999999D) + 35;
 		if (k < 10)
 			k = 10;
@@ -369,8 +375,7 @@ final class ObjectManager {
 	}
 
 	public static void method173(Buffer stream, ResourceProvider class42_sub1) {
-		label0:
-		{
+		label0: {
 			int i = -1;
 			do {
 				int j = stream.readUSmart2();
@@ -407,7 +412,8 @@ final class ObjectManager {
 		}
 	}
 
-	private void method175(int y, SceneGraph region, CollisionMap collisionMap, int type, int height, int x, int objectId, int rotation) {
+	private void method175(int y, SceneGraph region, CollisionMap collisionMap, int type, int height, int x,
+			int objectId, int rotation) {
 		if (lowMem && (mapTerrainAttributes[0][x][y] & 2) == 0) {
 			if ((mapTerrainAttributes[height][x][y] & 0x10) != 0) {
 				return;
@@ -507,7 +513,8 @@ final class ObjectManager {
 					width = objectDefinition.width;
 					length = objectDefinition.length;
 				}
-				if (region.method284(l2, byte0, k2, length, ((Renderable) (obj1)), width, height, i5, y, x) && objectDefinition.castsShadow) {
+				if (region.method284(l2, byte0, k2, length, ((Renderable) (obj1)), width, height, i5, y, x)
+						&& objectDefinition.castsShadow) {
 					Model model;
 					if (obj1 instanceof Model)
 						model = (Model) obj1;
@@ -529,7 +536,8 @@ final class ObjectManager {
 				}
 			}
 			if (objectDefinition.solid && collisionMap != null)
-				collisionMap.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation, objectDefinition.impenetrable);
+				collisionMap.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation,
+						objectDefinition.impenetrable);
 			return;
 		}
 		if (type >= 12) {
@@ -542,7 +550,8 @@ final class ObjectManager {
 			if (type >= 12 && type <= 17 && type != 13 && height > 0)
 				anIntArrayArrayArray135[height][x][y] |= 0x924;
 			if (objectDefinition.solid && collisionMap != null)
-				collisionMap.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation, objectDefinition.impenetrable);
+				collisionMap.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation,
+						objectDefinition.impenetrable);
 			return;
 		}
 		if (type == 0) {
@@ -618,7 +627,8 @@ final class ObjectManager {
 				obj11 = new SceneObject(objectId, 4 + rotation, 2, l1, i2, k1, j2, objectDefinition.animation, true);
 				obj12 = new SceneObject(objectId, i3, 2, l1, i2, k1, j2, objectDefinition.animation, true);
 			}
-			region.method282(anIntArray152[rotation], ((Renderable) (obj11)), l2, y, byte0, x, ((Renderable) (obj12)), k2, anIntArray152[i3], height);
+			region.method282(anIntArray152[rotation], ((Renderable) (obj11)), l2, y, byte0, x, ((Renderable) (obj12)),
+					k2, anIntArray152[i3], height);
 			if (objectDefinition.modelClipped)
 				if (rotation == 0) {
 					anIntArrayArrayArray135[height][x][y] |= 0x249;
@@ -667,7 +677,8 @@ final class ObjectManager {
 				obj6 = new SceneObject(objectId, rotation, type, l1, i2, k1, j2, objectDefinition.animation, true);
 			region.method284(l2, byte0, k2, 1, ((Renderable) (obj6)), 1, height, 0, y, x);
 			if (objectDefinition.solid && collisionMap != null)
-				collisionMap.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation, objectDefinition.impenetrable);
+				collisionMap.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation,
+						objectDefinition.impenetrable);
 			return;
 		}
 		if (objectDefinition.contouredGround)
@@ -697,7 +708,8 @@ final class ObjectManager {
 				obj7 = objectDefinition.method578(4, 0, k1, l1, i2, j2, -1);
 			else
 				obj7 = new SceneObject(objectId, 0, 4, l1, i2, k1, j2, objectDefinition.animation, true);
-			region.method283(l2, y, rotation * 512, height, 0, k2, ((Renderable) (obj7)), x, byte0, 0, anIntArray152[rotation]);
+			region.method283(l2, y, rotation * 512, height, 0, k2, ((Renderable) (obj7)), x, byte0, 0,
+					anIntArray152[rotation]);
 			return;
 		}
 		if (type == 5) {
@@ -710,7 +722,8 @@ final class ObjectManager {
 				obj13 = objectDefinition.method578(4, 0, k1, l1, i2, j2, -1);
 			else
 				obj13 = new SceneObject(objectId, 0, 4, l1, i2, k1, j2, objectDefinition.animation, true);
-			region.method283(l2, y, rotation * 512, height, anIntArray137[rotation] * i4, k2, ((Renderable) (obj13)), x, byte0, anIntArray144[rotation] * i4, anIntArray152[rotation]);
+			region.method283(l2, y, rotation * 512, height, anIntArray137[rotation] * i4, k2, ((Renderable) (obj13)), x,
+					byte0, anIntArray144[rotation] * i4, anIntArray152[rotation]);
 			return;
 		}
 		if (type == 6) {
@@ -776,7 +789,8 @@ final class ObjectManager {
 		return class46.method577(j);
 	}
 
-	public final void method179(int i, int height, CollisionMap collisionMap[], int x, int i1, byte data[], int j1, int collisionMapIndex, int y) {
+	public final void method179(int i, int height, CollisionMap collisionMap[], int x, int i1, byte data[], int j1,
+			int collisionMapIndex, int y) {
 		for (int localX = 0; localX < 8; localX++) {
 			for (int localY = 0; localY < 8; localY++) {
 
@@ -794,7 +808,8 @@ final class ObjectManager {
 				for (int xx = 0; xx < 64; xx++) {
 
 					if (plane == i && yy >= i1 && yy < i1 + 8 && xx >= j1 && xx < j1 + 8) {
-						method181(y + ChunkUtil.method156(xx & 7, height, yy & 7), 0, stream, x + ChunkUtil.method155(height, xx & 7, yy & 7), collisionMapIndex, height, 0);
+						method181(y + ChunkUtil.method156(xx & 7, height, yy & 7), 0, stream,
+								x + ChunkUtil.method155(height, xx & 7, yy & 7), collisionMapIndex, height, 0);
 					} else {
 						method181(-1, 0, stream, -1, 0, 0, 0);
 					}
@@ -836,10 +851,12 @@ final class ObjectManager {
 
 					if (attributeId == 0) {
 						if (height == 0) {
-							anIntArrayArrayArray129[0][mapX][mapY] = -method172(0xe3b7b + mapX + k1, 0x87CCE + mapY + j) * 8;
+							anIntArrayArrayArray129[0][mapX][mapY] = -method172(0xe3b7b + mapX + k1, 0x87CCE + mapY + j)
+									* 8;
 							return;
 						} else {
-							anIntArrayArrayArray129[height][mapX][mapY] = anIntArrayArrayArray129[height - 1][mapX][mapY] - 240;
+							anIntArrayArrayArray129[height][mapX][mapY] = anIntArrayArrayArray129[height
+									- 1][mapX][mapY] - 240;
 							return;
 						}
 					}
@@ -855,7 +872,8 @@ final class ObjectManager {
 							anIntArrayArrayArray129[0][mapX][mapY] = -val * 8;
 							return;
 						} else {
-							anIntArrayArrayArray129[height][mapX][mapY] = anIntArrayArrayArray129[height - 1][mapX][mapY] - val * 8;
+							anIntArrayArrayArray129[height][mapX][mapY] = anIntArrayArrayArray129[height
+									- 1][mapX][mapY] - val * 8;
 							return;
 						}
 					}
@@ -898,9 +916,9 @@ final class ObjectManager {
 		return plane;
 	}
 
-	public final void method183(CollisionMap[] matrix, SceneGraph region, int i, int j, int k, int plane, byte abyte0[], int i1, int j1, int k1) {
-		label0:
-		{
+	public final void method183(CollisionMap[] matrix, SceneGraph region, int i, int j, int k, int plane, byte abyte0[],
+			int i1, int j1, int k1) {
+		label0: {
 			Buffer stream = new Buffer(abyte0);
 			int x = -1;
 			do {
@@ -983,7 +1001,8 @@ final class ObjectManager {
 		return (i & 0xff80) + j;
 	}
 
-	public static void method188(SceneGraph worldController, int rotation, int y, int type, int l, CollisionMap matrix, int ai[][][], int x, int j1, int k1) {
+	public static void method188(SceneGraph worldController, int rotation, int y, int type, int l, CollisionMap matrix,
+			int ai[][][], int x, int j1, int k1) {
 		int l1 = ai[l][x][y];
 		int i2 = ai[l][x + 1][y];
 		int j2 = ai[l][x + 1][y + 1];
@@ -1027,7 +1046,8 @@ final class ObjectManager {
 				worldController.method284(i3, byte1, l2, i5, ((Renderable) (obj1)), k4, k1, j5, y, x);
 			}
 			if (objectDefinition.solid)
-				matrix.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation, objectDefinition.impenetrable);
+				matrix.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation,
+						objectDefinition.impenetrable);
 			return;
 		}
 		if (type >= 12) {
@@ -1038,7 +1058,8 @@ final class ObjectManager {
 				obj2 = new SceneObject(j1, rotation, type, i2, j2, l1, k2, objectDefinition.animation, true);
 			worldController.method284(i3, byte1, l2, 1, ((Renderable) (obj2)), 1, k1, 0, y, x);
 			if (objectDefinition.solid)
-				matrix.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation, objectDefinition.impenetrable);
+				matrix.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation,
+						objectDefinition.impenetrable);
 			return;
 		}
 		if (type == 0) {
@@ -1074,7 +1095,8 @@ final class ObjectManager {
 				obj11 = new SceneObject(j1, 4 + rotation, 2, i2, j2, l1, k2, objectDefinition.animation, true);
 				obj12 = new SceneObject(j1, j3, 2, i2, j2, l1, k2, objectDefinition.animation, true);
 			}
-			worldController.method282(anIntArray152[rotation], ((Renderable) (obj11)), i3, y, byte1, x, ((Renderable) (obj12)), l2, anIntArray152[j3], k1);
+			worldController.method282(anIntArray152[rotation], ((Renderable) (obj11)), i3, y, byte1, x,
+					((Renderable) (obj12)), l2, anIntArray152[j3], k1);
 			if (objectDefinition.solid)
 				matrix.clip(x, y, type, rotation, objectDefinition.impenetrable);
 			return;
@@ -1098,7 +1120,8 @@ final class ObjectManager {
 				obj6 = new SceneObject(j1, rotation, type, i2, j2, l1, k2, objectDefinition.animation, true);
 			worldController.method284(i3, byte1, l2, 1, ((Renderable) (obj6)), 1, k1, 0, y, x);
 			if (objectDefinition.solid)
-				matrix.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation, objectDefinition.impenetrable);
+				matrix.clipObject(x, y, objectDefinition.width, objectDefinition.length, rotation,
+						objectDefinition.impenetrable);
 			return;
 		}
 		if (objectDefinition.contouredGround)
@@ -1128,7 +1151,8 @@ final class ObjectManager {
 				obj7 = objectDefinition.method578(4, 0, l1, i2, j2, k2, -1);
 			else
 				obj7 = new SceneObject(j1, 0, 4, i2, j2, l1, k2, objectDefinition.animation, true);
-			worldController.method283(i3, y, rotation * 512, k1, 0, l2, ((Renderable) (obj7)), x, byte1, 0, anIntArray152[rotation]);
+			worldController.method283(i3, y, rotation * 512, k1, 0, l2, ((Renderable) (obj7)), x, byte1, 0,
+					anIntArray152[rotation]);
 			return;
 		}
 		if (type == 5) {
@@ -1141,7 +1165,8 @@ final class ObjectManager {
 				obj13 = objectDefinition.method578(4, 0, l1, i2, j2, k2, -1);
 			else
 				obj13 = new SceneObject(j1, 0, 4, i2, j2, l1, k2, objectDefinition.animation, true);
-			worldController.method283(i3, y, rotation * 512, k1, anIntArray137[rotation] * j4, l2, ((Renderable) (obj13)), x, byte1, anIntArray144[rotation] * j4, anIntArray152[rotation]);
+			worldController.method283(i3, y, rotation * 512, k1, anIntArray137[rotation] * j4, l2,
+					((Renderable) (obj13)), x, byte1, anIntArray144[rotation] * j4, anIntArray152[rotation]);
 			return;
 		}
 		if (type == 6) {
@@ -1176,14 +1201,14 @@ final class ObjectManager {
 		boolean bool = true;
 		Buffer stream = new Buffer(is);
 		int objId = -1;
-		for (; ; ) {
+		for (;;) {
 			int objIdOffset = stream.method422();
 			if (objIdOffset == 0)
 				break;
 			objId += objIdOffset;
 			int objPosInfo = 0;
 			boolean bool_255_ = false;
-			for (; ; ) {
+			for (;;) {
 				if (bool_255_) {
 					int objPosInfoOffset = stream.method422();
 					if (objPosInfoOffset == 0) {
@@ -1205,7 +1230,8 @@ final class ObjectManager {
 					if (mapX > 0 && mapY > 0 && mapX < 103 && mapY < 103) {
 						ObjectDefinition definition = ObjectDefinition.lookup(objId);
 
-						if (plane != 22 || Settings.GROUND_DECORATIONS || definition.interactive || definition.obstructsGround) {//!lowMem
+						if (plane != 22 || Settings.GROUND_DECORATIONS || definition.interactive
+								|| definition.obstructsGround) {// !lowMem
 							bool &= definition.method579();
 							bool_255_ = true;
 						}
@@ -1217,8 +1243,7 @@ final class ObjectManager {
 	}
 
 	public final void method190(int x, CollisionMap[] collisions, int y, SceneGraph worldController, byte[] data) {
-		main_loop:
-		{
+		main_loop: {
 			Buffer stream = new Buffer(data);
 			int objId = -1;
 			do {
@@ -1274,17 +1299,17 @@ final class ObjectManager {
 	private final byte[][][] aByteArrayArrayArray134;
 	private final int[][][] anIntArrayArrayArray135;
 	private final byte[][][] aByteArrayArrayArray136;
-	private static final int anIntArray137[] = {1, 0, -1, 0};
+	private static final int anIntArray137[] = { 1, 0, -1, 0 };
 	private final int[][] anIntArrayArray139;
-	private static final int anIntArray140[] = {16, 32, 64, 128};
+	private static final int anIntArray140[] = { 16, 32, 64, 128 };
 	private final byte[][][] aByteArrayArrayArray142;
-	private static final int anIntArray144[] = {0, -1, 0, 1};
+	private static final int anIntArray144[] = { 0, -1, 0, 1 };
 	static int anInt145 = 99;
 	private final int anInt146;
 	private final int anInt147;
 	private final byte[][][] aByteArrayArrayArray148;
 	private final byte[][][] mapTerrainAttributes;
 	static boolean lowMem = true;
-	private static final int anIntArray152[] = {1, 2, 4, 8};
+	private static final int anIntArray152[] = { 1, 2, 4, 8 };
 
 }

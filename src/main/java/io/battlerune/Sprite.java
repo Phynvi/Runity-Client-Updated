@@ -14,20 +14,15 @@ import java.awt.image.PixelGrabber;
 import javax.swing.ImageIcon;
 
 public final class Sprite extends Raster {
-	
-	
+
 	private static final ColorModel COLOR_MODEL = new DirectColorModel(32, 0xff0000, 0xff00, 0xff);
 
 	public static Graphics2D createGraphics(int[] pixels, int width, int height) {
-		return new java.awt.image.BufferedImage(
-			COLOR_MODEL, 
-				java.awt.image.Raster.createWritableRaster(COLOR_MODEL.createCompatibleSampleModel(width, height), 
-					new java.awt.image.DataBufferInt(pixels, width * height), null), 
-						false, new java.util.Hashtable<Object, Object>()).createGraphics();
+		return new java.awt.image.BufferedImage(COLOR_MODEL,
+				java.awt.image.Raster.createWritableRaster(COLOR_MODEL.createCompatibleSampleModel(width, height),
+						new java.awt.image.DataBufferInt(pixels, width * height), null),
+				false, new java.util.Hashtable<Object, Object>()).createGraphics();
 	}
-	
-	
-	
 
 	private int idenfier;
 
@@ -124,7 +119,8 @@ public final class Sprite extends Raster {
 			sprite.resizeWidth = sprite.width;
 			sprite.resizeHeight = sprite.height;
 			sprite.raster = new int[sprite.width * sprite.height];
-			PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, sprite.width, sprite.height, sprite.raster, 0, sprite.width);
+			PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, sprite.width, sprite.height, sprite.raster, 0,
+					sprite.width);
 			pixelgrabber.grabPixels();
 			image = null;
 			return sprite;
@@ -132,7 +128,6 @@ public final class Sprite extends Raster {
 			return null;
 		}
 	}
-	
 
 	public String location = Utility.findcachedir() + "Sprites/";
 
@@ -225,11 +220,11 @@ public final class Sprite extends Raster {
 
 	public void drawHoverSprite(int x, int y, int offsetX, int offsetY, Sprite hover) {
 		this.drawSprite(x, y);
-		if (Client.instance.mouseX >= offsetX + x && Client.instance.mouseX <= offsetX + x + this.width && Client.instance.mouseY >= offsetY + y && Client.instance.mouseY <= offsetY + y + this.height) {
+		if (Client.instance.mouseX >= offsetX + x && Client.instance.mouseX <= offsetX + x + this.width
+				&& Client.instance.mouseY >= offsetY + y && Client.instance.mouseY <= offsetY + y + this.height) {
 			hover.drawSprite(x, y);
 		}
 	}
-
 
 	public void draw24BitSprite(int x, int y) {
 		int alpha = 256;
@@ -310,7 +305,8 @@ public final class Sprite extends Raster {
 		}
 	}
 
-	private void set24BitPixels(int width, int height, int destPixels[], int srcPixels[], int srcAlpha, int destOffset, int srcOffset, int destStep, int srcStep) {
+	private void set24BitPixels(int width, int height, int destPixels[], int srcPixels[], int srcAlpha, int destOffset,
+			int srcOffset, int destStep, int srcStep) {
 		int srcColor;
 		int destAlpha;
 		for (int loop = -height; loop < 0; loop++) {
@@ -320,7 +316,9 @@ public final class Sprite extends Raster {
 				srcColor = srcPixels[srcOffset++];
 				if (srcColor != 0 && srcColor != 0xffffff) {
 					int destColor = destPixels[destOffset];
-					destPixels[destOffset++] = ((srcColor & 0xff00ff) * srcAlpha + (destColor & 0xff00ff) * destAlpha & 0xff00ff00) + ((srcColor & 0xff00) * srcAlpha + (destColor & 0xff00) * destAlpha & 0xff0000) >> 8;
+					destPixels[destOffset++] = ((srcColor & 0xff00ff) * srcAlpha + (destColor & 0xff00ff) * destAlpha
+							& 0xff00ff00)
+							+ ((srcColor & 0xff00) * srcAlpha + (destColor & 0xff00) * destAlpha & 0xff0000) >> 8;
 				} else {
 					destOffset++;
 				}
@@ -332,7 +330,8 @@ public final class Sprite extends Raster {
 
 	public void setTransparency(int transRed, int transGreen, int transBlue) {
 		for (int index = 0; index < raster.length; index++)
-			if (((raster[index] >> 16) & 255) == transRed && ((raster[index] >> 8) & 255) == transGreen && (raster[index] & 255) == transBlue)
+			if (((raster[index] >> 16) & 255) == transRed && ((raster[index] >> 8) & 255) == transGreen
+					&& (raster[index] & 255) == transBlue)
 				raster[index] = 0;
 	}
 
@@ -613,16 +612,20 @@ public final class Sprite extends Raster {
 		for (int x2 = 0; x2 < tempWidth; x2++) {
 			for (int y = 0; y < tempHeight; y++) {
 				if (tempArray[(x2) + (y) * tempWidth] == 0) {
-					if (x2 < tempWidth - 1 && tempArray[(x2 + 1) + ((y) * tempWidth)] != 0 && tempArray[(x2 + 1) + ((y) * tempWidth)] != 0xffffff) {
+					if (x2 < tempWidth - 1 && tempArray[(x2 + 1) + ((y) * tempWidth)] != 0
+							&& tempArray[(x2 + 1) + ((y) * tempWidth)] != 0xffffff) {
 						tempArray[(x2) + (y) * tempWidth] = color;
 					}
-					if (x2 > 0 && tempArray[(x2 - 1) + ((y) * tempWidth)] != 0 && tempArray[(x2 - 1) + ((y) * tempWidth)] != 0xffffff) {
+					if (x2 > 0 && tempArray[(x2 - 1) + ((y) * tempWidth)] != 0
+							&& tempArray[(x2 - 1) + ((y) * tempWidth)] != 0xffffff) {
 						tempArray[(x2) + (y) * tempWidth] = color;
 					}
-					if (y < tempHeight - 1 && tempArray[(x2) + ((y + 1) * tempWidth)] != 0 && tempArray[(x2) + ((y + 1) * tempWidth)] != 0xffffff) {
+					if (y < tempHeight - 1 && tempArray[(x2) + ((y + 1) * tempWidth)] != 0
+							&& tempArray[(x2) + ((y + 1) * tempWidth)] != 0xffffff) {
 						tempArray[(x2) + (y) * tempWidth] = color;
 					}
-					if (y > 0 && tempArray[(x2) + ((y - 1) * tempWidth)] != 0 && tempArray[(x2) + ((y - 1) * tempWidth)] != 0xffffff) {
+					if (y > 0 && tempArray[(x2) + ((y - 1) * tempWidth)] != 0
+							&& tempArray[(x2) + ((y - 1) * tempWidth)] != 0xffffff) {
 						tempArray[(x2) + (y) * tempWidth] = color;
 					}
 				}
@@ -760,7 +763,8 @@ public final class Sprite extends Raster {
 				k = ai1[i++];
 				if (k != 0) {
 					int i3 = ai[l1];
-					ai[l1++] = ((k & 0xff00ff) * k1 + (i3 & 0xff00ff) * j2 & 0xff00ff00) + ((k & 0xff00) * k1 + (i3 & 0xff00) * j2 & 0xff0000) >> 8;
+					ai[l1++] = ((k & 0xff00ff) * k1 + (i3 & 0xff00ff) * j2 & 0xff00ff00)
+							+ ((k & 0xff00) * k1 + (i3 & 0xff00) * j2 & 0xff0000) >> 8;
 				} else {
 					l1++;
 				}
@@ -804,8 +808,10 @@ public final class Sprite extends Raster {
 					int a2 = u1 * v2;
 					int a3 = u2 * v1;
 					int a4 = u1 * v1;
-					int r = (c1 >> 16 & 0xff) * a1 + (c2 >> 16 & 0xff) * a2 + (c3 >> 16 & 0xff) * a3 + (c4 >> 16 & 0xff) * a4 & 0xff0000;
-					int g = (c1 >> 8 & 0xff) * a1 + (c2 >> 8 & 0xff) * a2 + (c3 >> 8 & 0xff) * a3 + (c4 >> 8 & 0xff) * a4 >> 8 & 0xff00;
+					int r = (c1 >> 16 & 0xff) * a1 + (c2 >> 16 & 0xff) * a2 + (c3 >> 16 & 0xff) * a3
+							+ (c4 >> 16 & 0xff) * a4 & 0xff0000;
+					int g = (c1 >> 8 & 0xff) * a1 + (c2 >> 8 & 0xff) * a2 + (c3 >> 8 & 0xff) * a3
+							+ (c4 >> 8 & 0xff) * a4 >> 8 & 0xff00;
 					int b = (c1 & 0xff) * a1 + (c2 & 0xff) * a2 + (c3 & 0xff) * a3 + (c4 & 0xff) * a4 >> 16;
 					pixels[j4++] = r | g | b;
 					k4 += i3;
@@ -963,7 +969,8 @@ public final class Sprite extends Raster {
 		}
 	}
 
-	private void renderARGBPixels(int spriteWidth, int spriteHeight, int spritePixels[], int renderAreaPixels[], int pixel, int alphaValue, int i, int l, int j1) {
+	private void renderARGBPixels(int spriteWidth, int spriteHeight, int spritePixels[], int renderAreaPixels[],
+			int pixel, int alphaValue, int i, int l, int j1) {
 		int pixelColor;
 		int alphaLevel;
 		int alpha = alphaValue;
@@ -981,7 +988,9 @@ public final class Sprite extends Raster {
 				pixelColor = spritePixels[i++];
 				if (pixelColor != 0) {
 					int pixelValue = renderAreaPixels[pixel];
-					renderAreaPixels[pixel++] = ((pixelColor & 0xff00ff) * alphaValue + (pixelValue & 0xff00ff) * alphaLevel & 0xff00ff00) + ((pixelColor & 0xff00) * alphaValue + (pixelValue & 0xff00) * alphaLevel & 0xff0000) >> 8;
+					renderAreaPixels[pixel++] = ((pixelColor & 0xff00ff) * alphaValue
+							+ (pixelValue & 0xff00ff) * alphaLevel & 0xff00ff00)
+							+ ((pixelColor & 0xff00) * alphaValue + (pixelValue & 0xff00) * alphaLevel & 0xff0000) >> 8;
 				} else {
 					pixel++;
 				}

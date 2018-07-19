@@ -57,23 +57,24 @@ public class Raster extends Cacheable {
 		centerY = bottomX / 2;
 		anInt1387 = bottomY / 2;
 	}
-	
-	
-		public static void draw_arc(int x, int y, int width, int height, int stroke, int start, int sweep, int color, int alpha, int closure, boolean fill) {
+
+	public static void draw_arc(int x, int y, int width, int height, int stroke, int start, int sweep, int color,
+			int alpha, int closure, boolean fill) {
 		Graphics2D graphics = Sprite.createGraphics(Raster.pixels, Raster.width, Raster.height);
-		graphics.setColor(new Color((color >> 16 & 0xff), (color >> 8 & 0xff), (color & 0xff), ((alpha >= 256 || alpha < 0) ? 255 : alpha)));
-		
+		graphics.setColor(new Color((color >> 16 & 0xff), (color >> 8 & 0xff), (color & 0xff),
+				((alpha >= 256 || alpha < 0) ? 255 : alpha)));
+
 		RenderingHints render = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		render.put(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);//fix the 'jittering'
+		render.put(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);// fix the 'jittering'
 
 		graphics.setRenderingHints(render);
 		graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
-		if(!fill) {
+		if (!fill) {
 			graphics.setStroke(new BasicStroke((stroke < 1 ? 1 : stroke)));
 		}
-		//Closure types - OPEN(0), CHORD(1), PIE(2)
+		// Closure types - OPEN(0), CHORD(1), PIE(2)
 		Arc2D.Double arc = new Arc2D.Double(x + stroke, y + stroke, width, height, start, sweep, closure);
-		if(fill) {
+		if (fill) {
 			graphics.fill(arc);
 		} else {
 			graphics.draw(arc);
@@ -177,7 +178,8 @@ public class Raster extends Cacheable {
 		}
 	}
 
-	public static void drawAlphaGradient(int x, int y, int gradientWidth, int gradientHeight, int startColor, int endColor, int alpha) {
+	public static void drawAlphaGradient(int x, int y, int gradientWidth, int gradientHeight, int startColor,
+			int endColor, int alpha) {
 		int k1 = 0;
 		int l1 = 0x10000 / gradientHeight;
 		if (x < topX) {
@@ -199,11 +201,14 @@ public class Raster extends Cacheable {
 		for (int k2 = -gradientHeight; k2 < 0; k2++) {
 			int gradient1 = 0x10000 - k1 >> 8;
 			int gradient2 = k1 >> 8;
-			int gradient_color = ((startColor & 0xff00ff) * gradient1 + (endColor & 0xff00ff) * gradient2 & 0xff00ff00) + ((startColor & 0xff00) * gradient1 + (endColor & 0xff00) * gradient2 & 0xff0000) >>> 8;
-			int color = ((gradient_color & 0xff00ff) * alpha >> 8 & 0xff00ff) + ((gradient_color & 0xff00) * alpha >> 8 & 0xff00);
+			int gradient_color = ((startColor & 0xff00ff) * gradient1 + (endColor & 0xff00ff) * gradient2 & 0xff00ff00)
+					+ ((startColor & 0xff00) * gradient1 + (endColor & 0xff00) * gradient2 & 0xff0000) >>> 8;
+			int color = ((gradient_color & 0xff00ff) * alpha >> 8 & 0xff00ff)
+					+ ((gradient_color & 0xff00) * alpha >> 8 & 0xff00);
 			for (int k3 = -gradientWidth; k3 < 0; k3++) {
 				int colored_pixel = pixels[total_pixels];
-				colored_pixel = ((colored_pixel & 0xff00ff) * result_alpha >> 8 & 0xff00ff) + ((colored_pixel & 0xff00) * result_alpha >> 8 & 0xff00);
+				colored_pixel = ((colored_pixel & 0xff00ff) * result_alpha >> 8 & 0xff00ff)
+						+ ((colored_pixel & 0xff00) * result_alpha >> 8 & 0xff00);
 				pixels[total_pixels++] = color + colored_pixel;
 			}
 			total_pixels += i2;
@@ -332,7 +337,8 @@ public class Raster extends Cacheable {
 				int otherRed = (pixels[pixelIndex] >> 16 & 0xff) * transparency;
 				int otherGreen = (pixels[pixelIndex] >> 8 & 0xff) * transparency;
 				int otherBlue = (pixels[pixelIndex] & 0xff) * transparency;
-				int transparentColour = ((red + otherRed >> 8) << 16) + ((green + otherGreen >> 8) << 8) + (blue + otherBlue >> 8);
+				int transparentColour = ((red + otherRed >> 8) << 16) + ((green + otherGreen >> 8) << 8)
+						+ (blue + otherBlue >> 8);
 				pixels[pixelIndex++] = transparentColour;
 			}
 			pixelIndex += leftOver;
@@ -433,7 +439,8 @@ public class Raster extends Cacheable {
 		}
 	}
 
-	public static void drawRoundedRectangle(int x, int y, int width, int height, int color, int alpha, boolean filled, boolean shadowed) {
+	public static void drawRoundedRectangle(int x, int y, int width, int height, int color, int alpha, boolean filled,
+			boolean shadowed) {
 		if (shadowed) {
 			drawRoundedRectangle(x + 1, y + 1, width, height, 0, alpha, filled, false);
 		}
@@ -658,11 +665,13 @@ public class Raster extends Cacheable {
 		for (int yi = -h; yi < 0; yi++) {
 			int amount = 0x10000 - k1 >> 8;
 			int inverse = k1 >> 8;
-			int color = ((firstColor & 0xff00ff) * amount + (secondColor & 0xff00ff) * inverse & 0xff00ff00) + ((firstColor & 0xff00) * amount + (secondColor & 0xff00) * inverse & 0xff0000) >>> 8;
+			int color = ((firstColor & 0xff00ff) * amount + (secondColor & 0xff00ff) * inverse & 0xff00ff00)
+					+ ((firstColor & 0xff00) * amount + (secondColor & 0xff00) * inverse & 0xff0000) >>> 8;
 			int alpha = (((firstColor >> 24) & 0xff) * amount + ((secondColor >> 24) & 0xff) * inverse) >>> 8;
 			for (int xi = -w; xi < 0; xi++) {
 				int pixel = pixels[offset];
-				pixels[offset++] = ((pixel & 0xff00ff) * (256 - alpha) + (color & 0xff00ff) * alpha & 0xff00ff00) + ((pixel & 0xff00) * (256 - alpha) + (color & 0xff00) * alpha & 0xff0000) >>> 8;
+				pixels[offset++] = ((pixel & 0xff00ff) * (256 - alpha) + (color & 0xff00ff) * alpha & 0xff00ff00)
+						+ ((pixel & 0xff00) * (256 - alpha) + (color & 0xff00) * alpha & 0xff0000) >>> 8;
 			}
 			offset += gap;
 			k1 += l1;
@@ -702,11 +711,11 @@ public class Raster extends Cacheable {
 				int dest_red = (pixels[pixel_offset] >> 16 & 0xff) * dest_intensity;
 				int dest_green = (pixels[pixel_offset] >> 8 & 0xff) * dest_intensity;
 				int dest_blue = (pixels[pixel_offset] & 0xff) * dest_intensity;
-				int result_rgb = ((src_red + dest_red >> 8) << 16) + ((src_green + dest_green >> 8) << 8) + (src_blue + dest_blue >> 8);
+				int result_rgb = ((src_red + dest_red >> 8) << 16) + ((src_green + dest_green >> 8) << 8)
+						+ (src_blue + dest_blue >> 8);
 				pixels[pixel_offset++] = result_rgb;
 			}
 		}
 	}
-
 
 }

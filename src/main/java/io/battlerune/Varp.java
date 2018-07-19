@@ -30,7 +30,7 @@ public final class Varp {
 	}
 
 	private void decode(Buffer stream, int i) {
-		while(true) {
+		while (true) {
 			int opcode = stream.readUByte();
 			if (opcode == 0) {
 				return;

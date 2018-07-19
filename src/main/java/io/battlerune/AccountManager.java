@@ -50,7 +50,8 @@ public class AccountManager {
 
 		account.uses++;
 		ACCOUNTS.remove(accountIndex);
-		ACCOUNTS.add(accountIndex, new AccountData(username, password, account.created, account.avatar, rank, account.uses));
+		ACCOUNTS.add(accountIndex,
+				new AccountData(username, password, account.created, account.avatar, rank, account.uses));
 		saveAccount();
 	}
 
@@ -73,7 +74,8 @@ public class AccountManager {
 		}
 
 		ACCOUNTS.remove(accountIndex);
-		ACCOUNTS.add(accountIndex, new AccountData(username, lastAccount.password, lastAccount.created, avatar, lastAccount.rank, lastAccount.uses));
+		ACCOUNTS.add(accountIndex, new AccountData(username, lastAccount.password, lastAccount.created, avatar,
+				lastAccount.rank, lastAccount.uses));
 		saveAccount();
 	}
 

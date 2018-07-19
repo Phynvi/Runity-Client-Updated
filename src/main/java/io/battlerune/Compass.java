@@ -1,14 +1,10 @@
 package io.battlerune;
 
 public enum Compass {
-	NORTH(0, 1, new int[]{1, 0, 31, 30}),
-	NORTHWEST(-1, 1, new int[]{5, 4, 3, 2}),
-	WEST(-2, 0, new int[]{9, 8, 7, 6}),
-	SOUTHWEST(-1, -1, new int[]{13, 12, 11, 10}),
-	SOUTH(0, -1, new int[]{17, 16, 15, 14}),
-	SOUTHEAST(1, -1, new int[]{21, 20, 19, 18}),
-	EAST(2, 0, new int[]{25, 24, 23, 22}),
-	NORTHEAST(1, 1, new int[]{29, 28, 27, 26});
+	NORTH(0, 1, new int[] { 1, 0, 31, 30 }), NORTHWEST(-1, 1, new int[] { 5, 4, 3, 2 }),
+	WEST(-2, 0, new int[] { 9, 8, 7, 6 }), SOUTHWEST(-1, -1, new int[] { 13, 12, 11, 10 }),
+	SOUTH(0, -1, new int[] { 17, 16, 15, 14 }), SOUTHEAST(1, -1, new int[] { 21, 20, 19, 18 }),
+	EAST(2, 0, new int[] { 25, 24, 23, 22 }), NORTHEAST(1, 1, new int[] { 29, 28, 27, 26 });
 
 	private final int x;
 	private final int y;
@@ -29,7 +25,8 @@ public enum Compass {
 	}
 
 	public Compass opposite() {
-		Compass[][] c = new Compass[][]{{NORTH, SOUTH}, {WEST, EAST}, {NORTHWEST, SOUTHEAST}, {NORTHEAST, SOUTHWEST}};
+		Compass[][] c = new Compass[][] { { NORTH, SOUTH }, { WEST, EAST }, { NORTHWEST, SOUTHEAST },
+				{ NORTHEAST, SOUTHWEST } };
 		for (Compass[] _c : c) {
 			if (this == _c[0]) {
 				return _c[1];

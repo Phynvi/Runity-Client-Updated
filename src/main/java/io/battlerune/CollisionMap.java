@@ -469,23 +469,28 @@ final class CollisionMap {
 		return false;
 	}
 
-	boolean withinDistanceTarget(int startX, int startY, int targetX, int targetY, int targetWidth, int targetLength, int face) {
+	boolean withinDistanceTarget(int startX, int startY, int targetX, int targetY, int targetWidth, int targetLength,
+			int face) {
 		int targetTopX = targetX + targetWidth - 1;
 		int targetTopY = targetY + targetLength - 1;
 
 		if (startX >= targetX && startX <= targetTopX && startY >= targetY && startY <= targetTopY)
 			return true;
 
-		if (startX == targetX - 1 && startY >= targetY && startY <= targetTopY && (adjacencies[startX][startY] & WALL_EAST) == 0 && (face & 8) == 0)
+		if (startX == targetX - 1 && startY >= targetY && startY <= targetTopY
+				&& (adjacencies[startX][startY] & WALL_EAST) == 0 && (face & 8) == 0)
 			return true;
 
-		if (startX == targetTopX + 1 && startY >= targetY && startY <= targetTopY && (adjacencies[startX][startY] & WALL_WEST) == 0 && (face & 2) == 0)
+		if (startX == targetTopX + 1 && startY >= targetY && startY <= targetTopY
+				&& (adjacencies[startX][startY] & WALL_WEST) == 0 && (face & 2) == 0)
 			return true;
 
-		if (startY == targetY - 1 && startX >= targetX && startX <= targetTopX && (adjacencies[startX][startY] & WALL_NORTH) == 0 && (face & 4) == 0)
+		if (startY == targetY - 1 && startX >= targetX && startX <= targetTopX
+				&& (adjacencies[startX][startY] & WALL_NORTH) == 0 && (face & 4) == 0)
 			return true;
 
-		if (startY == targetTopY + 1 && startX >= targetX && startX <= targetTopX && (adjacencies[startX][startY] & WALL_SOUTH) == 0 && (face & 1) == 0)
+		if (startY == targetTopY + 1 && startX >= targetX && startX <= targetTopX
+				&& (adjacencies[startX][startY] & WALL_SOUTH) == 0 && (face & 1) == 0)
 			return true;
 
 		return false;

@@ -49,7 +49,8 @@ final class Synthesizer {
 				anIntArray118[j2] = 0;
 				anIntArray119[j2] = (int) ((double) anIntArray108[j2] * d);
 				anIntArray120[j2] = (anIntArray106[j2] << 14) / 100;
-				anIntArray121[j2] = (int) (((double) (aClass29_98.anInt539 - aClass29_98.anInt538) * 32.768000000000001D * Math.pow(1.0057929410678534D, anIntArray107[j2])) / d);
+				anIntArray121[j2] = (int) (((double) (aClass29_98.anInt539 - aClass29_98.anInt538) * 32.768000000000001D
+						* Math.pow(1.0057929410678534D, anIntArray107[j2])) / d);
 				anIntArray122[j2] = (int) (((double) aClass29_98.anInt538 * 32.768000000000001D) / d);
 			}
 
@@ -72,7 +73,8 @@ final class Synthesizer {
 				if (anIntArray106[l5] != 0) {
 					int l6 = k2 + anIntArray119[l5];
 					if (l6 < i) {
-						anIntArray115[l6] += method168(j4 * anIntArray120[l5] >> 15, anIntArray118[l5], aClass29_98.anInt540);
+						anIntArray115[l6] += method168(j4 * anIntArray120[l5] >> 15, anIntArray118[l5],
+								aClass29_98.anInt540);
 						anIntArray118[l5] += (l2 * anIntArray121[l5] >> 16) + anIntArray122[l5];
 					}
 				}
@@ -120,10 +122,12 @@ final class Synthesizer {
 				for (; j7 < l7; j7++) {
 					int j8 = (int) ((long) anIntArray115[j7 + i5] * (long) SoundFilter.anInt672 >> 16);
 					for (int k8 = 0; k8 < i5; k8++)
-						j8 += (int) ((long) anIntArray115[(j7 + i5) - 1 - k8] * (long) SoundFilter.anIntArrayArray670[0][k8] >> 16);
+						j8 += (int) ((long) anIntArray115[(j7 + i5) - 1 - k8]
+								* (long) SoundFilter.anIntArrayArray670[0][k8] >> 16);
 
 					for (int j9 = 0; j9 < j7; j9++)
-						j8 -= (int) ((long) anIntArray115[j7 - 1 - j9] * (long) SoundFilter.anIntArrayArray670[1][j9] >> 16);
+						j8 -= (int) ((long) anIntArray115[j7 - 1 - j9]
+								* (long) SoundFilter.anIntArrayArray670[1][j9] >> 16);
 
 					anIntArray115[j7] = j8;
 					k3 = aClass29_112.method328(i + 1);
@@ -137,10 +141,12 @@ final class Synthesizer {
 					for (; j7 < l7; j7++) {
 						int l8 = (int) ((long) anIntArray115[j7 + i5] * (long) SoundFilter.anInt672 >> 16);
 						for (int k9 = 0; k9 < i5; k9++)
-							l8 += (int) ((long) anIntArray115[(j7 + i5) - 1 - k9] * (long) SoundFilter.anIntArrayArray670[0][k9] >> 16);
+							l8 += (int) ((long) anIntArray115[(j7 + i5) - 1 - k9]
+									* (long) SoundFilter.anIntArrayArray670[0][k9] >> 16);
 
 						for (int i10 = 0; i10 < i6; i10++)
-							l8 -= (int) ((long) anIntArray115[j7 - 1 - i10] * (long) SoundFilter.anIntArrayArray670[1][i10] >> 16);
+							l8 -= (int) ((long) anIntArray115[j7 - 1 - i10]
+									* (long) SoundFilter.anIntArrayArray670[1][i10] >> 16);
 
 						anIntArray115[j7] = l8;
 						k3 = aClass29_112.method328(i + 1);
@@ -155,10 +161,12 @@ final class Synthesizer {
 				for (; j7 < i; j7++) {
 					int i9 = 0;
 					for (int l9 = (j7 + i5) - i; l9 < i5; l9++)
-						i9 += (int) ((long) anIntArray115[(j7 + i5) - 1 - l9] * (long) SoundFilter.anIntArrayArray670[0][l9] >> 16);
+						i9 += (int) ((long) anIntArray115[(j7 + i5) - 1 - l9]
+								* (long) SoundFilter.anIntArrayArray670[0][l9] >> 16);
 
 					for (int j10 = 0; j10 < i6; j10++)
-						i9 -= (int) ((long) anIntArray115[j7 - 1 - j10] * (long) SoundFilter.anIntArrayArray670[1][j10] >> 16);
+						i9 -= (int) ((long) anIntArray115[j7 - 1 - j10]
+								* (long) SoundFilter.anIntArrayArray670[1][j10] >> 16);
 
 					anIntArray115[j7] = i9;
 				}

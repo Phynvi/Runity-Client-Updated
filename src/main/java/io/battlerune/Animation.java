@@ -2,7 +2,6 @@ package io.battlerune;
 
 public final class Animation {
 
-
 	public static void unpackConfig(StreamLoader archive) {
 		Buffer buffer = new Buffer(archive.getDataForName("seq.dat"));
 
@@ -21,11 +20,10 @@ public final class Animation {
 		}
 	}
 
-
 	public int method258(int i) {
 		int j = durations[i];
 		if (j == 0) {
-			Frame class36 = Frame.method531(primaryFrames[i] );
+			Frame class36 = Frame.method531(primaryFrames[i]);
 			if (class36 != null)
 				j = durations[i] = class36.anInt636;
 		}
@@ -35,7 +33,7 @@ public final class Animation {
 	}
 
 	private void decode(Buffer buffer) {
-		while(true) {
+		while (true) {
 			final int opcode = buffer.readUByte();
 
 			if (opcode == 0) {
@@ -72,9 +70,6 @@ public final class Animation {
 //                for (int i = 0; i < frameCount; i++) {
 //                    primaryFrames[i] =+ buffer.readUShort() << 16;
 //                }
-
-
-
 
 			} else if (opcode == 2) {
 				loopOffset = buffer.readUShort();
@@ -141,7 +136,7 @@ public final class Animation {
 	}
 
 	private Animation() {
-		animatingPrecedence = -1; //Stops character from moving
+		animatingPrecedence = -1; // Stops character from moving
 		walkingPrecedence = -1;
 		replayMode = 1;
 	}
@@ -164,7 +159,5 @@ public final class Animation {
 	public int replayMode;
 	public int[] delay;
 	public int[] anIntArray354;
-
-
 
 }

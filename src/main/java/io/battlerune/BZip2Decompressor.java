@@ -35,8 +35,7 @@ final class BZip2Decompressor {
 		int j1 = class32.anInt570;
 		int k1 = j1;
 		int l1 = class32.anInt601 + 1;
-		label0:
-		do {
+		label0: do {
 			if (i > 0) {
 				do {
 					if (j1 == 0)
@@ -242,7 +241,8 @@ final class BZip2Decompressor {
 						byte8 = class32.aByteArrayArray596[l3][l1];
 				}
 
-				method232(class32.anIntArrayArray597[l3], class32.anIntArrayArray598[l3], class32.anIntArrayArray599[l3], class32.aByteArrayArray596[l3], byte8, i, i4);
+				method232(class32.anIntArrayArray597[l3], class32.anIntArrayArray598[l3],
+						class32.anIntArrayArray599[l3], class32.aByteArrayArray596[l3], byte8, i, i4);
 				class32.anIntArray600[l3] = byte8;
 			}
 
@@ -281,7 +281,7 @@ final class BZip2Decompressor {
 				byte9 = method229(class32);
 			}
 
-			for (int k5 = ai2[l7 - ai1[i7]]; k5 != l4; )
+			for (int k5 = ai2[l7 - ai1[i7]]; k5 != l4;)
 				if (k5 == 0 || k5 == 1) {
 					int j6 = -1;
 					int k6 = 1;
@@ -348,7 +348,8 @@ final class BZip2Decompressor {
 						class32.anIntArray593[l10]++;
 						for (; l10 > 0; l10--) {
 							class32.anIntArray593[l10]--;
-							class32.aByteArray592[class32.anIntArray593[l10]] = class32.aByteArray592[(class32.anIntArray593[l10 - 1] + 16) - 1];
+							class32.aByteArray592[class32.anIntArray593[l10]] = class32.aByteArray592[(class32.anIntArray593[l10
+									- 1] + 16) - 1];
 						}
 
 						class32.anIntArray593[0]--;

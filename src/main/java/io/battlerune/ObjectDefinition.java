@@ -57,7 +57,7 @@ public final class ObjectDefinition {
 			if (cache[j].type == i)
 				return cache[j];
 		cacheIndex = (cacheIndex + 1) % 20;
-	    /* Seers village fix */
+		/* Seers village fix */
 		if (i == 25913)
 			i = 15552;
 		if (i == 25916 || i == 25926)
@@ -72,181 +72,179 @@ public final class ObjectDefinition {
 		/* Custom/Modified Objects */
 		switch (i) {
 
-			case 10738:/* Stone of rejuvenation */
-				def.name = "Stone of teleportation";
-				def.actions = new String[5];
-				def.actions[0] = "Touch";
-				break;
-			case 3029:/* Stone of rejuvenation */
-				def.name = "Personal Store Management";
-				def.actions = new String[5];
-				def.actions[0] = "Open";
-				break;
+		case 10738:/* Stone of rejuvenation */
+			def.name = "Stone of teleportation";
+			def.actions = new String[5];
+			def.actions[0] = "Touch";
+			break;
+		case 3029:/* Stone of rejuvenation */
+			def.name = "Personal Store Management";
+			def.actions = new String[5];
+			def.actions[0] = "Open";
+			break;
 
+		case 10081: /* Dead Ore */
+		case 2194: /* Dead Ore */
+		case 26756:
+			def.actions = new String[5];
+			break;
 
+		case 5249:
+			def.actions = new String[5];
+			def.actions[0] = "Add-logs";
+			break;
 
-			case 10081: /* Dead Ore */
-			case 2194: /* Dead Ore */
-			case 26756:
-				def.actions = new String[5];
-				break;
+		case 27215:
+			def.actions = new String[5];
+			def.actions[0] = "Attack";
+			break;
 
-			case 5249:
-				def.actions = new String[5];
-				def.actions[0] = "Add-logs";
-				break;
+		case 3994:
+			def.actions = new String[5];
+			def.actions[0] = "Smelt";
+			break;
 
-			case 27215:
-				def.actions = new String[5];
-				def.actions[0] = "Attack";
-				break;
+		case 29776:
+			def.actions = new String[5];
+			def.actions[0] = "View";
+			def.name = "PvP Leaderboard";
+			break;
 
-			case 3994:
-				def.actions = new String[5];
-				def.actions[0] = "Smelt";
-				break;
+		case 24099:
+			def.actions = new String[5];
+			def.actions[0] = "View";
+			def.name = "Bot Loot";
+			break;
 
-			case 29776:
-				def.actions = new String[5];
-				def.actions[0] = "View";
-				def.name = "PvP Leaderboard";
-				break;
+		case 14826:
+		case 14827:
+		case 14828:
+		case 14829:
+		case 14830:
+		case 14831:
+			def.actions = new String[5];
+			def.actions[0] = "Activate";
+			def.actions[1] = "Set Destination";
+			break;
 
-			case 24099:
-				def.actions = new String[5];
-				def.actions[0] = "View";
-				def.name = "Bot Loot";
-				break;
+		case 23885:
+			def.actions = new String[5];
+			def.actions[0] = "Enter";
+			def.name = "Arena stairs";
+			break;
 
-			case 14826:
-			case 14827:
-			case 14828:
-			case 14829:
-			case 14830:
-			case 14831:
-				def.actions = new String[5];
-				def.actions[0] = "Activate";
-				def.actions[1] = "Set Destination";
-				break;
+		case 2191:
+			def.name = "Crystal Chest";
+			break;
 
-			case 23885:
-				def.actions = new String[5];
-				def.actions[0] = "Enter";
-				def.name = "Arena stairs";
-				break;
+		case 11338:
+			def.actions = new String[5];
+			def.actions[0] = "Access";
+			def.name = "Clan Bank";
+			def.description = "The bank of the clan.".getBytes();
+			break;
 
-			case 2191:
-				def.name = "Crystal Chest";
-				break;
-
-			case 11338:
-				def.actions = new String[5];
-				def.actions[0] = "Access";
-				def.name = "Clan Bank";
-				def.description = "The bank of the clan.".getBytes();
-				break;
-
-			case 884:
-				def.actions = new String[5];
-				def.actions[0] = "Activate";
-				def.actions[1] = "Check";
-				def.name = "Well of Goodwill";
-				def.description = "A well that is filled with will of the good.".getBytes();
-				//                def.modelIds = new int[]{10460};
-				def.solid = true;
+		case 884:
+			def.actions = new String[5];
+			def.actions[0] = "Activate";
+			def.actions[1] = "Check";
+			def.name = "Well of Goodwill";
+			def.description = "A well that is filled with will of the good.".getBytes();
+			// def.modelIds = new int[]{10460};
+			def.solid = true;
 //				def.aBoolean779 = false;
-				break;
+			break;
 
-			case 16254:
-				def.actions = new String[5];
-				def.actions[0] = "Open";
-				def.name = "Teleportation Menu";
-				def.description = "Teleport around the world in ease!".getBytes();
-				break;
+		case 16254:
+			def.actions = new String[5];
+			def.actions[0] = "Open";
+			def.name = "Teleportation Menu";
+			def.description = "Teleport around the world in ease!".getBytes();
+			break;
 
-			case 11546:
-				def.actions = new String[5];
-				def.actions[0] = "Access";
-				def.name = "Management machine";
-				def.description = "A machine that manages players.".getBytes();
-				break;
+		case 11546:
+			def.actions = new String[5];
+			def.actions[0] = "Access";
+			def.name = "Management machine";
+			def.description = "A machine that manages players.".getBytes();
+			break;
 
-			case 26043:
-				def.name = "Marketplace";
-				def.description = "Buy/sell items using the Player owned shops.".getBytes();
-				def.actions = new String[]{"Access", null, null, null, null};
-				////                def.modelIds = new int[]{55555};
-				def.solid = true;
+		case 26043:
+			def.name = "Marketplace";
+			def.description = "Buy/sell items using the Player owned shops.".getBytes();
+			def.actions = new String[] { "Access", null, null, null, null };
+			//// def.modelIds = new int[]{55555};
+			def.solid = true;
 //				def.aBoolean779 = false;
-				break;
+			break;
 
-			case 10090:
-				def.name = "Marketplace Information";
-				def.description = "Information regarding the marketplace.".getBytes();
-				def.actions = new String[]{"Read", null, null, null, null};
-				//                def.modelIds = new int[]{55557};
-				def.solid = true;
+		case 10090:
+			def.name = "Marketplace Information";
+			def.description = "Information regarding the marketplace.".getBytes();
+			def.actions = new String[] { "Read", null, null, null, null };
+			// def.modelIds = new int[]{55557};
+			def.solid = true;
 //				def.aBoolean779 = false;
-				break;
+			break;
 
-			case 26782:
-				def.actions = new String[5];
-				def.actions[0] = "Recharge";
-				break;
+		case 26782:
+			def.actions = new String[5];
+			def.actions[0] = "Recharge";
+			break;
 
-			case 29150:
-				def.actions = new String[5];
-				def.actions[0] = "Pray";
-				break;
+		case 29150:
+			def.actions = new String[5];
+			def.actions[0] = "Pray";
+			break;
 
-			case 29241:
-				def.actions = new String[5];
-				def.actions[0] = "Drink";
-				break;
+		case 29241:
+			def.actions = new String[5];
+			def.actions[0] = "Drink";
+			break;
 
-			/* Donator deposit box */
-			case 26254:
-				def.actions = new String[5];
-				def.actions[0] = "Deposit";
-				def.name = "Donator box";
-				def.description = "A donator-only feature which allows members to quick deposit items.".getBytes();
-				break;
+		/* Donator deposit box */
+		case 26254:
+			def.actions = new String[5];
+			def.actions[0] = "Deposit";
+			def.name = "Donator box";
+			def.description = "A donator-only feature which allows members to quick deposit items.".getBytes();
+			break;
 
-			/* Grand exchange desk */
-			case 26044:
-				def.actions = new String[5];
-				def.actions[0] = "Open";
-				def.actions[1] = "Manage";
-				def.name = "Marketplace";
-				def.description = "The marketplace desk.".getBytes();
-				break;
+		/* Grand exchange desk */
+		case 26044:
+			def.actions = new String[5];
+			def.actions[0] = "Open";
+			def.actions[1] = "Manage";
+			def.name = "Marketplace";
+			def.description = "The marketplace desk.".getBytes();
+			break;
 
-			/* Wilderness Sign */
-			case 14503:
-				def.actions = new String[5];
-				def.actions[0] = "Read";
-				break;
+		/* Wilderness Sign */
+		case 14503:
+			def.actions = new String[5];
+			def.actions[0] = "Read";
+			break;
 
-			/* Magic Book Statue */
-			case 576:
-				def.name = "Magic book";
-				def.actions = new String[5];
-				def.actions[0] = "Change";
-				break;
+		/* Magic Book Statue */
+		case 576:
+			def.name = "Magic book";
+			def.actions = new String[5];
+			def.actions[0] = "Change";
+			break;
 
-			/* Prayer Statue */
-			case 575:
-				def.name = "Prayer";
-				def.actions = new String[5];
-				def.actions[0] = "Recharge";
-				break;
+		/* Prayer Statue */
+		case 575:
+			def.name = "Prayer";
+			def.actions = new String[5];
+			def.actions[0] = "Recharge";
+			break;
 
-			/* Fountain of Charges */
-			case 12089:
-				def.name = "Fountain of Charges";
-				def.actions = new String[5];
-				def.actions[0] = "Inspect";
-				break;
+		/* Fountain of Charges */
+		case 12089:
+			def.name = "Fountain of Charges";
+			def.actions = new String[5];
+			def.actions[0] = "Inspect";
+			break;
 		}
 		return def;
 	}
@@ -364,7 +362,7 @@ public final class ObjectDefinition {
 			int k = varBit.lsb;
 			int l = varBit.msb;
 			int i1 = Client.BIT_MASKS[l - k];
-			//Debug
+			// Debug
 			System.out.println("j:" + j + ", k:" + k);
 			i = clientInstance.settings[j] >> k & i1;
 		} else if (varp != -1)
@@ -372,15 +370,14 @@ public final class ObjectDefinition {
 
 		int var;
 
-		/*if (i >= 0 && i < morphisms.length) {
-			var = morphisms[i];
-		} else {
-			var = morphisms[morphisms.length - 1];
-		}
+		/*
+		 * if (i >= 0 && i < morphisms.length) { var = morphisms[i]; } else { var =
+		 * morphisms[morphisms.length - 1]; }
+		 * 
+		 * return var != -1 ? lookup(var) : null;
+		 */
 
-		return var != -1 ? lookup(var) : null;*/
-
-		if(i < 0 || i >= morphisms.length || morphisms[i] == -1) {
+		if (i < 0 || i >= morphisms.length || morphisms[i] == -1) {
 			return null;
 		} else {
 			return lookup(morphisms[i]);
@@ -454,7 +451,8 @@ public final class ObjectDefinition {
 		flag = scaleX != 128 || scaleY != 128 || scaleZ != 128;
 		boolean flag2;
 		flag2 = translateX != 0 || translateY != 0 || translateZ != 0;
-		Model model_3 = new Model(modifiedModelColors == null, Frame.method532(k), l == 0 && k == -1 && !flag && !flag2, modifiedTexture == null, model);
+		Model model_3 = new Model(modifiedModelColors == null, Frame.method532(k), l == 0 && k == -1 && !flag && !flag2,
+				modifiedTexture == null, model);
 		if (k != -1) {
 			model_3.skin();
 			model_3.method470(k);
@@ -490,7 +488,7 @@ public final class ObjectDefinition {
 	}
 
 	public void decode(Buffer buffer) {
-		while(true) {
+		while (true) {
 			int opcode = buffer.readUByte();
 
 			if (opcode == 0) {
@@ -641,12 +639,12 @@ public final class ObjectDefinition {
 				int value = -1;
 
 				if (opcode == 92) {
-                    value = buffer.readUShort();
+					value = buffer.readUShort();
 
-                    if (value == 0xFFFF) {
-                        value = -1;
-                    }
-                }
+					if (value == 0xFFFF) {
+						value = -1;
+					}
+				}
 
 				int len = buffer.readUByte();
 
@@ -659,25 +657,25 @@ public final class ObjectDefinition {
 				}
 				morphisms[len + 1] = value;
 			} else if (opcode == 249) {
-			int length = buffer.readUByte();
+				int length = buffer.readUByte();
 
-			params = new HashMap<>(length);
-			for (int i1 = 0; i1 < length; i1++) {
-				boolean isString = (buffer.readUShort()) == 1;
-				int key = buffer.readInt();
-				Object value;
+				params = new HashMap<>(length);
+				for (int i1 = 0; i1 < length; i1++) {
+					boolean isString = (buffer.readUShort()) == 1;
+					int key = buffer.readInt();
+					Object value;
 
-				if (isString) {
-					value = buffer.readString();
+					if (isString) {
+						value = buffer.readString();
+					}
+
+					else {
+						value = buffer.readInt();
+					}
+
+					params.put(key, value);
 				}
-
-				else {
-					value = buffer.readInt();
-				}
-
-				params.put(key, value);
-			}
-		} else {
+			} else {
 				System.out.println("invalid opcode: " + opcode);
 			}
 

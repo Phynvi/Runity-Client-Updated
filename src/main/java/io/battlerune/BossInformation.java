@@ -1,8 +1,7 @@
 package io.battlerune;
 
-
 public enum BossInformation {
-	
+
 	KING_BLACK_DRAGON("King Black Dragon", 239, 276, 420, 25, 2700, 46, -12, BossDrops.KBD_DROPS, 19),
 	GIANT_MOLE("Giant Mole", 6499, 230, 350, 20, 2100, 52, -20, BossDrops.MOLE_DROPS, 16),
 	LAVA_DRAGONS("Lava Dragons", 6593, 252, 230, 30, 2600, 52, -20, BossDrops.LAVA_DRAGON_DROPS, 5),
