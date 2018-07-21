@@ -3,6 +3,30 @@ package io.battlerune;
 import java.util.logging.Logger;
 
 public final class ItemDefinition {
+	
+	
+	  public static void defaultConfig(ItemDefinition itemDef, int groundModel, int maleModel, String name) {
+		    defaultConfig(itemDef, groundModel, maleModel, maleModel, name);
+		  }
+		  
+		  public static void defaultConfig(ItemDefinition itemDef, int groundModel, int maleModel, int femaleModel, String name) {
+			  itemDef.modelID = groundModel;
+			  itemDef.maleWield = maleModel;
+			  itemDef.femaleWield = femaleModel;
+			  itemDef.name = name;
+			  itemDef.description = ("It's an " + itemDef.name);
+		    
+
+			  itemDef.modelZoom = 1500;
+			  itemDef.modelOffset1 = 0;
+			  itemDef.modelOffset2 = 0;
+			  itemDef.modelRotationY = 900;
+			  itemDef.modelRotationX = 1200;
+			  itemDef.groundActions = new String[5];
+		    itemDef.groundActions[2] = "Take";
+		    
+		    itemDef.stackable = false;
+		  }
 
 	/**
 	 * The single logger for this class.
@@ -237,11 +261,11 @@ public final class ItemDefinition {
 			// Model.printModelColours(model);
 			// System.out.println("Lava Scale-------------------------");
 			break;
-		/*
-		 * case 12371: //System.out.println("Lava mask-------------------------");
-		 * model.setTexture(38119, 40); //Model.printModelColours(model);
-		 * //System.out.println("Lava mask-------------------------"); break;
-		 */
+			/*
+			 * case 12371: //System.out.println("Lava mask-------------------------");
+			 * model.setTexture(38119, 40); //Model.printModelColours(model);
+			 * //System.out.println("Lava mask-------------------------"); break;
+			 */
 		case 13188:
 			// System.out.println("Lava mask-------------------------");
 			model.setTexture(40);
@@ -270,9 +294,187 @@ public final class ItemDefinition {
 		switch (i) {
 
 		/** START OF CUSTOMS **/
+		
+		   case 13738: //47109
+		        defaultConfig(itemDef, 47109, 47110, 47110, "Lava virtus mask");
+				itemDef.groundActions = new String[5];
+				itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[4] = "Drop";
+				itemDef.modelZoom = 964;
+		        itemDef.modelRotationY = 498;
+		        itemDef.modelRotationX = 1150;
+		        itemDef.modelOffset1 = -1;
+		        itemDef.modelOffset2 = -1;
+		        break;
+		    case 13739: 
+		        defaultConfig(itemDef, 47111, 47112, 47112, "@red@Lava scythe");
+				itemDef.groundActions = new String[5];
+				itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[4] = "Drop";
+				itemDef.description = "WOW! Its on fire!";
+		        itemDef.modelOffset1 = 0;
+		        itemDef.modelOffset2 = 0;
+		        break;
+		    case 13740: 
+		    	itemDef.name = "Lava Santa";
+		    	itemDef.modelID = 47113;
+				itemDef.groundActions = new String[5];
+				itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[4] = "Drop";
+				itemDef.modelID = 2537;
+				itemDef.modelZoom = 540;
+				itemDef.modelRotationY = 72;
+				itemDef.modelRotationX = 136;
+				itemDef.modelOffset1 = 0;
+				itemDef.modelOffset2 = -3;
+				itemDef.anInt167 = 128;
+				itemDef.anInt192 = 128;
+				itemDef.anInt191 = 128;
+				itemDef.value = 160;
+				itemDef.maleWield = 47114;
+				itemDef.femaleWield = 47114;
+		        break;
+		    case 13741: 
+		  defaultConfig(itemDef, 47115, 47116, 47116, "Lava Helm");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.description = "WOW! Its a Lava helm!";
+		     itemDef.modelZoom = 1100;
+		        itemDef.modelOffset1 = 0;
+		        itemDef.modelOffset2 = 0;
+		        break;//upto here.
+		    case 13742: 
+		  defaultConfig(itemDef, 47117, 47118, 47118, "Lava Platebody");
+			itemDef.description = "A Powerful Item";
+			itemDef.modelZoom = 1506;
+			itemDef.modelRotationY = 473;
+			itemDef.modelRotationX = 2042;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+		        break;
+		        
+		    case 13743: 
+		        defaultConfig(itemDef, 47119, 47120, 47120, "@or1@Lava pernix cowl");
+				itemDef.groundActions = new String[5];
+				itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[4] = "Drop";
+				itemDef.description = "It's a Lava pernix cowl";
+		        itemDef.modelZoom = 1506;
+		        itemDef.modelRotationY = 473;
+		        itemDef.modelRotationX = 2042;
+		        itemDef.modelOffset1 = 0;
+		        itemDef.modelOffset2 = 0;
+		        break;
+		      case 13744: 
+		        defaultConfig(itemDef, 47121, 47122, 47122, "@or1@Lava pernix body");
+
+				itemDef.groundActions = new String[5];
+				itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[4] = "Drop";
+				itemDef.description = "It's a Lava pernix body";
+		        itemDef.modelZoom = 1506;
+		        itemDef.modelRotationY = 473;
+		        itemDef.modelRotationX = 2042;
+		        itemDef.modelOffset1 = 0;
+		        itemDef.modelOffset2 = 0;
+		        break;
+		      case 13745: 
+		        defaultConfig(itemDef, 47123, 47124, 47124, "@or1@Lava pernix chaps");
+				itemDef.groundActions = new String[5];
+				itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[4] = "Drop";
+				itemDef.description = "It's a Lava pernix chaps";
+		        itemDef.modelZoom = 1506;
+		        itemDef.modelRotationY = 473;
+		        itemDef.modelRotationX = 2042;
+		        itemDef.modelOffset1 = 0;
+		        itemDef.modelOffset2 = 0;
+		        break;
+		      
+		      case 13746: 
+		        defaultConfig(itemDef, 47125, 47126, 47126, "Lava Legs");
+				itemDef.modelZoom = 1550;
+				itemDef.modelRotationY = 344;
+				itemDef.modelRotationX = 186;
+				itemDef.modelOffset1 = 5;
+				itemDef.modelOffset2 = 11;
+				itemDef.groundActions = new String[5];
+				itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[4] = "Drop";
+		        break;
+		      case 13747: 
+		        defaultConfig(itemDef, 47127, 47128, 47128, "Lava virtus top");
+				itemDef.groundActions = new String[5];
+				itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[4] = "Drop";
+				itemDef.modelZoom = 964;
+		        itemDef.modelRotationY = 498;
+		        itemDef.modelRotationX = 1150;
+		        itemDef.modelOffset1 = -1;
+		        itemDef.modelOffset2 = -1;
+		        break;
+		      
+		      case 13748: 
+		        defaultConfig(itemDef, 47129, 47130, 47130, "Lava virtus bottom");
+				itemDef.groundActions = new String[5];
+				itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[4] = "Drop";
+				itemDef.modelZoom = 964;
+		        itemDef.modelRotationY = 498;
+		        itemDef.modelRotationX = 1150;
+		        itemDef.modelOffset1 = -1;
+		        itemDef.modelOffset2 = -1;
+		        break;
+				
+				
+				
+		        
+		      case 13749: 
+		          defaultConfig(itemDef, 47131, 47132, 47132, "Lava bow");
+					itemDef.groundActions = new String[5];
+					itemDef.groundActions[2] = "Take";
+					itemDef.itemActions = new String[5];
+					itemDef.itemActions[1] = "Wear";
+					itemDef.itemActions[4] = "Drop";
+					itemDef.modelRotationY = 498;
+		          itemDef.modelRotationX = 1150;
+		          itemDef.modelOffset1 = -1;
+		          itemDef.modelOffset2 = -1;
+		          break;
+		
+		
+		
+		
+		
 		case 16628:
-			itemDef.modelID = 94391;
-			itemDef.name = "Lava Logs";
+			itemDef.modelID = 47062; //47062
+			itemDef.name = "Lava Logs"; //47062
 			itemDef.description = "Hot...hot...hot!!!!";
 			itemDef.modelZoom = 1180;
 			itemDef.modelRotationY = 120;
@@ -285,68 +487,426 @@ public final class ItemDefinition {
 			itemDef.value = 160;
 			break;
 		case 16629:
-			itemDef.modelID = 91844;
-			itemDef.maleWield = 91845;
-			itemDef.femaleWield = 91845;
-			itemDef.itemActions = new String[] { "Wear", "Drop" };
+			itemDef.modelID = 47063;
+			itemDef.maleWield = 47064;
+			itemDef.femaleWield = 47064;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
 			itemDef.description = "WOW! Its a Lava Helmet!";
 			itemDef.modelZoom = 2100;
 			itemDef.modelOffset1 = 0;
 			itemDef.modelOffset2 = 0;
 			break;
 		case 16630:
-			itemDef.modelID = 91751;
-			itemDef.maleWield = 91752;
-			itemDef.femaleWield = 91752;
-			itemDef.itemActions = new String[] { "Wear", "Drop" };
+			itemDef.modelID = 47065;
+			itemDef.maleWield = 47066;
+			itemDef.femaleWield = 47066;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
 			itemDef.description = "WOW! Its on fire!";
 			itemDef.modelOffset1 = 0;
 			itemDef.modelOffset2 = 0;
 			break;
 
 		case 16631:
-			itemDef.modelID = 91815;
-			itemDef.maleWield = 91816;
-			itemDef.femaleWield = 91816;
-			itemDef.itemActions = new String[] { "Wield", "Drop" };
+			itemDef.modelID = 47067;
+			itemDef.maleWield = 47068;
+			itemDef.femaleWield = 47068;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
 			itemDef.description = " I can feel the lava flowing.!";
 			itemDef.modelOffset1 = -1;
 			itemDef.modelOffset2 = -1;
 			break;
-		/*
-		 * FINISH THIS OFF ADAM case 22206: ItemDef_2.defaultConfig(itemdef, 91819,
-		 * 91820, 91820, "Lava Platebody"); itemDef.itemActions = new String[] { 0,
-		 * "Wear", 0, 0, "Drop" }; itemDef.description = "WOW! Its a Lava Platebody!";
-		 * itemDef.modelZoom = 1100;
-		 * 
-		 * 
-		 * 
-		 * itemDef.modelOffset1 = 0; itemDef.modelOffset2 = 0; break;
-		 * 
-		 * case 22207: ItemDef_2.defaultConfig(itemdef, 91821, 91822, 91822,
-		 * "Lava Legs"); itemDef.itemActions = new String[] { 0, "Wear", 0, 0, "Drop" };
-		 * itemDef.description = "WOW! Its Lava Legs!"; itemDef.modelZoom = 1100;
-		 * 
-		 * 
-		 * 
-		 * itemDef.modelOffset1 = 0; itemDef.modelOffset2 = 0; break;
-		 * 
-		 * case 22212: ItemDef_2.defaultConfig(itemdef, 91831, 91832, "Pink Platebody");
-		 * itemDef.itemActions = new String[] { 0, "Wear", 0, 0, "Drop" };
-		 * itemDef.description = "WOW! Its a Lava Platebody!"; itemDef.modelZoom = 1100;
-		 * 
-		 * 
-		 * 
-		 * itemDef.modelOffset1 = 0; itemDef.modelOffset2 = 0; break;
-		 * 
-		 * case 22213: ItemDef_2.defaultConfig(itemdef, 91833, 91834, "Pinks Legs");
-		 * itemDef.itemActions = new String[] { 0, "Wear", 0, 0, "Drop" };
-		 * itemDef.description = "WOW! Its Lava Legs!"; itemDef.modelZoom = 1100;
-		 * 
-		 * 
-		 * 
-		 * itemDef.modelOffset1 = 0; itemDef.modelOffset2 = 0; break;
-		 */
+
+
+		case 16647: 
+			itemDef.modelID = 47069;
+			itemDef.name = "Elite torva body";
+			itemDef.description = "A Powerful Item";
+			itemDef.modelZoom = 1506;
+			itemDef.modelRotationY = 473;
+			itemDef.modelRotationX = 2042;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.femaleWield = 47070;
+			itemDef.femaleWield = 47070;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+
+		case 16648: 
+			itemDef.modelID = 47071;
+			itemDef.name = "Elite torva helm";
+			itemDef.description = "A Powerful Item";
+
+			itemDef.modelZoom = 676;
+			itemDef.modelRotationY = 0;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 3;
+			itemDef.modelOffset2 = -14;
+			itemDef.femaleWield = 47072;
+			itemDef.femaleWield = 47072;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+
+		case 16649: 
+			itemDef.modelID = 47073;
+			itemDef.name = "Elite torva legs";
+			itemDef.description = "A Powerful item.";
+			itemDef.modelZoom = 1550;
+			itemDef.modelRotationY = 344;
+			itemDef.modelRotationX = 186;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = 11;
+			itemDef.femaleWield = 47074;
+			itemDef.femaleWield = 47074;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.modifiedModelColors = new int[1];
+			itemDef.originalModelColors = new int[1];
+			itemDef.modifiedModelColors[0] = 58383;
+			itemDef.originalModelColors[0] = 10756;
+			break;
+		case 16650: 
+			itemDef.modelID = 47075;
+			itemDef.name = "Elite virtus mask";
+			itemDef.description = "Elite Virtus mask";
+			itemDef.modelZoom = 928;
+			itemDef.modelRotationY = 406;
+			itemDef.modelRotationX = 2041;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = -5;
+			itemDef.femaleWield = 47076;
+			itemDef.femaleWield = 47076;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[2] = "Check-charges";
+			itemDef.itemActions[4] = "Drop";
+			//itemDef.maleHeadModel1 = 62728;
+			//itemDef.femaleHeadModel1 = 62728;
+			break;
+		case 16651: 
+			itemDef.modelID = 47077;
+			itemDef.name = "Elite virtus robe top";
+			itemDef.description = "Elite Virtus robe top";
+			itemDef.modelZoom = 1122;
+			itemDef.modelRotationY = 488;
+			itemDef.modelRotationX = 3;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = 0;
+			itemDef.femaleWield = 47078;
+			itemDef.femaleWield = 47078;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[2] = "Check-charges";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 16653: 
+			itemDef.modelID = 47079;
+			itemDef.name = "Elite Virtus robe legs";
+			itemDef.description = "Elite Virtus robe legs";
+			itemDef.modelZoom = 1740;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 2045;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 4;
+			itemDef.femaleWield = 47080;
+			itemDef.femaleWield = 47080;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[2] = "Check-charges";
+			itemDef.itemActions[4] = "Drop";
+			break;
+
+		case 16654:
+			itemDef.modelID = 47081;
+			itemDef.name = "Elite Pernix cowl";
+			itemDef.description = "Elite Pernix cowl";
+			itemDef.modelZoom = 800;
+			itemDef.modelRotationY = 532;
+			itemDef.modelRotationX = 14;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 1;
+			itemDef.femaleWield = 47082;
+			itemDef.femaleWield = 47082;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			// maleHeadModel1 = 79301;
+			// femaleHeadModel1 = 79302;
+			break;
+		case 16655:
+			itemDef.modelID = 47083;
+			itemDef.name = "Elite Pernix body";
+			itemDef.description = "Elite Pernix body";
+			itemDef.modelZoom = 1378;
+			itemDef.modelRotationY = 485;
+			itemDef.modelRotationX = 2042;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 7;
+			itemDef.femaleWield = 47084;
+			itemDef.femaleWield = 47084;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+
+		case 16656:
+
+			itemDef.modelID = 47085;
+			itemDef.name = "Elite Pernix chaps";
+			itemDef.description = "Elite Pernix chaps";
+			itemDef.modelZoom = 1740;
+			itemDef.modelRotationY = 504;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = 3;
+			itemDef.femaleWield = 47086;
+			itemDef.femaleWield = 47086;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+
+
+
+		case 19923:
+		        itemDef.name = "Groudon Pet";
+		        itemDef.itemActions = new String[] {"Hatch" };
+		        itemDef.modelID = 47087;
+		        itemDef.maleWield = 47087;
+		        itemDef.femaleWield = 47087;
+		        itemDef.modelRotationY = 0;
+		       itemDef.modelRotationX = 0;
+		        itemDef.modelZoom = 1849;
+		        itemDef.modelOffset1 = 1;
+		        itemDef.modelOffset2 = 89;
+		      break;
+
+		case 16657:
+			defaultConfig(itemDef, 47088, 47089, 47090, "@zol@Aphrodite's helm");
+			/*itemDef.modelID = 47088;
+			itemDef.maleWield = 47089;
+			itemDef.femaleWield = 47090;*/
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.description = "\"A piece of Aphrodite's beautiful armour, only the most beautiful can wear\"";
+			itemDef.modelZoom = 676;
+			itemDef.modelRotationY = 0;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 3;
+			itemDef.modelOffset2 = -14;
+			break;
+		case 16658: 
+			defaultConfig(itemDef, 47091, 47092, 47093, "@zol@Aphrodite's chestplate");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.description = "\"A piece of Aphrodite's beautiful armour, only the most beautiful can wear\"";
+			itemDef.modelZoom = 1506;
+			itemDef.modelRotationY = 473;
+			itemDef.modelRotationX = 2042;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			break;
+		case 16659: 
+			defaultConfig(itemDef, 47094, 47095, 47096, "@zol@Aphrodite's platelegs");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.description = "\"A piece of Aphrodite's beautiful armour, only the most beautiful can wear\"";
+			itemDef.modelZoom = 1506;
+			itemDef.modelRotationY = 473;
+			itemDef.modelRotationX = 2042;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			break;
+		case 16660: 
+			defaultConfig(itemDef, 47097, 47098, 47098, "@zol@Aphrodite's gauntlets");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.description = "\"A piece of Aphrodite's beautiful armour, only the most beautiful can wear\"";
+			itemDef.modelZoom = 1506;
+			itemDef.modelRotationY = 473;
+			itemDef.modelRotationX = 2042;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.stackable = false;
+			break;
+		case 16661: 
+			defaultConfig(itemDef, 47099, 47099, 47099, "@zol@Aphrodite's greaves");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.description = "\"A piece of Aphrodite's beautiful armour, only the most beautiful can wear\"";
+			/*itemDef.modelZoom = forID11732itemDef.modelZoom;
+			itemDef.modelOffset1 = forID11732itemDef.modelOffset1;
+			itemDef.modelOffset2 = forID11732itemDef.modelOffset2;
+			itemDef.modelRotationY = forID11732itemDef.modelRotationY;
+			itemDef.modelRotationX = forID11732itemDef.modelRotationX;*/
+			break;
+
+		case 16662: 
+			defaultConfig(itemDef, 47100, 47101, 47101, "@zo1@Aphrodite Bow");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.description = "When you hear its whisper, it's already too late.";
+			itemDef.modelZoom = 1506;
+			itemDef.modelRotationY = 473;
+			itemDef.modelRotationX = 2042;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.stackable = false;
+			break;
+
+		case 16663:
+			itemDef.modelID = 47102;
+			itemDef.name = "Aphrodite Cape";
+			itemDef.description = "An co-oporation between Ima Katana & Zeven.";
+			itemDef.modelZoom = 1579;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = 0;
+			itemDef.modelRotationY = 533;
+			itemDef.modelRotationY = 333;
+			itemDef.femaleWield = 91274;
+			itemDef.femaleWield = 91274;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+
+		case 16664:
+		    defaultConfig(itemDef, 47103, 47103, "Infernal boots");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.modelZoom = 964;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 1150;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -1;
+			break;
+		case 16665:
+
+			defaultConfig(itemDef, 47104, 47104, "Infernal gloves");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.modelRotationY = 1025;
+			itemDef.modelRotationX = 776;
+			itemDef.modelZoom = 995;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 47;
+			break;
+		case 16666:
+
+			defaultConfig(itemDef, 47105, 47105, "Infernal hat");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.modelZoom = 964;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 1150;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -1;
+			break;
+		case 16667:
+
+			defaultConfig(itemDef, 47106, 47106, "Infernal kiteshield");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.modelRotationY = 0;
+			itemDef.modelRotationX = 1662;
+			itemDef.modelZoom = 1560;
+			itemDef.modelOffset1 = -9;
+			itemDef.modelOffset2 = 33;
+			break;
+		case 16668:
+
+			defaultConfig(itemDef, 47107, 47107, "Infernal top");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.modelZoom = 964;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 1150;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -1;
+			break;
+		case 16669:
+
+			defaultConfig(itemDef, 47108, 47108, "Infernal bottoms");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.modelZoom = 964;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 1150;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -1;
+			break;	
+					
+			
 
 		case 13717:
 			itemDef.modelID = 40920;
@@ -976,6 +1536,8 @@ public final class ItemDefinition {
 			itemDef.anInt192 = 128;
 			itemDef.anInt191 = 128;
 			itemDef.value = 10000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
 			break;
 		case 17157:
 			itemDef.modelID = 47010;
@@ -2509,7 +3071,7 @@ public final class ItemDefinition {
 			itemDef.stackable = false;
 			break;
 
-		/** END OF CUSTOMS **/
+			/** END OF CUSTOMS **/
 
 		case 21795:
 			itemDef.name = "Imbued zamorak cape";
@@ -2933,7 +3495,7 @@ public final class ItemDefinition {
 			itemDef.name = "Abyssal whip(p+)"; // Name
 			itemDef.description = "A Poisoned a Abbysal whip.";
 			break;
-		// Pickup the fucking phone you mother fucker
+			// Pickup the fucking phone you mother fucker
 		case 21228:
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wield";
@@ -3254,7 +3816,7 @@ public final class ItemDefinition {
 		if (k > 0)
 			k3 = (int) ((double) k3 * 1.04D);
 		int l3 = Rasterizer.anIntArray1470[itemDef.modelRotationY] * k3 >> 16;
-		int i4 = Rasterizer.anIntArray1471[itemDef.modelRotationY] * k3 >> 16;
+			int i4 = Rasterizer.anIntArray1471[itemDef.modelRotationY] * k3 >> 16;
 		model.method482(itemDef.modelRotationX, itemDef.anInt204, itemDef.modelRotationY, itemDef.modelOffset1,
 				l3 + model.modelHeight / 2 + itemDef.modelOffset2, i4 + itemDef.modelOffset2);
 		for (int i5 = 31; i5 >= 0; i5--) {
@@ -3290,7 +3852,7 @@ public final class ItemDefinition {
 			for (int k5 = 31; k5 >= 0; k5--) {
 				for (int l4 = 31; l4 >= 0; l4--)
 					if (enabledSprite.raster[k5 + l4 * 32] == 0 && k5 > 0 && l4 > 0
-							&& enabledSprite.raster[(k5 - 1) + (l4 - 1) * 32] > 0)
+					&& enabledSprite.raster[(k5 - 1) + (l4 - 1) * 32] > 0)
 						enabledSprite.raster[k5 + l4 * 32] = 0x302020;
 
 			}
@@ -3410,7 +3972,7 @@ public final class ItemDefinition {
 			for (int k5 = 31; k5 >= 0; k5--) {
 				for (int l4 = 31; l4 >= 0; l4--)
 					if (enabledSprite.raster[k5 + l4 * 32] == 0 && k5 > 0 && l4 > 0
-							&& enabledSprite.raster[(k5 - 1) + (l4 - 1) * 32] > 0)
+					&& enabledSprite.raster[(k5 - 1) + (l4 - 1) * 32] > 0)
 						enabledSprite.raster[k5 + l4 * 32] = 0x302020;
 
 			}
