@@ -14525,7 +14525,7 @@ public class Client extends GameApplet {
 	}
 
 	private boolean cheapHaxPacket(int id, String text) {
-		if (id == 45621) {
+		if (id == 45615) {
 			EventBossData data = EventBossHandler.handle(Integer.parseInt(text));
 			RSInterface.interfaceCache[id].npcDisplay = data.getNpcId();
 			RSInterface.interfaceCache[45604].disabledMessage = data.getTitle();
