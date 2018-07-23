@@ -1,4 +1,4 @@
-package io.battlerune.eventboss;
+/*package io.battlerune.eventboss;
 
 public class EventBossHandler {
 
@@ -11,3 +11,4 @@ public class EventBossHandler {
 		return null;
 	}
 }
+*/

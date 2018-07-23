@@ -1,10 +1,10 @@
-package io.battlerune.eventboss;
+/*package io.battlerune.eventboss;
 
 import io.battlerune.BossDrops;
 
 public enum EventBossData {
 
-	LAVA_DRAGON("Lava Dragon", 6593, 252, 280, 23, "Magic, Stab,\\n Range", "Melee,\\n Dragon breath", "This nigger  \\n",
+	LAVA_DRAGON("Lava Dragon", 8095, 252, 280, 23, "Magic, Stab,\\n Range", "Melee,\\n Dragon breath", "This nigger  \\n",
 			BossDrops.LAVA_DRAGON_DROPS),
 	GALVEK("Galvek", 8095, 252, 280, 23, "Magic, Stab,\\n Range", "Melee,\\n Dragon breath", "This nigger  \\n",
 			BossDrops.LAVA_DRAGON_DROPS);
@@ -69,3 +69,4 @@ public enum EventBossData {
 		return drops;
 	}
 }
+*/

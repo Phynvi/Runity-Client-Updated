@@ -59,6 +59,9 @@ public final class NpcDefinition {
 		entityDef.decode(buffer);
 
 		switch (id) {
+		case 5129:
+			entityDef.combatLevel = 806;
+			break;
 		case 6773:
 			entityDef.actions = new String[5];
 			entityDef.actions[0] = "Open";

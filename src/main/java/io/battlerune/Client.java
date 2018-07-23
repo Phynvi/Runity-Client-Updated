@@ -39,8 +39,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import io.battlerune.eventboss.EventBossData;
-import io.battlerune.eventboss.EventBossHandler;
+
 import io.battlerune.login.LoginRenderer;
 import io.battlerune.login.impl.MainScreen;
 import io.battlerune.updater.UpdateState;
@@ -14524,56 +14523,41 @@ public class Client extends GameApplet {
 		return true;
 	}
 
-	private boolean cheapHaxPacket(int id, String text) {
-		if (id == 45615) {
-			EventBossData data = EventBossHandler.handle(Integer.parseInt(text));
-			RSInterface.interfaceCache[id].npcDisplay = data.getNpcId();
-			RSInterface.interfaceCache[45604].disabledMessage = data.getTitle();
-			RSInterface.interfaceCache[45610].disabledMessage = String.valueOf(data.getCombatLevel());
-			RSInterface.interfaceCache[45611].disabledMessage = String.valueOf(data.getHealth());
-			RSInterface.interfaceCache[45612].disabledMessage = String.valueOf(data.getMaxHit());
-			RSInterface.interfaceCache[45613].disabledMessage = data.getWeakNess();
-			RSInterface.interfaceCache[45614].disabledMessage = data.getStyles();
-			RSInterface.interfaceCache[45616].disabledMessage = data.getContent();
-			for (int i = 0; i < data.getDrops().length; ++i) {
-				RSInterface.interfaceCache[45621].inv[i] = data.getDrops()[i][0] + 1;
-				RSInterface.interfaceCache[45621].invStackSizes[i] = data.getDrops()[i][1];
-			}
-			return true;
-		}
-		if (id == 45600) {
-			int state = Integer.parseInt(text);
-			if (state == 0) {
-				teleportButton = null;
-			} else {
-				teleportButton = RSInterface.interfaceCache[45600];
-			}
-			return true;
-		}
-		if (id == 23050) {
-			if (text.equals("on"))
-				drawOpponentStats = true;
-			else if (text.equals("off"))
-				drawOpponentStats = false;
-			return true;
-		} else if (id == 1998) {
-			if (text.equals("on"))
-				specActive = true;
-			else if (text.equals("off"))
-				specActive = false;
-			return true;
-		} else if (id >= 37331 && id <= 37381) {
-			RSInterface ach = RSInterface.interfaceCache[id];
-			if (text.contains("%")) {
-				String[] remove = text.split("%");
-				ach.achievementPercent = Integer.parseInt(remove[remove.length - 1]);
-				text = text.replaceAll("%" + ach.achievementPercent, "");
-			}
-			sendString(text, id);
-			return true;
-		}
-		return false;
-	}
+
+    private boolean cheapHaxPacket(int id, String text) {
+    	if (id == 45615) {
+    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+    		return true;
+    	}
+    	if (id == 45600) {
+    		int state = Integer.parseInt(text);
+    		if (state == 0) {
+    			teleportButton = null;
+    		} else {
+    			teleportButton = RSInterface.interfaceCache[45600];
+    		}
+    		return true;
+    	} else if (id == 23050) {
+            if (text.equals("on")) 			drawOpponentStats = true;
+            else if (text.equals("off")) 	drawOpponentStats = false;
+            return true;
+        } else if (id == 1998) {
+            if (text.equals("on")) 		specActive = true;
+            else if (text.equals("off")) 	specActive = false;
+            return true;
+        }
+	     else if (id >= 37331 && id <= 37381) {
+        	RSInterface ach = RSInterface.interfaceCache[id];
+        	if (text.contains("%")) {
+        		String[] remove = text.split("%");
+        		ach.achievementPercent = Integer.parseInt(remove[remove.length - 1]);
+        		text = text.replaceAll("%"+ach.achievementPercent, "");
+        	}
+        	sendString(text, id);
+        	return true;
+        }
+        return false;
+    }
 
 	private void drawGameWorld() {
 		anInt1265++;
