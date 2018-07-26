@@ -171,6 +171,49 @@ public final class NpcDefinition {
 			entityDef.actions[0] = "Tan";
 			entityDef.actions[2] = "Trade";
 			break;
+		 case 2641:
+         	entityDef.scaleXZ = 64;
+         	entityDef.scaleY = 64;
+         	entityDef.description = "Pet Dragonkin, increases @ore@special attack@ore@ restore!".getBytes();
+             entityDef.actions = new String[5];
+               entityDef.actions[0] = "Talk-to";
+               entityDef.actions[2] = "Pick-up";
+         break;
+         case 3456:
+         	entityDef.scaleXZ = 64;
+         	entityDef.scaleY = 64;
+         	entityDef.description = "Fallen God, allows you to teleport out of any @ore@ wilderness level!".getBytes();
+             entityDef.actions = new String[5];
+               entityDef.actions[0] = "Talk-to";
+               entityDef.actions[2] = "Pick-up";
+         	
+         	break;
+         case 5504:
+         	entityDef.scaleXZ = 64;
+         	entityDef.scaleY = 64;
+         	entityDef.description = "Pet Morduat, does pretty much nothing.".getBytes();
+             entityDef.actions = new String[5];
+               entityDef.actions[0] = "Talk-to";
+               entityDef.actions[2] = "Pick-up";
+         break;
+         	
+         case 1873:
+         	entityDef.name = "Pet Yoshi";
+         	entityDef.description = "Pet Yoshi, has magical Drop rate powers!".getBytes();
+             entityDef.actions = new String[5];
+               entityDef.actions[0] = "Talk-to";
+               entityDef.actions[2] = "Pick-up";
+         
+         	//entityDef.actions[0] = "Talk-to";
+ 		//	entityDef.actions[1] = "Pick-up";
+         	break;
+		case 4052:
+			entityDef.actions = new String[5];
+			entityDef.actions[0] = "Talk-to";
+			entityDef.actions[2] = "Pick-up";
+         	entityDef.scaleXZ = 64;
+         	entityDef.scaleY = 64;
+         	break;
 		/* Clanmaster */
 		case 1143:
 			entityDef.name = "Clanmaster";

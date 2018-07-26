@@ -679,6 +679,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Drop";
+			break;
 
 		case 16656:
 
@@ -697,7 +698,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Drop";
-
+break;
 
 
 		case 19923:
@@ -999,7 +1000,7 @@ public final class ItemDefinition {
 
 		case 13719:
 			itemDef.modelID = 40920;
-			itemDef.name = "Dragonbone spirit shield";
+			itemDef.name = "Elite spirit shield";
 			itemDef.description = "It's a spirit shield";
 			itemDef.modifiedModelColors = new int[13];
 			itemDef.originalModelColors = new int[13];
@@ -2020,6 +2021,21 @@ public final class ItemDefinition {
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Drop";
 			break;
+		case 20666:
+			itemDef.name = "Pet Yoshi";
+			itemDef.modelID = 13850;
+			itemDef.modelZoom = 976;
+			itemDef.modelRotationY = 2042;
+			itemDef.modelRotationX = 1892;
+			itemDef.modelOffset1 = -20;
+			itemDef.modelOffset2 = 0;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 1;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[4] = "Drop";
+			break;
 		case 20251:
 			itemDef.modelID = 55055;
 			itemDef.name = "@red@American @whi@Torva @blu@platelegs";
@@ -2209,7 +2225,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[] { "Open", null, null, null, null };
 			itemDef.originalModelColors = new int[] { 12, 6, 63 };
 			itemDef.modifiedModelColors = new int[] { 22410, 926, 2999 };
-			itemDef.stackable = true;
+			itemDef.stackable = false;
 			break;
 		case 20690:
 			itemDef.modelID = 65526;

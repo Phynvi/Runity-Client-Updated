@@ -1001,7 +1001,7 @@ public class RSInterface {
 		
 		tab = addInterface(23085);
         addOutlinedColorBox(23086, 0x534a40, 145, 100, 200);
-        addText(23087, "Info\\nInfo\\nInfo", tda, 0, 0xffffff, false, true);
+        addText(23087, "Should list info about the item", tda, 0, 0xffffff, false, true);
         x = 8; y = 8;
         tab.totalChildren(4);
         tab.child(0, 23086, x, y);
