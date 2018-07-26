@@ -998,6 +998,25 @@ public class RSInterface {
 		tab.child(0, 23021, x, y);
 		tab.child(1, 23002, 72 + x, 2 + y);
 		tab.child(2, 23022, 2 + x, 14 + y);
+		
+		tab = addInterface(23085);
+        addOutlinedColorBox(23086, 0x534a40, 145, 100, 200);
+        addText(23087, "Info\\nInfo\\nInfo", tda, 0, 0xffffff, false, true);
+        x = 8; y = 8;
+        tab.totalChildren(4);
+        tab.child(0, 23086, x, y);
+        tab.child(1, 23002, 72 + x, 2 + y);
+        tab.child(2, 23087, 4 + x, 17 + y);
+        tab.child(3, 23088, x, 75);
+        
+        
+        RSInterface items = addInterface(23088);
+		itemGroup(23089, 40, 1, 10, 1);
+		interfaceCache[23089].parentID = 23088;
+		items.totalChildren(1);
+		items.child(0, 23089, 0, 0);
+		items.width = 145;
+		items.height = 50;
 	}
 
 	private static void editAncientsTab(TextDrawingArea[] tda) {

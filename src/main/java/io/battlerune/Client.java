@@ -155,7 +155,7 @@ public class Client extends GameApplet {
 							+ "@whi@ to view stats";
 					RSInterface.interfaceCache[23022].centerText = false;
 					RSInterface.interfaceCache[23020].childX[2] = 10;
-				} else {
+				} else if (ItemStats.itemstats[itemHover].type == 2) {
 					RSInterface.interfaceCache[23021].height = 28;
 					int width = newSmallFont.getTextWidth(def.name) + newSmallFont.getTextWidth(action) + 8;
 					if (width < 58)
@@ -166,7 +166,10 @@ public class Client extends GameApplet {
 					RSInterface.interfaceCache[23022].disabledMessage = "@whi@Heals: @gre@"
 							+ ItemStats.itemstats[itemHover].healAmount;
 					RSInterface.interfaceCache[23022].centerText = true;
-				}
+				} else if (ItemStats.itemstats[itemHover].type == 3) {
+            		RSInterface.setScrollableItems(RSInterface.interfaceCache[23089], ItemStats.itemstats[itemHover].rewards);
+            		RSInterface.interfaceCache[23087].disabledMessage = ItemStats.itemstats[itemHover].information;
+            	}
 			} else {
 				RSInterface.interfaceCache[23021].height = 16;
 				RSInterface.interfaceCache[23021].width = newSmallFont.getTextWidth(def.name)
@@ -3120,32 +3123,30 @@ public class Client extends GameApplet {
 				drawInterface(RSInterface.interfaceCache[37400], dx, dy, 0);
 			}
 			if (Settings.DRAW_ITEM_HOVERS && itemHover > -1 && super.mouseX > getScreenWidth() - 300) {
-				if (frameMode == ScreenMode.FIXED) {
-					x = 516;
-					y = 169;
-					if (super.mouseX > x && super.mouseY > y) {
-						if (controlIsDown && ItemStats.itemstats[itemHover] != null
-								&& ItemStats.itemstats[itemHover].type == 1) {
-							drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(true, x, false),
-									getItemHoverY(true, y, false), 0);
-						} else {
-							drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(true, x, true),
-									getItemHoverY(true, y, true), 0);
-						}
-					}
-				} else {
-					if (super.mouseX > x && super.mouseY > y) {
-						if (controlIsDown && ItemStats.itemstats[itemHover] != null
-								&& ItemStats.itemstats[itemHover].type == 1) {
-							drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(true, x, false),
-									getItemHoverY(true, y, false), 0);
-						} else {
-							drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(true, x, true),
-									getItemHoverY(true, y, true), 0);
-						}
-					}
-				}
-			}
+                if (frameMode == ScreenMode.FIXED) {
+                    x = 516;
+                    y = 169;
+                    if (super.mouseX > x && super.mouseY > y) {
+                        if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
+                            drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(true, x, false), getItemHoverY(true, y, false), 0);
+                        } else if (ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 3) {
+                        	drawInterface(RSInterface.interfaceCache[23085], getItemHoverX(true, x, false), getItemHoverY(true, y, false), 0);
+                        } else {
+                            drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(true, x, true), getItemHoverY(true, y, true), 0);
+                        }
+                    }
+                } else {
+                    if (super.mouseX > x && super.mouseY > y) {
+                        if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
+                            drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(true, x, false), getItemHoverY(true, y, false), 0);
+                        } else if (ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 3) {
+                        	drawInterface(RSInterface.interfaceCache[23085], getItemHoverX(true, x, false), getItemHoverY(true, y, false), 0);
+                        } else {
+                            drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(true, x, true), getItemHoverY(true, y, true), 0);
+                        }
+                    }
+                }
+            }
 
 		}
 		if (menuOpen) {
@@ -11314,14 +11315,14 @@ public class Client extends GameApplet {
 		}
 
 		if (Settings.DRAW_ITEM_HOVERS && itemHover > -1 && super.mouseX < getScreenWidth() - 300) {
-			if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
-				drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(false, 0, false),
-						getItemHoverY(false, 0, false), 0);
-			} else {
-				drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(false, 0, true),
-						getItemHoverY(false, 0, true), 0);
-			}
-		}
+            if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
+                drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(false, 0, false), getItemHoverY(false, 0, false), 0);
+            } else if (ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 3) {
+            	drawInterface(RSInterface.interfaceCache[23085], getItemHoverX(true, 0, false), getItemHoverY(true, 0, false), 0);
+            } else {
+                drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(false, 0, true), getItemHoverY(false, 0, true), 0);
+            }
+        }
 
 		method70();
 		if (!menuOpen) {

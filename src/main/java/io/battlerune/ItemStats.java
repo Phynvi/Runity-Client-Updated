@@ -22,6 +22,8 @@ public class ItemStats {
 	public int strengthBonus;
 	public int healAmount;
 	public int type;
+	 public int[][] rewards;
+	    public String information;
 
 	public ItemStats(int id, int typeOfStat) {
 		this.itemId = id;
@@ -50,6 +52,10 @@ public class ItemStats {
 					readType = 2;
 					continue;
 				}
+				if (line.equals("[MYSTERY BOXES]")) {
+            		readType = 3;
+            		continue;
+            	}
 				if (readType == 1) {
 					String[] data = line.split(" ");
 					int slot = 0;
@@ -68,7 +74,19 @@ public class ItemStats {
 					int id = Integer.parseInt(data[0]);
 					itemstats[id] = new ItemStats(id, readType);
 					itemstats[id].healAmount = Integer.parseInt(data[1]);
-				}
+				} else if (readType == 3) {
+            		String[] data = line.split(" ");
+            		int id = Integer.parseInt(data[0]);
+            		itemstats[id] = new ItemStats(id, readType);
+            		itemstats[id].rewards = new int[data.length - 1][2];
+            		for (int i = 1; i < data.length; ++i) {
+            			int commaPos = data[i].indexOf(',');
+            			int reward = Integer.parseInt(data[i].substring(0, commaPos));
+            			int amount = Integer.parseInt(data[i].substring(commaPos + 1));
+            			itemstats[id].rewards[i - 1] = new int[] {reward, amount};
+            		}
+            		itemstats[id].information = bufferedReader.readLine();
+            	}
 			}
 			fileReader.close();
 		} catch (IOException e) {
