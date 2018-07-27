@@ -3992,7 +3992,7 @@ public class Client extends GameApplet {
 
 	public static void start(String args[]) {
 		Configuration.LOADING_MESSAGE = Utility.randomElement(Configuration.LOADING_MESSAGES);
-		ClientFrame.load();
+	ClientFrame.load();
 		try {
 			nodeID = 10;
 			portOff = 0;

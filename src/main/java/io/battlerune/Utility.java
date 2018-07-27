@@ -244,7 +244,7 @@ public class Utility {
 	}
 
 	public static String findcachedir() {
-		String cacheLoc = System.getProperty("user.home") + "/NR/"; // live
+		String cacheLoc = System.getProperty("user.home") + "/RunityCache/"; // live
 
 		File cacheDir = new File(cacheLoc);
 		if (!cacheDir.exists()) {

@@ -48,12 +48,12 @@ public class Updater {
 	/**
 	 * The cache download url link.
 	 */
-	public static final String CACHE_LINK = "http://nearreality.io/NR.zip";
+	public static final String CACHE_LINK = "http://nearreality.io/RunityCache.zip";
 
 	/**
 	 * The client download url link.
 	 */
-	private static final String CLIENT_LINK = "http://nearreality.io/Client.jar";
+	private static final String CLIENT_LINK = "http://nearreality.io/Runity-Beta.jar";
 
 	/**
 	 * The cache directory.
