@@ -1288,6 +1288,8 @@ public class RSInterface {
 				-100);
 		// setBounds(28009, 120, 198, 88, rsinterface); //Hover box
 
+		
+		
 		PrayerSystem.prayerPlacement();
 	}
 

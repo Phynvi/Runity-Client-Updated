@@ -77,8 +77,5 @@ public class Configuration {
 
 	/** The current game version. */
 	public static final int GAME_VERSION = 5;
-	//public static final int GAME_VERSION = CACHE_VERSION + CLIENT_VERSION;
-
-	//keep game version at 5
 
 }

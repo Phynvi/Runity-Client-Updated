@@ -3511,7 +3511,7 @@ public class CustomInterface extends RSInterface {
 		scrollInterface.child(0, 37199, 83, -15);
 
 		for (int i = 0; i < amountOfLines; i++) {
-			addText(37111 + i, "", 0xA11A1A, true, false, 52, TDA, 1);
+			addText(37111 + i, "a", 0xA11A1A, true, false, 52, TDA, 1);
 			scrollInterface.child(1 + i, 37111 + i, 205, y);
 			y += 19;
 		}

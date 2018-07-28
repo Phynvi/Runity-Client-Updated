@@ -2021,6 +2021,9 @@ break;
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Drop";
 			break;
+		case 290:
+			itemDef.name = "Legendary Mystery Box";
+			break;
 		case 20666:
 			itemDef.name = "Pet Yoshi";
 			itemDef.modelID = 13850;
