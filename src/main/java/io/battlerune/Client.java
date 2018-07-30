@@ -10667,8 +10667,12 @@ public class Client extends GameApplet {
 						model = child.getModel(animation.secondaryFrames[child.anInt246],
 								animation.primaryFrames[child.anInt246], flag2);
 					}
-					if (model != null)
+					if (model != null) {
+						Raster.resetDepthBuffer();
+						Rasterizer.aBoolean1464 = false;
 						model.method482(child.modelRotation2, 0, child.modelRotation1, 0, i5, l5);
+						Rasterizer.aBoolean1464 = true;
+					}
 					Rasterizer.textureInt1 = k3;
 					Rasterizer.textureInt2 = j4;
 				} else if (child.type == 7) {
@@ -14617,6 +14621,7 @@ public class Client extends GameApplet {
 		Model.anInt1687 = 0;
 		Model.anInt1685 = super.mouseX - (frameMode == ScreenMode.FIXED ? 4 : 0);
 		Model.anInt1686 = super.mouseY - (frameMode == ScreenMode.FIXED ? 4 : 0);
+		Raster.resetDepthBuffer();
 		Raster.reset();
 		worldController.method313(xCameraPos, yCameraPos, xCameraCurve, zCameraPos, j, yCameraCurve);
 		worldController.clearObj5Cache();

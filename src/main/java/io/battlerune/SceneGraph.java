@@ -949,16 +949,6 @@ final class SceneGraph {
 	}
 
 	public void method313(int i, int j, int k, int l, int i1, int j1) {
-		if (Rasterizer.saveDepth = Settings.FOG || Settings.PARTICLES) {
-			if (Rasterizer.depthBuffer == null || Rasterizer.depthBuffer.length != Raster.pixels.length) {
-				Rasterizer.depthBuffer = new int[Raster.pixels.length];
-			}
-			for (int index = Rasterizer.depthBuffer.length - 1; index >= 0; index--) {
-				Rasterizer.depthBuffer[index] = 3500;// 3500 being the viewing distance
-			}
-		} else if (Rasterizer.depthBuffer != null) {
-			Rasterizer.depthBuffer = null;
-		}
 		if (i < 0)
 			i = 0;
 		else if (i >= anInt438 * 128)
@@ -1168,13 +1158,13 @@ final class SceneGraph {
 					if (class10 != null)
 						class10.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461,
 								class10.anInt274 - anInt455, class10.anInt273 - anInt456, class10.anInt275 - anInt457,
-								class10.uid);
+								class10.uid, 10);
 					for (int i2 = 0; i2 < class30_sub3_7.anInt1317; i2++) {
 						StaticObject class28 = class30_sub3_7.obj5Array[i2];
 						if (class28 != null)
 							class28.aClass30_Sub2_Sub4_521.method443(class28.anInt522, anInt458, anInt459, anInt460,
 									anInt461, class28.anInt519 - anInt455, class28.anInt518 - anInt456,
-									class28.anInt520 - anInt457, class28.uid);
+									class28.anInt520 - anInt457, class28.uid, 120);
 					}
 
 				}
@@ -1229,17 +1219,17 @@ final class SceneGraph {
 					if ((class10_3.orientation & j2) != 0 && !method321(l, i, j, class10_3.orientation))
 						class10_3.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461,
 								class10_3.anInt274 - anInt455, class10_3.anInt273 - anInt456,
-								class10_3.anInt275 - anInt457, class10_3.uid);
+								class10_3.anInt275 - anInt457, class10_3.uid, 10);
 					if ((class10_3.orientation1 & j2) != 0 && !method321(l, i, j, class10_3.orientation1))
 						class10_3.aClass30_Sub2_Sub4_279.method443(0, anInt458, anInt459, anInt460, anInt461,
 								class10_3.anInt274 - anInt455, class10_3.anInt273 - anInt456,
-								class10_3.anInt275 - anInt457, class10_3.uid);
+								class10_3.anInt275 - anInt457, class10_3.uid, 10);
 				}
 				if (class26_1 != null && !method322(l, i, j, class26_1.aClass30_Sub2_Sub4_504.modelHeight))
 					if ((class26_1.anInt502 & j2) != 0)
 						class26_1.aClass30_Sub2_Sub4_504.method443(class26_1.anInt503, anInt458, anInt459, anInt460,
 								anInt461, class26_1.anInt500 - anInt455, class26_1.anInt499 - anInt456,
-								class26_1.anInt501 - anInt457, class26_1.uid);
+								class26_1.anInt501 - anInt457, class26_1.uid, 40);
 					else if ((class26_1.anInt502 & 0x300) != 0) {
 						int j4 = class26_1.anInt500 - anInt455;
 						int l5 = class26_1.anInt499 - anInt456;
@@ -1259,13 +1249,13 @@ final class SceneGraph {
 							int i11 = j4 + anIntArray463[i8];
 							int k11 = k6 + anIntArray464[i8];
 							class26_1.aClass30_Sub2_Sub4_504.method443(i8 * 512 + 256, anInt458, anInt459, anInt460,
-									anInt461, i11, l5, k11, class26_1.uid);
+									anInt461, i11, l5, k11, class26_1.uid, 40);
 						}
 						if ((class26_1.anInt502 & 0x200) != 0 && k10 > k9) {
 							int j11 = j4 + anIntArray465[i8];
 							int l11 = k6 + anIntArray466[i8];
 							class26_1.aClass30_Sub2_Sub4_504.method443(i8 * 512 + 1280 & 0x7ff, anInt458, anInt459,
-									anInt460, anInt461, j11, l5, l11, class26_1.uid);
+									anInt460, anInt461, j11, l5, l11, class26_1.uid, 40);
 						}
 					}
 				if (flag1) {
@@ -1273,21 +1263,21 @@ final class SceneGraph {
 					if (class49 != null)
 						class49.aClass30_Sub2_Sub4_814.method443(0, anInt458, anInt459, anInt460, anInt461,
 								class49.anInt812 - anInt455, class49.anInt811 - anInt456, class49.anInt813 - anInt457,
-								class49.uid);
+								class49.uid, 40);
 					ItemPile object4_1 = class30_sub3_1.obj4;
 					if (object4_1 != null && object4_1.anInt52 == 0) {
 						if (object4_1.aClass30_Sub2_Sub4_49 != null)
 							object4_1.aClass30_Sub2_Sub4_49.method443(0, anInt458, anInt459, anInt460, anInt461,
 									object4_1.anInt46 - anInt455, object4_1.anInt45 - anInt456,
-									object4_1.anInt47 - anInt457, object4_1.uid);
+									object4_1.anInt47 - anInt457, object4_1.uid, 5);
 						if (object4_1.aClass30_Sub2_Sub4_50 != null)
 							object4_1.aClass30_Sub2_Sub4_50.method443(0, anInt458, anInt459, anInt460, anInt461,
 									object4_1.anInt46 - anInt455, object4_1.anInt45 - anInt456,
-									object4_1.anInt47 - anInt457, object4_1.uid);
+									object4_1.anInt47 - anInt457, object4_1.uid, 5);
 						if (object4_1.aClass30_Sub2_Sub4_48 != null)
 							object4_1.aClass30_Sub2_Sub4_48.method443(0, anInt458, anInt459, anInt460, anInt461,
 									object4_1.anInt46 - anInt455, object4_1.anInt45 - anInt456,
-									object4_1.anInt47 - anInt457, object4_1.uid);
+									object4_1.anInt47 - anInt457, object4_1.uid, 5);
 					}
 				}
 				int k4 = class30_sub3_1.anInt1320;
@@ -1329,7 +1319,7 @@ final class SceneGraph {
 					if (!method321(l, i, j, class10_1.orientation))
 						class10_1.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461,
 								class10_1.anInt274 - anInt455, class10_1.anInt273 - anInt456,
-								class10_1.anInt275 - anInt457, class10_1.uid);
+								class10_1.anInt275 - anInt457, class10_1.uid, 10);
 					class30_sub3_1.anInt1325 = 0;
 				}
 			}
@@ -1408,7 +1398,7 @@ final class SceneGraph {
 								class28_3.anInt526, class28_3.aClass30_Sub2_Sub4_521.modelHeight))
 							class28_3.aClass30_Sub2_Sub4_521.method443(class28_3.anInt522, anInt458, anInt459, anInt460,
 									anInt461, class28_3.anInt519 - anInt455, class28_3.anInt518 - anInt456,
-									class28_3.anInt520 - anInt457, class28_3.uid);
+									class28_3.anInt520 - anInt457, class28_3.uid, 120);
 						for (int k7 = class28_3.anInt523; k7 <= class28_3.anInt524; k7++) {
 							for (int l8 = class28_3.anInt525; l8 <= class28_3.anInt526; l8++) {
 								Ground class30_sub3_22 = aclass30_sub3[k7][l8];
@@ -1455,15 +1445,15 @@ final class SceneGraph {
 				if (object4.aClass30_Sub2_Sub4_49 != null)
 					object4.aClass30_Sub2_Sub4_49.method443(0, anInt458, anInt459, anInt460, anInt461,
 							object4.anInt46 - anInt455, object4.anInt45 - anInt456 - object4.anInt52,
-							object4.anInt47 - anInt457, object4.uid);
+							object4.anInt47 - anInt457, object4.uid, 5);
 				if (object4.aClass30_Sub2_Sub4_50 != null)
 					object4.aClass30_Sub2_Sub4_50.method443(0, anInt458, anInt459, anInt460, anInt461,
 							object4.anInt46 - anInt455, object4.anInt45 - anInt456 - object4.anInt52,
-							object4.anInt47 - anInt457, object4.uid);
+							object4.anInt47 - anInt457, object4.uid, 5);
 				if (object4.aClass30_Sub2_Sub4_48 != null)
 					object4.aClass30_Sub2_Sub4_48.method443(0, anInt458, anInt459, anInt460, anInt461,
 							object4.anInt46 - anInt455, object4.anInt45 - anInt456 - object4.anInt52,
-							object4.anInt47 - anInt457, object4.uid);
+							object4.anInt47 - anInt457, object4.uid, 5);
 			}
 			if (class30_sub3_1.anInt1328 != 0) {
 				WallDecoration class26 = class30_sub3_1.obj2;
@@ -1471,7 +1461,7 @@ final class SceneGraph {
 					if ((class26.anInt502 & class30_sub3_1.anInt1328) != 0)
 						class26.aClass30_Sub2_Sub4_504.method443(class26.anInt503, anInt458, anInt459, anInt460,
 								anInt461, class26.anInt500 - anInt455, class26.anInt499 - anInt456,
-								class26.anInt501 - anInt457, class26.uid);
+								class26.anInt501 - anInt457, class26.uid, 40);
 					else if ((class26.anInt502 & 0x300) != 0) {
 						int l2 = class26.anInt500 - anInt455;
 						int j3 = class26.anInt499 - anInt456;
@@ -1491,13 +1481,13 @@ final class SceneGraph {
 							int i9 = l2 + anIntArray463[k5];
 							int i10 = i4 + anIntArray464[k5];
 							class26.aClass30_Sub2_Sub4_504.method443(k5 * 512 + 256, anInt458, anInt459, anInt460,
-									anInt461, i9, j3, i10, class26.uid);
+									anInt461, i9, j3, i10, class26.uid, 40);
 						}
 						if ((class26.anInt502 & 0x200) != 0 && l7 <= j6) {
 							int j9 = l2 + anIntArray465[k5];
 							int j10 = i4 + anIntArray466[k5];
 							class26.aClass30_Sub2_Sub4_504.method443(k5 * 512 + 1280 & 0x7ff, anInt458, anInt459,
-									anInt460, anInt461, j9, j3, j10, class26.uid);
+									anInt460, anInt461, j9, j3, j10, class26.uid, 40);
 						}
 					}
 				Wall class10_2 = class30_sub3_1.obj1;
@@ -1506,12 +1496,12 @@ final class SceneGraph {
 							&& !method321(l, i, j, class10_2.orientation1))
 						class10_2.aClass30_Sub2_Sub4_279.method443(0, anInt458, anInt459, anInt460, anInt461,
 								class10_2.anInt274 - anInt455, class10_2.anInt273 - anInt456,
-								class10_2.anInt275 - anInt457, class10_2.uid);
+								class10_2.anInt275 - anInt457, class10_2.uid, 10);
 					if ((class10_2.orientation & class30_sub3_1.anInt1328) != 0
 							&& !method321(l, i, j, class10_2.orientation))
 						class10_2.aClass30_Sub2_Sub4_278.method443(0, anInt458, anInt459, anInt460, anInt461,
 								class10_2.anInt274 - anInt455, class10_2.anInt273 - anInt456,
-								class10_2.anInt275 - anInt457, class10_2.uid);
+								class10_2.anInt275 - anInt457, class10_2.uid, 10);
 				}
 			}
 			if (k < anInt437 - 1) {
@@ -1606,18 +1596,18 @@ final class SceneGraph {
 			if (class43.anInt720 == -1) {
 				if (class43.anInt718 != 0xbc614e)
 					Rasterizer.drawGouraudTriangle(j6, l6, l5, i6, k6, k5, class43.anInt718, class43.anInt719,
-							class43.anInt717, k3, j3, j2);
+							class43.anInt717, k3, j3, j2, 0);
 			} else if (!lowMem) {
 				if (class43.aBoolean721)
 					Rasterizer.drawTexturedTriangle(j6, l6, l5, i6, k6, k5, class43.anInt718, class43.anInt719,
-							class43.anInt717, i2, i3, l1, l3, i4, k4, k2, j2, j3, class43.anInt720, k3, j3, j2);
+							class43.anInt717, i2, i3, l1, l3, i4, k4, k2, j2, j3, class43.anInt720, k3, j3, j2, 0);
 				else
 					Rasterizer.drawTexturedTriangle(j6, l6, l5, i6, k6, k5, class43.anInt718, class43.anInt719,
-							class43.anInt717, l2, l1, i3, j4, k4, i4, k3, j3, j2, class43.anInt720, k3, j3, j2);
+							class43.anInt717, l2, l1, i3, j4, k4, i4, k3, j3, j2, class43.anInt720, k3, j3, j2, 0);
 			} else {
 				int i7 = anIntArray485[class43.anInt720];
 				Rasterizer.drawGouraudTriangle(j6, l6, l5, i6, k6, k5, method317(i7, class43.anInt718),
-						method317(i7, class43.anInt719), method317(i7, class43.anInt717), k3, j3, j2);
+						method317(i7, class43.anInt719), method317(i7, class43.anInt717), k3, j3, j2, 0);
 			}
 		}
 		if ((i5 - k5) * (l6 - l5) - (j5 - l5) * (k6 - k5) > 0) {
@@ -1630,17 +1620,17 @@ final class SceneGraph {
 			if (class43.anInt720 == -1) {
 				if (class43.anInt716 != 0xbc614e) {
 					Rasterizer.drawGouraudTriangle(j5, l5, l6, i5, k5, k6, class43.anInt716, class43.anInt717,
-							class43.anInt719, k2, j2, j3);
+							class43.anInt719, k2, j2, j3, 0);
 				}
 			} else {
 				if (!lowMem) {
 					Rasterizer.drawTexturedTriangle(j5, l5, l6, i5, k5, k6, class43.anInt716, class43.anInt717,
-							class43.anInt719, i2, i3, l1, l3, i4, k4, k2, j2, j3, class43.anInt720, k2, j2, j3);
+							class43.anInt719, i2, i3, l1, l3, i4, k4, k2, j2, j3, class43.anInt720, k2, j2, j3, 0);
 					return;
 				}
 				int j7 = anIntArray485[class43.anInt720];
 				Rasterizer.drawGouraudTriangle(j5, l5, l6, i5, k5, k6, method317(j7, class43.anInt716),
-						method317(j7, class43.anInt717), method317(j7, class43.anInt719), k2, j2, j3);
+						method317(j7, class43.anInt717), method317(j7, class43.anInt719), k2, j2, j3, 0);
 			}
 		}
 	}
@@ -1692,7 +1682,7 @@ final class SceneGraph {
 					if (class40.anIntArray676[j2] != 0xbc614e)
 						Rasterizer.drawGouraudTriangle(l4, i5, j5, i4, j4, k4, class40.anIntArray676[j2],
 								class40.anIntArray677[j2], class40.anIntArray678[j2], TileOverlay.depthPoint[l2],
-								TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
+								TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3], 0);
 				} else if (!lowMem) {
 					if (class40.aBoolean683)
 						Rasterizer.drawTexturedTriangle(l4, i5, j5, i4, j4, k4, class40.anIntArray676[j2],
@@ -1701,7 +1691,7 @@ final class SceneGraph {
 								TileOverlay.anIntArray691[0], TileOverlay.anIntArray691[1],
 								TileOverlay.anIntArray691[3], TileOverlay.anIntArray692[0],
 								TileOverlay.anIntArray692[1], TileOverlay.anIntArray692[3], class40.anIntArray682[j2],
-								TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
+								TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3], 0);
 					else
 						Rasterizer.drawTexturedTriangle(l4, i5, j5, i4, j4, k4, class40.anIntArray676[j2],
 								class40.anIntArray677[j2], class40.anIntArray678[j2], TileOverlay.anIntArray690[l2],
@@ -1709,12 +1699,12 @@ final class SceneGraph {
 								TileOverlay.anIntArray691[l2], TileOverlay.anIntArray691[j3],
 								TileOverlay.anIntArray691[l3], TileOverlay.anIntArray692[l2],
 								TileOverlay.anIntArray692[j3], TileOverlay.anIntArray692[l3], class40.anIntArray682[j2],
-								TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
+								TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3], 0);
 				} else {
 					int k5 = anIntArray485[class40.anIntArray682[j2]];
 					Rasterizer.drawGouraudTriangle(l4, i5, j5, i4, j4, k4, method317(k5, class40.anIntArray676[j2]),
 							method317(k5, class40.anIntArray677[j2]), method317(k5, class40.anIntArray678[j2]),
-							TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3]);
+							TileOverlay.depthPoint[l2], TileOverlay.depthPoint[j3], TileOverlay.depthPoint[l3], 0);
 				}
 			}
 		}

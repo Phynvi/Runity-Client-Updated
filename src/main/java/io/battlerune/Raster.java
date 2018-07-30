@@ -9,6 +9,7 @@ import java.awt.geom.Arc2D;
 
 public class Raster extends Cacheable {
 
+	public static float depthBuffer[];
 	public static int pixels[];
 	public static int width;
 	public static int height;
@@ -101,6 +102,17 @@ public class Raster extends Cacheable {
 		centerX = bottomX;
 		centerY = bottomX / 2;
 		anInt1387 = Raster.bottomY / 2;
+	}
+
+	public static void resetDepthBuffer() {
+		int i = width * height;
+		if (depthBuffer == null || depthBuffer.length != width * height) {
+			depthBuffer = new float[width * height];
+		}
+
+		for (int j = 0; j < i; j++) {
+			depthBuffer[j] = Float.MAX_VALUE;
+		}
 	}
 
 	public static void reset() {

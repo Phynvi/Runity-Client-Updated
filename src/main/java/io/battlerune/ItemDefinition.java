@@ -3828,6 +3828,7 @@ break;
 		Rasterizer.aBoolean1464 = false;
 		Raster.initDrawingArea(enabledSprite.raster, 32, 32);
 		Raster.fillRectangle(0, 0, 32, 32, 0);
+		Raster.resetDepthBuffer();
 		Rasterizer.method364();
 		int k3 = itemDef.modelZoom;
 		if (k == -1)
@@ -3948,6 +3949,7 @@ break;
 		Rasterizer.aBoolean1464 = false;
 		Raster.initDrawingArea(enabledSprite.raster, 32, 32);
 		Raster.fillRectangle(0, 0, 32, 32, 0);
+		Raster.resetDepthBuffer();
 		Rasterizer.method364();
 		int k3 = itemDef.modelZoom;
 		if (k == -1)

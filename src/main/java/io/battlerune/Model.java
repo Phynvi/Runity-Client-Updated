@@ -66,7 +66,6 @@ public class Model extends Renderable {
 				}
 			}
 		}
-
 	}
 
 	public void decodeNewModel(byte data[], int modelId) {
@@ -2147,11 +2146,9 @@ public class Model extends Renderable {
 			j5 = i5 * l3 + j5 * i4 >> 16;
 			i5 = j6;
 			anIntArray1667[k4] = j5 - j4;
+			vertexPerspectiveDepth[k4] = j5;
 			anIntArray1665[k4] = l1 + (l4 << 9) / j5;
 			anIntArray1666[k4] = i2 + (i5 << 9) / j5;
-			if (Rasterizer.saveDepth) {
-				vertexPerspectiveDepth[k4] = j5;
-			}
 			if (anInt1642 > 0) {
 				anIntArray1668[k4] = l4;
 				anIntArray1669[k4] = i5;
@@ -2160,14 +2157,15 @@ public class Model extends Renderable {
 		}
 
 		try {
-			method483(false, false, 0);
+			method483(false, false, 0, 0);
 			return;
 		} catch (Exception _ex) {
 			return;
 		}
 	}
 
-	public final void method443(int i, int j, int k, int l, int i1, int j1, int k1, int l1, int i2) {
+	@Override
+	public final void method443(int i, int j, int k, int l, int i1, int j1, int k1, int l1, int i2, int bufferOffset) {
 		renderAtPointX = j1 + Client.instance.xCameraPos;
 		renderAtPointY = l1 + Client.instance.yCameraPos;
 		renderAtPointZ = k1 + Client.instance.zCameraPos;
@@ -2252,12 +2250,10 @@ public class Model extends Renderable {
 			i8 = l7 * j + i8 * k >> 16;
 			l7 = k8;
 			anIntArray1667[j7] = i8 - k2;
+			vertexPerspectiveDepth[j7] = i8;
 			if (i8 >= 50) {
 				anIntArray1665[j7] = l5 + (k7 << SceneGraph.viewDistance) / i8;
 				anIntArray1666[j7] = j6 + (l7 << SceneGraph.viewDistance) / i8;
-				if (Rasterizer.saveDepth) {
-					vertexPerspectiveDepth[j7] = i8;
-				}
 			} else {
 				anIntArray1665[j7] = -5000;
 				flag = true;
@@ -2266,20 +2262,18 @@ public class Model extends Renderable {
 				anIntArray1668[j7] = k7;
 				anIntArray1669[j7] = l7;
 				anIntArray1670[j7] = i8;
-			} else {
-				anIntArray1670[j7] = i8;
 			}
 		}
 
 		try {
-			method483(flag, flag1, i2);
+			method483(flag, flag1, i2, bufferOffset);
 			return;
 		} catch (Exception _ex) {
 			return;
 		}
 	}
 
-	private final void method483(boolean flag, boolean flag1, int i) {
+	private final void method483(boolean flag, boolean flag1, int i, int bufferOffset) {
 		for (int j = 0; j < anInt1652; j++)
 			anIntArray1671[j] = 0;
 
@@ -2321,7 +2315,7 @@ public class Model extends Renderable {
 				if (l1 > 0) {
 					int ai[] = anIntArrayArray1672[i1];
 					for (int j3 = 0; j3 < l1; j3++)
-						method484(ai[j3]);
+						method484(ai[j3], bufferOffset);
 
 				}
 			}
@@ -2379,7 +2373,7 @@ public class Model extends Renderable {
 			i5 = -1000;
 		for (int l6 = 0; l6 < 10; l6++) {
 			while (l6 == 0 && i5 > l2) {
-				method484(ai2[i6++]);
+				method484(ai2[i6++], bufferOffset);
 				if (i6 == k6 && ai2 != anIntArrayArray1674[11]) {
 					i6 = 0;
 					k6 = anIntArray1673[11];
@@ -2392,7 +2386,7 @@ public class Model extends Renderable {
 					i5 = -1000;
 			}
 			while (l6 == 3 && i5 > k3) {
-				method484(ai2[i6++]);
+				method484(ai2[i6++], bufferOffset);
 				if (i6 == k6 && ai2 != anIntArrayArray1674[11]) {
 					i6 = 0;
 					k6 = anIntArray1673[11];
@@ -2405,7 +2399,7 @@ public class Model extends Renderable {
 					i5 = -1000;
 			}
 			while (l6 == 5 && i5 > j4) {
-				method484(ai2[i6++]);
+				method484(ai2[i6++], bufferOffset);
 				if (i6 == k6 && ai2 != anIntArrayArray1674[11]) {
 					i6 = 0;
 					k6 = anIntArray1673[11];
@@ -2420,12 +2414,12 @@ public class Model extends Renderable {
 			int i7 = anIntArray1673[l6];
 			int ai4[] = anIntArrayArray1674[l6];
 			for (int j7 = 0; j7 < i7; j7++)
-				method484(ai4[j7]);
+				method484(ai4[j7], bufferOffset);
 
 		}
 
 		while (i5 != -1000) {
-			method484(ai2[i6++]);
+			method484(ai2[i6++], bufferOffset);
 			if (i6 == k6 && ai2 != anIntArrayArray1674[11]) {
 				i6 = 0;
 				ai2 = anIntArrayArray1674[11];
@@ -2512,9 +2506,9 @@ public class Model extends Renderable {
 		return particleColors;
 	}
 
-	private final void method484(int i) {
+	private final void method484(int i, int bufferOffset) {
 		if (aBooleanArray1664[i]) {
-			method485(i);
+			method485(i, bufferOffset);
 			return;
 		}
 		int j = anIntArray1631[i];
@@ -2549,7 +2543,7 @@ public class Model extends Renderable {
 						anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
 						anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
 						anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k],
-						vertexPerspectiveDepth[l]);
+						vertexPerspectiveDepth[l], bufferOffset);
 			} else {
 				Rasterizer.drawTexturedTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l],
 						anIntArray1665[j], anIntArray1665[k], anIntArray1665[l], anIntArray1634[i], anIntArray1635[i],
@@ -2557,26 +2551,26 @@ public class Model extends Renderable {
 						anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
 						anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
 						anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k],
-						vertexPerspectiveDepth[l]);
+						vertexPerspectiveDepth[l], bufferOffset);
 			}
 		} else {
 			if (type == 0) {
 				Rasterizer.drawGouraudTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l],
 						anIntArray1665[j], anIntArray1665[k], anIntArray1665[l], anIntArray1634[i], anIntArray1635[i],
 						anIntArray1636[i], vertexPerspectiveDepth[j], vertexPerspectiveDepth[k],
-						vertexPerspectiveDepth[l]);
+						vertexPerspectiveDepth[l], bufferOffset);
 				return;
 			}
 			if (type == 1) {
 				Rasterizer.drawFlatTriangle(anIntArray1666[j], anIntArray1666[k], anIntArray1666[l], anIntArray1665[j],
 						anIntArray1665[k], anIntArray1665[l], modelIntArray3[anIntArray1634[i]],
-						vertexPerspectiveDepth[j], vertexPerspectiveDepth[k], vertexPerspectiveDepth[l]);
+						vertexPerspectiveDepth[j], vertexPerspectiveDepth[k], vertexPerspectiveDepth[l], bufferOffset);
 				return;
 			}
 		}
 	}
 
-	private final void method485(int i) {
+	private final void method485(int i, int bufferOffset) {
 		int j = Rasterizer.textureInt1;
 		int k = Rasterizer.textureInt2;
 		int l = 0;
@@ -2683,22 +2677,22 @@ public class Model extends Renderable {
 								anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
 								anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
 								anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1],
-								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1], bufferOffset);
 					} else {
 						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1],
 								anIntArray1680[2], anIntArray1668[texture_a], anIntArray1668[texture_b],
 								anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
 								anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
 								anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1],
-								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1], bufferOffset);
 					}
 				} else {
 					if (l7 == 0)
 						Rasterizer.drawGouraudTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1],
-								anIntArray1680[2], 0, 0, 0);
+								anIntArray1680[2], 0, 0, 0, bufferOffset);
 
 					else if (l7 == 1)
-						Rasterizer.drawFlatTriangle(i7, j7, k7, j3, j4, j5, modelIntArray3[anIntArray1634[i]], 0, 0, 0);
+						Rasterizer.drawFlatTriangle(i7, j7, k7, j3, j4, j5, modelIntArray3[anIntArray1634[i]], 0, 0, 0, bufferOffset);
 				}
 			}
 			if (l == 4) {
@@ -2724,42 +2718,42 @@ public class Model extends Renderable {
 								anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
 								anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
 								anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1],
-								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1], bufferOffset);
 						Rasterizer.drawTexturedTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3],
 								anIntArray1634[i], anIntArray1634[i], anIntArray1634[i], anIntArray1668[texture_a],
 								anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a],
 								anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a],
 								anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i],
-								vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+								vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1], bufferOffset);
 					} else {
 						Rasterizer.drawTexturedTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1],
 								anIntArray1680[2], anIntArray1668[texture_a], anIntArray1668[texture_b],
 								anIntArray1668[texture_c], anIntArray1669[texture_a], anIntArray1669[texture_b],
 								anIntArray1669[texture_c], anIntArray1670[texture_a], anIntArray1670[texture_b],
 								anIntArray1670[texture_c], texture[i], vertexPerspectiveDepth[i1],
-								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1], bufferOffset);
 						Rasterizer.drawTexturedTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3],
 								anIntArray1680[0], anIntArray1680[2], anIntArray1680[3], anIntArray1668[texture_a],
 								anIntArray1668[texture_b], anIntArray1668[texture_c], anIntArray1669[texture_a],
 								anIntArray1669[texture_b], anIntArray1669[texture_c], anIntArray1670[texture_a],
 								anIntArray1670[texture_b], anIntArray1670[texture_c], texture[i],
-								vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+								vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1], bufferOffset);
 						return;
 					}
 				} else {
 					if (type == 0) {
 						Rasterizer.drawGouraudTriangle(i7, j7, k7, j3, j4, j5, anIntArray1680[0], anIntArray1680[1],
-								anIntArray1680[2], 0, 0, 0);
+								anIntArray1680[2], 0, 0, 0, bufferOffset);
 						Rasterizer.drawGouraudTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3],
 								anIntArray1680[0], anIntArray1680[2], anIntArray1680[3], vertexPerspectiveDepth[i1],
-								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+								vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1], bufferOffset);
 						return;
 					}
 					if (type == 1) {
 						int l8 = modelIntArray3[anIntArray1634[i]];
-						Rasterizer.drawFlatTriangle(i7, j7, k7, j3, j4, j5, l8, 0, 0, 0);
+						Rasterizer.drawFlatTriangle(i7, j7, k7, j3, j4, j5, l8, 0, 0, 0, bufferOffset);
 						Rasterizer.drawFlatTriangle(i7, k7, anIntArray1679[3], j3, j5, anIntArray1678[3], l8,
-								vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1]);
+								vertexPerspectiveDepth[i1], vertexPerspectiveDepth[j1], vertexPerspectiveDepth[k1], bufferOffset);
 						return;
 					}
 				}
@@ -2820,21 +2814,21 @@ public class Model extends Renderable {
 	Vertex aClass33Array1660[];
 	static ModelHeader aClass21Array1661[];
 	static Provider aOnDemandFetcherParent_1662;
-	static boolean aBooleanArray1663[] = new boolean[4700];
-	static boolean aBooleanArray1664[] = new boolean[4700];
-	static int anIntArray1665[] = new int[4700];
-	static int anIntArray1666[] = new int[4700];
-	static int anIntArray1667[] = new int[4700];
-	static int anIntArray1668[] = new int[4700];
-	static int anIntArray1669[] = new int[4700];
-	static int anIntArray1670[] = new int[4700];
-	static int vertexPerspectiveDepth[] = new int[4700];
+	static boolean aBooleanArray1663[] = new boolean[8000];
+	static boolean aBooleanArray1664[] = new boolean[8000];
+	static int anIntArray1665[] = new int[8000];
+	static int anIntArray1666[] = new int[8000];
+	static int anIntArray1667[] = new int[8000];
+	static int anIntArray1668[] = new int[8000];
+	static int anIntArray1669[] = new int[8000];
+	static int anIntArray1670[] = new int[8000];
+	static int vertexPerspectiveDepth[] = new int[8000];
 	static int anIntArray1671[] = new int[1600];
 	static int anIntArrayArray1672[][] = new int[1600][512];
 	static int anIntArray1673[] = new int[12];
-	static int anIntArrayArray1674[][] = new int[12][2000];
-	static int anIntArray1675[] = new int[2000];
-	static int anIntArray1676[] = new int[2000];
+	static int anIntArrayArray1674[][] = new int[12][8000];
+	static int anIntArray1675[] = new int[8000];
+	static int anIntArray1676[] = new int[8000];
 	static int anIntArray1677[] = new int[12];
 	static int anIntArray1678[] = new int[10];
 	static int anIntArray1679[] = new int[10];
