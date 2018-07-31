@@ -104,6 +104,7 @@ public final class ItemDefinition {
 		Buffer stream = new Buffer(archive.getDataForName("obj.idx"));
 		totalItems = stream.readUShort();
 		BufferIndices = new int[totalItems];
+
 		int offset = 2;
 		for (int _ctr = 0; _ctr < totalItems; _ctr++) {
 			BufferIndices[_ctr] = offset;
@@ -151,6 +152,18 @@ public final class ItemDefinition {
 			for (int i1 = 0; i1 < modifiedModelColors.length; i1++)
 				model.recolor(modifiedModelColors[i1], originalModelColors[i1]);
 
+		}
+		
+		//cue
+		if(modifiedModelColors != null && originalModelColors != null) {
+			if(originalTexture != null && modifiedTexture != null) {
+				for(int index = 0; index < modifiedModelColors.length; index++) {
+					if(modifiedTexture[index] > 0 && originalModelColors[index] == -2) {
+						
+						model.color_to_texture(model, modifiedTexture[index]);
+					}
+				}
+			}
 		}
 		return model;
 	}
@@ -207,6 +220,18 @@ public final class ItemDefinition {
 			for (int i1 = 0; i1 < modifiedModelColors.length; i1++)
 				model.recolor(modifiedModelColors[i1], originalModelColors[i1]);
 
+		}
+		
+		//cue
+		if(modifiedModelColors != null && originalModelColors != null) {
+			if(originalTexture != null && modifiedTexture != null) {
+				for(int index = 0; index < modifiedModelColors.length; index++) {
+					if(modifiedTexture[index] > 0 && originalModelColors[index] == -2) {
+						
+						model.color_to_texture(model, modifiedTexture[index]);
+					}
+				}
+			}
 		}
 
 		return model;
@@ -279,6 +304,9 @@ public final class ItemDefinition {
 	}
 
 	public static ItemDefinition lookup(int i) {
+		if(i > totalItems)
+			i = 1;
+		
 		for (int j = 0; j < 10; j++)
 			if (cache[j].id == i)
 				return cache[j];
@@ -292,7 +320,27 @@ public final class ItemDefinition {
 		/* Customs added here? */
 
 		switch (i) {
-
+		
+			//cue
+			case 579:
+				itemDef.name = "Lava Party hat";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelZoom = 440;
+				itemDef.modelID = 2635;
+				itemDef.modelOffset1 = 1;
+				itemDef.modelOffset2 = 1;
+				itemDef.modelRotationX = 1852;
+				itemDef.modelRotationY = 76;
+				itemDef.maleWield = 187;
+				itemDef.femaleWield = 363;
+				itemDef.modifiedModelColors = new int[] {926};
+				itemDef.originalModelColors = new int[] {-2};
+				itemDef.originalTexture = new short[] {40};
+				itemDef.modifiedTexture = new short[] {40};
+				break;
+		
+		
 		/** START OF CUSTOMS **/
 		
 		   case 13738: //47109
@@ -585,8 +633,12 @@ public final class ItemDefinition {
 			itemDef.modifiedModelColors = new int[1];
 			itemDef.originalModelColors = new int[1];
 			itemDef.modifiedModelColors[0] = 58383;
-			itemDef.originalModelColors[0] = 10756;
+			itemDef.originalModelColors[0] = -2;//10756
+			itemDef.originalTexture = new short[] {40};
+			itemDef.modifiedTexture = new short[] {40};
+			
 			break;
+			
 		case 16650: 
 			itemDef.modelID = 47075;
 			itemDef.name = "Elite virtus mask";
@@ -4047,6 +4099,17 @@ break;
 				model.recolor(modifiedModelColors[l], originalModelColors[l]);
 
 		}
+		
+		//cue
+		if(modifiedModelColors != null && originalModelColors != null) {
+			if(originalTexture != null && modifiedTexture != null) {
+				for(int index = 0; index < modifiedModelColors.length; index++) {
+					if(originalModelColors[index] == -2) {
+						model.color_to_texture(model, modifiedTexture[index]);
+					}
+				}
+			}
+		}
 		model.light(64 + brightness, 768 + anInt184, -50, -10, -50, true);
 		model.aBoolean1659 = true;
 		mruNodes2.put(model, id);
@@ -4070,6 +4133,17 @@ break;
 			for (int l = 0; l < modifiedModelColors.length; l++)
 				model.recolor(modifiedModelColors[l], originalModelColors[l]);
 
+		}
+		
+		//cue
+		if(modifiedModelColors != null && originalModelColors != null) {
+			if(originalTexture != null && modifiedTexture != null) {
+				for(int index = 0; index < modifiedModelColors.length; index++) {
+					if(modifiedTexture[index] > 0 && originalModelColors[index] == -2) {
+						model.color_to_texture(model, modifiedTexture[index]);
+					}
+				}
+			}
 		}
 		return model;
 	}
