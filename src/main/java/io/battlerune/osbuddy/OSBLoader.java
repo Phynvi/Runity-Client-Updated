@@ -518,9 +518,9 @@ public class OSBLoader extends JFrame {// someone updated the data i can see it 
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				CalcSubClass calc = new CalcSubClass();
-				calc.pack();
-				System.out.println("Calculator JFrame extended. its ugly ik :(");
+			//	CalcSubClass calc = new CalcSubClass();
+		   //		calc.pack();
+		   //		System.out.println("Calculator JFrame extended. its ugly ik :(");
 			}
 		});
 

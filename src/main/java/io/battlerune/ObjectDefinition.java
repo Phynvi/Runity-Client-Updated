@@ -191,10 +191,11 @@ public final class ObjectDefinition {
 			def.actions = new String[5];
 			def.actions[0] = "Recharge";
 			break;
-
-		case 29150:
+		case 409:
 			def.actions = new String[5];
-			def.actions[0] = "Pray";
+			def.actions[0] = "Recharge";
+			def.actions[1] = "Ancient";
+			def.actions[2] = "Lunar";
 			break;
 
 		case 29241:

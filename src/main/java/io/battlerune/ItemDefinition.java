@@ -304,8 +304,6 @@ public final class ItemDefinition {
 	}
 
 	public static ItemDefinition lookup(int i) {
-		if(i > totalItems)
-			i = 1;
 		
 		for (int j = 0; j < 10; j++)
 			if (cache[j].id == i)
