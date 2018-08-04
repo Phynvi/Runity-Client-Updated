@@ -196,6 +196,11 @@ public final class NpcDefinition {
                entityDef.actions[0] = "Talk-to";
                entityDef.actions[2] = "Pick-up";
          break;
+         case 1636:
+         case 1635:
+        	 entityDef.actions = new String[5];
+        	 entityDef.actions[0] = "Catch";
+        	 break;
          	
          case 1873:
          	entityDef.name = "Pet Yoshi";

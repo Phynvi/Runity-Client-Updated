@@ -115,7 +115,7 @@ public class Client extends GameApplet {
 		String action = "";
 		if (itemHover > 0 && def != null) {
 			if (def.itemActions != null) {
-				action = def.itemActions[0] == null ? "Use" : def.itemActions[0];
+				action = def.itemActions[1] == null ? "Use" : def.itemActions[1];
 			} /** IF THIS BREAKS THE SERVER ADAM_ REFER BACK TO THIS. **/
 			/*if (def.itemActions != null) {
 				action = def.itemActions[1] == null ? "Use" : def.itemActions[1];
@@ -9062,7 +9062,7 @@ public class Client extends GameApplet {
 			scrollBar2 = new Sprite(streamLoader_2, "scrollbar", 1);
 //			 repackCacheIndex(1);
 //            repackCacheIndex(2);
-//            repackCacheIndex(4);
+ //           repackCacheIndex(4);
 			prepareGameFrame();
 			Sprite sprite = new Sprite(streamLoader_2, "screenframe", 0);
 			leftFrame = new GraphicsBuffer(sprite.width, sprite.height, getGameComponent());
@@ -14885,28 +14885,26 @@ public class Client extends GameApplet {
 		}
 	}
 
-	void loadPrayerOrb(int xOffset) {
-		final boolean isFixed = frameMode == ScreenMode.FIXED;
-		final int fixedXOffset = isFixed ? 0 : 8;
-		final int fixedYOffset = isFixed ? 0 : 8;
-		Sprite bg = spriteCache.get(prayHover ? 8 : 7);
-		Sprite fg = spriteCache.get(prayClicked ? 2 : 1);
-		bg.drawSprite(0 + xOffset + fixedXOffset, 75 + fixedYOffset);
-		fg.drawSprite(27 + xOffset + fixedXOffset, 79 + fixedYOffset);
-		int level = currentStats[5];
-		int max = maxStats[5];
-		double percent = level / (double) max;
-		spriteCache.get(14).height = (int) (26 * (1 - percent));
-		spriteCache.get(14).drawSprite(27 + xOffset + fixedXOffset, 79 + fixedYOffset);
-		if (percent <= .25) {
-			spriteCache.get(10).drawSprite1(30 + xOffset + fixedXOffset, 82 + fixedYOffset,
-					200 + (int) (50 * Math.sin(tick / 7.0)));
-		} else {
-			spriteCache.get(10).drawSprite(30 + xOffset + fixedXOffset, 82 + fixedYOffset);
-		}
-		smallFont.drawCenteredText(getOrbTextColor((int) (percent * 100)), 16 + xOffset + fixedXOffset, level + "",
-				101 + fixedYOffset, true);
-	}
+	 void loadPrayerOrb(int xOffset) {
+	        final boolean isFixed = frameMode == ScreenMode.FIXED;
+	        final int fixedXOffset = isFixed ? 0 : 8;
+	        final int fixedYOffset = isFixed ? 0 : 8;
+	        Sprite bg = spriteCache.get(prayHover ? 8 : 7);
+	        Sprite fg = spriteCache.get(prayClicked ? 2 : 1);
+	        bg.drawSprite(0 + xOffset + fixedXOffset, 75 + fixedYOffset);
+	        fg.drawSprite(27 + xOffset + fixedXOffset, 79 + fixedYOffset);
+	        int level = currentStats[5];
+	        int max = maxStats[5];
+	        double percent = level / (double) max;
+	        spriteCache.get(14).height = (int) (26 * (1 - percent));
+	        spriteCache.get(14).drawSprite(27 + xOffset + fixedXOffset, 79 + fixedYOffset);
+	        if (percent <= .25) {
+	            spriteCache.get(10).drawSprite1(30 + xOffset + fixedXOffset, 82 + fixedYOffset, 200 + (int) (50 * Math.sin(tick / 7.0)));
+	        } else {
+	            spriteCache.get(10).drawSprite(30 + xOffset + fixedXOffset, 82 + fixedYOffset);
+	        }
+	        smallFont.drawCenteredText(getOrbTextColor((int) (percent * 100)), 16 + xOffset + fixedXOffset, level + "", 101 + fixedYOffset, true);
+	    }
 
 	void loadRunOrb(int xOffset) {
 		final boolean isFixed = frameMode == ScreenMode.FIXED;

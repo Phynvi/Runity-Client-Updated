@@ -10,7 +10,7 @@ public enum Connection {
 	ECONOMY("ECO", "127.0.0.1"),
 
 	/** The management world - used for private testing by the management team. */
-	MANAGEMENT("MGN", "127.0.0.1"),
+	MANAGEMENT("MGN", "35.189.119.140"),
 
 	/** The development world - used by developers. */
 	DEVELOPMENT("DEV", "127.0.0.1");

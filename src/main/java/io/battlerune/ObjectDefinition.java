@@ -136,6 +136,13 @@ public final class ObjectDefinition {
 		case 2191:
 			def.name = "Crystal Chest";
 			break;
+			
+		case 25016:
+			def.actions = new String[5];
+			def.actions[0] = "Push-through";
+			def.actions[1] = "Enter";
+
+			break;
 
 		case 11338:
 			def.actions = new String[5];
