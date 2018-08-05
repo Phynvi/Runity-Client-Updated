@@ -110,6 +110,7 @@ public class CustomInterface extends RSInterface {
 		presets2(textDrawingAreas);
 		toolkit(textDrawingAreas);
 		stopBotting(textDrawingAreas);
+		RuneliteBox(textDrawingAreas);
 	}
 
 	public static void presets2(TextDrawingArea[] tda) {
@@ -497,6 +498,22 @@ public class CustomInterface extends RSInterface {
 		tab.child(5, 41708, 406, 26);
 		tab.child(6, 41710, 188, 84);
 		tab.child(7, 41711, 105, 154);
+	}
+	
+	public static void RuneliteBox(TextDrawingArea[] TDA) {
+		RSInterface tab = addInterface(34500);
+		
+		addOutlinedColorBox(34501, 0x534a40, 50, 75, 200);
+		addText(34502, "YOU", TDA, 0, 0xf8f107, true, true);
+
+		
+		
+		int x = 8, y = 8;
+		tab.totalChildren(2);
+		tab.child(0, 34501, 0, 0);
+		tab.child(1, 34502, 75, 2);
+
+		
 	}
 
 	private static void mysteryBox(TextDrawingArea[] TDA) {

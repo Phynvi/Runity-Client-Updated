@@ -651,14 +651,14 @@ public class RSInterface {
 		int childNum = 0;
 		setBounds(52101, 75, 20, childNum++, tab);
 		setBounds(52102, 104, 71, childNum++, tab);
-		setBounds(52113, 108, 118, childNum++, tab);
-		setBounds(52114, 309, 70, childNum++, tab);
+		setBounds(52113, 110, 120, childNum++, tab);
+		setBounds(52114, 320, 70, childNum++, tab);
 		setBounds(52128, 279, 94, childNum++, tab);
 		setBounds(52129, 369, 94, childNum++, tab);
-		setBounds(52130, 306, 213, childNum++, tab);
-		setBounds(52143, 152, 84, childNum++, tab);
-		setBounds(52144, 269, 235, childNum++, tab);
-		setBounds(52145, 269, 250, childNum++, tab);
+		setBounds(52130, 320, 220, childNum++, tab);
+		setBounds(52143, 154, 86, childNum++, tab);
+		setBounds(52144, 275, 240, childNum++, tab);
+		setBounds(52145, 275, 255, childNum++, tab);
 
 		for (int i = 0; i < 9; i++) {
 			setBounds(52103 + i, 106, y, childNum++, tab);
@@ -666,12 +666,12 @@ public class RSInterface {
 		}
 
 		for (int i = 0; i < 5; i++) {
-			setBounds(52131 + i, 269, yy, childNum++, tab);
+			setBounds(52131 + i, 275, yy, childNum++, tab);
 			yy += 15;
 		}
 
 		for (int i = 0; i < 5; i++) {
-			setBounds(52138 + i, 356, yyy, childNum++, tab);
+			setBounds(52138 + i, 366, yyy, childNum++, tab);
 			yyy += 15;
 		}
 
@@ -909,15 +909,15 @@ public class RSInterface {
 
 	private static void opponentStats(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(23050);
-		addColorBox(23051, 0, 131, 114, 150);
+		addOutlinedColorBox(23051, 0, 131, 114, 150);
 
-		addText(23052, "Attack:", tda, 0, 0xffffff, false, true);
-		addText(23053, "Strength:", tda, 0, 0xffffff, false, true);
-		addText(23054, "Defence:", tda, 0, 0xffffff, false, true);
-		addText(23055, "Hitpoints:", tda, 0, 0xffffff, false, true);
-		addText(23056, "Ranged:", tda, 0, 0xffffff, false, true);
-		addText(23057, "Magic:", tda, 0, 0xffffff, false, true);
-		addText(23058, "Prayer:", tda, 0, 0xffffff, false, true);
+		addText(23052, "Attack:", tda, 0, 0xff9040, false, true);
+		addText(23053, "Strength:", tda, 0, 0xff9040, false, true);
+		addText(23054, "Defence:", tda, 0, 0xff9040, false, true);
+		addText(23055, "Hitpoints:", tda, 0, 0xff9040, false, true);
+		addText(23056, "Ranged:", tda, 0, 0xff9040, false, true);
+		addText(23057, "Magic:", tda, 0, 0xff9040, false, true);
+		addText(23058, "Prayer:", tda, 0, 0xff9040, false, true);
 
 		addText(23059, "You", tda, 0, 0xf8f107, true, true);
 		addText(23060, "Them", tda, 0, 0xf80707, true, true);

@@ -115,11 +115,8 @@ public class Client extends GameApplet {
 		String action = "";
 		if (itemHover > 0 && def != null) {
 			if (def.itemActions != null) {
-				action = def.itemActions[1] == null ? "Use" : def.itemActions[1];
-			} /** IF THIS BREAKS THE SERVER ADAM_ REFER BACK TO THIS. **/
-			/*if (def.itemActions != null) {
-				action = def.itemActions[1] == null ? "Use" : def.itemActions[1];
-			}*/
+				action = def.itemActions[1] == null ? "" : def.itemActions[1];
+			} 
 			RSInterface.interfaceCache[23002].disabledMessage = "@whi@" + action + " @lre@" + def.name;
 			if (ItemStats.itemstats[itemHover] != null) {
 				if (ItemStats.itemstats[itemHover].type == 1) {

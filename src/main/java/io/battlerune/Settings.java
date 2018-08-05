@@ -25,15 +25,15 @@ public final class Settings {
 	static int HITSPLAT;
 	static int GAMEFRAME = 474;
 	static int HP_BAR;
-	static boolean PROFANITY_FILTER;
+	static boolean PROFANITY_FILTER = true;
 
-	static boolean HD_MINIMAP;
-	static boolean TWEENING;
+	static boolean HD_MINIMAP = true;
+	static boolean TWEENING = true;
 	static boolean GROUND_DECORATIONS = true;
-	static boolean CUSTOM_LIGHTING;
-	private static boolean MIPMAPPING;
+	static boolean CUSTOM_LIGHTING = true;
+	private static boolean MIPMAPPING = true;
 	static boolean FOG;
-	static boolean SMOOTH_SHADING;
+	static boolean SMOOTH_SHADING = true;
 	static boolean SNOW;
 	static boolean PARTICLES = true;
 
@@ -59,7 +59,7 @@ public final class Settings {
 	static boolean SHIFT_DROP = true;
 	static boolean DRAW_ITEM_HOVERS = true;
 	static boolean DRAW_OPPONENT_STATS = true;
-	static boolean SPEC_BUTTON;
+	static boolean SPEC_BUTTON = true;
 
 	static int COUNTER_SIZE = 1;
 	static int COUNTER_COLOR = 0xffffff;

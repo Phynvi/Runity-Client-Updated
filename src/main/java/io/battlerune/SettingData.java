@@ -15,6 +15,21 @@ public enum SettingData implements SettingsAction<Client> {
 	// SNOW = !SNOW;
 	// }
 	// },
+	HD("Activate HD Rendering") {
+		@Override
+		public String name(Client client) {
+			return Settings.CUSTOM_LIGHTING + setting;
+		}
+
+		public boolean status() {
+			return Settings.CUSTOM_LIGHTING;
+		}
+
+		@Override
+		public void handle(Client client) {
+			Settings.CUSTOM_LIGHTING = !Settings.CUSTOM_LIGHTING;
+		}
+	},
 	ITEM_HOVER_INFO("Item tooltip hovers") {
 		@Override
 		public String name(Client client) {
