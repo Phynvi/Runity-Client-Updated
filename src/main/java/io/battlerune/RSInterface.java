@@ -646,8 +646,11 @@ public class RSInterface {
 		for (int i = 0; i < 5; i++) {
 			addText(52138 + i, text[i], tda, 1, 0xff8a1f, false, true);
 		}
+		
+		addHoverButton(52146, 252, 21, 21, "Close", -1, 52147, 1);
+		addHoveredButton(52147, 253, 21, 21, 52148);
 
-		tab.totalChildren(29);
+		tab.totalChildren(31);
 		int childNum = 0;
 		setBounds(52101, 75, 20, childNum++, tab);
 		setBounds(52102, 104, 71, childNum++, tab);
@@ -659,6 +662,8 @@ public class RSInterface {
 		setBounds(52143, 154, 86, childNum++, tab);
 		setBounds(52144, 275, 240, childNum++, tab);
 		setBounds(52145, 275, 255, childNum++, tab);
+		setBounds(52146, 445, 28, childNum++, tab);
+		setBounds(52147, 445, 28, childNum++, tab);
 
 		for (int i = 0; i < 9; i++) {
 			setBounds(52103 + i, 106, y, childNum++, tab);

@@ -252,7 +252,7 @@ public final class NpcDefinition {
 			entityDef.actions = new String[5];
 			entityDef.actions[0] = "Open";
 			break;
-
+		case 8099:
 		case 1157:
 		case 1158:
 		case 1160:
