@@ -7,7 +7,7 @@ package io.battlerune;
  */
 public enum Connection {
 	/** The economy (main) world. */
-	ECONOMY("ECO", "127.0.0.1"),
+	ECONOMY("ECO", "35.189.119.140"),
 
 	/** The management world - used for private testing by the management team. */
 	MANAGEMENT("MGN", "35.189.119.140"),

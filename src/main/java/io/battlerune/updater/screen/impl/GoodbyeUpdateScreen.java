@@ -38,7 +38,7 @@ public class GoodbyeUpdateScreen extends UpdateComponent {
 	@Override
 	public void process() {
 		if (stage == 0 || stage == 1)
-			setLabel("BattleRune was successfully installed");
+			setLabel("Runity successfully installed");
 
 		else if (stage == 2 || stage == 3)
 			setLabel("Your adventure now awaits");

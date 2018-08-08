@@ -570,16 +570,19 @@ public final class ItemDefinition {
 
 		case 13738: //47109
 			defaultConfig(itemDef, 47109, 47110, 47110, "Lava virtus mask");
+			itemDef.modelZoom = 928;
+			itemDef.modelRotationY = 406;
+			itemDef.modelRotationX = 2041;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = -5;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[2] = "Check-charges";
 			itemDef.itemActions[4] = "Drop";
-			itemDef.modelZoom = 964;
-			itemDef.modelRotationY = 498;
-			itemDef.modelRotationX = 1150;
-			itemDef.modelOffset1 = -1;
-			itemDef.modelOffset2 = -1;
+			//itemDef.maleHeadModel1 = 62728;
+			//itemDef.femaleHeadModel1 = 62728;
 			break;
 		case 13739: 
 			defaultConfig(itemDef, 47111, 47112, 47112, "@red@Lava scythe");
@@ -699,30 +702,32 @@ public final class ItemDefinition {
 			break;
 		case 13747: 
 			defaultConfig(itemDef, 47127, 47128, 47128, "Lava virtus top");
+			itemDef.modelZoom = 1122;
+			itemDef.modelRotationY = 488;
+			itemDef.modelRotationX = 3;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = 0;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[2] = "Check-charges";
 			itemDef.itemActions[4] = "Drop";
-			itemDef.modelZoom = 964;
-			itemDef.modelRotationY = 498;
-			itemDef.modelRotationX = 1150;
-			itemDef.modelOffset1 = -1;
-			itemDef.modelOffset2 = -1;
 			break;
 
 		case 13748: 
 			defaultConfig(itemDef, 47129, 47130, 47130, "Lava virtus bottom");
+			itemDef.modelZoom = 1740;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 2045;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 4;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[2] = "Check-charges";
 			itemDef.itemActions[4] = "Drop";
-			itemDef.modelZoom = 964;
-			itemDef.modelRotationY = 498;
-			itemDef.modelRotationX = 1150;
-			itemDef.modelOffset1 = -1;
-			itemDef.modelOffset2 = -1;
 			break;
 
 
@@ -864,6 +869,8 @@ public final class ItemDefinition {
 			break;
 		case 16650: 
 			itemDef.modelID = 47075;
+			itemDef.maleWield = 47076;
+			itemDef.femaleWield = 47076;
 			itemDef.name = "Elite virtus mask";
 			itemDef.description = "Elite Virtus mask";
 			itemDef.modelZoom = 928;
@@ -871,8 +878,6 @@ public final class ItemDefinition {
 			itemDef.modelRotationX = 2041;
 			itemDef.modelOffset1 = 1;
 			itemDef.modelOffset2 = -5;
-			itemDef.maleWield = 47076;
-			itemDef.femaleWield = 47076;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
@@ -884,6 +889,8 @@ public final class ItemDefinition {
 			break;
 		case 16651: 
 			itemDef.modelID = 47077;
+			itemDef.maleWield = 47078;
+			itemDef.femaleWield = 47078;
 			itemDef.name = "Elite virtus robe top";
 			itemDef.description = "Elite Virtus robe top";
 			itemDef.modelZoom = 1122;
@@ -891,8 +898,6 @@ public final class ItemDefinition {
 			itemDef.modelRotationX = 3;
 			itemDef.modelOffset1 = 1;
 			itemDef.modelOffset2 = 0;
-			itemDef.maleWield = 47078;
-			itemDef.femaleWield = 47078;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
@@ -902,6 +907,8 @@ public final class ItemDefinition {
 			break;
 		case 16653: 
 			itemDef.modelID = 47079;
+			itemDef.maleWield = 47080;
+			itemDef.femaleWield = 47080;
 			itemDef.name = "Elite Virtus robe legs";
 			itemDef.description = "Elite Virtus robe legs";
 			itemDef.modelZoom = 1740;
@@ -909,8 +916,6 @@ public final class ItemDefinition {
 			itemDef.modelRotationX = 2045;
 			itemDef.modelOffset1 = -1;
 			itemDef.modelOffset2 = 4;
-			itemDef.maleWield = 47080;
-			itemDef.femaleWield = 47080;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
@@ -978,7 +983,11 @@ public final class ItemDefinition {
 
 		case 19923:
 			itemDef.name = "Groudon Pet";
-			itemDef.itemActions = new String[] {"Hatch" };
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
 			itemDef.modelID = 47087;
 			itemDef.modelRotationY = 0;
 			itemDef.modelRotationX = 0;
@@ -2276,7 +2285,7 @@ public final class ItemDefinition {
 			itemDef.stackable = false;
 			break;
 
-		case 20250:
+	/*	case 20250:
 			itemDef.modelID = 55057;
 			itemDef.name = "@red@Amer@whi@ican @blu@Whip";
 			itemDef.description = "It's a american whip.";
@@ -2292,7 +2301,7 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Drop";
-			break;
+			break;*/
 		case 290:
 			itemDef.name = "Legendary Mystery Box";
 			break;
@@ -2618,7 +2627,7 @@ public final class ItemDefinition {
 			itemDef.itemActions[4] = "Drop";
 			break;
 
-		case 14587:
+		/*case 14587:
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
@@ -2636,8 +2645,8 @@ public final class ItemDefinition {
 			itemDef.femaleWield = -1;
 			itemDef.name = "Gold santa hat";
 			itemDef.description = "It's a gold santa hat.";
-			break;
-		case 14588:
+			break;*/
+		/**case 14588:
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
@@ -2656,7 +2665,7 @@ public final class ItemDefinition {
 			itemDef.name = "Gold partyhat";
 			itemDef.description = "It's a gold partyhat.";
 			break;
-
+*/
 		case 14589:
 			itemDef.modelID = 32565;
 			itemDef.name = "Staff of gods";

@@ -1,16 +1,13 @@
 package io.battlerune.updater.screen.impl;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.util.concurrent.TimeUnit;
-
 import io.battlerune.Client;
 import io.battlerune.Stopwatch;
 import io.battlerune.updater.UpdateState;
 import io.battlerune.updater.Updater;
 import io.battlerune.updater.screen.UpdateComponent;
+
+import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
 public class WelcomeUpdateScreen extends UpdateComponent {
 
@@ -42,10 +39,7 @@ public class WelcomeUpdateScreen extends UpdateComponent {
 			setLabel("Hello");
 
 		else if (stage == 2 || stage == 3)
-			setLabel("Welcome to BattleRune");
-
-		else if (stage == 4 || stage == 5)
-			setLabel("Please wait as we set up your files");
+			setLabel("Welcome to Runity, Please wait as we set up your files");
 
 		else
 			return;
@@ -65,7 +59,7 @@ public class WelcomeUpdateScreen extends UpdateComponent {
 
 		if (stopwatch.hasElapsed(2, TimeUnit.SECONDS)) {
 			stage++;
-			if (stage == 6)
+			if (stage == 4)
 				Updater.get().state = UpdateState.DEFAULT_SCREEN;
 			stopwatch.reset();
 		}

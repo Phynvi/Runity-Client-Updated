@@ -1,32 +1,19 @@
 package io.battlerune.updater;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.BufferedWriter;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
+import io.battlerune.Client;
+import io.battlerune.Configuration;
+import io.battlerune.Utility;
+import io.battlerune.updater.screen.UpdateComponent;
+import io.battlerune.updater.screen.UpdaterRenderer;
+import io.battlerune.updater.screen.impl.*;
+
+import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
-
-import io.battlerune.Client;
-import io.battlerune.Configuration;
-import io.battlerune.Utility;
-import io.battlerune.updater.screen.UpdateComponent;
-import io.battlerune.updater.screen.UpdaterRenderer;
-import io.battlerune.updater.screen.impl.CacheUpdateScreen;
-import io.battlerune.updater.screen.impl.ClientUpdateScreen;
-import io.battlerune.updater.screen.impl.DefaultUpdateScreen;
-import io.battlerune.updater.screen.impl.GoodbyeUpdateScreen;
-import io.battlerune.updater.screen.impl.UpToDateUpdateScreen;
-import io.battlerune.updater.screen.impl.WelcomeUpdateScreen;
 
 /**
  * An update handler that updates the client and cache files.
@@ -54,7 +41,6 @@ public class Updater {
 	 * The client download url link.
 	 */
 	private static final String CLIENT_LINK = "http://nearreality.io/Runity-Beta.jar";
-
 	/**
 	 * The cache directory.
 	 */
@@ -74,7 +60,7 @@ public class Updater {
 	 * Constructs a new {@link Updater}.
 	 */
 	private Updater() {
-		/* can't initialize this class. */
+	    /* can't initialize this class. */
 	}
 
 	public void setup(Client client) {
@@ -83,8 +69,8 @@ public class Updater {
 			state = UpdateState.WELCOME_SCREEN;
 			client.updaterRenderer.setScreen(new WelcomeUpdateScreen());
 		} else {
-			state = UpdateState.DEFAULT_SCREEN;
-			client.updaterRenderer.setScreen(new DefaultUpdateScreen());
+			state = UpdateState.WELCOME_SCREEN;
+			client.updaterRenderer.setScreen(new WelcomeUpdateScreen());
 		}
 	}
 
@@ -308,8 +294,7 @@ public class Updater {
 		ZipEntry entry;
 		int length;
 		byte[] buffer = new byte[1024];
-		try (ZipInputStream in = new ZipInputStream(new BufferedInputStream(new FileInputStream(source)));
-				ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(target)))) {
+		try (ZipInputStream in = new ZipInputStream(new BufferedInputStream(new FileInputStream(source))); ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(target)))) {
 			while ((entry = in.getNextEntry()) != null) {
 				if (entry.isDirectory())
 					continue;
