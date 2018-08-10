@@ -173,6 +173,37 @@ public class Widget {
 		case 7:
 			submit(new Widget(time, 79));
 			break;
+		case 8: //OVERLOAD
+			submit(new Widget(time, 884));
+			break;
+		case 9: //STRENGTH
+			submit(new Widget(time, 885));
+			break;
+		case 10: //ATTACK
+			submit(new Widget(time, 358));
+			break;
+		case 11: //DEFENCE
+			submit(new Widget(time, 887));
+			break;
+		case 12: //RANGE
+			submit(new Widget(time, 359));
+			break;
+		case 13: //MAGIC
+			submit(new Widget(time, 360));
+			break;
+		case 14: //DOUBLE XP
+			submit(new Widget(time, 890));
+			break;
+		case 15: //POISON
+			submit(new Widget(time, 891));
+			break;
+		case 16: //FISHING POTION
+			submit(new Widget(time, 892));
+			break;
+		case 17: //STAMINA POTION
+			submit(new Widget(time, 893));
+			break;
+			//TODO ADAM WIDGET CODE.
 		}
 	}
 

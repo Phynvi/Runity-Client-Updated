@@ -166,6 +166,17 @@ public final class NpcDefinition {
 			entityDef.actions[3] = "Trade";
 			break;
 		/** Crafting master. */
+		case 473:
+		case 137:
+		case 8091:
+		case 3354:
+		 case 787:
+	         	entityDef.scaleXZ = 64;
+	         	entityDef.scaleY = 64;
+	             entityDef.actions = new String[5];
+	               entityDef.actions[0] = "Talk-to";
+	               entityDef.actions[2] = "Pick-up";
+	         break;
 		case 5811:
 			entityDef.actions = new String[5];
 			entityDef.actions[0] = "Tan";
