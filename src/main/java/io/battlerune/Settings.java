@@ -25,14 +25,14 @@ public final class Settings {
 	static int HITSPLAT;
 	static int GAMEFRAME = 474;
 	static int HP_BAR;
-	static boolean PROFANITY_FILTER = true;
+	static boolean PROFANITY_FILTER = false;
 
 	static boolean HD_MINIMAP = true;
 	static boolean TWEENING = true;
 	static boolean GROUND_DECORATIONS = true;
 	static boolean CUSTOM_LIGHTING = true;
 	private static boolean MIPMAPPING = true;
-	static boolean FOG;
+	static boolean FOG = false;
 	static boolean SMOOTH_SHADING = true;
 	static boolean SNOW;
 	static boolean PARTICLES = true;
@@ -251,7 +251,7 @@ public final class Settings {
 		TWEENING = high;
 		HD_MINIMAP = high;
 		MIPMAPPING = high;
-		FOG = high;
+		//FOG = high;
 		SMOOTH_SHADING = high;
 		PARTICLES = high;
 		client.loadingStage = 1;

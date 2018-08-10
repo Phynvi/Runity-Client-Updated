@@ -14530,12 +14530,26 @@ public class Client extends GameApplet {
     		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
     		return true;
     	}
+    	if (id == 46615) {
+    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+    		return true;
+    	}
     	if (id == 45600) {
     		int state = Integer.parseInt(text);
     		if (state == 0) {
     			teleportButton = null;
     		} else {
     			teleportButton = RSInterface.interfaceCache[45600];
+    		}
+    		
+    		return true;
+    	}
+    	if (id == 46600) {
+    		int state1 = Integer.parseInt(text);
+    		if (state1 == 0) {
+    			teleportButton = null;
+    		} else {
+    			teleportButton = RSInterface.interfaceCache[46600];
     		}
     		return true;
     	} else if (id == 23050) {

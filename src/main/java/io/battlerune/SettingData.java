@@ -45,6 +45,21 @@ public enum SettingData implements SettingsAction<Client> {
 			Settings.DRAW_ITEM_HOVERS = !Settings.DRAW_ITEM_HOVERS;
 		}
 	},
+	FOG("Disable Fog") {
+		@Override
+		public String name(Client client) {
+			return Settings.FOG + setting;
+		}
+
+		public boolean status() {
+			return Settings.FOG;
+		}
+
+		@Override
+		public void handle(Client client) {
+			Settings.FOG = !Settings.FOG;
+		}
+	},
 
 	DRAW_SPEC_BUTTON("Special attack button") {
 		@Override

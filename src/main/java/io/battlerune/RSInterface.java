@@ -379,6 +379,7 @@ public class RSInterface {
 		bossMinigame(textDrawingAreas);
 		petInterface(textDrawingAreas);
 		teleportButtonThing(textDrawingAreas);
+		teleportButtonThing1(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
 
@@ -434,7 +435,61 @@ public class RSInterface {
 		items.child(0, 45621, 0, 0);
 		items.width = 310;
 		items.height = 50;
-		setScrollableItems(interfaceCache[45621], BossDrops.BOSSEVENT_DROPS);
+		setScrollableItems(interfaceCache[45621], BossDrops.GALVEK_DROPS);
+	}
+	
+	public static void teleportButtonThing1(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(46600);
+		addButton(46601, 17, "TeleSexy/SPRITE", "Teleport");
+		RSInterface button = interfaceCache[46601];
+		button.hoverType = 46602;
+		tab.totalChildren(2);
+		tab.child(0, 46601, 10, 25);
+		tab.child(1, 46602, 35, 10);
+		
+		RSInterface popup = addInterface(46602);
+		popup.isMouseoverTriggered = true;
+		addColorBox(46603, 0, 310, 265, 160);
+		addText(46604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
+		addText(46605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
+		addText(46606, "Health:", tda, 0, 0xff9040,  false, true);
+		addText(46607, "Max Hit:", tda, 0, 0xff9040,  false, true);
+		addText(46608, "Weakness:", tda, 0, 0xff9040,  false, true);
+		addText(46609, "Attack:", tda, 0, 0xff9040,  false, true);
+		addText(46610, "252", tda, 0, 0xffffff,  false, true);
+		addText(46611, "280", tda, 0, 0xffffff,  false, true);
+		addText(46612, "23", tda, 0, 0xffffff,  false, true);
+		addText(46613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
+		addText(46614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addNpc(46615, 8095, 3000);
+		addText(46616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
+		addText(46617, "Rare Drops:", tda, 0, 0xff9040,  false, true);
+		popup.totalChildren(16);
+		popup.child(0, 46603, 0, 0);
+		popup.child(1, 46604, 150, 12);
+		popup.child(2, 46605, 165, 45);
+		popup.child(3, 46606, 165, 59);
+		popup.child(4, 46607, 165, 73);
+		popup.child(5, 46608, 165, 87);
+		popup.child(6, 46609, 165, 115);
+		popup.child(7, 46610, 225, 45);
+		popup.child(8, 46611, 225, 59);
+		popup.child(9, 46612, 225, 73);
+		popup.child(10, 46613, 225, 87);
+		popup.child(11, 46614, 225, 115);
+		popup.child(12, 46615, 20, 30);
+		popup.child(13, 46616, 10, 145);
+		popup.child(14, 46617, 10, 217);
+		popup.child(15, 46620, 0, 230);
+		
+		RSInterface items = addInterface(46620);
+		itemGroup(46621, 40, 1, 10, 1);
+		interfaceCache[46621].parentID = items.interfaceId;
+		items.totalChildren(1);
+		items.child(0, 46621, 0, 0);
+		items.width = 310;
+		items.height = 50;
+		setScrollableItems(interfaceCache[46621], BossDrops.ARENA_DROPS);
 	}
 	
 	

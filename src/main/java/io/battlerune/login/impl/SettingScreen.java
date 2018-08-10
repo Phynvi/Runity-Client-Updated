@@ -64,9 +64,9 @@ public class SettingScreen extends LoginComponent {
 		client.smallFont.drawCenteredText(0xFFFFFF, centerX + 330, "Client Build: " + Configuration.GAME_VERSION,
 				centerY + 245, true);
 		if (Configuration.DEBUG_MODE) {
-			client.smallFont.drawCenteredText(0xFFFFFF, centerX + 300,
+		/*	client.smallFont.drawCenteredText(0xFFFFFF, centerX + 300,
 					"MouseX: " + (client.mouseX - (centerX)) + " Mouse Y: " + (client.mouseY - (centerY)),
-					centerY - 225, true);
+					centerY - 225, true);*/
 		}
 
 		/* Drawing */

@@ -1,4 +1,4 @@
-/*package io.battlerune.eventboss;
+package io.battlerune.eventboss;
 
 import io.battlerune.BossDrops;
 
@@ -69,4 +69,3 @@ public enum EventBossData {
 		return drops;
 	}
 }
-*/

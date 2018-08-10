@@ -428,7 +428,7 @@ public final class NpcDefinition {
 			break;
 		case 6481:
 			entityDef.name = "Mac";
-			entityDef.description = "Only the most knowledgeable players of OS-Royale are worthy of such a cape."
+			entityDef.description = "Only the most knowledgeable players of Runity are worthy of such a cape."
 					.getBytes();
 			entityDef.combatLevel = 126;
 			entityDef.walkingAnimation = 819;

@@ -119,10 +119,10 @@ public class MainScreen extends LoginComponent {
 		/* Other */
 		client.smallFont.drawCenteredText(0xFFFFFF, centerX + 330, "Client Build: " + Configuration.GAME_VERSION,
 				centerY + 245, true);
-		// if (Configuration.DEBUG_MODE) {
-		client.smallFont.drawCenteredText(0xFFFFFF, centerX + 300,
-				"MouseX: " + (client.mouseX) + " Mouse Y: " + (client.mouseY), centerY - 225, true);
-		// }
+		if (Configuration.DEBUG_MODE) {
+		/*client.smallFont.drawCenteredText(0xFFFFFF, centerX + 300,
+				"MouseX: " + (client.mouseX) + " Mouse Y: " + (client.mouseY), centerY - 225, true);*/
+		 }
 
 		/* Drawing */
 		Client.loginScreenIP.drawGraphics(client.graphics, 0, 0);
