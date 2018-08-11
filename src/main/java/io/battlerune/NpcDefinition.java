@@ -155,6 +155,11 @@ public final class NpcDefinition {
 
 			break;
 		case 326:
+			
+		case 3220:
+			entityDef.actions[2] = "Crafting Tele";
+			entityDef.actions[3] = "Crafting Tele 1";
+			break;
 		case 321:
 			entityDef.actions = new String[5];
 			entityDef.actions[0] = "Talk-to";

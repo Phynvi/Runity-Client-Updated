@@ -192,18 +192,27 @@ public class Widget {
 			submit(new Widget(time, 360));
 			break;
 		case 14: //DOUBLE XP
-			submit(new Widget(time, 890));
+			submit(new Widget(time, 707));
 			break;
 		case 15: //POISON
 			submit(new Widget(time, 891));
 			break;
-		case 16: //FISHING POTION
+		case 16: //FISHING POTION //BROKEN....
 			submit(new Widget(time, 892));
 			break;
-		case 17: //STAMINA POTION
-			submit(new Widget(time, 893));
+		case 18: //ANTI_VENOM POTION
+			submit(new Widget(time, 894));
 			break;
-			//TODO ADAM WIDGET CODE.
+		case 19: //SUPER ANTI VENOM+4
+			submit(new Widget(time, 895));
+			break;		
+		case 17: //STAMINA POTION
+			submit(new Widget(time, 896));
+			break;
+		case 20: //AGILITY POTION
+			submit(new Widget(time, 897));
+			break;
+		
 		}
 	}
 

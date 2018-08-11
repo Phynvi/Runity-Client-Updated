@@ -14534,6 +14534,14 @@ public class Client extends GameApplet {
     		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
     		return true;
     	}
+    	if (id == 46715) {
+    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+    		return true;
+    	}
+    	if (id == 48615) {
+    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+    		return true;
+    	}
     	if (id == 45600) {
     		int state = Integer.parseInt(text);
     		if (state == 0) {
@@ -14552,7 +14560,25 @@ public class Client extends GameApplet {
     			teleportButton = RSInterface.interfaceCache[46600];
     		}
     		return true;
-    	} else if (id == 23050) {
+    	} 
+    	if (id == 47600) {
+    		int state2 = Integer.parseInt(text);
+    		if (state2 == 0) {
+    			teleportButton = null;
+    		} else {
+    			teleportButton = RSInterface.interfaceCache[47600];
+    		}
+    		return true;
+    	}
+    	if (id == 48600) {
+    		int state3 = Integer.parseInt(text);
+    		if (state3 == 0) {
+    			teleportButton = null;
+    		} else {
+    			teleportButton = RSInterface.interfaceCache[48600];
+    		}
+    		return true;
+    	}else if (id == 23050) {
             if (text.equals("on")) 			drawOpponentStats = true;
             else if (text.equals("off")) 	drawOpponentStats = false;
             return true;
