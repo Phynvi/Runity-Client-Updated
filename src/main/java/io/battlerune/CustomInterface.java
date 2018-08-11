@@ -4673,7 +4673,7 @@ public class CustomInterface extends RSInterface {
 		addHoveredButton(29414, 295, 18, 18, 29415);
 		addHoverButton(29420, dir, 3, 125, 22, "View Interfaces & More", -1, 29421, 1);
 		addHoveredButton(29421, dir, 4, 125, 22, 29422);
-		addHoverButton(29423, dir, 0, 88, 22, "View Money Making Guide", -1, 29424, 1);
+		addHoverButton(29423, dir, 0, 88, 22, "View Player Guide", -1, 29424, 1);
 		addHoveredButton(29424, dir, 1, 88, 22, 29425);
 		addHoverButton(29426, dir, 0, 88, 22, "View NPC Drop", -1, 29427, 1);
 		addHoveredButton(29427, dir, 1, 88, 22, 29428);
@@ -4686,7 +4686,7 @@ public class CustomInterface extends RSInterface {
 		addText(29436, "NPC Drops", tda, 0, 0xecc636, true, true);
 		addText(29437, "Presets", tda, 0, 0xecc636, true, true);
 		addText(29438, "Bosses", tda, 0, 0xecc636, true, true);
-		addText(29439, "Money Making Guide", tda, 0, 0xecc636, true, true);
+		addText(29439, "Player Guide", tda, 0, 0xecc636, true, true);
 
 		addHoverButton(29440, 71, 16, 16, "Refresh quest tab", -1, 29441, 1);
 		addHoveredButton(29441, 72, 16, 16, 29442);
