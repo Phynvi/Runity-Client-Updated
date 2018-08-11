@@ -36,10 +36,10 @@ public class WelcomeUpdateScreen extends UpdateComponent {
 	@Override
 	public void process() {
 		if (stage == 0 || stage == 1)
-			setLabel("Hello");
+			setLabel("Welcome to Runity");
 
 		else if (stage == 2 || stage == 3)
-			setLabel("Welcome to Runity, Please wait as we set up your files");
+			setLabel("Please wait as we set up your files");
 
 		else
 			return;
