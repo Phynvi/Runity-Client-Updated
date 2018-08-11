@@ -4682,10 +4682,10 @@ public class CustomInterface extends RSInterface {
 		addHoverButton(29432, dir, 0, 88, 22, "View Bosses", -1, 29433, 1);
 		addHoveredButton(29433, dir, 1, 88, 22, 29434);
 
-		addText(29435, "Achievements", tda, 0, 0xecc636, true, true);
-		addText(29436, "NPC Drops", tda, 0, 0xecc636, true, true);
+		addText(29435, "Main Tab", tda, 0, 0xecc636, true, true);
+		addText(29436, "Tools", tda, 0, 0xecc636, true, true);
 		addText(29437, "Presets", tda, 0, 0xecc636, true, true);
-		addText(29438, "Bosses", tda, 0, 0xecc636, true, true);
+		addText(29438, "Teleports", tda, 0, 0xecc636, true, true);
 		addText(29439, "Player Guide", tda, 0, 0xecc636, true, true);
 
 		addHoverButton(29440, 71, 16, 16, "Refresh quest tab", -1, 29441, 1);
