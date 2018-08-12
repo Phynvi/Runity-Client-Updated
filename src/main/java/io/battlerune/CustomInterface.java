@@ -4667,7 +4667,7 @@ public class CustomInterface extends RSInterface {
 		addSprite(29402, 64);
 		addText(29403, "", tda, 2, 0xecc636, true, true);
 		addHoverText(29404, "www.Runity.io", "Visit website", tda, 3, 0xC47423, true, true, 168);
-		addHoverButton(29410, 292, 18, 18, "Daily Achievements", -1, 29411, 1);
+		addHoverButton(29410, 292, 18, 18, "View Panels", -1, 29411, 1);
 		addHoveredButton(29411, 293, 18, 18, 29412);
 		addHoverButton(29413, 294, 18, 18, "View Quests", -1, 29414, 1);
 		addHoveredButton(29414, 295, 18, 18, 29415);
@@ -4677,15 +4677,15 @@ public class CustomInterface extends RSInterface {
 		addHoveredButton(29424, dir, 1, 88, 22, 29425);
 		addHoverButton(29426, dir, 0, 88, 22, "View NPC Drop", -1, 29427, 1);
 		addHoveredButton(29427, dir, 1, 88, 22, 29428);
-		addHoverButton(29429, dir, 0, 88, 22, "View Preset Interface!", -1, 29430, 1);
+		addHoverButton(29429, dir, 0, 88, 22, "View Preset Interface", -1, 29430, 1);
 		addHoveredButton(29430, dir, 1, 88, 22, 29431);
 		addHoverButton(29432, dir, 0, 88, 22, "View Bosses", -1, 29433, 1);
 		addHoveredButton(29433, dir, 1, 88, 22, 29434);
 
-		addText(29435, "Main Tab", tda, 0, 0xecc636, true, true);
-		addText(29436, "Tools", tda, 0, 0xecc636, true, true);
+		addText(29435, "Achievements", tda, 0, 0xecc636, true, true);
+		addText(29436, "NPC Drops", tda, 0, 0xecc636, true, true);
 		addText(29437, "Presets", tda, 0, 0xecc636, true, true);
-		addText(29438, "Teleports", tda, 0, 0xecc636, true, true);
+		addText(29438, "Bosses", tda, 0, 0xecc636, true, true);
 		addText(29439, "Player Guide", tda, 0, 0xecc636, true, true);
 
 		addHoverButton(29440, 71, 16, 16, "Refresh quest tab", -1, 29441, 1);
@@ -4736,7 +4736,6 @@ public class CustomInterface extends RSInterface {
 			y += 18;
 		}
 	}
-
 	private static void achievementTab(TextDrawingArea tda[]) {
 		RSInterface rsinterface = addInterface(35000);
 		addSprite(35001, 63);
