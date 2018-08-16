@@ -59,6 +59,106 @@ public final class NpcDefinition {
 		entityDef.decode(buffer);
 
 		switch (id) {
+		
+		/**
+		 * Illerai NPC's.
+		 */
+		/*  271:     */     case 1202: 
+			/*  272: 290 */       entityDef.name = "Vine Growth";
+			/*  273: 291 */       entityDef.combatLevel = 128;
+			/*  274: 292 */       entityDef.description = "Grown by the Baron Maple's magic.".getBytes();
+			/*  275: 293 */       entityDef.walkingAnimation = 3617;
+			/*  276: 294 */       entityDef.standingAnimation = 3617;
+			/*  277: 295 */       entityDef.actions = new String[5];
+			/*  278: 296 */       entityDef.actions[1] = "Attack";
+			/*  279: 297 */       entityDef.modelId = new int[] { 38578 };
+			/*  280: 298 */       entityDef.scaleXZ = 200;
+			/*  281: 299 */       entityDef.scaleY = 200;
+			/*  282: 300 */       entityDef.size = 2;
+			/*  283: 301 */       break;
+			/*  284:     */     case 1203: 
+			/*  285: 304 */       entityDef.name = "Seed";
+			/*  286: 305 */       entityDef.description = "Was that there before...?".getBytes();
+			/*  287: 306 */       entityDef.walkingAnimation = 65535;
+			/*  288: 307 */       entityDef.standingAnimation = 65535;
+			/*  289: 308 */       entityDef.actions = new String[5];
+			/*  290: 309 */       entityDef.modelId = new int[] { 38582 };
+			/*  291: 310 */       entityDef.scaleXZ = 200;
+			/*  292: 311 */       entityDef.scaleY = 200;
+			/*  293: 312 */       entityDef.size = 2;
+			/*  294: 313 */       break;
+	    case 253: 
+	    	/*  476: 502 */       entityDef.name = "Spirit Black Dragon";
+	    	/*  477: 503 */       entityDef.combatLevel = 255;
+	    	/*  478: 504 */       entityDef.description = "It's a Spirit Black Dragon".getBytes();
+	    	/*  479: 505 */       entityDef.walkingAnimation = 79;
+	    	/*  480: 506 */       entityDef.standingAnimation = 90;
+	    	/*  481: 507 */       entityDef.actions = new String[5];
+	    	/*  482: 508 */       entityDef.actions[1] = "Attack";
+	    	/*  483: 509 */       entityDef.recolorOriginal = new int[] { 2469, 912, 1938, 1814, 2588, 910 };
+	    	/*  484: 510 */       entityDef.recolorTarget = new int[] { 24, 898, 42398, 4, 16 };
+	    	/*  485: 511 */       entityDef.scaleXZ = 80;
+	    	/*  486: 512 */       entityDef.scaleY = 80;
+	    	/*  487: 513 */       entityDef.size = 2;
+	    	/*  488: 514 */       break;
+	    /*  180:     */     case 1198: 
+	    	/*  181: 195 */       entityDef.name = "Baron Maple";
+	    	/*  182: 196 */       entityDef.combatLevel = 612;
+	    	/*  183: 197 */       entityDef.description = "A long forgotten soul encased in the branches of a maple tree.".getBytes();
+	    	/*  184: 198 */       entityDef.walkingAnimation = 4654;
+	    	/*  185: 199 */       entityDef.standingAnimation = 4656;
+	    	/*  186: 200 */       entityDef.actions = new String[5];
+	    	/*  187: 201 */       entityDef.actions[1] = "Attack";
+	    	/*  188: 202 */       entityDef.modelId = new int[] { 38576, 38577, 38579 };
+	    	/*  189: 203 */       entityDef.scaleXZ = 140;
+	    	/*  190: 204 */       entityDef.scaleY = 140;
+	    	/*  191: 205 */       entityDef.size = 4;
+	    	/*  192: 206 */       break;
+		 case 1207: 
+			 /*  194: 209 */       entityDef.name = "Exoden";
+			 /*  195: 210 */       entityDef.combatLevel = 806;
+			 /*  196: 211 */       entityDef.description = "That thing can't be mortal...".getBytes();
+			 /*  197: 212 */       entityDef.walkingAnimation = 6505;
+			 /*  198: 213 */       entityDef.standingAnimation = 6504;
+			 entityDef.actions = new String[5];
+			 entityDef.actions[1] = "Attack";
+			                       entityDef.modelId = new int[1];
+			                       entityDef.modelId[0] = 2881;
+			                       /*  202: 217 */       entityDef.scaleXZ = 128;
+			                       /*  203: 218 */       entityDef.scaleY = 128;
+			                       /*  204: 219 */       entityDef.size = 4;
+			 /*  205: 220 */       break;
+		 /*  245:     */     case 4708: 
+			 /*  246: 262 */       entityDef.name = "King Chimera";
+			 /*  247: 263 */       entityDef.combatLevel = 646;
+			 /*  248: 264 */       entityDef.description = "A mythical beast of chaos.".getBytes();
+			 /*  249: 265 */       entityDef.walkingAnimation = 7033;
+			 /*  250: 266 */       entityDef.standingAnimation = 7032;
+			 /*  251: 267 */       entityDef.actions = new String[5];
+			 /*  252: 268 */       entityDef.actions[1] = "Attack";
+			 /*  253: 269 */       entityDef.modelId = new int[] { 47007 };
+			 /*  254: 270 */       entityDef.scaleXZ = 250;
+			 /*  255: 271 */       entityDef.scaleY = 250;
+			 /*  256: 272 */       entityDef.size = 5;
+			 /*  257: 273 */       break;
+			 /*  258:     */     case 3829: 
+			 /*  259: 276 */       entityDef.name = "Chimera's cub";
+			 /*  260: 277 */       entityDef.description = "It's glare is intimidating even for a cub.".getBytes();
+			 /*  261: 278 */       entityDef.walkingAnimation = 7033;
+			 /*  262: 279 */       entityDef.standingAnimation = 7032;
+			 /*  263: 280 */       entityDef.actions = new String[5];
+			 /*  264: 281 */       entityDef.actions[0] = "Talk-to";
+			 /*  265: 282 */       entityDef.actions[2] = "Pick-up";
+			 /*  266: 283 */       entityDef.modelId = new int[] { 47007 };
+			 /*  267: 284 */       entityDef.scaleXZ = 50;
+			 /*  268: 285 */       entityDef.scaleY = 50;
+			 /*  269: 286 */       entityDef.size = 1;
+			 /*  270: 287 */       break;
+			 
+			 /**
+			  * end of Illerai NPC's.
+			  */
+		
 		case 5129:
 			entityDef.combatLevel = 806;
 			break;
