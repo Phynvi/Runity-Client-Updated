@@ -388,7 +388,7 @@ public class CustomInterface extends RSInterface {
 		RSInterface tab = addInterface(51200);
 		String dir = "TeleSexy/SPRITE";
 
-		tab.totalChildren(36);
+		tab.totalChildren(38);
 		int t = 0;
 		int child = 0;
 		int x = 16;
@@ -704,7 +704,7 @@ public class CustomInterface extends RSInterface {
     public static void welcome(TextDrawingArea[] TDA) {
         RSInterface rsinterface = addInterface(450);
         addSprite(21300, 778);
-        addHoverButton(21301, 298, 367, 45, "Enter OS Royale", -1, 21302, 1);
+        addHoverButton(21301, 298, 367, 45, "Enter Runity", -1, 21302, 1);
         addHoveredButton(21302, 779, 367, 45, 21303);
         addHoverButton(21304, 298, 172, 28, "View Latest Announcements", -1, 21305, 1);
         addHoveredButton(21305, 780, 172, 28, 21306);
@@ -712,13 +712,13 @@ public class CustomInterface extends RSInterface {
         addHoveredButton(21308, 780, 172, 28, 21309);
         //addHead(21310, 35, 35, 2500);
         addHead(21342, 2, 306, 588, 35, 35, 900);
-        addText(21311, "WELCOME TO OS ROYALE!", 0xE9EBC5, true, true, 52, TDA, 3);
+        addText(21311, "WELCOME TO Runity!", 0xE9EBC5, true, true, 52, TDA, 3);
         addText(21312, "CLICK HERE TO PLAY", 0xFF4545, true, true, 52, TDA, 3);
         addText(21313, "View Latest Announcement", 0xC9C2BF, true, true, 52, TDA, 1);
         addText(21314, "View Latest Update", 0xC9C2BF, true, true, 52, TDA, 1);
-        addText(21315, "OS Royale is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
-        addText(21316, "OS Royale is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
-        addText(21317, "OS Royale is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
+        addText(21315, "Runity is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
+        addText(21316, "Runity is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
+        addText(21317, "Runity is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
         addText(21318, "You last logged in from 127.0.0.1", 0xEBCD96, true, true, 52, TDA, 0);
         addMarqueeText(21319, 0xEBCD96, true, 52, 3, TDA);
         addText(21320, "Bank pin line 1", 0xC9C2BF, false, true, 52, TDA, 0);

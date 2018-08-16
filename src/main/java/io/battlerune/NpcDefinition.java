@@ -217,6 +217,11 @@ public final class NpcDefinition {
         	 entityDef.actions = new String[5];
         	 entityDef.actions[0] = "Catch";
         	 break;
+         case 1637:
+        	 entityDef.actions = new String[5];
+        	 entityDef.actions[1] = "Catch";
+        	 break;
+        	 
          	
          case 1873:
          	entityDef.name = "Pet Yoshi";

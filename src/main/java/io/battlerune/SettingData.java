@@ -298,7 +298,7 @@ public enum SettingData implements SettingsAction<Client> {
 			Settings.ITEM_RARITY_COLOR = !Settings.ITEM_RARITY_COLOR;
 		}
 	},
-	SNOW_SETTING("Winter") {
+/*	SNOW_SETTING("Winter") {
 		@Override
 		public String name(Client client) {
 			return Settings.SNOW + setting;
@@ -313,7 +313,8 @@ public enum SettingData implements SettingsAction<Client> {
 			Settings.SNOW = !Settings.SNOW;
 			client.pushMessage("Reload your client for full effect!");
 		}
-	},;
+	},*/
+	;
 
 	/**
 	 * The setting name.

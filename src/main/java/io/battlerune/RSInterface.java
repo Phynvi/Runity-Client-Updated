@@ -598,7 +598,7 @@ public class RSInterface {
 		items3.child(0, 48621, 0, 0);
 		items3.width = 310;
 		items3.height = 50;
-		setScrollableItems(interfaceCache[48621], BossDrops.JUSTICAR_DROPS);
+		setScrollableItems(interfaceCache[48621], BossDrops.SKOTIZO_DROPS);
 	}
 	
 	

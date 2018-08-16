@@ -19,7 +19,8 @@ public enum BossInformation {
 	CALLISTO("Callisto", 6503, 470, 255, 30, 2800, 52, -20, BossDrops.CALLISTO_DROPS, 18),
 	SCORPIA("Scorpia", 6615, 225, 200, 32, 2100, 60, -20, BossDrops.SCORPIA_DROPS, 17),
 	CERBERUS("Cerberus", 5862, 318, 600, 42, 4200, 52, -20, BossDrops.CERBERUS_DROPS, 18),
-	VORKATH("Vorkath", 8060, 392, 750, 90, 5200, 52, -20, BossDrops.VORKATH_DROPS, 9);
+	VORKATH("Vorkath", 8060, 392, 750, 90, 5200, 52, -20, BossDrops.VORKATH_DROPS, 9),
+	ICEDEMON("Ice Demon", 7585, 318, 600, 42, 4200, 52, -20, BossDrops.CERBERUS_DROPS, 5);
 
 	public final String name;
 	public final int id;

@@ -29,14 +29,13 @@ public final class Settings {
 
 	static boolean HD_MINIMAP = true;
 	static boolean TWEENING = true;
-	static boolean GROUND_DECORATIONS = true;
+	static boolean GROUND_DECORATIONS = false;
 	static boolean CUSTOM_LIGHTING = true;
 	private static boolean MIPMAPPING = true;
 	static boolean FOG = false;
 	static boolean SMOOTH_SHADING = true;
 	static boolean SNOW;
 	static boolean PARTICLES = true;
-
 	static boolean DAMAGE_MULTIPLIER;
 	static boolean ENTITY_FEED = true;
 	static boolean STATUS_ORB = true;

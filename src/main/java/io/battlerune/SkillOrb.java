@@ -58,11 +58,17 @@ public class SkillOrb {
 		Raster.defaultDrawingAreaSize();
 		icon.drawARGBSprite(x + 30 - icon.width / 2, 28 - icon.height / 2 + y, alpha);
 	}
+	
+	
+
 
 	/**
 	 * Draws a tooltip containing information about this skill orb.
-	 */
+	 */	
+	static int lastSkill = -1;
+
 	public void drawTooltip() {
+		
 		NumberFormat nf = NumberFormat.getInstance();
 		int mouseX = Client.instance.mouseX;
 		int mouseY = Client.instance.mouseY;
@@ -71,7 +77,10 @@ public class SkillOrb {
 		int staticLevel = SkillConstants.getLevelForExperience(experience);
 		int maxExperience = SkillConstants.getExperienceForLevel(level + 1);
 		int completion = staticLevel == 99 ? 100 : experience * 100 / maxExperience;
-		int percentage = completion * 119 / 100;
+		int startExp = SkillConstants.getExperienceForLevel(level);
+		int endExp = SkillConstants.getExperienceForLevel(level + 1);
+		int percentage = (int) (100D * (experience - startExp) / (endExp - startExp));
+
 
 		Raster.drawTransparentBox(mouseX + 1, mouseY + 6, 122, 82, 0x7D5C51, 150);
 		Raster.drawRectangle(mouseX, mouseY + 5, 122, 82, 0x000000);
@@ -88,8 +97,9 @@ public class SkillOrb {
 
 		Raster.drawRoundedRectangle(mouseX, mouseY + 70, 121, 15, 0xED4747, 100, true, true);
 
-		if (percentage > 121)
-			percentage = 121;
+		if (percentage >= 100) {
+			percentage = 100;
+		}
 
 		Raster.fillRectangle(mouseX + 2, mouseY + 70, 119, 15, 0xDB2323);
 		Raster.fillRectangle(mouseX + 1, mouseY + 70, percentage, 15, 0x37A351);
