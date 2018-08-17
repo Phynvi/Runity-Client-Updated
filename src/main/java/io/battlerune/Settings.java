@@ -250,7 +250,7 @@ public final class Settings {
 		TWEENING = high;
 		HD_MINIMAP = high;
 		MIPMAPPING = high;
-		//FOG = high;
+		FOG = high;
 		SMOOTH_SHADING = high;
 		PARTICLES = high;
 		client.loadingStage = 1;

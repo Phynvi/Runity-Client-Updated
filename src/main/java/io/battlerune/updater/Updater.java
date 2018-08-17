@@ -35,7 +35,7 @@ public class Updater {
 	/**
 	 * The cache download url link.
 	 */
-	public static final String CACHE_LINK = "http://nearreality.io/RunityCache.zip";
+	public static final String CACHE_LINK = "https://runity.io/RunityCache.zip";
 
 	/**
 	 * The client download url link.
