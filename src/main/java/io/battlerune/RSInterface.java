@@ -382,8 +382,174 @@ public class RSInterface {
 		teleportButtonThing1(textDrawingAreas);
 		teleportButtonThing2(textDrawingAreas);
 		teleportButtonThing3(textDrawingAreas);
+		goldenScratchCard(textDrawingAreas);
+		dealBoardRewards(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
+	
+	
+	
+	public static void dealBoardRewards(TextDrawingArea[] TDA) {
+	    RSInterface rsi = addInterface(21365);
+	    int childId = 21366;
+	    
+	    addSprite(childId++, 1, "Interfaces/NewDealBoard/BACKGROUND");
+	    
+	    addText(childId++, "Runity's Deal Board", 16750899, true, true, -1, TDA, 2);
+	    
+	    addHoverButton(childId++, "Interfaces/Bank/BANK", 1, 16, 16, "Close", -1, childId, 1);
+	    addHoveredButton(childId++, "Interfaces/Bank/BANK", 2, 16, 16, childId++);
+	    
+	    addText(childId++, "Runitys Boxes", 16750899, true, true, -1, TDA, 2);
+	    addText(childId++, "Reward List", 16750899, true, true, -1, TDA, 2);
+	    
+	    addText(childId++, "Currently", 16750899, true, true, -1, TDA, 2);
+	    addText(childId++, "Viewing", 16750899, true, true, -1, TDA, 2);
+	    
+	    String[] boxes = { "box names" };
+	    for (int i = 0; i < boxes.length; i++) {
+	     // addClickableText(childId++, "@red@" + boxes[i], "View " + boxes[i], TDA, 2, 16748608, false, true, 145);
+		    addText(childId++, "@red@" + boxes[i] + "View " + boxes[i], 16748608, false, true, -1, TDA, 2);
+
+	    }
+	    
+	    addHoverButton(childId++, "Interfaces/NewDealBoard/BUTTON", 4, 72, 32, "Back to Deals", -1, childId, 1);
+	    addHoveredButton(childId++, "Interfaces/NewDealBoard/BUTTON", 5, 72, 32, childId++);
+	    
+	    addText(childId++, "Back to", 16750899, true, true, -1, TDA, 0);
+	    addText(childId++, "Deals", 16750899, true, true, -1, TDA, 0);
+	    
+	    //addToItemGroup(childId++, 1, 1, 16, 7, null);
+		itemGroup(childId++, 1, 1, 16, 7);
+
+	    RSInterface scroll = addInterface(childId++);
+	   int width = 131;
+	    int height = 175;
+	    int scrollMax = 1400;
+	    int scrollChildId = childId;
+	    int scrollFrame = 0;
+	    
+	    int startScrollY = 3;
+	    
+	    scroll.totalChildren(100);
+	    
+	    for (int i = 0; i < 100; i++) {
+	      addText(scrollChildId, "Item: " + (i + 1), 16750899, false, true, -1, TDA, 0);
+	      scroll.child(scrollFrame++, scrollChildId++, 2, startScrollY);
+	      startScrollY += 13;
+	    }
+	    
+	    rsi.totalChildren(childId - 21366 - 2);
+	    
+	    childId = 21366;
+	    int frame = 0;
+	    
+	    rsi.child(frame++, childId++, 11, 11);
+	    
+	    rsi.child(frame++, childId++, 255, 21);
+	    
+	    rsi.child(frame++, childId++, 473, 20);
+	    rsi.child(frame++, childId++, 473, 20);
+	    childId++;
+	    
+	    rsi.child(frame++, childId++, 135, 77);
+	    rsi.child(frame++, childId++, 308, 77);
+	    
+	    rsi.child(frame++, childId++, 440, 123);
+	    rsi.child(frame++, childId++, 440, 138);
+	    
+	    int startY = 103;
+	    for (int i = 0; i < boxes.length; i++) {
+	      rsi.child(frame++, childId++, 65, startY);
+	      startY += 15;
+	    }
+	    
+	    rsi.child(frame++, childId++, 404, 265);
+	    rsi.child(frame++, childId++, 404, 265);
+	    childId++;
+	    
+	    rsi.child(frame++, childId++, 440, 268);
+	    rsi.child(frame++, childId++, 440, 282);
+	    
+	    rsi.child(frame++, childId++, 426, 172);
+	    
+	    rsi.child(frame++, childId++, 231, 100);
+	  }
+	
+	 public static void goldenScratchCard(TextDrawingArea[] TDA)
+	  {
+			RSInterface rsi = addInterface(20011);
+
+	    //Widget rsi = addInterface(20011);
+	    int childId = 20012;
+	    
+	    addSprite(childId++, 0, "Interfaces/ScratchCard/BACKGROUND");
+	    addText(childId++, "Runity's Golden Scratch Card", 14929501, true, true, -1, TDA, 2);
+	    addText(childId++, "Match 3 to Win!", 14929501, true, true, -1, TDA, 2);
+	    addText(childId++, "Win up to 5 quad!", 14929501, true, true, -1, TDA, 0);
+	    
+	    for (int i = 0; i < 3; i++) {
+	      addHoverButton(childId++, "Interfaces/ScratchCard/BUTTON", 0, 57, 57, "Scratch", -1, childId, 1);
+	      addHoveredButton(childId++, "Interfaces/ScratchCard/BUTTON", 1, 57, 57, childId++);
+	      
+	      addText(childId++, "$", 14929501, true, true, -1, TDA, 2);
+			itemGroup(childId++, 1, 1, 16, 7);
+	      //		itemGroup(id + 9, boss.loot.length, 1, 10, 0);
+	      //	public static void itemGroup(int id, int w, int h, int x, int y) {
+
+	    }
+	    
+	    addText(childId++, "Bonus Prize", 14929501, true, true, -1, TDA, 2);
+	    addText(childId++, "Guaranteed Win", 14929501, true, true, -1, TDA, 0);
+	    
+	    addHoverButton(childId++, "Interfaces/ScratchCard/BUTTON", 0, 57, 57, "Scratch", -1, childId, 1);
+	    addHoveredButton(childId++, "Interfaces/ScratchCard/BUTTON", 1, 57, 57, childId++);
+	    
+	    //addToItemGroup(childId++, 1, 1, 16, 7, null);
+		itemGroup(childId++, 1, 1, 16, 7);
+
+	    addHoverButton(childId++, "Interfaces/Bank/BANK", 1, 16, 16, "Close", -1, childId, 1);
+	    addHoveredButton(childId++, "Interfaces/Bank/BANK", 2, 16, 16, childId++);
+	    
+	    rsi.totalChildren(childId - 20012 - 5);
+	    
+	    childId = 20012;
+	    int frame = 0;
+	    
+	    rsi.child(frame++, childId++, 90, 15);
+	    rsi.child(frame++, childId++, 255, 26);
+	    
+	    rsi.child(frame++, childId++, 255, 60);
+	    
+	    rsi.child(frame++, childId++, 255, 75);
+	    
+	    int startX = 150;
+	    int startY = 110;
+	    for (int i = 0; i < 3; i++) {
+	      rsi.child(frame++, childId++, startX, startY);
+	      rsi.child(frame++, childId++, startX, startY);
+	      childId++;
+	      
+	      rsi.child(frame++, childId++, startX + 28, startY + 20);
+	      
+	      rsi.child(frame++, childId++, startX + 13, startY + 15);
+	      startX += 75;
+	    }
+	    
+	    rsi.child(frame++, childId++, 255, 205);
+	    
+	    rsi.child(frame++, childId++, 255, 220);
+	    
+	    rsi.child(frame++, childId++, startX - 150, startY + 135);
+	    rsi.child(frame++, childId++, startX - 150, startY + 135);
+	    childId++;
+	    
+	    rsi.child(frame++, childId++, 236, 260);
+	    
+	    rsi.child(frame++, childId++, 392, 25);
+	    rsi.child(frame++, childId++, 392, 25);
+	    childId++;
+	  }
 
 
 	public static void teleportButtonThing(TextDrawingArea[] tda) {
