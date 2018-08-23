@@ -391,6 +391,7 @@ public class RSInterface {
 	
 	 public static void loyaltyStreakRewards(TextDrawingArea[] TDA) {
 		    RSInterface widget = addInterface(22406);
+		    //daily rewards interface
 		    
 		    int childId = 22407;
 		    
