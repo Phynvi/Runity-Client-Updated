@@ -476,26 +476,22 @@ public class RSInterface {
 	    rsi.child(frame++, childId++, 231, 100);
 	  }
 	
-	 public static void goldenScratchCard(TextDrawingArea[] TDA)
-	  {
-			RSInterface rsi = addInterface(20011);
+	 public static void goldenScratchCard(TextDrawingArea[] TDA) {
+		RSInterface rsi = addInterface(20011);
 
-	    //Widget rsi = addInterface(20011);
 	    int childId = 20012;
 	    
-	    addSprite(childId++, 0, "Interfaces/ScratchCard/BACKGROUND");
-	    addText(childId++, "Runity's Golden Scratch Card", 14929501, true, true, -1, TDA, 2);
-	    addText(childId++, "Match 3 to Win!", 14929501, true, true, -1, TDA, 2);
-	    addText(childId++, "Win up to 5 quad!", 14929501, true, true, -1, TDA, 0);
+	    addSprite(childId++, 0, "Interfaces/ScratchCard/BACKGROUND");//20013
+	    addText(childId++, "Runity's Golden Scratch Card", 14929501, true, true, -1, TDA, 2); //20014
+	    addText(childId++, "Match 3 to Win!", 14929501, true, true, -1, TDA, 2); //20015
+	    addText(childId++, "Win up to 5 quad!", 14929501, true, true, -1, TDA, 0); //20016
 	    
 	    for (int i = 0; i < 3; i++) {
 	      addHoverButton(childId++, "Interfaces/ScratchCard/BUTTON", 0, 57, 57, "Scratch", -1, childId, 1);
 	      addHoveredButton(childId++, "Interfaces/ScratchCard/BUTTON", 1, 57, 57, childId++);
-	      
 	      addText(childId++, "$", 14929501, true, true, -1, TDA, 2);
-			itemGroup(childId++, 1, 1, 16, 7);
-	      //		itemGroup(id + 9, boss.loot.length, 1, 10, 0);
-	      //	public static void itemGroup(int id, int w, int h, int x, int y) {
+	      System.out.println("CHILD NIGGER: " + childId);
+	      addContainer(childId++, 0, 1, 80, 30, 2, 100, false, false, false, null, null, null, null, null);
 
 	    }
 	    
@@ -2828,7 +2824,7 @@ public class RSInterface {
 
 	/* Other */
 	public static Sprite imageLoader(int i, String s) {
-		long l = (StringUtils.method585(s) << 8) + (long) i;
+		long l = (StringUtils.method585(s) << 8) + i;
 		Sprite sprite = (Sprite) aMRUNodes_238.get(l);
 		if (sprite != null)
 			return sprite;
@@ -2842,7 +2838,7 @@ public class RSInterface {
 	}
 
 	private static Sprite CustomSpriteLoader(int id, String s) {
-		long l = (StringUtils.method585(s) << 8) + (long) id;
+		long l = (StringUtils.method585(s) << 8) + id;
 		Sprite sprite = (Sprite) aMRUNodes_238.get(l);
 		if (sprite != null) {
 			return sprite;
@@ -2909,7 +2905,7 @@ public class RSInterface {
 	}
 
 	private static Sprite method207(int i, StreamLoader streamLoader, String s) {
-		long l = (StringUtils.method585(s) << 8) + (long) i;
+		long l = (StringUtils.method585(s) << 8) + i;
 		Sprite sprite = (Sprite) aMRUNodes_238.get(l);
 		if (sprite != null) {
 			return sprite;
