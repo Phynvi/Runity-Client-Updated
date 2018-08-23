@@ -384,8 +384,101 @@ public class RSInterface {
 		teleportButtonThing3(textDrawingAreas);
 		goldenScratchCard(textDrawingAreas);
 		dealBoardRewards(textDrawingAreas);
+	    loyaltyStreakRewards(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
+	
+	
+	 public static void loyaltyStreakRewards(TextDrawingArea[] TDA) {
+		    RSInterface widget = addInterface(22406);
+		    
+		    int childId = 22407;
+		    
+		    addSprite(childId++, 0, "Interfaces/LoyaltyStreak/BACKGROUND");
+		    
+		    addText(childId++, "Dreamscape Loyalty Streak Rewards", 16750899, true, true, -1, TDA, 2);
+		    
+		    addHoverButton(childId++, "Interfaces/Bank/BANK", 1, 16, 16, "Close", -1, childId, 1);
+		    addHoveredButton(childId++, "Interfaces/Bank/BANK", 2, 16, 16, childId++);
+		    
+		    addText(childId++, "Thank you for being a loyal player of Dreamscape!", 16750899, true, true, -1, TDA, 0);
+		    
+		    String[] text = { "Current Streak:", "@whi@#", "Longest Streak:", "@whi@#", "Total Claimed", "Rewards:", "@whi@#", "Total Playtime:", 
+		      "@whi@#", "Time Until Next", "Reward:", "@whi@#", "Voted in last", "24 hours:", "@whi@#" };
+		    
+		    for (int i = 0; i < text.length; i++) {
+		      addText(childId++, text[i], 16750899, true, true, -1, TDA, 1);
+		    }
+		    
+		    addHoverButton(childId++, "Interfaces/Upgrade/REFRESH", 0, 16, 16, "Refresh", -1, childId, 1);
+		    addHoveredButton(childId++, "Interfaces/Upgrade/REFRESH", 1, 16, 16, childId++);
+		    
+		    RSInterface scroll = addInterface(childId++);
+		    int scrollChildId = childId;
+		    int scrollFrame = 0;
+		    int scrollX = 3;
+		    int scrollY = 3;
+		    int width = 274;
+		    int height = 231;
+		    int scrollMax = 425;
+		    scroll.totalChildren(35);
+		    
+		    for (int i = 0; i < 7; i++) {
+		      addHoverButton(scrollChildId++, "Interfaces/LoyaltyStreak/BUTTON", 0, 270, 53, "Claim", -1, scrollChildId, 1);
+		      addHoveredButton(scrollChildId++, "Interfaces/LoyaltyStreak/BUTTON", 1, 270, 53, scrollChildId++);
+		      
+		      scrollChildId -= 3;
+		      
+		      scroll.child(scrollFrame++, scrollChildId++, scrollX, scrollY);
+		      scroll.child(scrollFrame++, scrollChildId++, scrollX, scrollY);
+		      scrollChildId++;
+		      
+		      addText(scrollChildId, "Day " + (i + 1), 16750899, false, true, -1, TDA, 2);
+		      scroll.child(scrollFrame++, scrollChildId++, scrollX + 10, scrollY + 6);
+		      
+		      addText(scrollChildId, "Reward text goes here blah blah blah" + (i + 1), 16750899, false, true, -1, TDA, 1);
+		      scroll.child(scrollFrame++, scrollChildId++, scrollX + 10, scrollY + 22);
+		      
+		   //   addToItemGroup(scrollChildId, 1, 1, 16, 7, null);
+		      itemGroup(scrollChildId, 1, 1, 16, 7);
+		      scroll.child(scrollFrame++, scrollChildId++, scrollX + 210, scrollY + 12);
+		      
+		      scrollY += 60;
+		    }
+		    
+		    widget.totalChildren(childId - 22407 - 2);
+		    
+		    childId = 22407;
+		    int frame = 0;
+		    
+		    widget.child(frame++, childId++, 11, 11);
+		    
+		    widget.child(frame++, childId++, 255, 21);
+		    
+		    widget.child(frame++, childId++, 473, 20);
+		    widget.child(frame++, childId++, 473, 20);
+		    childId++;
+		    
+		    widget.child(frame++, childId++, 255, 48);
+		    
+		    int startX = 411;
+		    int startY = 71;
+		    
+		    for (int i = 0; i < text.length; i++) {
+		      widget.child(frame++, childId++, startX, startY);
+		      if ((i == 4) || (i == 9) || (i == 12)) {
+		        startY += 13;
+		      } else {
+		        startY += 15;
+		      }
+		    }
+		    
+		    widget.child(frame++, childId++, 455, 20);
+		    widget.child(frame++, childId++, 455, 20);
+		    childId++;
+		    
+		    widget.child(frame++, childId++, 28, 69);
+		  }
 	
 	
 	
