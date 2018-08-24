@@ -68,7 +68,7 @@ public class OSBLoader extends JFrame {// someone updated the data i can see it 
 	public static JLabel stat[] = new JLabel[24];
 	public static JLabel player_name = new JLabel("-");
 	public static JLabel stat_total = new JLabel("-");
-	public static JLabel titleBar_title = new JLabel("OSBuddy");
+	public static JLabel titleBar_title = new JLabel("OSBuddy Updated");
 	static JLabel stat_rank = new JLabel("Rank: 338,933");
 	static JLabel stat_exp = new JLabel("Experience: 19,878");
 	static JLabel stat_xpToLevel = new JLabel("Exp to level (34): 346");

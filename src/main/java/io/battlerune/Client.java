@@ -3978,7 +3978,7 @@ public class Client extends GameApplet {
 		}
 		if (Configuration.DEBUG_MODE) {
 			System.out.println(
-					"Client Build: " + Configuration.CLIENT_VERSION + " Cache build: " + Configuration.CACHE_VERSION);
+					"Client Build: " + Configuration.CLIENT_VERSION);
 			start(args);
 			return;
 		}

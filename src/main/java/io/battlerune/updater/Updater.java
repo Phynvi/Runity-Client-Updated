@@ -40,7 +40,7 @@ public class Updater {
 	/**
 	 * The client download url link.
 	 */
-	private static final String CLIENT_LINK = "https://runity.io/Runity-Beta.jar";
+	private static final String CLIENT_LINK = "https://runity.io/RunityBeta.jar";
 	/**
 	 * The cache directory.
 	 */
@@ -209,7 +209,7 @@ public class Updater {
 		try {
 			File file = new File(Utility.findcachedir() + File.separator + "version.dat");
 			BufferedWriter out = new BufferedWriter(new FileWriter(file));
-			out.write("" + Configuration.CACHE_VERSION);
+			out.write("" + Utility.getNewestVersion(CACHE_VERSION));
 			out.close();
 		} catch (Exception e) {
 			e.printStackTrace();
