@@ -584,7 +584,6 @@ public class RSInterface {
 	      addHoverButton(childId++, "Interfaces/ScratchCard/BUTTON", 0, 57, 57, "Scratch", -1, childId, 1);
 	      addHoveredButton(childId++, "Interfaces/ScratchCard/BUTTON", 1, 57, 57, childId++);
 	      addText(childId++, "$", 14929501, true, true, -1, TDA, 2);
-	      System.out.println("CHILD NIGGER: " + childId);
 	      addContainer(childId++, 0, 1, 80, 30, 2, 100, false, false, false, null, null, null, null, null);
 
 	    }
