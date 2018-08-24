@@ -103,6 +103,7 @@ public final class ItemDefinition {
 		Buffer = new Buffer(archive.getDataForName("obj.dat"));
 		Buffer stream = new Buffer(archive.getDataForName("obj.idx"));
 		totalItems = stream.readUShort();
+		System.out.println("Total Items: " + totalItems);
 		BufferIndices = new int[totalItems];
 		int offset = 2;
 		for (int _ctr = 0; _ctr < totalItems; _ctr++) {

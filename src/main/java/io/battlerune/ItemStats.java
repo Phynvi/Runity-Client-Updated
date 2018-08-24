@@ -61,11 +61,12 @@ public class ItemStats {
 					int slot = 0;
 					int id = Integer.parseInt(data[slot++]);
 					itemstats[id] = new ItemStats(id, readType);
-					for (int i = 0; i < 5; ++i) {
+					for (int i = 0; i < 5; ++i) {//yethats is
 						itemstats[id].attackBonus[i] = Integer.parseInt(data[slot++]);
 					}
 					for (int i = 0; i < 5; ++i) {
-						itemstats[id].defenceBonus[i] = Integer.parseInt(data[slot++]);
+						itemstats[id].defenceBonus[i] = Integer.parseInt(data[slot++]);//the problem is that it doesnt print out 12 things
+						//like 0 0 0 0 0 0 0 0 0 it has do to that for every single item
 					}
 					itemstats[id].strengthBonus = Integer.parseInt(data[slot++]);
 					itemstats[id].prayerBonus = Integer.parseInt(data[slot++]);
