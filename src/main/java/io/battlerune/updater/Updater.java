@@ -25,12 +25,12 @@ public class Updater {
 	/**
 	 * The client version.
 	 */
-	private static final String CLIENT_VERSION = "http://nearreality.io/clientVersion.txt";
+	private static final String CLIENT_VERSION = "https://runity.io/clientVersion.txt";
 
 	/**
 	 * The cache version.
 	 */
-	private static final String CACHE_VERSION = "http://nearreality.io/cacheVersion.txt";
+	private static final String CACHE_VERSION = "https://runity.io/cacheVersion.txt";
 
 	/**
 	 * The cache download url link.
@@ -40,7 +40,7 @@ public class Updater {
 	/**
 	 * The client download url link.
 	 */
-	private static final String CLIENT_LINK = "http://nearreality.io/Runity-Beta.jar";
+	private static final String CLIENT_LINK = "https://runity.io/Runity-Beta.jar";
 	/**
 	 * The cache directory.
 	 */
@@ -160,7 +160,7 @@ public class Updater {
 			return true;
 		}
 
-		File versionFile = new File(Utility.findcachedir() + "version.dat");
+		File versionFile = new File(Utility.findcachedir() + File.separator + "version.dat");
 
 		// check if the version file exists
 		if (!versionFile.exists()) {
@@ -170,7 +170,7 @@ public class Updater {
 		}
 
 		String version = Utility.getNewestVersion(CACHE_VERSION);
-		String current = Utility.getCurrentVersion(Utility.findcachedir() + "version.dat");
+		String current = Utility.getCurrentVersion(Utility.findcachedir() + File.separator + "version.dat");
 
 		// does the version of the cache match the updated version
 		if (!current.equalsIgnoreCase(version)) {
