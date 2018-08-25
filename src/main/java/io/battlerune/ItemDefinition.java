@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 public final class ItemDefinition {
 
-
+/** Easier way to pack custom models -- Adam. **/
 	public static void defaultConfig(ItemDefinition itemDef, int groundModel, int maleModel, String name) {
 		defaultConfig(itemDef, groundModel, maleModel, maleModel, name);
 	}
@@ -4004,6 +4004,9 @@ public final class ItemDefinition {
 		case 13066:
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[0] = "Unpack";
+			break;
+		case 455:
+			itemDef.name = "Golden Scratch Card";
 			break;
 
 		case 1050:

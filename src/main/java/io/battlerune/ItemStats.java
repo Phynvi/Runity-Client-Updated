@@ -61,7 +61,7 @@ public class ItemStats {
 					int slot = 0;
 					int id = Integer.parseInt(data[slot++]);
 					itemstats[id] = new ItemStats(id, readType);
-					for (int i = 0; i < 5; ++i) {//yethats is
+					for (int i = 0; i < 5; ++i) {
 						itemstats[id].attackBonus[i] = Integer.parseInt(data[slot++]);
 					}
 					for (int i = 0; i < 5; ++i) {

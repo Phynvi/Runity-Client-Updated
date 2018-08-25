@@ -429,6 +429,23 @@ public class Client extends GameApplet {
 			frameHeight = 503;
 			forceWidth = forceHeight = -1;
 			cameraZoom = 600;
+			/**
+             * Reset the settings
+             */
+            if (Client.changeChatArea) {
+                Client.changeChatArea = false;
+                toggleConfig(882, 0);
+            }
+
+            if (Client.transparentTabArea) {
+                Client.transparentTabArea = false;
+                toggleConfig(881, 0);
+            }
+
+            if (Client.changeTabArea) {
+                Client.changeTabArea = false;
+                toggleConfig(883, 0);
+            }
 			if (clientFrame != null) {
 				clientFrame.resize(ScreenMode.FIXED, 765, 503);
 			}

@@ -384,12 +384,12 @@ public class RSInterface {
 		teleportButtonThing3(textDrawingAreas);
 		goldenScratchCard(textDrawingAreas);
 		dealBoardRewards(textDrawingAreas);
-	    loyaltyStreakRewards(textDrawingAreas);
+		//loyaltyStreakRewards(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
 	
 	
-	 public static void loyaltyStreakRewards(TextDrawingArea[] TDA) {
+	/* public static void loyaltyStreakRewards(TextDrawingArea[] TDA) {
 		    RSInterface widget = addInterface(22406);
 		    //daily rewards interface
 		    
@@ -482,7 +482,7 @@ public class RSInterface {
 		  }
 	
 	
-	
+	*/
 	public static void dealBoardRewards(TextDrawingArea[] TDA) {
 	    RSInterface rsi = addInterface(21365);
 	    int childId = 21366;

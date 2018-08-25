@@ -29,6 +29,7 @@ public class Configuration {
 
 	/** State of client being in debug mode. */
 	public static boolean DEBUG_MODE = false;
+	//KEEP THIS FALSE
 
 	/** Debug the interfaces. */
 	static boolean DEBUG_INTERFACES = false;
@@ -47,7 +48,7 @@ public class Configuration {
 
 	/** All the announcements which will be displayed on the loginscreen. */
 	public final static String[] ANNOUNCEMENT = { "Welcome to Runity", "We are currently in beta mode.",
-			"Developers are Adam, Red Bracket, and Torv." };
+			"Developers are Adam, and Nerik." };
 
 	/** The current displayed loading message. */
 	static String LOADING_MESSAGE;
