@@ -44,6 +44,8 @@ import io.battlerune.login.LoginRenderer;
 import io.battlerune.login.impl.MainScreen;
 import io.battlerune.updater.UpdateState;
 import io.battlerune.updater.Updater;
+import net.runelite.client.ui.ClientUI;
+import net.runelite.client.ui.ContainableFrame;
 
 public class Client extends GameApplet {
 
@@ -429,9 +431,17 @@ public class Client extends GameApplet {
 			frameHeight = 503;
 			forceWidth = forceHeight = -1;
 			cameraZoom = 600;
+			
+			ContainableFrame clientui = new ContainableFrame();
+			clientui.contractBy(frameWidth);
+			clientui.contractBy(frameHeight);
+
+			
+			
 			/**
              * Reset the settings
              */
+
             if (Client.changeChatArea) {
                 Client.changeChatArea = false;
                 toggleConfig(882, 0);
@@ -2280,7 +2290,7 @@ public class Client extends GameApplet {
 					// report
 				} else if (super.lastClickX >= 417 && super.lastClickX <= 503 && super.lastClickY >= yOffset + 468
 						&& super.lastClickY <= yOffset + 496) {
-					Utility.launchURL("www.battlerune.net");
+					Utility.launchURL("www.runity.io");
 				}
 			}
 			break;
@@ -2424,7 +2434,7 @@ public class Client extends GameApplet {
 					}
 				} else if (super.lastClickX >= 404 && super.lastClickX <= 515 && super.lastClickY >= yOffset + 482
 						&& super.lastClickY <= yOffset + 505) {
-					Utility.launchURL("www.battlerune.net");
+					Utility.launchURL("www.runity.io");
 				}
 			}
 			break;
@@ -5679,7 +5689,7 @@ public class Client extends GameApplet {
 			String s2 = menuActionName[id];
 			int j2 = s2.indexOf(">");
 			if (j2 != -1)
-				Utility.launchURL("www.battlerune.net");
+				Utility.launchURL("www.runity.io");
 		}
 		if (action == 491) {
 			Player class30_sub2_sub4_sub1_sub2_6 = playerArray[localPlayerIndex];
@@ -9075,8 +9085,8 @@ public class Client extends GameApplet {
 			scrollBar1 = new Sprite(streamLoader_2, "scrollbar", 0);
 			scrollBar2 = new Sprite(streamLoader_2, "scrollbar", 1);
 //			 repackCacheIndex(1);
-//            repackCacheIndex(2);
- //           repackCacheIndex(4);
+  //          repackCacheIndex(2);
+ //          repackCacheIndex(4);
 			prepareGameFrame();
 			Sprite sprite = new Sprite(streamLoader_2, "screenframe", 0);
 			leftFrame = new GraphicsBuffer(sprite.width, sprite.height, getGameComponent());
@@ -9203,8 +9213,8 @@ public class Client extends GameApplet {
 	}
 
 	public String indexLocation(int cacheIndex, int index) {
-		//return Utility.findcachedir() + "/index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
-        return "C:/Users/Amin/Desktop/Index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
+		return Utility.findcachedir() + "/index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
+       // return "C:/Users/Amin/Desktop/Index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
 
 		// return "C:/Users/evan__000/Desktop/RSPS/Data/OSRS/118 data/index" +
 		// cacheIndex + "/" + (index != -1 ? index + ".gz" : "");

@@ -3310,10 +3310,6 @@ public class CustomInterface extends RSInterface {
 		addText(57505, "Description line here (57505)", 0xff9933, true, true, 52, daniel, 0);
 		addText(57506, "Description line here (57506)", 0xff9933, true, true, 52, daniel, 0);
 		addText(57507, "Description line here (57507)", 0xff9933, true, true, 52, daniel, 0);
-		addConfigButton(57508, 57500, 234, 235, 15, 15, "Select normal account settings", 0, 5, 1085, false);
-		addConfigButton(57509, 57500, 234, 235, 15, 15, "Select ironman account settings", 1, 5, 1085, false);
-		addConfigButton(57510, 57500, 234, 235, 15, 15, "Select ultimate ironman account settings", 2, 5, 1085, false);
-		addConfigButton(57511, 57500, 234, 235, 15, 15, "Select hardcore ironman account settings", 3, 5, 1085, false);
 		addHoverText(57512, "Normal", "Select normal account settings", daniel, 0, 0xF7AA25, false, true, 65);
 		addHoverText(57513, "<img=11> Ironman", "Select ironman account settings", daniel, 0, 0xF7AA25, false, true,
 				65);
@@ -3327,7 +3323,7 @@ public class CustomInterface extends RSInterface {
 		addChar(57520, 825);
 		addContainer(57521, 6, 18, 5, 6, false, null, null, null, null, null);
 
-		Interface.totalChildren(20);
+		Interface.totalChildren(16);
 		Interface.child(0, 57501, 11, 13);
 		Interface.child(1, 57502, 255, 22);
 		Interface.child(2, 57503, 255, 213);
@@ -3335,19 +3331,15 @@ public class CustomInterface extends RSInterface {
 		Interface.child(4, 57505, 255, 255);
 		Interface.child(5, 57506, 255, 270);
 		Interface.child(6, 57507, 255, 285);
-		Interface.child(7, 57508, 31, 64);
-		Interface.child(8, 57509, 31, 93);
-		Interface.child(9, 57510, 31, 122);
-		Interface.child(10, 57511, 31, 151);
-		Interface.child(11, 57512, 51, 66);
-		Interface.child(12, 57513, 51, 95);
-		Interface.child(13, 57514, 51, 124);
-		Interface.child(14, 57515, 51, 153);
-		Interface.child(15, 57516, 27, 174);
-		Interface.child(16, 57517, 27, 174);
-		Interface.child(17, 57519, 93, 178);
-		Interface.child(18, 57520, 145, 105);
-		Interface.child(19, 57521, 265, 55);
+		Interface.child(7, 57512, 52, 66);
+		Interface.child(8, 57513, 52, 95);
+		Interface.child(9, 57514, 52, 124);
+		Interface.child(10, 57515, 52, 153);
+		Interface.child(11, 57516, 27, 174);
+		Interface.child(12, 57517, 27, 174);
+		Interface.child(13, 57519, 93, 178);
+		Interface.child(14, 57520, 145, 105);
+		Interface.child(15, 57521, 265, 55);
 
 		// addText(51756, "Modes: <col=FF0000>", 0xff9933, false, true, 52, daniel, 1);
 		// addText(51757, "Starter Items:", 0xff9933, false, true, 52, daniel, 1);
@@ -4671,9 +4663,9 @@ public class CustomInterface extends RSInterface {
 		addHoveredButton(29411, 293, 18, 18, 29412);
 		addHoverButton(29413, 294, 18, 18, "View Quests", -1, 29414, 1);
 		addHoveredButton(29414, 295, 18, 18, 29415);
-		addHoverButton(29420, dir, 3, 125, 22, "View Interfaces & More", -1, 29421, 1);
+		addHoverButton(29420, dir, 3, 125, 22, "View Player Guide", -1, 29421, 1);
 		addHoveredButton(29421, dir, 4, 125, 22, 29422);
-		addHoverButton(29423, dir, 0, 88, 22, "View Player Guide", -1, 29424, 1);
+		addHoverButton(29423, dir, 0, 88, 22, "View Achievements", -1, 29424, 1);
 		addHoveredButton(29424, dir, 1, 88, 22, 29425);
 		addHoverButton(29426, dir, 0, 88, 22, "View NPC Drop", -1, 29427, 1);
 		addHoveredButton(29427, dir, 1, 88, 22, 29428);
