@@ -40,7 +40,7 @@ public class Updater {
 	/**
 	 * The client download url link.
 	 */
-	private static final String CLIENT_LINK = "https://runity.io/Runity-Beta.jar";
+	private static final String CLIENT_LINK = "https://runity.io/Runityz.jar";
 	/**
 	 * The cache directory.
 	 */
@@ -129,13 +129,13 @@ public class Updater {
 			return false;
 		}
 
-		int clientVersion = Integer.parseInt(Utility.getNewestVersion(CLIENT_VERSION));
+		int version = Integer.parseInt(Utility.getNewestVersion(CLIENT_VERSION));
 		int current = Configuration.CLIENT_VERSION;
 
-		System.out.println(clientVersion + " " + current);
+		System.out.println(version + " " + current);
 
 		// Incorrect client version
-		if (current != clientVersion) {
+		if (current != version) {
 			System.out.println("Client update required!");
 			state = UpdateState.UPDATE_CLIENT;
 		}
@@ -160,7 +160,7 @@ public class Updater {
 			return true;
 		}
 
-		File versionFile = new File(Utility.findcachedir() + File.separator + "version.dat");
+		File versionFile = new File(Utility.findcachedir() + File.separator + "cacheVersion.dat");
 
 		// check if the version file exists
 		if (!versionFile.exists()) {
@@ -170,7 +170,7 @@ public class Updater {
 		}
 
 		String version = Utility.getNewestVersion(CACHE_VERSION);
-		String current = Utility.getCurrentVersion(Utility.findcachedir() + File.separator + "version.dat");
+		String current = Utility.getCurrentVersion(Utility.findcachedir() + File.separator + "cacheVersion.dat");
 
 		// does the version of the cache match the updated version
 		if (!current.equalsIgnoreCase(version)) {

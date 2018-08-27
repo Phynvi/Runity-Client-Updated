@@ -70,9 +70,9 @@ public class Configuration {
 	/** The IP address client will be connecting to. */
 	public static Connection CONNECTION = Connection.ECONOMY;
 
-	/** The current version of the client. */
+	/** The current client version. */
 	public static final int CLIENT_VERSION = 3;
-
+	
 	/** The current game version. */
 	public static final int GAME_VERSION = 5;
 

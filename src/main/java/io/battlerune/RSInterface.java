@@ -384,262 +384,250 @@ public class RSInterface {
 		teleportButtonThing3(textDrawingAreas);
 		goldenScratchCard(textDrawingAreas);
 		dealBoardRewards(textDrawingAreas);
-		//loyaltyStreakRewards(textDrawingAreas);
+		// loyaltyStreakRewards(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
-	
-	
-	/* public static void loyaltyStreakRewards(TextDrawingArea[] TDA) {
-		    RSInterface widget = addInterface(22406);
-		    //daily rewards interface
-		    
-		    int childId = 22407;
-		    
-		    addSprite(childId++, 0, "Interfaces/LoyaltyStreak/BACKGROUND");
-		    
-		    addText(childId++, "Dreamscape Loyalty Streak Rewards", 16750899, true, true, -1, TDA, 2);
-		    
-		    addHoverButton(childId++, "Interfaces/Bank/BANK", 1, 16, 16, "Close", -1, childId, 1);
-		    addHoveredButton(childId++, "Interfaces/Bank/BANK", 2, 16, 16, childId++);
-		    
-		    addText(childId++, "Thank you for being a loyal player of Dreamscape!", 16750899, true, true, -1, TDA, 0);
-		    
-		    String[] text = { "Current Streak:", "@whi@#", "Longest Streak:", "@whi@#", "Total Claimed", "Rewards:", "@whi@#", "Total Playtime:", 
-		      "@whi@#", "Time Until Next", "Reward:", "@whi@#", "Voted in last", "24 hours:", "@whi@#" };
-		    
-		    for (int i = 0; i < text.length; i++) {
-		      addText(childId++, text[i], 16750899, true, true, -1, TDA, 1);
-		    }
-		    
-		    addHoverButton(childId++, "Interfaces/Upgrade/REFRESH", 0, 16, 16, "Refresh", -1, childId, 1);
-		    addHoveredButton(childId++, "Interfaces/Upgrade/REFRESH", 1, 16, 16, childId++);
-		    
-		    RSInterface scroll = addInterface(childId++);
-		    int scrollChildId = childId;
-		    int scrollFrame = 0;
-		    int scrollX = 3;
-		    int scrollY = 3;
-		    int width = 274;
-		    int height = 231;
-		    int scrollMax = 425;
-		    scroll.totalChildren(35);
-		    
-		    for (int i = 0; i < 7; i++) {
-		      addHoverButton(scrollChildId++, "Interfaces/LoyaltyStreak/BUTTON", 0, 270, 53, "Claim", -1, scrollChildId, 1);
-		      addHoveredButton(scrollChildId++, "Interfaces/LoyaltyStreak/BUTTON", 1, 270, 53, scrollChildId++);
-		      
-		      scrollChildId -= 3;
-		      
-		      scroll.child(scrollFrame++, scrollChildId++, scrollX, scrollY);
-		      scroll.child(scrollFrame++, scrollChildId++, scrollX, scrollY);
-		      scrollChildId++;
-		      
-		      addText(scrollChildId, "Day " + (i + 1), 16750899, false, true, -1, TDA, 2);
-		      scroll.child(scrollFrame++, scrollChildId++, scrollX + 10, scrollY + 6);
-		      
-		      addText(scrollChildId, "Reward text goes here blah blah blah" + (i + 1), 16750899, false, true, -1, TDA, 1);
-		      scroll.child(scrollFrame++, scrollChildId++, scrollX + 10, scrollY + 22);
-		      
-		   //   addToItemGroup(scrollChildId, 1, 1, 16, 7, null);
-		      itemGroup(scrollChildId, 1, 1, 16, 7);
-		      scroll.child(scrollFrame++, scrollChildId++, scrollX + 210, scrollY + 12);
-		      
-		      scrollY += 60;
-		    }
-		    
-		    widget.totalChildren(childId - 22407 - 2);
-		    
-		    childId = 22407;
-		    int frame = 0;
-		    
-		    widget.child(frame++, childId++, 11, 11);
-		    
-		    widget.child(frame++, childId++, 255, 21);
-		    
-		    widget.child(frame++, childId++, 473, 20);
-		    widget.child(frame++, childId++, 473, 20);
-		    childId++;
-		    
-		    widget.child(frame++, childId++, 255, 48);
-		    
-		    int startX = 411;
-		    int startY = 71;
-		    
-		    for (int i = 0; i < text.length; i++) {
-		      widget.child(frame++, childId++, startX, startY);
-		      if ((i == 4) || (i == 9) || (i == 12)) {
-		        startY += 13;
-		      } else {
-		        startY += 15;
-		      }
-		    }
-		    
-		    widget.child(frame++, childId++, 455, 20);
-		    widget.child(frame++, childId++, 455, 20);
-		    childId++;
-		    
-		    widget.child(frame++, childId++, 28, 69);
-		  }
-	
-	
-	*/
-	public static void dealBoardRewards(TextDrawingArea[] TDA) {
-	    RSInterface rsi = addInterface(21365);
-	    int childId = 21366;
-	    
-	    addSprite(childId++, 1, "Interfaces/NewDealBoard/BACKGROUND");
-	    
-	    addText(childId++, "Runity's Deal Board", 16750899, true, true, -1, TDA, 2);
-	    
-	    addHoverButton(childId++, "Interfaces/Bank/BANK", 1, 16, 16, "Close", -1, childId, 1);
-	    addHoveredButton(childId++, "Interfaces/Bank/BANK", 2, 16, 16, childId++);
-	    
-	    addText(childId++, "Runitys Boxes", 16750899, true, true, -1, TDA, 2);
-	    addText(childId++, "Reward List", 16750899, true, true, -1, TDA, 2);
-	    
-	    addText(childId++, "Currently", 16750899, true, true, -1, TDA, 2);
-	    addText(childId++, "Viewing", 16750899, true, true, -1, TDA, 2);
-	    
-	    String[] boxes = { "box names" };
-	    for (int i = 0; i < boxes.length; i++) {
-	     // addClickableText(childId++, "@red@" + boxes[i], "View " + boxes[i], TDA, 2, 16748608, false, true, 145);
-		    addText(childId++, "@red@" + boxes[i] + "View " + boxes[i], 16748608, false, true, -1, TDA, 2);
 
-	    }
-	    
-	    addHoverButton(childId++, "Interfaces/NewDealBoard/BUTTON", 4, 72, 32, "Back to Deals", -1, childId, 1);
-	    addHoveredButton(childId++, "Interfaces/NewDealBoard/BUTTON", 5, 72, 32, childId++);
-	    
-	    addText(childId++, "Back to", 16750899, true, true, -1, TDA, 0);
-	    addText(childId++, "Deals", 16750899, true, true, -1, TDA, 0);
-	    
-	    //addToItemGroup(childId++, 1, 1, 16, 7, null);
+	/*
+	 * public static void loyaltyStreakRewards(TextDrawingArea[] TDA) { RSInterface
+	 * widget = addInterface(22406); //daily rewards interface
+	 * 
+	 * int childId = 22407;
+	 * 
+	 * addSprite(childId++, 0, "Interfaces/LoyaltyStreak/BACKGROUND");
+	 * 
+	 * addText(childId++, "Dreamscape Loyalty Streak Rewards", 16750899, true, true,
+	 * -1, TDA, 2);
+	 * 
+	 * addHoverButton(childId++, "Interfaces/Bank/BANK", 1, 16, 16, "Close", -1,
+	 * childId, 1); addHoveredButton(childId++, "Interfaces/Bank/BANK", 2, 16, 16,
+	 * childId++);
+	 * 
+	 * addText(childId++, "Thank you for being a loyal player of Dreamscape!",
+	 * 16750899, true, true, -1, TDA, 0);
+	 * 
+	 * String[] text = { "Current Streak:", "@whi@#", "Longest Streak:", "@whi@#",
+	 * "Total Claimed", "Rewards:", "@whi@#", "Total Playtime:", "@whi@#",
+	 * "Time Until Next", "Reward:", "@whi@#", "Voted in last", "24 hours:",
+	 * "@whi@#" };
+	 * 
+	 * for (int i = 0; i < text.length; i++) { addText(childId++, text[i], 16750899,
+	 * true, true, -1, TDA, 1); }
+	 * 
+	 * addHoverButton(childId++, "Interfaces/Upgrade/REFRESH", 0, 16, 16, "Refresh",
+	 * -1, childId, 1); addHoveredButton(childId++, "Interfaces/Upgrade/REFRESH", 1,
+	 * 16, 16, childId++);
+	 * 
+	 * RSInterface scroll = addInterface(childId++); int scrollChildId = childId;
+	 * int scrollFrame = 0; int scrollX = 3; int scrollY = 3; int width = 274; int
+	 * height = 231; int scrollMax = 425; scroll.totalChildren(35);
+	 * 
+	 * for (int i = 0; i < 7; i++) { addHoverButton(scrollChildId++,
+	 * "Interfaces/LoyaltyStreak/BUTTON", 0, 270, 53, "Claim", -1, scrollChildId,
+	 * 1); addHoveredButton(scrollChildId++, "Interfaces/LoyaltyStreak/BUTTON", 1,
+	 * 270, 53, scrollChildId++);
+	 * 
+	 * scrollChildId -= 3;
+	 * 
+	 * scroll.child(scrollFrame++, scrollChildId++, scrollX, scrollY);
+	 * scroll.child(scrollFrame++, scrollChildId++, scrollX, scrollY);
+	 * scrollChildId++;
+	 * 
+	 * addText(scrollChildId, "Day " + (i + 1), 16750899, false, true, -1, TDA, 2);
+	 * scroll.child(scrollFrame++, scrollChildId++, scrollX + 10, scrollY + 6);
+	 * 
+	 * addText(scrollChildId, "Reward text goes here blah blah blah" + (i + 1),
+	 * 16750899, false, true, -1, TDA, 1); scroll.child(scrollFrame++,
+	 * scrollChildId++, scrollX + 10, scrollY + 22);
+	 * 
+	 * // addToItemGroup(scrollChildId, 1, 1, 16, 7, null); itemGroup(scrollChildId,
+	 * 1, 1, 16, 7); scroll.child(scrollFrame++, scrollChildId++, scrollX + 210,
+	 * scrollY + 12);
+	 * 
+	 * scrollY += 60; }
+	 * 
+	 * widget.totalChildren(childId - 22407 - 2);
+	 * 
+	 * childId = 22407; int frame = 0;
+	 * 
+	 * widget.child(frame++, childId++, 11, 11);
+	 * 
+	 * widget.child(frame++, childId++, 255, 21);
+	 * 
+	 * widget.child(frame++, childId++, 473, 20); widget.child(frame++, childId++,
+	 * 473, 20); childId++;
+	 * 
+	 * widget.child(frame++, childId++, 255, 48);
+	 * 
+	 * int startX = 411; int startY = 71;
+	 * 
+	 * for (int i = 0; i < text.length; i++) { widget.child(frame++, childId++,
+	 * startX, startY); if ((i == 4) || (i == 9) || (i == 12)) { startY += 13; }
+	 * else { startY += 15; } }
+	 * 
+	 * widget.child(frame++, childId++, 455, 20); widget.child(frame++, childId++,
+	 * 455, 20); childId++;
+	 * 
+	 * widget.child(frame++, childId++, 28, 69); }
+	 * 
+	 * 
+	 */
+	public static void dealBoardRewards(TextDrawingArea[] TDA) {
+		RSInterface rsi = addInterface(21365);
+		int childId = 21366;
+
+		addSprite(childId++, 1, "Interfaces/NewDealBoard/BACKGROUND");
+
+		addText(childId++, "Runity's Deal Board", 16750899, true, true, -1, TDA, 2);
+
+		addHoverButton(childId++, "Interfaces/Bank/BANK", 1, 16, 16, "Close", -1, childId, 1);
+		addHoveredButton(childId++, "Interfaces/Bank/BANK", 2, 16, 16, childId++);
+
+		addText(childId++, "Runitys Boxes", 16750899, true, true, -1, TDA, 2);
+		addText(childId++, "Reward List", 16750899, true, true, -1, TDA, 2);
+
+		addText(childId++, "Currently", 16750899, true, true, -1, TDA, 2);
+		addText(childId++, "Viewing", 16750899, true, true, -1, TDA, 2);
+
+		String[] boxes = { "box names" };
+		for (int i = 0; i < boxes.length; i++) {
+			// addClickableText(childId++, "@red@" + boxes[i], "View " + boxes[i], TDA, 2,
+			// 16748608, false, true, 145);
+			addText(childId++, "@red@" + boxes[i] + "View " + boxes[i], 16748608, false, true, -1, TDA, 2);
+
+		}
+
+		addHoverButton(childId++, "Interfaces/NewDealBoard/BUTTON", 4, 72, 32, "Back to Deals", -1, childId, 1);
+		addHoveredButton(childId++, "Interfaces/NewDealBoard/BUTTON", 5, 72, 32, childId++);
+
+		addText(childId++, "Back to", 16750899, true, true, -1, TDA, 0);
+		addText(childId++, "Deals", 16750899, true, true, -1, TDA, 0);
+
+		// addToItemGroup(childId++, 1, 1, 16, 7, null);
 		itemGroup(childId++, 1, 1, 16, 7);
 
-	    RSInterface scroll = addInterface(childId++);
-	   int width = 131;
-	    int height = 175;
-	    int scrollMax = 1400;
-	    int scrollChildId = childId;
-	    int scrollFrame = 0;
-	    
-	    int startScrollY = 3;
-	    
-	    scroll.totalChildren(100);
-	    
-	    for (int i = 0; i < 100; i++) {
-	      addText(scrollChildId, "Item: " + (i + 1), 16750899, false, true, -1, TDA, 0);
-	      scroll.child(scrollFrame++, scrollChildId++, 2, startScrollY);
-	      startScrollY += 13;
-	    }
-	    
-	    rsi.totalChildren(childId - 21366 - 2);
-	    
-	    childId = 21366;
-	    int frame = 0;
-	    
-	    rsi.child(frame++, childId++, 11, 11);
-	    
-	    rsi.child(frame++, childId++, 255, 21);
-	    
-	    rsi.child(frame++, childId++, 473, 20);
-	    rsi.child(frame++, childId++, 473, 20);
-	    childId++;
-	    
-	    rsi.child(frame++, childId++, 135, 77);
-	    rsi.child(frame++, childId++, 308, 77);
-	    
-	    rsi.child(frame++, childId++, 440, 123);
-	    rsi.child(frame++, childId++, 440, 138);
-	    
-	    int startY = 103;
-	    for (int i = 0; i < boxes.length; i++) {
-	      rsi.child(frame++, childId++, 65, startY);
-	      startY += 15;
-	    }
-	    
-	    rsi.child(frame++, childId++, 404, 265);
-	    rsi.child(frame++, childId++, 404, 265);
-	    childId++;
-	    
-	    rsi.child(frame++, childId++, 440, 268);
-	    rsi.child(frame++, childId++, 440, 282);
-	    
-	    rsi.child(frame++, childId++, 426, 172);
-	    
-	    rsi.child(frame++, childId++, 231, 100);
-	  }
-	
-	 public static void goldenScratchCard(TextDrawingArea[] TDA) {
+		RSInterface scroll = addInterface(childId++);
+		int width = 131;
+		int height = 175;
+		int scrollMax = 1400;
+		int scrollChildId = childId;
+		int scrollFrame = 0;
+
+		int startScrollY = 3;
+
+		scroll.totalChildren(100);
+
+		for (int i = 0; i < 100; i++) {
+			addText(scrollChildId, "Item: " + (i + 1), 16750899, false, true, -1, TDA, 0);
+			scroll.child(scrollFrame++, scrollChildId++, 2, startScrollY);
+			startScrollY += 13;
+		}
+
+		rsi.totalChildren(childId - 21366 - 2);
+
+		childId = 21366;
+		int frame = 0;
+
+		rsi.child(frame++, childId++, 11, 11);
+
+		rsi.child(frame++, childId++, 255, 21);
+
+		rsi.child(frame++, childId++, 473, 20);
+		rsi.child(frame++, childId++, 473, 20);
+		childId++;
+
+		rsi.child(frame++, childId++, 135, 77);
+		rsi.child(frame++, childId++, 308, 77);
+
+		rsi.child(frame++, childId++, 440, 123);
+		rsi.child(frame++, childId++, 440, 138);
+
+		int startY = 103;
+		for (int i = 0; i < boxes.length; i++) {
+			rsi.child(frame++, childId++, 65, startY);
+			startY += 15;
+		}
+
+		rsi.child(frame++, childId++, 404, 265);
+		rsi.child(frame++, childId++, 404, 265);
+		childId++;
+
+		rsi.child(frame++, childId++, 440, 268);
+		rsi.child(frame++, childId++, 440, 282);
+
+		rsi.child(frame++, childId++, 426, 172);
+
+		rsi.child(frame++, childId++, 231, 100);
+	}
+
+	public static void goldenScratchCard(TextDrawingArea[] TDA) {
 		RSInterface rsi = addInterface(20011);
 
-	    int childId = 20012;
-	    
-	    addSprite(childId++, 0, "Interfaces/ScratchCard/BACKGROUND");//20013
-	    addText(childId++, "Runity's Golden Scratch Card", 14929501, true, true, -1, TDA, 2); //20014
-	    addText(childId++, "Match 3 to Win!", 14929501, true, true, -1, TDA, 2); //20015
-	    addText(childId++, "Win up to 5 quad!", 14929501, true, true, -1, TDA, 0); //20016
-	    
-	    for (int i = 0; i < 3; i++) {
-	      addHoverButton(childId++, "Interfaces/ScratchCard/BUTTON", 0, 57, 57, "Scratch", -1, childId, 1);
-	      addHoveredButton(childId++, "Interfaces/ScratchCard/BUTTON", 1, 57, 57, childId++);
-	      addText(childId++, "$", 14929501, true, true, -1, TDA, 2);
-	      addContainer(childId++, 0, 1, 80, 30, 2, 100, false, false, false, null, null, null, null, null);
+		int childId = 20012;
 
-	    }
-	    
-	    addText(childId++, "Bonus Prize", 14929501, true, true, -1, TDA, 2);
-	    addText(childId++, "Guaranteed Win", 14929501, true, true, -1, TDA, 0);
-	    
-	    addHoverButton(childId++, "Interfaces/ScratchCard/BUTTON", 0, 57, 57, "Scratch", -1, childId, 1);
-	    addHoveredButton(childId++, "Interfaces/ScratchCard/BUTTON", 1, 57, 57, childId++);
-	    
-	    //addToItemGroup(childId++, 1, 1, 16, 7, null);
-		itemGroup(childId++, 1, 1, 16, 7);
+		addSprite(childId++, 0, "Interfaces/ScratchCard/BACKGROUND");// 20013
+		addText(childId++, "Runity's Golden Scratch Card", 14929501, true, true, -1, TDA, 2); // 20014
+		addText(childId++, "Match 3 to Win!", 14929501, true, true, -1, TDA, 2); // 20015
+		addText(childId++, "Win Amazing Prizes!", 14929501, true, true, -1, TDA, 0); // 20016
 
-	    addHoverButton(childId++, "Interfaces/Bank/BANK", 1, 16, 16, "Close", -1, childId, 1);
-	    addHoveredButton(childId++, "Interfaces/Bank/BANK", 2, 16, 16, childId++);
-	    
-	    rsi.totalChildren(childId - 20012 - 5);
-	    
-	    childId = 20012;
-	    int frame = 0;
-	    
-	    rsi.child(frame++, childId++, 90, 15);
-	    rsi.child(frame++, childId++, 255, 26);
-	    
-	    rsi.child(frame++, childId++, 255, 60);
-	    
-	    rsi.child(frame++, childId++, 255, 75);
-	    
-	    int startX = 150;
-	    int startY = 110;
-	    for (int i = 0; i < 3; i++) {
-	      rsi.child(frame++, childId++, startX, startY);
-	      rsi.child(frame++, childId++, startX, startY);
-	      childId++;
-	      
-	      rsi.child(frame++, childId++, startX + 28, startY + 20);
-	      
-	      rsi.child(frame++, childId++, startX + 13, startY + 15);
-	      startX += 75;
-	    }
-	    
-	    rsi.child(frame++, childId++, 255, 205);
-	    
-	    rsi.child(frame++, childId++, 255, 220);
-	    
-	    rsi.child(frame++, childId++, startX - 150, startY + 135);
-	    rsi.child(frame++, childId++, startX - 150, startY + 135);
-	    childId++;
-	    
-	    rsi.child(frame++, childId++, 236, 260);
-	    
-	    rsi.child(frame++, childId++, 392, 25);
-	    rsi.child(frame++, childId++, 392, 25);
-	    childId++;
-	  }
+		for (int i = 0; i < 3; i++) {
+			addHoverButton(childId++, "Interfaces/ScratchCard/BUTTON", 0, 57, 57, "Scratch", -1, childId, 1);
+			addHoveredButton(childId++, "Interfaces/ScratchCard/BUTTON", 1, 57, 57, childId++);
+			addText(childId++, "$", 14929501, true, true, -1, TDA, 2);
+			addContainer(childId++, 0, 1, 80, 30, 2, 100, false, false, false, null, null, null, null, null);
 
+		}
+
+		addText(childId++, "Bonus Prize", 14929501, true, true, -1, TDA, 2);
+		addText(childId++, "Guaranteed Win", 14929501, true, true, -1, TDA, 0);
+
+		addHoverButton(childId++, "Interfaces/ScratchCard/BUTTON", 0, 57, 57, "Scratch", -1, childId, 1);
+		addHoveredButton(childId++, "Interfaces/ScratchCard/BUTTON", 1, 57, 57, childId++);
+
+		addContainer(childId++, 0, 1, 80, 30, 2, 100, false, false, false, null, null, null, null, null);
+
+		addHoverButton(childId++, 252, 21, 21, "Close", -1, childId, 1);
+		addHoveredButton(childId++, 253, 21, 21, childId++);
+
+		rsi.totalChildren(childId - 20012 - 5);
+
+		childId = 20012;
+		int frame = 0;
+
+		rsi.child(frame++, childId++, 90, 15);
+		rsi.child(frame++, childId++, 255, 26);
+
+		rsi.child(frame++, childId++, 255, 65);
+
+		rsi.child(frame++, childId++, 255, 80);
+
+		int startX = 150;
+		int startY = 110;
+		for (int i = 0; i < 3; i++) {
+			rsi.child(frame++, childId++, startX, startY);
+			rsi.child(frame++, childId++, startX, startY);
+			childId++;
+
+			rsi.child(frame++, childId++, startX + 28, startY + 20);
+
+			rsi.child(frame++, childId++, startX + 13, startY + 10);
+			startX += 75;
+		}
+
+		rsi.child(frame++, childId++, 255, 205);
+
+		rsi.child(frame++, childId++, 255, 220);
+
+		rsi.child(frame++, childId++, startX - 150, startY + 135);
+		rsi.child(frame++, childId++, startX - 150, startY + 135);
+		childId++;
+
+		rsi.child(frame++, childId++, 236, 255);
+
+		rsi.child(frame++, childId++, 390, 23);
+		rsi.child(frame++, childId++, 390, 23);
+		childId++;
+	}
 
 	public static void teleportButtonThing(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(45600);
@@ -649,24 +637,26 @@ public class RSInterface {
 		tab.totalChildren(2);
 		tab.child(0, 45601, 10, 25);
 		tab.child(1, 45602, 35, 10);
-		
+
 		RSInterface popup = addInterface(45602);
 		popup.isMouseoverTriggered = true;
 		addColorBox(45603, 0, 310, 265, 160);
-		addText(45604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
-		addText(45605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
-		addText(45606, "Health:", tda, 0, 0xff9040,  false, true);
-		addText(45607, "Max Hit:", tda, 0, 0xff9040,  false, true);
-		addText(45608, "Weakness:", tda, 0, 0xff9040,  false, true);
-		addText(45609, "Attack:", tda, 0, 0xff9040,  false, true);
-		addText(45610, "252", tda, 0, 0xffffff,  false, true);
-		addText(45611, "280", tda, 0, 0xffffff,  false, true);
-		addText(45612, "23", tda, 0, 0xffffff,  false, true);
-		addText(45613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
-		addText(45614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addText(45604, "Lava Dragon", tda, 1, 0xff9040, true, true);
+		addText(45605, "Combat Lvl:", tda, 0, 0xff9040, false, true);
+		addText(45606, "Health:", tda, 0, 0xff9040, false, true);
+		addText(45607, "Max Hit:", tda, 0, 0xff9040, false, true);
+		addText(45608, "Weakness:", tda, 0, 0xff9040, false, true);
+		addText(45609, "Attack:", tda, 0, 0xff9040, false, true);
+		addText(45610, "252", tda, 0, 0xffffff, false, true);
+		addText(45611, "280", tda, 0, 0xffffff, false, true);
+		addText(45612, "23", tda, 0, 0xffffff, false, true);
+		addText(45613, "Magic, Stab,\\nRange", tda, 0, 0xffffff, false, true);
+		addText(45614, "Melee,\\nDragon Breath", tda, 0, 0xffffff, false, true);
 		addNpc(45615, 6593, 3000);
-		addText(45616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
-		addText(45617, "Rare Drops:", tda, 0, 0xff9040,  false, true);
+		addText(45616,
+				"Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)",
+				tda, 0, 0xff9040, false, true);
+		addText(45617, "Rare Drops:", tda, 0, 0xff9040, false, true);
 		popup.totalChildren(16);
 		popup.child(0, 45603, 0, 0);
 		popup.child(1, 45604, 150, 12);
@@ -684,7 +674,7 @@ public class RSInterface {
 		popup.child(13, 45616, 10, 145);
 		popup.child(14, 45617, 10, 217);
 		popup.child(15, 45620, 0, 230);
-		
+
 		RSInterface items = addInterface(45620);
 		itemGroup(45621, 40, 1, 10, 1);
 		interfaceCache[45621].parentID = items.interfaceId;
@@ -694,7 +684,7 @@ public class RSInterface {
 		items.height = 50;
 		setScrollableItems(interfaceCache[45621], BossDrops.GALVEK_DROPS);
 	}
-	
+
 	public static void teleportButtonThing1(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(46600);
 		addButton(46601, 17, "TeleSexy/SPRITE", "Teleport");
@@ -703,24 +693,26 @@ public class RSInterface {
 		tab.totalChildren(2);
 		tab.child(0, 46601, 10, 25);
 		tab.child(1, 46602, 35, 10);
-		
+
 		RSInterface popup = addInterface(46602);
 		popup.isMouseoverTriggered = true;
 		addColorBox(46603, 0, 310, 265, 160);
-		addText(46604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
-		addText(46605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
-		addText(46606, "Health:", tda, 0, 0xff9040,  false, true);
-		addText(46607, "Max Hit:", tda, 0, 0xff9040,  false, true);
-		addText(46608, "Weakness:", tda, 0, 0xff9040,  false, true);
-		addText(46609, "Attack:", tda, 0, 0xff9040,  false, true);
-		addText(46610, "252", tda, 0, 0xffffff,  false, true);
-		addText(46611, "280", tda, 0, 0xffffff,  false, true);
-		addText(46612, "23", tda, 0, 0xffffff,  false, true);
-		addText(46613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
-		addText(46614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addText(46604, "Lava Dragon", tda, 1, 0xff9040, true, true);
+		addText(46605, "Combat Lvl:", tda, 0, 0xff9040, false, true);
+		addText(46606, "Health:", tda, 0, 0xff9040, false, true);
+		addText(46607, "Max Hit:", tda, 0, 0xff9040, false, true);
+		addText(46608, "Weakness:", tda, 0, 0xff9040, false, true);
+		addText(46609, "Attack:", tda, 0, 0xff9040, false, true);
+		addText(46610, "252", tda, 0, 0xffffff, false, true);
+		addText(46611, "280", tda, 0, 0xffffff, false, true);
+		addText(46612, "23", tda, 0, 0xffffff, false, true);
+		addText(46613, "Magic, Stab,\\nRange", tda, 0, 0xffffff, false, true);
+		addText(46614, "Melee,\\nDragon Breath", tda, 0, 0xffffff, false, true);
 		addNpc(46615, 8095, 3000);
-		addText(46616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
-		addText(46617, "Rare Drops:", tda, 0, 0xff9040,  false, true);
+		addText(46616,
+				"Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)",
+				tda, 0, 0xff9040, false, true);
+		addText(46617, "Rare Drops:", tda, 0, 0xff9040, false, true);
 		popup.totalChildren(16);
 		popup.child(0, 46603, 0, 0);
 		popup.child(1, 46604, 150, 12);
@@ -738,7 +730,7 @@ public class RSInterface {
 		popup.child(13, 46616, 10, 145);
 		popup.child(14, 46617, 10, 217);
 		popup.child(15, 46620, 0, 230);
-		
+
 		RSInterface items = addInterface(46620);
 		itemGroup(46621, 40, 1, 10, 1);
 		interfaceCache[46621].parentID = items.interfaceId;
@@ -748,6 +740,7 @@ public class RSInterface {
 		items.height = 50;
 		setScrollableItems(interfaceCache[46621], BossDrops.ARENA_DROPS);
 	}
+
 	public static void teleportButtonThing2(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(47600);
 		addButton(47601, 16, "TeleSexy/SPRITE", "Teleport");
@@ -756,24 +749,26 @@ public class RSInterface {
 		tab.totalChildren(2);
 		tab.child(0, 47601, 10, 25);
 		tab.child(1, 47602, 35, 10);
-		
+
 		RSInterface popup2 = addInterface(47602);
 		popup2.isMouseoverTriggered = true;
 		addColorBox(47603, 0, 310, 265, 160);
-		addText(47604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
-		addText(47605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
-		addText(47606, "Health:", tda, 0, 0xff9040,  false, true);
-		addText(47607, "Max Hit:", tda, 0, 0xff9040,  false, true);
-		addText(47608, "Weakness:", tda, 0, 0xff9040,  false, true);
-		addText(47609, "Attack:", tda, 0, 0xff9040,  false, true);
-		addText(47610, "252", tda, 0, 0xffffff,  false, true);
-		addText(47611, "280", tda, 0, 0xffffff,  false, true);
-		addText(47612, "23", tda, 0, 0xffffff,  false, true);
-		addText(47613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
-		addText(47614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addText(47604, "Lava Dragon", tda, 1, 0xff9040, true, true);
+		addText(47605, "Combat Lvl:", tda, 0, 0xff9040, false, true);
+		addText(47606, "Health:", tda, 0, 0xff9040, false, true);
+		addText(47607, "Max Hit:", tda, 0, 0xff9040, false, true);
+		addText(47608, "Weakness:", tda, 0, 0xff9040, false, true);
+		addText(47609, "Attack:", tda, 0, 0xff9040, false, true);
+		addText(47610, "252", tda, 0, 0xffffff, false, true);
+		addText(47611, "280", tda, 0, 0xffffff, false, true);
+		addText(47612, "23", tda, 0, 0xffffff, false, true);
+		addText(47613, "Magic, Stab,\\nRange", tda, 0, 0xffffff, false, true);
+		addText(47614, "Melee,\\nDragon Breath", tda, 0, 0xffffff, false, true);
 		addNpc(47615, 7858, 1750);
-		addText(47616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
-		addText(47617, "Rare Drops:", tda, 0, 0xff9040,  false, true);
+		addText(47616,
+				"Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)",
+				tda, 0, 0xff9040, false, true);
+		addText(47617, "Rare Drops:", tda, 0, 0xff9040, false, true);
 		popup2.totalChildren(16);
 		popup2.child(0, 47603, 0, 0);
 		popup2.child(1, 47604, 150, 12);
@@ -791,7 +786,7 @@ public class RSInterface {
 		popup2.child(13, 47616, 10, 145);
 		popup2.child(14, 47617, 10, 217);
 		popup2.child(15, 47620, 0, 230);
-		
+
 		RSInterface items2 = addInterface(47620);
 		itemGroup(47621, 40, 1, 10, 1);
 		interfaceCache[47621].parentID = items2.interfaceId;
@@ -801,7 +796,7 @@ public class RSInterface {
 		items2.height = 50;
 		setScrollableItems(interfaceCache[47621], BossDrops.JUSTICAR_DROPS);
 	}
-	
+
 	public static void teleportButtonThing3(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(48600);
 		addButton(48601, 16, "TeleSexy/SPRITE", "Teleport");
@@ -810,24 +805,26 @@ public class RSInterface {
 		tab.totalChildren(2);
 		tab.child(0, 48601, 10, 25);
 		tab.child(1, 48602, 35, 10);
-		
+
 		RSInterface popup3 = addInterface(48602);
 		popup3.isMouseoverTriggered = true;
 		addColorBox(48603, 0, 310, 265, 160);
-		addText(48604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
-		addText(48605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
-		addText(48606, "Health:", tda, 0, 0xff9040,  false, true);
-		addText(48607, "Max Hit:", tda, 0, 0xff9040,  false, true);
-		addText(48608, "Weakness:", tda, 0, 0xff9040,  false, true);
-		addText(48609, "Attack:", tda, 0, 0xff9040,  false, true);
-		addText(48610, "252", tda, 0, 0xffffff,  false, true);
-		addText(48611, "280", tda, 0, 0xffffff,  false, true);
-		addText(48612, "23", tda, 0, 0xffffff,  false, true);
-		addText(48613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
-		addText(48614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addText(48604, "Lava Dragon", tda, 1, 0xff9040, true, true);
+		addText(48605, "Combat Lvl:", tda, 0, 0xff9040, false, true);
+		addText(48606, "Health:", tda, 0, 0xff9040, false, true);
+		addText(48607, "Max Hit:", tda, 0, 0xff9040, false, true);
+		addText(48608, "Weakness:", tda, 0, 0xff9040, false, true);
+		addText(48609, "Attack:", tda, 0, 0xff9040, false, true);
+		addText(48610, "252", tda, 0, 0xffffff, false, true);
+		addText(48611, "280", tda, 0, 0xffffff, false, true);
+		addText(48612, "23", tda, 0, 0xffffff, false, true);
+		addText(48613, "Magic, Stab,\\nRange", tda, 0, 0xffffff, false, true);
+		addText(48614, "Melee,\\nDragon Breath", tda, 0, 0xffffff, false, true);
 		addNpc(48615, 7858, 2500);
-		addText(48616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
-		addText(48617, "Rare Drops:", tda, 0, 0xff9040,  false, true);
+		addText(48616,
+				"Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)",
+				tda, 0, 0xff9040, false, true);
+		addText(48617, "Rare Drops:", tda, 0, 0xff9040, false, true);
 		popup3.totalChildren(16);
 		popup3.child(0, 48603, 0, 0);
 		popup3.child(1, 48604, 150, 12);
@@ -855,9 +852,7 @@ public class RSInterface {
 		items3.height = 50;
 		setScrollableItems(interfaceCache[48621], BossDrops.SKOTIZO_DROPS);
 	}
-	
-	
-	
+
 	public static void setScrollableItems(RSInterface tab, int[][] loot) {
 		RSInterface parent = interfaceCache[tab.parentID];
 		tab.contentType = 1430;
@@ -1066,7 +1061,7 @@ public class RSInterface {
 		for (int i = 0; i < 5; i++) {
 			addText(52138 + i, text[i], tda, 1, 0xff8a1f, false, true);
 		}
-		
+
 		addHoverButton(52146, 252, 21, 21, "Close", -1, 52147, 1);
 		addHoveredButton(52147, 253, 21, 21, 52148);
 
@@ -1423,19 +1418,19 @@ public class RSInterface {
 		tab.child(0, 23021, x, y);
 		tab.child(1, 23002, 72 + x, 2 + y);
 		tab.child(2, 23022, 2 + x, 14 + y);
-		
+
 		tab = addInterface(23085);
-        addOutlinedColorBox(23086, 0x534a40, 145, 100, 200);
-        addText(23087, "Should list info about the item", tda, 0, 0xffffff, false, true);
-        x = 8; y = 8;
-        tab.totalChildren(4);
-        tab.child(0, 23086, x, y);
-        tab.child(1, 23002, 72 + x, 2 + y);
-        tab.child(2, 23087, 4 + x, 17 + y);
-        tab.child(3, 23088, x, 75);
-        
-        
-        RSInterface items = addInterface(23088);
+		addOutlinedColorBox(23086, 0x534a40, 145, 100, 200);
+		addText(23087, "Should list info about the item", tda, 0, 0xffffff, false, true);
+		x = 8;
+		y = 8;
+		tab.totalChildren(4);
+		tab.child(0, 23086, x, y);
+		tab.child(1, 23002, 72 + x, 2 + y);
+		tab.child(2, 23087, 4 + x, 17 + y);
+		tab.child(3, 23088, x, 75);
+
+		RSInterface items = addInterface(23088);
 		itemGroup(23089, 40, 1, 10, 1);
 		interfaceCache[23089].parentID = 23088;
 		items.totalChildren(1);
@@ -1713,8 +1708,6 @@ public class RSInterface {
 				-100);
 		// setBounds(28009, 120, 198, 88, rsinterface); //Hover box
 
-		
-		
 		PrayerSystem.prayerPlacement();
 	}
 

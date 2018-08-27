@@ -44,8 +44,6 @@ import io.battlerune.login.LoginRenderer;
 import io.battlerune.login.impl.MainScreen;
 import io.battlerune.updater.UpdateState;
 import io.battlerune.updater.Updater;
-import net.runelite.client.ui.ClientUI;
-import net.runelite.client.ui.ContainableFrame;
 
 public class Client extends GameApplet {
 
@@ -432,9 +430,9 @@ public class Client extends GameApplet {
 			forceWidth = forceHeight = -1;
 			cameraZoom = 600;
 			
-			ContainableFrame clientui = new ContainableFrame();
-			clientui.contractBy(frameWidth);
-			clientui.contractBy(frameHeight);
+			//ContainableFrame clientui = new ContainableFrame();
+			//clientui.contractBy(frameWidth);
+			//clientui.contractBy(frameHeight);
 
 			
 			
@@ -4004,8 +4002,6 @@ public class Client extends GameApplet {
 			exception.printStackTrace();
 		}
 		if (Configuration.DEBUG_MODE) {
-			System.out.println(
-					"Client Build: " + Configuration.CLIENT_VERSION);
 			start(args);
 			return;
 		}
