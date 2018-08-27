@@ -71,7 +71,7 @@ public class Configuration {
 	public static Connection CONNECTION = Connection.ECONOMY;
 
 	/** The current client version. */
-	public static final int CLIENT_VERSION = 3;
+	public static final int CLIENT_VERSION = 4;
 	
 	/** The current game version. */
 	public static final int GAME_VERSION = 5;
