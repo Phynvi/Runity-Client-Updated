@@ -160,7 +160,7 @@ public class Updater {
 			return true;
 		}
 
-		File versionFile = new File(Utility.findcachedir() + File.separator + "cacheVersion.dat");
+		File versionFile = new File(Utility.findcachedir() + File.separator + "version.dat");
 
 		// check if the version file exists
 		if (!versionFile.exists()) {
@@ -170,7 +170,7 @@ public class Updater {
 		}
 
 		String version = Utility.getNewestVersion(CACHE_VERSION);
-		String current = Utility.getCurrentVersion(Utility.findcachedir() + File.separator + "cacheVersion.dat");
+		String current = Utility.getCurrentVersion(Utility.findcachedir() + File.separator + "version.dat");
 
 		// does the version of the cache match the updated version
 		if (!current.equalsIgnoreCase(version)) {
