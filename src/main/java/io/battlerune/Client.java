@@ -39,7 +39,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 import io.battlerune.login.LoginRenderer;
 import io.battlerune.login.impl.MainScreen;
 import io.battlerune.updater.UpdateState;
@@ -116,7 +115,7 @@ public class Client extends GameApplet {
 		if (itemHover > 0 && def != null) {
 			if (def.itemActions != null) {
 				action = def.itemActions[1] == null ? "" : def.itemActions[1];
-			} 
+			}
 			RSInterface.interfaceCache[23002].disabledMessage = "@whi@" + action + " @lre@" + def.name;
 			if (ItemStats.itemstats[itemHover] != null) {
 				if (ItemStats.itemstats[itemHover].type == 1) {
@@ -163,9 +162,10 @@ public class Client extends GameApplet {
 							+ ItemStats.itemstats[itemHover].healAmount;
 					RSInterface.interfaceCache[23022].centerText = true;
 				} else if (ItemStats.itemstats[itemHover].type == 3) {
-            		RSInterface.setScrollableItems(RSInterface.interfaceCache[23089], ItemStats.itemstats[itemHover].rewards);
-            		RSInterface.interfaceCache[23087].disabledMessage = ItemStats.itemstats[itemHover].information;
-            	}
+					RSInterface.setScrollableItems(RSInterface.interfaceCache[23089],
+							ItemStats.itemstats[itemHover].rewards);
+					RSInterface.interfaceCache[23087].disabledMessage = ItemStats.itemstats[itemHover].information;
+				}
 			} else {
 				RSInterface.interfaceCache[23021].height = 16;
 				RSInterface.interfaceCache[23021].width = newSmallFont.getTextWidth(def.name)
@@ -429,31 +429,29 @@ public class Client extends GameApplet {
 			frameHeight = 503;
 			forceWidth = forceHeight = -1;
 			cameraZoom = 600;
-			
-			//ContainableFrame clientui = new ContainableFrame();
-			//clientui.contractBy(frameWidth);
-			//clientui.contractBy(frameHeight);
 
-			
-			
+			// ContainableFrame clientui = new ContainableFrame();
+			// clientui.contractBy(frameWidth);
+			// clientui.contractBy(frameHeight);
+
 			/**
-             * Reset the settings
-             */
+			 * Reset the settings
+			 */
 
-            if (Client.changeChatArea) {
-                Client.changeChatArea = false;
-                toggleConfig(882, 0);
-            }
+			if (Client.changeChatArea) {
+				Client.changeChatArea = false;
+				toggleConfig(882, 0);
+			}
 
-            if (Client.transparentTabArea) {
-                Client.transparentTabArea = false;
-                toggleConfig(881, 0);
-            }
+			if (Client.transparentTabArea) {
+				Client.transparentTabArea = false;
+				toggleConfig(881, 0);
+			}
 
-            if (Client.changeTabArea) {
-                Client.changeTabArea = false;
-                toggleConfig(883, 0);
-            }
+			if (Client.changeTabArea) {
+				Client.changeTabArea = false;
+				toggleConfig(883, 0);
+			}
 			if (clientFrame != null) {
 				clientFrame.resize(ScreenMode.FIXED, 765, 503);
 			}
@@ -3144,30 +3142,38 @@ public class Client extends GameApplet {
 				drawInterface(RSInterface.interfaceCache[37400], dx, dy, 0);
 			}
 			if (Settings.DRAW_ITEM_HOVERS && itemHover > -1 && super.mouseX > getScreenWidth() - 300) {
-                if (frameMode == ScreenMode.FIXED) {
-                    x = 516;
-                    y = 169;
-                    if (super.mouseX > x && super.mouseY > y) {
-                        if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
-                            drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(true, x, false), getItemHoverY(true, y, false), 0);
-                        } else if (ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 3) {
-                        	drawInterface(RSInterface.interfaceCache[23085], getItemHoverX(true, x, false), getItemHoverY(true, y, false), 0);
-                        } else {
-                            drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(true, x, true), getItemHoverY(true, y, true), 0);
-                        }
-                    }
-                } else {
-                    if (super.mouseX > x && super.mouseY > y) {
-                        if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
-                            drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(true, x, false), getItemHoverY(true, y, false), 0);
-                        } else if (ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 3) {
-                        	drawInterface(RSInterface.interfaceCache[23085], getItemHoverX(true, x, false), getItemHoverY(true, y, false), 0);
-                        } else {
-                            drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(true, x, true), getItemHoverY(true, y, true), 0);
-                        }
-                    }
-                }
-            }
+				if (frameMode == ScreenMode.FIXED) {
+					x = 516;
+					y = 169;
+					if (super.mouseX > x && super.mouseY > y) {
+						if (controlIsDown && ItemStats.itemstats[itemHover] != null
+								&& ItemStats.itemstats[itemHover].type == 1) {
+							drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(true, x, false),
+									getItemHoverY(true, y, false), 0);
+						} else if (ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 3) {
+							drawInterface(RSInterface.interfaceCache[23085], getItemHoverX(true, x, false),
+									getItemHoverY(true, y, false), 0);
+						} else {
+							drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(true, x, true),
+									getItemHoverY(true, y, true), 0);
+						}
+					}
+				} else {
+					if (super.mouseX > x && super.mouseY > y) {
+						if (controlIsDown && ItemStats.itemstats[itemHover] != null
+								&& ItemStats.itemstats[itemHover].type == 1) {
+							drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(true, x, false),
+									getItemHoverY(true, y, false), 0);
+						} else if (ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 3) {
+							drawInterface(RSInterface.interfaceCache[23085], getItemHoverX(true, x, false),
+									getItemHoverY(true, y, false), 0);
+						} else {
+							drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(true, x, true),
+									getItemHoverY(true, y, true), 0);
+						}
+					}
+				}
+			}
 
 		}
 		if (menuOpen) {
@@ -4011,7 +4017,7 @@ public class Client extends GameApplet {
 
 	public static void start(String args[]) {
 		Configuration.LOADING_MESSAGE = Utility.randomElement(Configuration.LOADING_MESSAGES);
-	ClientFrame.load();
+		ClientFrame.load();
 		try {
 			nodeID = 10;
 			portOff = 0;
@@ -9081,8 +9087,8 @@ public class Client extends GameApplet {
 			scrollBar1 = new Sprite(streamLoader_2, "scrollbar", 0);
 			scrollBar2 = new Sprite(streamLoader_2, "scrollbar", 1);
 //			 repackCacheIndex(1);
-  //          repackCacheIndex(2);
- //          repackCacheIndex(4);
+			// repackCacheIndex(2);
+			// repackCacheIndex(4);
 			prepareGameFrame();
 			Sprite sprite = new Sprite(streamLoader_2, "screenframe", 0);
 			leftFrame = new GraphicsBuffer(sprite.width, sprite.height, getGameComponent());
@@ -9210,7 +9216,8 @@ public class Client extends GameApplet {
 
 	public String indexLocation(int cacheIndex, int index) {
 		return Utility.findcachedir() + "/index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
-       // return "C:/Users/Amin/Desktop/Index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
+		// return "C:/Users/Amin/Desktop/Index" + cacheIndex + "/" + (index != -1 ?
+		// index + ".gz" : "");
 
 		// return "C:/Users/evan__000/Desktop/RSPS/Data/OSRS/118 data/index" +
 		// cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
@@ -11338,14 +11345,17 @@ public class Client extends GameApplet {
 		}
 
 		if (Settings.DRAW_ITEM_HOVERS && itemHover > -1 && super.mouseX < getScreenWidth() - 300) {
-            if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
-                drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(false, 0, false), getItemHoverY(false, 0, false), 0);
-            } else if (ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 3) {
-            	drawInterface(RSInterface.interfaceCache[23085], getItemHoverX(true, 0, false), getItemHoverY(true, 0, false), 0);
-            } else {
-                drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(false, 0, true), getItemHoverY(false, 0, true), 0);
-            }
-        }
+			if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
+				drawInterface(RSInterface.interfaceCache[23000], getItemHoverX(false, 0, false),
+						getItemHoverY(false, 0, false), 0);
+			} else if (ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 3) {
+				drawInterface(RSInterface.interfaceCache[23085], getItemHoverX(true, 0, false),
+						getItemHoverY(true, 0, false), 0);
+			} else {
+				drawInterface(RSInterface.interfaceCache[23020], getItemHoverX(false, 0, true),
+						getItemHoverY(false, 0, true), 0);
+			}
+		}
 
 		method70();
 		if (!menuOpen) {
@@ -14547,81 +14557,47 @@ public class Client extends GameApplet {
 		return true;
 	}
 
+	private boolean cheapHaxPacket(int id, String text) {
+		switch (id) {
 
-    private boolean cheapHaxPacket(int id, String text) {
-    	if (id == 45615) {
-    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
-    		return true;
-    	}
-    	if (id == 46615) {
-    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
-    		return true;
-    	}
-    	if (id == 46715) {
-    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
-    		return true;
-    	}
-    	if (id == 48615) {
-    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
-    		return true;
-    	}
-    	if (id == 45600) {
-    		int state = Integer.parseInt(text);
-    		if (state == 0) {
-    			teleportButton = null;
-    		} else {
-    			teleportButton = RSInterface.interfaceCache[45600];
-    		}
-    		
-    		return true;
-    	}
-    	if (id == 46600) {
-    		int state1 = Integer.parseInt(text);
-    		if (state1 == 0) {
-    			teleportButton = null;
-    		} else {
-    			teleportButton = RSInterface.interfaceCache[46600];
-    		}
-    		return true;
-    	} 
-    	if (id == 47600) {
-    		int state2 = Integer.parseInt(text);
-    		if (state2 == 0) {
-    			teleportButton = null;
-    		} else {
-    			teleportButton = RSInterface.interfaceCache[47600];
-    		}
-    		return true;
-    	}
-    	if (id == 48600) {
-    		int state3 = Integer.parseInt(text);
-    		if (state3 == 0) {
-    			teleportButton = null;
-    		} else {
-    			teleportButton = RSInterface.interfaceCache[48600];
-    		}
-    		return true;
-    	}else if (id == 23050) {
-            if (text.equals("on")) 			drawOpponentStats = true;
-            else if (text.equals("off")) 	drawOpponentStats = false;
-            return true;
-        } else if (id == 1998) {
-            if (text.equals("on")) 		specActive = true;
-            else if (text.equals("off")) 	specActive = false;
-            return true;
-        }
-	     else if (id >= 37331 && id <= 37381) {
-        	RSInterface ach = RSInterface.interfaceCache[id];
-        	if (text.contains("%")) {
-        		String[] remove = text.split("%");
-        		ach.achievementPercent = Integer.parseInt(remove[remove.length - 1]);
-        		text = text.replaceAll("%"+ach.achievementPercent, "");
-        	}
-        	sendString(text, id);
-        	return true;
-        }
-        return false;
-    }
+		case 45615:
+			RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+			return true;
+
+		case 45600:
+			int state = Integer.parseInt(text);
+			if (state == 0) {
+				teleportButton = null;
+			} else {
+				teleportButton = RSInterface.interfaceCache[id];
+			}
+			return true;
+		}
+
+		if (id == 23050) {
+			if (text.equals("on"))
+				drawOpponentStats = true;
+			else if (text.equals("off"))
+				drawOpponentStats = false;
+			return true;
+		} else if (id == 1998) {
+			if (text.equals("on"))
+				specActive = true;
+			else if (text.equals("off"))
+				specActive = false;
+			return true;
+		} else if (id >= 37331 && id <= 37381) {
+			RSInterface ach = RSInterface.interfaceCache[id];
+			if (text.contains("%")) {
+				String[] remove = text.split("%");
+				ach.achievementPercent = Integer.parseInt(remove[remove.length - 1]);
+				text = text.replaceAll("%" + ach.achievementPercent, "");
+			}
+			sendString(text, id);
+			return true;
+		}
+		return false;
+	}
 
 	private void drawGameWorld() {
 		anInt1265++;
@@ -14945,26 +14921,28 @@ public class Client extends GameApplet {
 		}
 	}
 
-	 void loadPrayerOrb(int xOffset) {
-	        final boolean isFixed = frameMode == ScreenMode.FIXED;
-	        final int fixedXOffset = isFixed ? 0 : 8;
-	        final int fixedYOffset = isFixed ? 0 : 8;
-	        Sprite bg = spriteCache.get(prayHover ? 8 : 7);
-	        Sprite fg = spriteCache.get(prayClicked ? 2 : 1);
-	        bg.drawSprite(0 + xOffset + fixedXOffset, 75 + fixedYOffset);
-	        fg.drawSprite(27 + xOffset + fixedXOffset, 79 + fixedYOffset);
-	        int level = currentStats[5];
-	        int max = maxStats[5];
-	        double percent = level / (double) max;
-	        spriteCache.get(14).height = (int) (26 * (1 - percent));
-	        spriteCache.get(14).drawSprite(27 + xOffset + fixedXOffset, 79 + fixedYOffset);
-	        if (percent <= .25) {
-	            spriteCache.get(10).drawSprite1(30 + xOffset + fixedXOffset, 82 + fixedYOffset, 200 + (int) (50 * Math.sin(tick / 7.0)));
-	        } else {
-	            spriteCache.get(10).drawSprite(30 + xOffset + fixedXOffset, 82 + fixedYOffset);
-	        }
-	        smallFont.drawCenteredText(getOrbTextColor((int) (percent * 100)), 16 + xOffset + fixedXOffset, level + "", 101 + fixedYOffset, true);
-	    }
+	void loadPrayerOrb(int xOffset) {
+		final boolean isFixed = frameMode == ScreenMode.FIXED;
+		final int fixedXOffset = isFixed ? 0 : 8;
+		final int fixedYOffset = isFixed ? 0 : 8;
+		Sprite bg = spriteCache.get(prayHover ? 8 : 7);
+		Sprite fg = spriteCache.get(prayClicked ? 2 : 1);
+		bg.drawSprite(0 + xOffset + fixedXOffset, 75 + fixedYOffset);
+		fg.drawSprite(27 + xOffset + fixedXOffset, 79 + fixedYOffset);
+		int level = currentStats[5];
+		int max = maxStats[5];
+		double percent = level / (double) max;
+		spriteCache.get(14).height = (int) (26 * (1 - percent));
+		spriteCache.get(14).drawSprite(27 + xOffset + fixedXOffset, 79 + fixedYOffset);
+		if (percent <= .25) {
+			spriteCache.get(10).drawSprite1(30 + xOffset + fixedXOffset, 82 + fixedYOffset,
+					200 + (int) (50 * Math.sin(tick / 7.0)));
+		} else {
+			spriteCache.get(10).drawSprite(30 + xOffset + fixedXOffset, 82 + fixedYOffset);
+		}
+		smallFont.drawCenteredText(getOrbTextColor((int) (percent * 100)), 16 + xOffset + fixedXOffset, level + "",
+				101 + fixedYOffset, true);
+	}
 
 	void loadRunOrb(int xOffset) {
 		final boolean isFixed = frameMode == ScreenMode.FIXED;
