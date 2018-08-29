@@ -67,42 +67,6 @@ public class Model extends Renderable {
 			}
 		}
 	}
-	
-	//cue
-	public void color_to_texture(Model model, short texture_id) {
-		if(anIntArray1640 != null) {
-			if(model != null) {
-				if(anIntArray1637 == null) {
-					anIntArray1637 = new int[model.anInt1630];
-				}
-				if(texture == null) {
-					texture = new short[model.anInt1630];
-				}
-				if(texture_coordinates == null) {
-					texture_coordinates = new byte[model.anInt1630];
-				}
-				texture_type = new byte[model.anInt1630];
-				anIntArray1643 = new short[model.anInt1630];
-				anIntArray1644 = new short[model.anInt1630];
-				anIntArray1645 = new short[model.anInt1630];
-				for(int face = 0; face < model.anInt1630; face++) {
-					if(model.anIntArray1640[face] == -2) {
-						anIntArray1637[face] = 1;
-						texture[face] = texture_id;
-						texture_type[face] = 1;
-						anInt1642++;
-					} else {
-						texture[face] = -1;
-					}
-				}
-				for(int face = 0; face < anInt1642; face++) {
-					anIntArray1643[face] = (short) anIntArray1631[face];
-					anIntArray1644[face] = (short) anIntArray1632[face];
-					anIntArray1645[face] = (short) anIntArray1633[face];
-				}
-			}
-		}
-	}
 
 	public void decodeNewModel(byte data[], int modelId) {
 		Buffer nc1 = new Buffer(data);

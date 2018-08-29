@@ -11,7 +11,7 @@ public enum BossInformation {
 	VETION("Vet'ion", 6611, 454, 255, 40, 2400, 64, -10, BossDrops.VETION_DROPS, 9),
 	CHAOS_FANATIC("Chaos Fanatic", 6619, 202, 225, 20, 1600, 70, -10, BossDrops.FANATIC_DROPS, 18),
 	CRAZY_ARCHAEOLOGIST("Crazy Archaeologist", 6618, 204, 225, 23, 1600, 70, -10, BossDrops.ARCHAEOLOGIST_DROPS, 18),
-	KRAKEN("Kraken", 494, 291, 255, 26, 4000, 52, -15, BossDrops.KRAKEN_DROPS, 9),
+	KRAKEN("Kraken", 494, 291, 255, 26, 4000, 52, -15, BossDrops.KRAKEN_DROPS, 19),
 	ZULRAH("Zulrah", 2042, 725, 500, 30, 4500, 52, -25, BossDrops.ZULRAH_DROPS, 13),
 	GODWARS("GodWars", 2215, 624, 255, 40, 3700, 65, -10, BossDrops.GODWARS_DROPS, 14),
 	CHAOS_ELEMENTAL("Chaos Elemental", 6505, 305, 250, 28, 2800, 52, 0, BossDrops.CHAOS_ELEMENTAL_DROPS, 18),

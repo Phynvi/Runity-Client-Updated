@@ -14559,46 +14559,79 @@ public class Client extends GameApplet {
 	}
 
 	private boolean cheapHaxPacket(int id, String text) {
-		switch (id) {
-
-		case 45615:
-			RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
-			return true;
-
-		case 45600:
-			int state = Integer.parseInt(text);
-			if (state == 0) {
-				teleportButton = null;
-			} else {
-				teleportButton = RSInterface.interfaceCache[id];
-			}
-			return true;
-		}
-
-		if (id == 23050) {
-			if (text.equals("on"))
-				drawOpponentStats = true;
-			else if (text.equals("off"))
-				drawOpponentStats = false;
-			return true;
-		} else if (id == 1998) {
-			if (text.equals("on"))
-				specActive = true;
-			else if (text.equals("off"))
-				specActive = false;
-			return true;
-		} else if (id >= 37331 && id <= 37381) {
-			RSInterface ach = RSInterface.interfaceCache[id];
-			if (text.contains("%")) {
-				String[] remove = text.split("%");
-				ach.achievementPercent = Integer.parseInt(remove[remove.length - 1]);
-				text = text.replaceAll("%" + ach.achievementPercent, "");
-			}
-			sendString(text, id);
-			return true;
-		}
-		return false;
-	}
+    	if (id == 45615) {
+    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+    		return true;
+    	}
+    	if (id == 46615) {
+    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+    		return true;
+    	}
+    	if (id == 46715) {
+    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+    		return true;
+    	}
+    	if (id == 48615) {
+    		RSInterface.interfaceCache[id].npcDisplay = Integer.parseInt(text);
+    		return true;
+    	}
+    	if (id == 45600) {
+    		int state = Integer.parseInt(text);
+    		if (state == 0) {
+    			teleportButton = null;
+    		} else {
+    			teleportButton = RSInterface.interfaceCache[45600];
+    		}
+    		
+    		return true;
+    	}
+    	if (id == 46600) {
+    		int state1 = Integer.parseInt(text);
+    		if (state1 == 0) {
+    			teleportButton = null;
+    		} else {
+    			teleportButton = RSInterface.interfaceCache[46600];
+    		}
+    		return true;
+    	} 
+    	if (id == 47600) {
+    		int state2 = Integer.parseInt(text);
+    		if (state2 == 0) {
+    			teleportButton = null;
+    		} else {
+    			teleportButton = RSInterface.interfaceCache[47600];
+    		}
+    		return true;
+    	}
+    	if (id == 48600) {
+    		int state3 = Integer.parseInt(text);
+    		if (state3 == 0) {
+    			teleportButton = null;
+    		} else {
+    			teleportButton = RSInterface.interfaceCache[48600];
+    		}
+    		return true;
+    	}else if (id == 23050) {
+            if (text.equals("on")) 			drawOpponentStats = true;
+            else if (text.equals("off")) 	drawOpponentStats = false;
+            return true;
+        } else if (id == 1998) {
+            if (text.equals("on")) 		specActive = true;
+            else if (text.equals("off")) 	specActive = false;
+            return true;
+        }
+	     else if (id >= 37331 && id <= 37381) {
+        	RSInterface ach = RSInterface.interfaceCache[id];
+        	if (text.contains("%")) {
+        		String[] remove = text.split("%");
+        		ach.achievementPercent = Integer.parseInt(remove[remove.length - 1]);
+        		text = text.replaceAll("%"+ach.achievementPercent, "");
+        	}
+        	sendString(text, id);
+        	return true;
+        }
+        return false;
+    }
 
 	private void drawGameWorld() {
 		anInt1265++;

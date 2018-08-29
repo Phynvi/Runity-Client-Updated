@@ -254,30 +254,6 @@ public final class ItemDefinition {
 		team = 0;
 	}
 
-	public static void applyTexturing(Model model, int id) {
-		switch (id) {
-		case 11992:
-			// System.out.println("Lava Scale-------------------------");
-			model.setTexture(47155, 40);
-			// Model.printModelColours(model);
-			// System.out.println("Lava Scale-------------------------");
-			break;
-			/*
-			 * case 12371: //System.out.println("Lava mask-------------------------");
-			 * model.setTexture(38119, 40); //Model.printModelColours(model);
-			 * //System.out.println("Lava mask-------------------------"); break;
-			 */
-		case 13188:
-			// System.out.println("Lava mask-------------------------");
-			model.setTexture(40);
-			Model.printModelColours(model);
-			// System.out.println("Lava mask-------------------------");
-			break;
-		case 1127:
-			model.setTexture(38119, 906112917);
-			break;
-		}
-	}
 
 	public static ItemDefinition lookup(int i) {
 		for (int j = 0; j < 10; j++)
@@ -996,12 +972,12 @@ public final class ItemDefinition {
 			itemDef.modelOffset1 = 1;
 			itemDef.modelOffset2 = 89;
 			break;
-
+ /*
 		case 16657:
 			defaultConfig(itemDef, 47088, 47089, 47090, "@zol@Aphrodite's helm");
-			/*itemDef.modelID = 47088;
+			itemDef.modelID = 47088;
 			itemDef.maleWield = 47089;
-			itemDef.femaleWield = 47090;*/
+			itemDef.femaleWield = 47090;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
@@ -1065,12 +1041,12 @@ public final class ItemDefinition {
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Drop";
 			itemDef.description = "\"A piece of Aphrodite's beautiful armour, only the most beautiful can wear\"";
-			/*itemDef.modelZoom = forID11732itemDef.modelZoom;
+			itemDef.modelZoom = forID11732itemDef.modelZoom;
 			itemDef.modelOffset1 = forID11732itemDef.modelOffset1;
 			itemDef.modelOffset2 = forID11732itemDef.modelOffset2;
 			itemDef.modelRotationY = forID11732itemDef.modelRotationY;
-			itemDef.modelRotationX = forID11732itemDef.modelRotationX;*/
-			break;
+			itemDef.modelRotationX = forID11732itemDef.modelRotationX;
+			break; */
 
 		case 16662: 
 			defaultConfig(itemDef, 47100, 47101, 47101, "@zo1@Aphrodite Bow");

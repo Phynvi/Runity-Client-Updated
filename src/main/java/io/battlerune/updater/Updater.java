@@ -40,7 +40,7 @@ public class Updater {
 	/**
 	 * The client download url link.
 	 */
-	private static final String CLIENT_LINK = "https://runity.io/Runityz.jar";
+	private static final String CLIENT_LINK = "https://runity.io/Runity-Beta.jar";
 	/**
 	 * The cache directory.
 	 */

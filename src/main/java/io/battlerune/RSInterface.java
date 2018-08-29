@@ -381,6 +381,10 @@ public class RSInterface {
 		teleportButtonThing(textDrawingAreas);
 		goldenScratchCard(textDrawingAreas);
 		dealBoardRewards(textDrawingAreas);
+		teleportButtonThing(textDrawingAreas);
+		teleportButtonThing1(textDrawingAreas);
+		teleportButtonThing2(textDrawingAreas);
+		teleportButtonThing3(textDrawingAreas);
 		// loyaltyStreakRewards(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
@@ -634,26 +638,24 @@ public class RSInterface {
 		tab.totalChildren(2);
 		tab.child(0, 45601, 10, 25);
 		tab.child(1, 45602, 35, 10);
-
+		
 		RSInterface popup = addInterface(45602);
 		popup.isMouseoverTriggered = true;
 		addColorBox(45603, 0, 310, 265, 160);
-		addText(45604, "Lava Dragon", tda, 1, 0xff9040, true, true);
-		addText(45605, "Combat Lvl:", tda, 0, 0xff9040, false, true);
-		addText(45606, "Health:", tda, 0, 0xff9040, false, true);
-		addText(45607, "Max Hit:", tda, 0, 0xff9040, false, true);
-		addText(45608, "Weakness:", tda, 0, 0xff9040, false, true);
-		addText(45609, "Attack:", tda, 0, 0xff9040, false, true);
-		addText(45610, "252", tda, 0, 0xffffff, false, true);
-		addText(45611, "280", tda, 0, 0xffffff, false, true);
-		addText(45612, "23", tda, 0, 0xffffff, false, true);
-		addText(45613, "Magic, Stab,\\nRange", tda, 0, 0xffffff, false, true);
-		addText(45614, "Melee,\\nDragon Breath", tda, 0, 0xffffff, false, true);
+		addText(45604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
+		addText(45605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
+		addText(45606, "Health:", tda, 0, 0xff9040,  false, true);
+		addText(45607, "Max Hit:", tda, 0, 0xff9040,  false, true);
+		addText(45608, "Weakness:", tda, 0, 0xff9040,  false, true);
+		addText(45609, "Attack:", tda, 0, 0xff9040,  false, true);
+		addText(45610, "252", tda, 0, 0xffffff,  false, true);
+		addText(45611, "280", tda, 0, 0xffffff,  false, true);
+		addText(45612, "23", tda, 0, 0xffffff,  false, true);
+		addText(45613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
+		addText(45614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
 		addNpc(45615, 6593, 3000);
-		addText(45616,
-				"Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)",
-				tda, 0, 0xff9040, false, true);
-		addText(45617, "Rare Drops:", tda, 0, 0xff9040, false, true);
+		addText(45616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
+		addText(45617, "Rare Drops:", tda, 0, 0xff9040,  false, true);
 		popup.totalChildren(16);
 		popup.child(0, 45603, 0, 0);
 		popup.child(1, 45604, 150, 12);
@@ -671,7 +673,7 @@ public class RSInterface {
 		popup.child(13, 45616, 10, 145);
 		popup.child(14, 45617, 10, 217);
 		popup.child(15, 45620, 0, 230);
-
+		
 		RSInterface items = addInterface(45620);
 		itemGroup(45621, 40, 1, 10, 1);
 		interfaceCache[45621].parentID = items.interfaceId;
@@ -681,6 +683,168 @@ public class RSInterface {
 		items.height = 50;
 		setScrollableItems(interfaceCache[45621], BossDrops.GALVEK_DROPS);
 	}
+	
+	public static void teleportButtonThing1(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(46600);
+		addButton(46601, 17, "TeleSexy/SPRITE", "Teleport");
+		RSInterface button = interfaceCache[46601];
+		button.hoverType = 46602;
+		tab.totalChildren(2);
+		tab.child(0, 46601, 10, 25);
+		tab.child(1, 46602, 35, 10);
+		
+		RSInterface popup = addInterface(46602);
+		popup.isMouseoverTriggered = true;
+		addColorBox(46603, 0, 310, 265, 160);
+		addText(46604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
+		addText(46605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
+		addText(46606, "Health:", tda, 0, 0xff9040,  false, true);
+		addText(46607, "Max Hit:", tda, 0, 0xff9040,  false, true);
+		addText(46608, "Weakness:", tda, 0, 0xff9040,  false, true);
+		addText(46609, "Attack:", tda, 0, 0xff9040,  false, true);
+		addText(46610, "252", tda, 0, 0xffffff,  false, true);
+		addText(46611, "280", tda, 0, 0xffffff,  false, true);
+		addText(46612, "23", tda, 0, 0xffffff,  false, true);
+		addText(46613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
+		addText(46614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addNpc(46615, 8095, 3000);
+		addText(46616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
+		addText(46617, "Rare Drops:", tda, 0, 0xff9040,  false, true);
+		popup.totalChildren(16);
+		popup.child(0, 46603, 0, 0);
+		popup.child(1, 46604, 150, 12);
+		popup.child(2, 46605, 165, 45);
+		popup.child(3, 46606, 165, 59);
+		popup.child(4, 46607, 165, 73);
+		popup.child(5, 46608, 165, 87);
+		popup.child(6, 46609, 165, 115);
+		popup.child(7, 46610, 225, 45);
+		popup.child(8, 46611, 225, 59);
+		popup.child(9, 46612, 225, 73);
+		popup.child(10, 46613, 225, 87);
+		popup.child(11, 46614, 225, 115);
+		popup.child(12, 46615, 20, 30);
+		popup.child(13, 46616, 10, 145);
+		popup.child(14, 46617, 10, 217);
+		popup.child(15, 46620, 0, 230);
+		
+		RSInterface items = addInterface(46620);
+		itemGroup(46621, 40, 1, 10, 1);
+		interfaceCache[46621].parentID = items.interfaceId;
+		items.totalChildren(1);
+		items.child(0, 46621, 0, 0);
+		items.width = 310;
+		items.height = 50;
+		setScrollableItems(interfaceCache[46621], BossDrops.ARENA_DROPS);
+	}
+	public static void teleportButtonThing2(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(47600);
+		addButton(47601, 16, "TeleSexy/SPRITE", "Teleport");
+		RSInterface button2 = interfaceCache[47601];
+		button2.hoverType = 47602;
+		tab.totalChildren(2);
+		tab.child(0, 47601, 10, 25);
+		tab.child(1, 47602, 35, 10);
+		
+		RSInterface popup2 = addInterface(47602);
+		popup2.isMouseoverTriggered = true;
+		addColorBox(47603, 0, 310, 265, 160);
+		addText(47604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
+		addText(47605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
+		addText(47606, "Health:", tda, 0, 0xff9040,  false, true);
+		addText(47607, "Max Hit:", tda, 0, 0xff9040,  false, true);
+		addText(47608, "Weakness:", tda, 0, 0xff9040,  false, true);
+		addText(47609, "Attack:", tda, 0, 0xff9040,  false, true);
+		addText(47610, "252", tda, 0, 0xffffff,  false, true);
+		addText(47611, "280", tda, 0, 0xffffff,  false, true);
+		addText(47612, "23", tda, 0, 0xffffff,  false, true);
+		addText(47613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
+		addText(47614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addNpc(47615, 7858, 1750);
+		addText(47616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
+		addText(47617, "Rare Drops:", tda, 0, 0xff9040,  false, true);
+		popup2.totalChildren(16);
+		popup2.child(0, 47603, 0, 0);
+		popup2.child(1, 47604, 150, 12);
+		popup2.child(2, 47605, 165, 45);
+		popup2.child(3, 47606, 165, 59);
+		popup2.child(4, 47607, 165, 73);
+		popup2.child(5, 47608, 165, 87);
+		popup2.child(6, 47609, 165, 115);
+		popup2.child(7, 47610, 225, 45);
+		popup2.child(8, 47611, 225, 59);
+		popup2.child(9, 47612, 225, 73);
+		popup2.child(10, 47613, 225, 87);
+		popup2.child(11, 47614, 225, 115);
+		popup2.child(12, 47615, 20, 30);
+		popup2.child(13, 47616, 10, 145);
+		popup2.child(14, 47617, 10, 217);
+		popup2.child(15, 47620, 0, 230);
+		
+		RSInterface items2 = addInterface(47620);
+		itemGroup(47621, 40, 1, 10, 1);
+		interfaceCache[47621].parentID = items2.interfaceId;
+		items2.totalChildren(1);
+		items2.child(0, 47621, 0, 0);
+		items2.width = 310;
+		items2.height = 50;
+		setScrollableItems(interfaceCache[47621], BossDrops.JUSTICAR_DROPS);
+	}
+	
+	public static void teleportButtonThing3(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(48600);
+		addButton(48601, 15, "TeleSexy/SPRITE", "Teleport");
+		RSInterface button3 = interfaceCache[48601];
+		button3.hoverType = 48602;
+		tab.totalChildren(2);
+		tab.child(0, 48601, 10, 25);
+		tab.child(1, 48602, 35, 10);
+		
+		RSInterface popup3 = addInterface(48602);
+		popup3.isMouseoverTriggered = true;
+		addColorBox(48603, 0, 310, 265, 160);
+		addText(48604, "Lava Dragon", tda, 1, 0xff9040,  true, true);
+		addText(48605, "Combat Lvl:", tda, 0, 0xff9040,  false, true);
+		addText(48606, "Health:", tda, 0, 0xff9040,  false, true);
+		addText(48607, "Max Hit:", tda, 0, 0xff9040,  false, true);
+		addText(48608, "Weakness:", tda, 0, 0xff9040,  false, true);
+		addText(48609, "Attack:", tda, 0, 0xff9040,  false, true);
+		addText(48610, "252", tda, 0, 0xffffff,  false, true);
+		addText(48611, "280", tda, 0, 0xffffff,  false, true);
+		addText(48612, "23", tda, 0, 0xffffff,  false, true);
+		addText(48613, "Magic, Stab,\\nRange", tda, 0, 0xffffff,  false, true);
+		addText(48614, "Melee,\\nDragon Breath", tda, 0, 0xffffff,  false, true);
+		addNpc(48615, 7858, 2500);
+		addText(48616, "Hunted primarily for their bones, this dragon attacks with\\na powerful breath dealing magic damage. Anti-fire methods\\nare advised.\\n\\nFound deep in the wilderness (dangerous)", tda, 0, 0xff9040,  false, true);
+		addText(48617, "Rare Drops:", tda, 0, 0xff9040,  false, true);
+		popup3.totalChildren(16);
+		popup3.child(0, 48603, 0, 0);
+		popup3.child(1, 48604, 150, 12);
+		popup3.child(2, 48605, 165, 45);
+		popup3.child(3, 48606, 165, 59);
+		popup3.child(4, 48607, 165, 73);
+		popup3.child(5, 48608, 165, 87);
+		popup3.child(6, 48609, 165, 115);
+		popup3.child(7, 48610, 225, 45);
+		popup3.child(8, 48611, 225, 59);
+		popup3.child(9, 48612, 225, 73);
+		popup3.child(10, 48613, 225, 87);
+		popup3.child(11, 48614, 225, 115);
+		popup3.child(12, 48615, 20, 30);
+		popup3.child(13, 48616, 10, 145);
+		popup3.child(14, 48617, 10, 217);
+		popup3.child(15, 48620, 0, 230);
+
+		RSInterface items3 = addInterface(48620);
+		itemGroup(48621, 40, 1, 10, 1);
+		interfaceCache[48621].parentID = items3.interfaceId;
+		items3.totalChildren(1);
+		items3.child(0, 48621, 0, 0);
+		items3.width = 310;
+		items3.height = 50;
+		setScrollableItems(interfaceCache[48621], BossDrops.JUSTICAR_DROPS);
+	}
+	
 
 	public static void setScrollableItems(RSInterface tab, int[][] loot) {
 		RSInterface parent = interfaceCache[tab.parentID];
