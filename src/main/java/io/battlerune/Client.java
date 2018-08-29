@@ -3556,6 +3556,7 @@ public class Client extends GameApplet {
 	private void resetLogout() {
 		Settings.save();
 		spriteCache.clear();
+		loginRenderer.setScreen(new MainScreen());
 		Client.loginScreenIP = null;
 		Client.updaterScreenIP = null;
 		try {
@@ -15678,6 +15679,7 @@ public class Client extends GameApplet {
 	public int anInt1171;
 	public String myUsername;
 	public String myPassword;
+	public String captchaInput = "";
 	private boolean genericLoadingError;
 	private final int[] anIntArray1177 = { 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3 };
 	private int reportAbuseInterfaceID;
@@ -15782,6 +15784,7 @@ public class Client extends GameApplet {
 	public int anInt1500;// 377
 	public int anInt1501;// 377
 	public static int[] fullScreenTextureArray;
+	public static Sprite captcha;
 	private int[] tabAmounts = new int[] { 350, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 	private int[] bankInvTemp = new int[9 * 89];
 	private int[] bankStackTemp = new int[9 * 89];

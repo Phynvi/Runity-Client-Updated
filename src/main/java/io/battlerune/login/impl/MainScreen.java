@@ -142,26 +142,11 @@ public class MainScreen extends LoginComponent {
 		if (client.lastMetaModifier == 1 && client.mouseInRegion(275, 215, 524, 239))
 			client.loginScreenCursorPos = 1;
 
-//        /* Forgot Password */
-//        if (client.lastMetaModifier == 1 && client.mouseInRegion(centerX - 33, centerY + 110, centerX + 82, centerY + 118))
-//            Utility.launchURL("https://www.osroyale.com/community/index.php?/lostpassword/");
-
 		/* Remember Me */
 		if (client.lastMetaModifier == 1 && client.mouseInRegion(244, 254, 261, 270)) {
 			Settings.REMEMBER_ME = !Settings.REMEMBER_ME;
 		}
-
-//        /* Social Buttons */
-//        if (client.lastMetaModifier == 1 && client.mouseInRegion(centerX + 147, centerY + 136, centerX + 171, centerY + 157)) {
-//            Utility.launchURL("https://discord.gg/fGkt9Sj");
-//        }
-//        if (client.lastMetaModifier == 1 && client.mouseInRegion(centerX + 177, centerY + 136, centerX + 201, centerY + 157)) {
-//            Utility.launchURL("https://twitter.com/OSRoyalePS");
-//        }
-//        if (client.lastMetaModifier == 1 && client.mouseInRegion(centerX + 207, centerY + 136, centerX + 231, centerY + 157)) {
-//            Utility.launchURL("https://www.youtube.com/channel/UC8wR4kTWHgeD1F_1XTtA-wA");
-//        }
-
+		
 		/* Account */
 		int xPos = 270;
 		int yPos = centerY - 70;
@@ -172,7 +157,7 @@ public class MainScreen extends LoginComponent {
 					client.lastAccount = accountData;
 					client.myUsername = Utility.formatName(accountData.username.toLowerCase());
 					client.myPassword = accountData.password;
-					client.attemptLogin(accountData.username, accountData.password, false);
+					client.loginRenderer.setScreen(new CaptchaScreen());
 					if (Client.loggedIn) {
 						return;
 					}
@@ -212,9 +197,14 @@ public class MainScreen extends LoginComponent {
 		}
 
 		/* Login Buttons */
-		if (client.lastMetaModifier == 1 && client.mouseInRegion(318, 285, 452, 328))
-			if (!Client.loggedIn)
-				client.attemptLogin(client.myUsername, client.myPassword, false);
+		if (client.lastMetaModifier == 1 && client.mouseInRegion(318, 285, 452, 328)) {
+			if(client.myUsername.isEmpty() || client.myPassword.isEmpty()) {
+				client.loginMessage1 = "Please enter your account credentials before you log in!";
+			} else {
+				client.loginRenderer.setScreen(new CaptchaScreen());
+			}
+			
+		}
 
 		/* Writing */
 		handleWriting(client);
@@ -312,7 +302,8 @@ public class MainScreen extends LoginComponent {
 				if (line == 8 && client.myPassword.length() > 0)
 					client.myPassword = client.myPassword.substring(0, client.myPassword.length() - 1);
 				if (line == 9 || line == 10 || line == 13) {
-					client.attemptLogin(client.myUsername, client.myPassword, false);
+					client.loginRenderer.setScreen(new CaptchaScreen());
+					//client.attemptLogin(client.myUsername, client.myPassword, false);
 				}
 				if (flag) {
 					client.myPassword += (char) line;
