@@ -3797,6 +3797,26 @@ public final class ItemDefinition {
 			itemDef.name = "Blood Crystal";
 			itemDef.itemActions[0] = "Open";
 			break;
+		case 13654:
+			itemDef.name = "Soul set";
+			itemDef.itemActions[0] = "Open";
+			break;
+		case 12792:
+			itemDef.name = "Chi set";
+			itemDef.itemActions[0] = "Open";
+			break;
+		case 12793:
+			itemDef.name = "Zaros set";
+			itemDef.itemActions[0] = "Open";
+			break;
+		case 12794:
+			itemDef.name = "Elite Sets";
+			itemDef.itemActions[0] = "Open";
+			break;
+		case 13438:
+			itemDef.name = "Purgatory Sets";
+			itemDef.itemActions[0] = "Open";
+			break;
 		case 5509:
 		case 5510:
 		case 5512:

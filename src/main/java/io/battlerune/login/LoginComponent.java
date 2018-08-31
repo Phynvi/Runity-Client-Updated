@@ -7,6 +7,7 @@ import io.battlerune.GraphicsBuffer;
 import io.battlerune.Raster;
 import io.battlerune.Settings;
 import io.battlerune.login.impl.MainScreen;
+import io.battlerune.login.impl.MainScreen.Loginstate;
 import io.battlerune.login.impl.SettingScreen;
 
 /**
@@ -109,9 +110,9 @@ public abstract class LoginComponent {
 		int centerY = getY();
 		if (client.lastMetaModifier == 1 && client.mouseInRegion(37, 452, 83, 480)) {
 			if (client.loginRenderer.getScreen(ScreenType.SETTING)) {
-				client.loginRenderer.setScreen(new MainScreen());
+				client.mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 			} else {
-				client.loginRenderer.setScreen(new SettingScreen());
+				client.mainscreen.setLoginstate(Loginstate.SETTINGSSCREEN);
 			}
 		}
 	}

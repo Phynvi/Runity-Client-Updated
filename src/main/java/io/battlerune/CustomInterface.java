@@ -922,7 +922,7 @@ public class CustomInterface extends RSInterface {
 		scrollInterface.height = 155;
 		scrollInterface.scrollMax = 300;
 		int y = 5;
-		scrollInterface.totalChildren(18);
+		scrollInterface.totalChildren(12);
 
 		addHoverButton(50421, 391, 118, 32, "@red@Teleport to Donator Zone", 0, 50422, 1);
 		addHoveredButton(50422, 392, 118, 32, 50423);
@@ -931,8 +931,12 @@ public class CustomInterface extends RSInterface {
 		addHoverButton(50425, 391, 118, 32, "@red@Manage donator titles", 0, 50426, 1);
 		addHoveredButton(50426, 392, 118, 32, 50427);
 		addText(50428, "Donator Titles", TDA, 1, 0xFF9900, true, true);
+		
+		addHoverButton(50429, 391, 118, 32, "@red@PK Supply Store.", 0, 50430, 1);
+		addHoveredButton(50430, 392, 118, 32, 50431);
+		addText(50432, "Open PK Store", TDA, 1, 0xFF9900, true, true);
 
-		addHoverButton(50429, 391, 118, 32, "@red@Open Donator Pet Store", 0, 50430, 1);
+		/*addHoverButton(50429, 391, 118, 32, "@red@Open Donator Pet Store", 0, 50430, 1);
 		addHoveredButton(50430, 392, 118, 32, 50431);
 		addText(50432, "Donator Pet Store", TDA, 1, 0xFF9900, true, true);
 
@@ -946,7 +950,7 @@ public class CustomInterface extends RSInterface {
 
 		addHoverButton(50441, 391, 118, 32, "@red@Spawn a Bank Pet.", 0, 50442, 1);
 		addHoveredButton(50442, 392, 118, 32, 50443);
-		addText(50444, "Spawn a Bank Pet", TDA, 1, 0xFF9900, true, true);
+		addText(50444, "Spawn a Bank Pet", TDA, 1, 0xFF9900, true, true);*/
 
 		scrollInterface.child(0, 50421, 30, y);
 		scrollInterface.child(1, 50422, 30, y);
@@ -962,7 +966,7 @@ public class CustomInterface extends RSInterface {
 		scrollInterface.child(7, 50430, 30, y);
 		scrollInterface.child(8, 50432, 88, y + 7);
 
-		y = 125;
+	/*	y = 125;
 		scrollInterface.child(9, 50433, 30, y);
 		scrollInterface.child(10, 50434, 30, y);
 		scrollInterface.child(11, 50436, 88, y + 7);
@@ -975,7 +979,7 @@ public class CustomInterface extends RSInterface {
 		y = 205;
 		scrollInterface.child(15, 50441, 30, y);
 		scrollInterface.child(16, 50442, 30, y);
-		scrollInterface.child(17, 50444, 88, y + 7);
+		scrollInterface.child(17, 50444, 88, y + 7);*/
 
 	}
 

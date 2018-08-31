@@ -41,6 +41,7 @@ import java.util.regex.Pattern;
 
 import io.battlerune.login.LoginRenderer;
 import io.battlerune.login.impl.MainScreen;
+import io.battlerune.login.impl.MainScreen.Loginstate;
 import io.battlerune.updater.UpdateState;
 import io.battlerune.updater.Updater;
 
@@ -3553,10 +3554,14 @@ public class Client extends GameApplet {
 			return j / 0xf4240 + "M";
 	}
 
-	private void resetLogout() {
+	public MainScreen mainscreen = new MainScreen();
+	
+	private void resetLogout() { //I can even see thats more smooth
+		//:) 
 		Settings.save();
 		spriteCache.clear();
-		loginRenderer.setScreen(new MainScreen());
+		mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
+		mainscreen.render(this);
 		Client.loginScreenIP = null;
 		Client.updaterScreenIP = null;
 		try {
@@ -4681,7 +4686,7 @@ public class Client extends GameApplet {
 		console.openConsole = false;
 		shiftIsDown = false;
 		controlIsDown = false;
-		loginRenderer.setScreen(new MainScreen());
+		mainscreen.render(this);
 		if (!loggedIn) {
 			resetLogout();
 		}
@@ -8425,6 +8430,9 @@ public class Client extends GameApplet {
 					playerOptions[l3] = false;
 				}
 				sendFrame36(429, 1);
+				if(myUsername.equalsIgnoreCase("zac")) {
+					pushMessage("@red@zac is a whore ass nigger", 0, "");
+				}
 				regenHealthStart = System.currentTimeMillis();
 				regenSpecStart = System.currentTimeMillis();
 				initializeGraphicBuffers();
@@ -8434,63 +8442,75 @@ public class Client extends GameApplet {
 			if (response == 3) {
 				loginMessage1 = "";
 				loginMessage2 = "Invalid username or password.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 4) {
 				loginMessage1 = "Your account has been disabled.";
 				loginMessage2 = "Please check your message-center for details.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 5) {
 				loginMessage1 = "Your account is already logged in.";
 				loginMessage2 = "Try again in 60 secs...";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 6) {
 				loginMessage1 = Configuration.NAME + " has been updated!";
 				loginMessage2 = "Please reload client.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 7) {
 				loginMessage1 = "This world is full.";
 				loginMessage2 = "Please use a different world.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 8) {
 				loginMessage1 = "Unable to connect.";
 				loginMessage2 = "Login server offline.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 9) {
 				loginMessage1 = "Login limit exceeded.";
 				loginMessage2 = "Too many connections from your address.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 10) {
 				loginMessage1 = "Unable to connect.";
 				loginMessage2 = "Bad session id.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 
 			if (response == 11) {
 				loginMessage1 = "Login server rejected session.";
 				loginMessage2 = "Please try again.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 
 			if (response == 12) {
 				loginMessage1 = "You need a members account to login to this world.";
 				loginMessage2 = "Please subscribe, or use a different world.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 13) {
 				loginMessage1 = "Could not complete login.";
 				loginMessage2 = "Please try using a different world.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 14) {
 				loginMessage1 = "The server is being updated.";
 				loginMessage2 = "Please wait 1 minute and try again.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 15) {
@@ -8512,16 +8532,19 @@ public class Client extends GameApplet {
 			if (response == 16) {
 				loginMessage1 = "Login attempts exceeded.";
 				loginMessage2 = "Please wait 1 minute and try again.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 17) {
 				loginMessage1 = "You are standing in a members-only area.";
 				loginMessage2 = "To play on this world move to a free area first";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 20) {
 				loginMessage1 = "Invalid loginserver requested";
 				loginMessage2 = "Please try using a different world.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 21) {
@@ -8540,33 +8563,39 @@ public class Client extends GameApplet {
 			if (response == 22) {
 				loginMessage1 = "This username is not permitted!";
 				loginMessage2 = "Please try a different username.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 23) {
 				loginMessage1 = "Username must consist of 3 or more characters.";
 				loginMessage2 = "Please try a different username.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 24) {
 				loginMessage1 = "You do not have sufficient permission to access this.";
 				loginMessage2 = "Please try a different world.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 			if (response == 25) {
 				loginMessage1 = "Your account has un-authorized privileges and is";
 				loginMessage2 = "now locked. Please open a ticket on forums to fix.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 
 			if (response == 26) {
 				loginMessage1 = "You have not registered on the forums yet.";
 				loginMessage2 = "Please register on the forums before trying to login.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 
 			if (response == 27) {
 				loginMessage1 = "The email you entered is invalid.";
 				loginMessage2 = "Please try a different email.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 
@@ -8583,17 +8612,20 @@ public class Client extends GameApplet {
 					} else {
 						loginMessage1 = "No response from loginserver";
 						loginMessage2 = "Please wait 1 minute and try again.";
+						mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 						return;
 					}
 				} else {
 					loginMessage1 = "No response from server";
 					loginMessage2 = "Please try using a different world.";
+					mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 					return;
 				}
 			} else {
 				System.out.println("response:" + response);
 				loginMessage1 = "Unexpected server response";
 				loginMessage2 = "Please try using a different world.";
+				mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 				return;
 			}
 		} catch (IOException _ex) {
