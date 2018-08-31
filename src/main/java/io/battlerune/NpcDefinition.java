@@ -441,7 +441,7 @@ public final class NpcDefinition {
 
 		/* Royal Points */
 		case 5523:
-			entityDef.name = "The Royal King";
+			entityDef.name = "Donator Store";
 			entityDef.actions = new String[5];
 			entityDef.actions[0] = "Talk-to";
 			entityDef.actions[2] = "Open-store";

@@ -17,27 +17,20 @@ public class LoginRenderer {
 	/** Constructs a new <code>LoginRenderer</code>. */
 	public LoginRenderer(Client client) {
 		this.client = client;
-		this.setScreen(new MainScreen());
 	}
 
 	/** Handles rendering the login screen. */
 	public void display() {
-		screen.render(client);
+		client.mainscreen.render(client);
 	}
 
 	/** Handles clicking on the login screen. */
 	public void click() {
 		if (!client.loginLoaded)
 			return;
-		screen.click(client);
+		client.mainscreen.click(client);
 	}
 
-	/** Sets the login screen. */
-	public void setScreen(LoginComponent screen) {
-		this.screen = screen;
-		this.client.loginLoaded = false;
-		this.client.loginTick = 50;
-	}
 
 	public boolean getScreen(ScreenType type) {
 		return screen.type() == type;
