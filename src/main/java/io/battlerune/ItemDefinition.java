@@ -384,6 +384,99 @@ public final class ItemDefinition {
 			itemDef.itemActions[4] = "Drop";
 			itemDef.stackable = false;
 			break;
+			
+			
+		case 21256:
+			itemDef.modelID = 47008;
+
+			itemDef.description = "";
+			itemDef.name = "Soul Gloves";
+			itemDef.maleWield = 65215;
+			itemDef.femaleWield = 65215;
+			itemDef.modelZoom = 830;
+			itemDef.modelRotationY = 536;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 3;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 10000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.originalModelColors = new int[2];
+			itemDef.modifiedModelColors = new int[2];
+			itemDef.modifiedModelColors[0] = 528;
+			itemDef.originalModelColors[0] = 43297;
+			break;
+		case 21258:
+			itemDef.modelID = 47010;
+			itemDef.description = "";
+			itemDef.name = "Soul Full Helm";
+			itemDef.maleWield = 65212;
+			itemDef.femaleWield = 65212;
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.originalModelColors = new int[2];
+			itemDef.modifiedModelColors = new int[2];
+			itemDef.modifiedModelColors[0] = 528;
+			itemDef.originalModelColors[0] = 43297;
+			break;
+		case 21265:
+			itemDef.modelID = 47013;
+			itemDef.description = "";
+			itemDef.name = "Soul Platelegs";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.maleWield = 65214;
+			itemDef.femaleWield = 65214;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.originalModelColors = new int[2];
+			itemDef.modifiedModelColors = new int[2];
+			itemDef.modifiedModelColors[0] = 528;
+			itemDef.originalModelColors[0] = 43297;
+			itemDef.stackable = false;
+			break;
+		case 21201:
+			itemDef.modelID = 47019;
+			itemDef.maleWield = 65213;
+			itemDef.femaleWield = 65213;
+			itemDef.description = "";
+			itemDef.name = "Soul Platebody";
+			itemDef.modelZoom = 1500;
+			itemDef.modelRotationY = 228;
+			itemDef.modelRotationX = 1830;
+			itemDef.modelOffset1 = 5;
+			itemDef.modelOffset2 = -55;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.originalModelColors = new int[2];
+			itemDef.modifiedModelColors = new int[2];
+			itemDef.modifiedModelColors[0] = 528;
+			itemDef.originalModelColors[0] = 43297;
+			itemDef.stackable = false;
+			break;
+
+			
 
 		case 13697: 
 			itemDef.modelID = 65253;

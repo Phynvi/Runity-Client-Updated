@@ -39,6 +39,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import io.battlerune.cache.CacheDownloader;
 import io.battlerune.login.LoginRenderer;
 import io.battlerune.login.impl.MainScreen;
 import io.battlerune.login.impl.MainScreen.Loginstate;
@@ -47,7 +48,7 @@ import io.battlerune.updater.Updater;
 
 public class Client extends GameApplet {
 
-	/** Regen skill orbs commit **/
+	/** Regen skill orbs commit **/ //should dm me that ;)
 	private final float REGEN_HEALTH_TIME = 60000.0f;
 	private final float REGEN_SPEC_TIME = 36000.0f;
 	private long regenHealthStart = 0;
@@ -4486,7 +4487,7 @@ public class Client extends GameApplet {
 		LP = value;
 	}
 
-	void drawLoadingText(int i, String s) {
+	public void drawLoadingText(int i, String s) {
 		if (titleStreamLoader == null) {
 			super.drawLoadingText(i, s);
 			return;
@@ -5174,7 +5175,8 @@ public class Client extends GameApplet {
 				atInventoryInterfaceType = 3;
 		}
 
-		// 484 trade request : 6 duel request
+		// 484 trade request : 6 duel request //ask them if it happened after one of these requests i cant hear ya so tell me here 
+		//i disabled the welcome screen, that's probably it tbh nah cant be lmao the welcome screen doesnt send any type of packet or anytthing th
 		if (action == 484 || action == 6) {
 			String optionName = menuActionName[id];
 			int l1 = optionName.indexOf(">");
@@ -5206,7 +5208,7 @@ public class Client extends GameApplet {
 					break;
 				}
 
-				if (!flag9)
+				if (!flag9)//it is as requestmanager has nothing to do with it ask them the full message
 					pushMessage("Unable to find " + s7, 0, "");
 			}
 		}
@@ -8974,6 +8976,11 @@ public class Client extends GameApplet {
 		Settings.load();
 		Saving.load();
 		Ping.runPing();
+		
+		/**
+		 * Backup cachedownloader.
+		 */
+		CacheDownloader.init(false);
 
 		try {
 			spriteCache.init(Paths.get(Utility.findcachedir(), Configuration.SPRITE_FILE_NAME + ".dat").toFile(),
@@ -9121,7 +9128,7 @@ public class Client extends GameApplet {
 			scrollBar2 = new Sprite(streamLoader_2, "scrollbar", 1);
 //			 repackCacheIndex(1);
 			// repackCacheIndex(2);
-			// repackCacheIndex(4);
+	//		 repackCacheIndex(4);
 			prepareGameFrame();
 			Sprite sprite = new Sprite(streamLoader_2, "screenframe", 0);
 			leftFrame = new GraphicsBuffer(sprite.width, sprite.height, getGameComponent());
@@ -12463,6 +12470,10 @@ public class Client extends GameApplet {
 
 		return true;
 	}
+	
+	
+	// i was also legit almost in sleep, yeah i fucked up i apologies, but ir eally wanna know how because wallah i don't get it
+	// me neither i really gotta recheck ur whole commit again just dont push jsons for now anymore 
 
 	private DataInputStream openJagGrabInputStream(String s) throws IOException {
 		// if(!aBoolean872)
@@ -12477,6 +12488,9 @@ public class Client extends GameApplet {
 			}
 			aSocket832 = null;
 		}
+		
+		//
+		
 		aSocket832 = openSocket(43595);
 		aSocket832.setSoTimeout(10000);
 		java.io.InputStream inputstream = aSocket832.getInputStream();

@@ -12,7 +12,7 @@ public class Configuration {
 
 	static boolean reporterror = true;
 
-	public static boolean USING_OSBUDDY = true;
+	public static boolean USING_OSBUDDY = false;
 
 	static String errorname = "";
 
@@ -28,7 +28,7 @@ public class Configuration {
 	static boolean CLIENT_DATA = false;
 
 	/** State of client being in debug mode. */
-	public static boolean DEBUG_MODE = false;
+	public static boolean DEBUG_MODE = true;
 	//KEEP THIS FALSE
 
 	/** Debug the interfaces. */

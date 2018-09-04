@@ -333,6 +333,14 @@ public final class NpcDefinition {
          	//entityDef.actions[0] = "Talk-to";
  		//	entityDef.actions[1] = "Pick-up";
          	break;
+         case 457:
+          	entityDef.name = "Pet Crawling Hand";
+              entityDef.actions = new String[5];
+                entityDef.actions[0] = "Talk-to";
+                entityDef.actions[2] = "Pick-up";
+             	entityDef.scaleXZ = 64;
+             	entityDef.scaleY = 64;
+          	break;
 		case 4052:
 			entityDef.actions = new String[5];
 			entityDef.actions[0] = "Talk-to";
