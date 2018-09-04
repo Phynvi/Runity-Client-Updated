@@ -19,7 +19,7 @@ public class CacheDownloader {
 
 	private static final String CACHE_NAME = "RunityCache.zip";
 	private static final String CACHE_URL = "https://runity.io/RunityCache.zip";
-	private static final String VERSION_URL = "https://www.dropbox.com/s/w38gkkt04ld2qjk/version.txt?dl=1"; 
+	private static final String VERSION_URL = "https://runity.io/version.txt"; 
 
 	public static void init(boolean force) {
 		double current = getCurrentVersion();

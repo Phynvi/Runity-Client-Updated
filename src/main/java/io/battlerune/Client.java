@@ -8980,7 +8980,7 @@ public class Client extends GameApplet {
 		/**
 		 * Backup cachedownloader.
 		 */
-		CacheDownloader.init(false);
+	//	CacheDownloader.init(false);
 
 		try {
 			spriteCache.init(Paths.get(Utility.findcachedir(), Configuration.SPRITE_FILE_NAME + ".dat").toFile(),

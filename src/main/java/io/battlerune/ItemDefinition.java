@@ -390,7 +390,7 @@ public final class ItemDefinition {
 			itemDef.modelID = 47008;
 
 			itemDef.description = "";
-			itemDef.name = "Soul Gloves";
+			itemDef.name = "Mason's Gloves";
 			itemDef.maleWield = 65215;
 			itemDef.femaleWield = 65215;
 			itemDef.modelZoom = 830;
@@ -412,7 +412,7 @@ public final class ItemDefinition {
 		case 21258:
 			itemDef.modelID = 47010;
 			itemDef.description = "";
-			itemDef.name = "Soul Full Helm";
+			itemDef.name = "Masons Full Helm";
 			itemDef.maleWield = 65212;
 			itemDef.femaleWield = 65212;
 			itemDef.modelZoom = 1010;
@@ -434,7 +434,7 @@ public final class ItemDefinition {
 		case 21265:
 			itemDef.modelID = 47013;
 			itemDef.description = "";
-			itemDef.name = "Soul Platelegs";
+			itemDef.name = "Masons Platelegs";
 			itemDef.modelZoom = 1500;
 			itemDef.modelRotationY = 228;
 			itemDef.modelRotationX = 1830;
@@ -458,7 +458,7 @@ public final class ItemDefinition {
 			itemDef.maleWield = 65213;
 			itemDef.femaleWield = 65213;
 			itemDef.description = "";
-			itemDef.name = "Soul Platebody";
+			itemDef.name = "Masons Platebody";
 			itemDef.modelZoom = 1500;
 			itemDef.modelRotationY = 228;
 			itemDef.modelRotationX = 1830;
