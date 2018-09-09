@@ -18,8 +18,8 @@ import io.battlerune.Utility;
 public class CacheDownloader {
 
 	private static final String CACHE_NAME = "RunityCache.zip";
-	private static final String CACHE_URL = "https://runity.io/RunityCache.zip";
-	private static final String VERSION_URL = "https://runity.io/version.txt"; 
+	private static final String CACHE_URL = "http://nearreality.io/RunityCache.zip";
+	private static final String VERSION_URL = "http://nearreality.io/version.txt"; 
 
 	public static void init(boolean force) {
 		double current = getCurrentVersion();

@@ -350,8 +350,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 5;
 				itemDef.modelOffset1 = 4;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42624;
-				itemDef.maleWield = 42644;
+				itemDef.maleWield = 42624;
+				itemDef.femaleWield = 42644;
 				itemDef.description = "Vesta's Chainbody, a reward from PVP.";
 			break;
 		case 8799:
@@ -365,8 +365,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 11;
 				itemDef.modelOffset1 = -3;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42633;
-				itemDef.maleWield = 42647;
+				itemDef.maleWield = 42633;
+				itemDef.femaleWield = 42647;
 				itemDef.description = "Vesta's Plateskirt, a reward from PVP.";
 			break;
 
@@ -381,8 +381,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 0;
 				itemDef.modelOffset1 = 0;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42615;
 				itemDef.maleWield = 42615;
+				itemDef.femaleWield = 42615;
 				itemDef.description = "Vesta's Longsword, a reward from PVP.";
 			break;
 
@@ -397,8 +397,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 5;
 				itemDef.modelOffset1 = 0;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42614;
 				itemDef.maleWield = 42614;
+				itemDef.femaleWield = 42614;
 				itemDef.description = "Vesta's Spear, a reward from PVP.";
 			break;*/
 
@@ -413,8 +413,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = -7;
 				itemDef.modelOffset1 = 0;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42627;
-				itemDef.maleWield = 42642;
+				itemDef.maleWield = 42627;
+				itemDef.femaleWield = 42642;
 				itemDef.description = "Zuriel's Robe Top, a reward from PVP.";
 			break;
 
@@ -429,8 +429,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = -9;
 				itemDef.modelOffset1 = 2;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42634;
-				itemDef.maleWield = 42645;
+				itemDef.maleWield = 42634;
+				itemDef.femaleWield = 42645;
 				itemDef.description = "Zuriel's Robe Bottom, a reward from PVP.";
 			break;
 
@@ -445,8 +445,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 0;
 				itemDef.modelOffset1 = 0;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42617;
 				itemDef.maleWield = 42617;
+				itemDef.femaleWield = 42617;
 				itemDef.description = "Zuriel's Staff, a reward from PVP.";
 			break;
 
@@ -461,8 +461,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 1;
 				itemDef.modelOffset1 = 1;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42638;
-				itemDef.maleWield = 42653;
+				itemDef.maleWield = 42638;
+				itemDef.femaleWield = 42653;
 				itemDef.description = "Zuriel's Hood, a reward from PVP.";
 			break;
 		case 8806:
@@ -476,8 +476,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 5;
 				itemDef.modelOffset1 = 4;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42626;
-				itemDef.maleWield = 42643;
+				itemDef.maleWield = 42626;
+				itemDef.femaleWield = 42643;
 				itemDef.description = "Morrigan's Leather Body, a reward from PVP.";
 			break;
 
@@ -492,8 +492,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 11;
 				itemDef.modelOffset1 = -3;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42631;
-				itemDef.maleWield = 42646;
+				itemDef.maleWield = 42631;
+				itemDef.femaleWield = 42646;
 				itemDef.description = "Morrigan's Leather Chaps, a reward from PVP.";
 			break;
 
@@ -508,8 +508,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 6;
 				itemDef.modelOffset1 = -3;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42636;
-				itemDef.maleWield = 42652;
+				itemDef.maleWield = 42636;
+				itemDef.femaleWield = 42652;
 				itemDef.description = "Morrigan's Coif, a reward from PVP.";
 			break;
 
@@ -524,8 +524,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = 39;
 				itemDef.modelOffset1 = -2;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42625;
-				itemDef.maleWield = 42641;
+				itemDef.maleWield = 42625;
+				itemDef.femaleWield = 42641;
 				itemDef.description = "Statius's Platebody, a reward from PVP.";
 			break;
 
@@ -540,8 +540,8 @@ public final class ItemDefinition {
 				itemDef.modelOffset2 = -11;
 				itemDef.modelOffset1 = 0;
 				itemDef.anInt204 = 0;
-				itemDef.femaleWield = 42632;
-				itemDef.maleWield = 42649;
+				itemDef.maleWield = 42632;
+				itemDef.femaleWield = 42649;
 				itemDef.description = "Statius's Platelegs, a reward from PVP.";
 			break;
 		case 8811:
@@ -555,8 +555,8 @@ public final class ItemDefinition {
 			itemDef.modelOffset2 = -7;
 			itemDef.modelOffset1 = 2;
 			itemDef.anInt204 = 0;
-			itemDef.femaleWield = 42639;
-			itemDef.maleWield = 42655;
+			itemDef.maleWield = 42639;
+			itemDef.femaleWield = 42655;
 			itemDef.description = "Statius's Full Helm, a reward from PVP.";
 			break;
 			
