@@ -122,8 +122,6 @@ public class MainScreen extends LoginComponent {
 			drawAccount(client);
 
 			/* Other */
-			client.smallFont.drawCenteredText(0xFFFFFF, centerX + 330, "Client Build: " + Configuration.GAME_VERSION,
-					centerY + 245, true);
 			if (Configuration.DEBUG_MODE) {
 				/*
 				 * client.smallFont.drawCenteredText(0xFFFFFF, centerX + 300, "MouseX: " +
@@ -205,8 +203,6 @@ public class MainScreen extends LoginComponent {
 					centerY + 150, true);
 
 			/* Other */
-			client.smallFont.drawCenteredText(0xFFFFFF, centerX + 330, "Client Build: " + Configuration.GAME_VERSION,
-					centerY + 245, true);
 			if (!Configuration.DEBUG_MODE) {
 				/*
 				 * client.smallFont.drawCenteredText(0xFFFFFF, centerX + 300, "MouseX: " +
@@ -374,8 +370,6 @@ public class MainScreen extends LoginComponent {
 					centerY + 150, true);
 
 			/* Other */
-			client.smallFont.drawCenteredText(0xFFFFFF, centerX + 330, "Client Build: " + Configuration.GAME_VERSION,
-					centerY + 245, true);
 
 			if (Configuration.DEBUG_MODE) {
 				/*
@@ -417,9 +411,6 @@ public class MainScreen extends LoginComponent {
 				client.smallFont.drawCenteredText(Utility.getPrefix(Settings.DRAW_BUBBLE), centerX + 5,
 						(Settings.DRAW_BUBBLE ? "Enabled" : "Disabled"), centerY + 49, true);
 
-				/* Other */
-				client.smallFont.drawCenteredText(0xFFFFFF, centerX + 330,
-						"Client Build: " + Configuration.GAME_VERSION, centerY + 245, true);
 				if (Configuration.DEBUG_MODE) {
 					/*
 					 * client.smallFont.drawCenteredText(0xFFFFFF, centerX + 300, "MouseX: " +

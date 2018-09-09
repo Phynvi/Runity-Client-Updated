@@ -60,9 +60,6 @@ public class SettingScreen extends LoginComponent {
 		/* Bubble */
 		drawSetting(client);
 
-		/* Other */
-		client.smallFont.drawCenteredText(0xFFFFFF, centerX + 330, "Client Build: " + Configuration.GAME_VERSION,
-				centerY + 245, true);
 		if (Configuration.DEBUG_MODE) {
 		/*	client.smallFont.drawCenteredText(0xFFFFFF, centerX + 300,
 					"MouseX: " + (client.mouseX - (centerX)) + " Mouse Y: " + (client.mouseY - (centerY)),

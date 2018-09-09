@@ -23,24 +23,15 @@ import java.util.zip.ZipOutputStream;
 public class Updater {
 
 	/**
-	 * The client version.
-	 */
-	private static final String CLIENT_VERSION = "https://runity.io/clientVersion.txt";
-
-	/**
 	 * The cache version.
 	 */
-	private static final String CACHE_VERSION = "https://runity.io/cacheVersion.txt";
+	private static final String CACHE_VERSION = "http://nearreality.io/cacheVersion.txt";
 
 	/**
 	 * The cache download url link.
 	 */
-	public static final String CACHE_LINK = "https://runity.io/RunityCache.zip";
+	public static final String CACHE_LINK = "http://nearreality.io/RunityCache.zip";
 
-	/**
-	 * The client download url link.
-	 */
-	private static final String CLIENT_LINK = "https://runity.io/Runity-Beta.jar";
 	/**
 	 * The cache directory.
 	 */
@@ -76,17 +67,7 @@ public class Updater {
 
 	public void checkForUpdates() {
 		Client client = Client.instance;
-		if (checkClientUpdates()) {
-			UpdateComponent screen = new ClientUpdateScreen();
-			client.updaterRenderer.setScreen(screen);
-
-			try {
-				final String path = getClass().getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
-				updateClient(path.substring(path.lastIndexOf("/") + 1, path.indexOf(".jar")), screen);
-			} catch (URISyntaxException e) {
-				e.printStackTrace();
-			}
-		} else if (checkCacheUpdate()) {
+		if (checkCacheUpdate()) {
 			UpdateComponent screen = new CacheUpdateScreen();
 			client.updaterRenderer.setScreen(screen);
 			try {
@@ -119,27 +100,6 @@ public class Updater {
 
 	public static boolean isActive() {
 		return get().state != UpdateState.FINISHED;
-	}
-
-	/**
-	 * Checks the web server for client jar updates.
-	 */
-	private boolean checkClientUpdates() {
-		if (Configuration.DEBUG_MODE) {
-			return false;
-		}
-
-		int version = Integer.parseInt(Utility.getNewestVersion(CLIENT_VERSION));
-		int current = Configuration.CLIENT_VERSION;
-
-		System.out.println(version + " " + current);
-
-		// Incorrect client version
-		if (current != version) {
-			System.out.println("Client update required!");
-			state = UpdateState.UPDATE_CLIENT;
-		}
-		return state == UpdateState.UPDATE_CLIENT;
 	}
 
 	/**
@@ -180,25 +140,6 @@ public class Updater {
 		}
 
 		return state == UpdateState.UPDATE_CACHE;
-	}
-
-	/**
-	 * Updates the current client jar file with the new downloaded one.
-	 *
-	 * @param jarName the name of this jar file
-	 */
-	private void updateClient(String jarName, UpdateComponent screen) {
-		File client = new File(System.getProperty("user.dir") + File.separator + jarName + ".jar");
-		try {
-			File temp = File.createTempFile("tmp", Long.toString(System.nanoTime()));
-			temp.deleteOnExit();
-			download(CLIENT_LINK, temp, screen);
-			replaceData(temp, client);
-			Runtime.getRuntime().exec("java -jar " + jarName + ".jar");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		System.exit(0);
 	}
 
 	public void updateCache(UpdateComponent screen) throws IOException {

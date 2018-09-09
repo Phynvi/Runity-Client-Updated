@@ -1,6 +1,9 @@
 package io.battlerune;
 
+import java.util.Arrays;
 import java.util.logging.Logger;
+
+import io.battlerune.dumper.ItemDefDumper;
 
 public final class ItemDefinition {
 
@@ -115,6 +118,7 @@ public final class ItemDefinition {
 		for (int _ctr = 0; _ctr < 10; _ctr++) {
 			cache[_ctr] = new ItemDefinition();
 		}
+		
 	}
 
 	// Buffer = new Buffer(FileUtility.readFile(SignLink.findcachedir() +
@@ -271,6 +275,363 @@ public final class ItemDefinition {
 		switch (i) {
 
 		/** START OF CUSTOMS **/
+		
+		
+		case 7029:
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.modelID = 35092;
+			itemDef.femaleWield = 35085;
+			itemDef.maleWield = 35085;
+			itemDef.anInt188 = -1;
+			itemDef.anInt164 = -1;
+			itemDef.modelZoom = 1400;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 1300;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -1;
+			itemDef.name = "Chaotic rapier";
+			itemDef.description = "A weapon of amazing speed.";
+			itemDef.aByte205 = -11;
+			itemDef.aByte154 = -11;
+			break;
+			
+		case 7030:
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.modelID = 35086;
+			itemDef.femaleWield = 35087;
+			itemDef.maleWield = 35087;
+			itemDef.anInt188 = -1;
+			itemDef.anInt164 = -1;
+			itemDef.modelZoom = 1300;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 1300;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -1;
+			itemDef.name = "Chaotic longsword";
+			itemDef.description = "A weapon of incredible accuracy.";
+			itemDef.aByte205 = -11;
+			itemDef.aByte154 = -11;
+			break;
+		case 7031:
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.aByte205 = -10;
+			itemDef.aByte154 = -10;
+			itemDef.modelID = 35088;
+			itemDef.modelZoom = 1360;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 354;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = 2;
+			itemDef.femaleWield = 35089;
+			itemDef.maleWield = 35089;
+			itemDef.anInt188 = -1;
+			itemDef.anInt164 = -1;
+			itemDef.name = "Chaotic maul";
+			itemDef.description = "A weapon of brute strength.";
+			break;
+		case 19687:
+			itemDef.name = "Vesta's full helm";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.description = "Vesta's full helm, a reward from PVP.";
+
+			break;
+		case 8798:
+				itemDef.name = "Vesta's Chainbody";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42593;
+				itemDef.modelZoom = 1440;
+				itemDef.modelRotationY = 545;
+				itemDef.modelRotationX = 2;
+				itemDef.modelOffset2 = 5;
+				itemDef.modelOffset1 = 4;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42624;
+				itemDef.maleWield = 42644;
+				itemDef.description = "Vesta's Chainbody, a reward from PVP.";
+			break;
+		case 8799:
+				itemDef.name = "Vesta's Plateskirt";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42581;
+				itemDef.modelZoom = 1753;
+				itemDef.modelRotationY = 562;
+				itemDef.modelRotationX = 1;
+				itemDef.modelOffset2 = 11;
+				itemDef.modelOffset1 = -3;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42633;
+				itemDef.maleWield = 42647;
+				itemDef.description = "Vesta's Plateskirt, a reward from PVP.";
+			break;
+
+		/*case 8800:
+				itemDef.name = "Vesta's Longsword";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.modelID = 42597;
+				itemDef.modelZoom = 1744;
+				itemDef.modelRotationY = 738;
+				itemDef.modelRotationX = 1985;
+				itemDef.modelOffset2 = 0;
+				itemDef.modelOffset1 = 0;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42615;
+				itemDef.maleWield = 42615;
+				itemDef.description = "Vesta's Longsword, a reward from PVP.";
+			break;
+
+		case 8801:
+				itemDef.name = "Vesta's Spear";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.modelID = 42599;
+				itemDef.modelZoom = 2022;
+				itemDef.modelRotationY = 480;
+				itemDef.modelRotationX = 15;
+				itemDef.modelOffset2 = 5;
+				itemDef.modelOffset1 = 0;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42614;
+				itemDef.maleWield = 42614;
+				itemDef.description = "Vesta's Spear, a reward from PVP.";
+			break;*/
+
+		case 8802:
+				itemDef.name = "Zuriel's Robe Top";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42591;
+				itemDef.modelZoom = 1373;
+				itemDef.modelRotationY = 373;
+				itemDef.modelRotationX = 0;
+				itemDef.modelOffset2 = -7;
+				itemDef.modelOffset1 = 0;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42627;
+				itemDef.maleWield = 42642;
+				itemDef.description = "Zuriel's Robe Top, a reward from PVP.";
+			break;
+
+		case 8803:
+				itemDef.name = "Zuriel's Robe Bottom";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42588;
+				itemDef.modelZoom = 1697;
+				itemDef.modelRotationY = 512;
+				itemDef.modelRotationX = 0;
+				itemDef.modelOffset2 = -9;
+				itemDef.modelOffset1 = 2;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42634;
+				itemDef.maleWield = 42645;
+				itemDef.description = "Zuriel's Robe Bottom, a reward from PVP.";
+			break;
+
+		case 8804:
+				itemDef.name = "Zuriel's Staff";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.modelID = 42595;
+				itemDef.modelZoom = 2000;
+				itemDef.modelRotationY = 366;
+				itemDef.modelRotationX = 3;
+				itemDef.modelOffset2 = 0;
+				itemDef.modelOffset1 = 0;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42617;
+				itemDef.maleWield = 42617;
+				itemDef.description = "Zuriel's Staff, a reward from PVP.";
+			break;
+
+		case 8805:
+				itemDef.name = "Zuriel's Hood";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42604;
+				itemDef.modelZoom = 720;
+				itemDef.modelRotationY = 28;
+				itemDef.modelRotationX = 0;
+				itemDef.modelOffset2 = 1;
+				itemDef.modelOffset1 = 1;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42638;
+				itemDef.maleWield = 42653;
+				itemDef.description = "Zuriel's Hood, a reward from PVP.";
+			break;
+		case 8806:
+				itemDef.name = "Morrigan's leather body";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42578;
+				itemDef.modelZoom = 1184;
+				itemDef.modelRotationY = 545;
+				itemDef.modelRotationX = 2;
+				itemDef.modelOffset2 = 5;
+				itemDef.modelOffset1 = 4;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42626;
+				itemDef.maleWield = 42643;
+				itemDef.description = "Morrigan's Leather Body, a reward from PVP.";
+			break;
+
+		case 8807:
+			itemDef.name = "Morrigan's Leather Chaps";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42603;
+				itemDef.modelZoom = 1753;
+				itemDef.modelRotationY = 482;
+				itemDef.modelRotationX = 1;
+				itemDef.modelOffset2 = 11;
+				itemDef.modelOffset1 = -3;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42631;
+				itemDef.maleWield = 42646;
+				itemDef.description = "Morrigan's Leather Chaps, a reward from PVP.";
+			break;
+
+		case 8808:
+				itemDef.name = "Morrigan's Coif";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42583;
+				itemDef.modelZoom = 592;
+				itemDef.modelRotationY = 537;
+				itemDef.modelRotationX = 5;
+				itemDef.modelOffset2 = 6;
+				itemDef.modelOffset1 = -3;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42636;
+				itemDef.maleWield = 42652;
+				itemDef.description = "Morrigan's Coif, a reward from PVP.";
+			break;
+
+		case 8809:
+				itemDef.name = "Statius's Platebody";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42602;
+				itemDef.modelZoom = 1312;
+				itemDef.modelRotationY = 272;
+				itemDef.modelRotationX = 2047;
+				itemDef.modelOffset2 = 39;
+				itemDef.modelOffset1 = -2;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42625;
+				itemDef.maleWield = 42641;
+				itemDef.description = "Statius's Platebody, a reward from PVP.";
+			break;
+
+		case 8810:
+				itemDef.name = "Statius's Platelegs";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelID = 42590;
+				itemDef.modelZoom = 1625;
+				itemDef.modelRotationY = 355;
+				itemDef.modelRotationX = 2046;
+				itemDef.modelOffset2 = -11;
+				itemDef.modelOffset1 = 0;
+				itemDef.anInt204 = 0;
+				itemDef.femaleWield = 42632;
+				itemDef.maleWield = 42649;
+				itemDef.description = "Statius's Platelegs, a reward from PVP.";
+			break;
+		case 8811:
+			itemDef.name = "Statius's Full Helm";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 42596;
+			itemDef.modelZoom = 789;
+			itemDef.modelRotationY = 96;
+			itemDef.modelRotationX = 2039;
+			itemDef.modelOffset2 = -7;
+			itemDef.modelOffset1 = 2;
+			itemDef.anInt204 = 0;
+			itemDef.femaleWield = 42639;
+			itemDef.maleWield = 42655;
+			itemDef.description = "Statius's Full Helm, a reward from PVP.";
+			break;
+			
+			
+			
+			
+			
+		case 21277:
+			itemDef.modelID = 47096;
+			itemDef.name = "Runity Helm";
+			itemDef.description = "Runity Helm";
+			itemDef.modelZoom = 760;
+			itemDef.modelRotationY = 552;
+			itemDef.modelRotationX = 28;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 2;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 289000;
+			itemDef.maleWield = 47096;
+			itemDef.femaleWield = 47096;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		case 21274:
+			
+			itemDef.modelID = 47092;
+			itemDef.name = "Runity Body";
+			itemDef.description = "Runity body";
+			itemDef.modelZoom = 854;
+			itemDef.modelRotationY = 453;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = -5;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 290000;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.maleWield = 47092;
+			itemDef.femaleWield = 47092;
+			break;
+
+		case 21272:
+
+			itemDef.modelID = 47094;
+			itemDef.name = "Runity chaps";
+			itemDef.description = "Runity chaps";
+			itemDef.modelZoom = 1957;
+			itemDef.modelRotationY = 555;
+			itemDef.modelRotationX = 2036;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -3;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 289900;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.maleWield = 47094;
+			itemDef.femaleWield = 47094;
+			break;
+		
+		
 
 		case 13703:          
 			defaultConfig(itemDef, 47134, 47135, 47135, "Chi full helm");
@@ -313,7 +674,6 @@ public final class ItemDefinition {
 			break;
 		case 13692:
 			itemDef.modelID = 47008;
-
 			itemDef.description = "";
 			itemDef.name = "Soul Gloves";
 			itemDef.maleWield = 65215;
@@ -387,8 +747,8 @@ public final class ItemDefinition {
 			
 			
 		case 21256:
+			ItemDefinition def = ItemDefinition.lookup(21256);
 			itemDef.modelID = 47008;
-
 			itemDef.description = "";
 			itemDef.name = "Mason's Gloves";
 			itemDef.maleWield = 65215;
@@ -404,10 +764,9 @@ public final class ItemDefinition {
 			itemDef.value = 10000;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-			itemDef.originalModelColors = new int[2];
-			itemDef.modifiedModelColors = new int[2];
+			itemDef.originalModelColors = def.originalModelColors;
+			itemDef.modifiedModelColors = new int[1];
 			itemDef.modifiedModelColors[0] = 528;
-			itemDef.originalModelColors[0] = 43297;
 			break;
 		case 21258:
 			itemDef.modelID = 47010;
@@ -3523,9 +3882,6 @@ public final class ItemDefinition {
 			itemDef.description = "The most rarest sword, forged from great Valyrian steel.";
 
 			break;
-		case 19687:
-			itemDef.name = "Vesta's full helm";
-			break;
 		case 6798:
 			itemDef.name = "Arrowhead scroll";
 			itemDef.itemActions = new String[5];
@@ -4096,6 +4452,13 @@ public final class ItemDefinition {
 			break;
 		case 455:
 			itemDef.name = "Golden Scratch Card";
+			break;
+			
+		case 21807:
+		case 21813:
+		case 21810:
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
 			break;
 
 		case 1050:

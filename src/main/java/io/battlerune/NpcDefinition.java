@@ -114,20 +114,6 @@ public final class NpcDefinition {
 	    	/*  190: 204 */       entityDef.scaleY = 140;
 	    	/*  191: 205 */       entityDef.size = 4;
 	    	/*  192: 206 */       break;
-		 case 1207: 
-			 /*  194: 209 */       entityDef.name = "Exoden";
-			 /*  195: 210 */       entityDef.combatLevel = 806;
-			 /*  196: 211 */       entityDef.description = "That thing can't be mortal...".getBytes();
-			 /*  197: 212 */       entityDef.walkingAnimation = 6505;
-			 /*  198: 213 */       entityDef.standingAnimation = 6504;
-			 entityDef.actions = new String[5];
-			 entityDef.actions[1] = "Attack";
-			                       entityDef.modelId = new int[1];
-			                       entityDef.modelId[0] = 2881;
-			                       /*  202: 217 */       entityDef.scaleXZ = 128;
-			                       /*  203: 218 */       entityDef.scaleY = 128;
-			                       /*  204: 219 */       entityDef.size = 4;
-			 /*  205: 220 */       break;
 		 /*  245:     */     case 4708: 
 			 /*  246: 262 */       entityDef.name = "King Chimera";
 			 /*  247: 263 */       entityDef.combatLevel = 646;
@@ -181,6 +167,71 @@ public final class NpcDefinition {
 			entityDef.actions = new String[5];
 			entityDef.actions[0] = "Open";
 			break;
+		case 1207:
+			entityDef.name = "Rock Crab"; //BLUE ROCK CRAB
+			entityDef.combatLevel = 13;
+			entityDef.walkingAnimation = 1311;
+			entityDef.standingAnimation = 1310;
+			entityDef.actions = new String[5];
+			entityDef.actions[1] = "Attack";
+			entityDef.modelId = new int[2];
+			entityDef.modelId[0] = 4399;
+			entityDef.modelId[1] = 47100; //MODELID [1] = ROCK CRAB SHELL.
+			break;
+			
+		case 102:
+			entityDef.name = "Rock Crab"; //YELLOW ROCK CRAB
+			entityDef.combatLevel = 13;
+			entityDef.walkingAnimation = 1311;
+			entityDef.standingAnimation = 1310;
+			entityDef.actions = new String[5];
+			entityDef.actions[1] = "Attack";
+			entityDef.modelId = new int[2];
+			entityDef.modelId[0] = 4399;
+			entityDef.modelId[1] = 47104; //MODELID [1] = ROCK CRAB SHELL.
+			break;
+			
+		case 761:
+			entityDef.name = "Rock Crab"; //PURPLE ROCK CRAB
+			entityDef.combatLevel = 13;
+			entityDef.walkingAnimation = 1311;
+			entityDef.standingAnimation = 1310;
+			entityDef.actions = new String[5];
+			entityDef.actions[1] = "Attack";
+			entityDef.modelId = new int[2];
+			entityDef.modelId[0] = 4399;
+			entityDef.modelId[1] = 4400;
+			entityDef.recolorOriginal = new int[1];
+			entityDef.recolorOriginal[0] = 10396;
+			entityDef.recolorTarget = new int[1];
+			entityDef.recolorTarget[0] = 48914;
+			break;
+			
+		case 769:
+			entityDef.name = "Rock Crab"; //PINK ROCK CRAB
+			entityDef.combatLevel = 13;
+			entityDef.walkingAnimation = 1311;
+			entityDef.standingAnimation = 1310;
+			entityDef.actions = new String[5];
+			entityDef.actions[1] = "Attack";
+			entityDef.modelId = new int[2];
+			entityDef.modelId[0] = 4399;
+			entityDef.modelId[1] = 47112; //MODELID [1] = ROCK CRAB SHELL.
+			break;
+			
+		case 770:
+			entityDef.name = "Abyssal demon"; //blue demon
+			entityDef.combatLevel = 124; 
+			entityDef.walkingAnimation = 1534;
+			entityDef.standingAnimation = 1536;
+			entityDef.actions = new String[5];
+			entityDef.actions[1] = "Attack";
+			entityDef.modelId = new int[1];
+			entityDef.modelId[0] = 47101;
+		/*	entityDef.anInt91 = 64;
+			entityDef.anInt86 = 64;
+			entityDef.aByte68 = 1;*/
+		break;
 		case 7836:
 			entityDef.name = "Mini Corporeal Beast";
 			entityDef.combatLevel = 785;

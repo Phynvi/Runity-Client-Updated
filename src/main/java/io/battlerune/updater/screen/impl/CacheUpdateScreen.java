@@ -66,7 +66,6 @@ public class CacheUpdateScreen extends UpdateComponent {
 		int y = (getHeight() - messageWidth) / 2;
 
 		getGraphics().setFont(new Font("Tahoma", Font.PLAIN, 15));
-		getGraphics().drawString("v" + Configuration.GAME_VERSION, 5, 496);
 
 		drawArc(x, y, messageWidth, 0, arcAngle);
 		drawArc(x, y, messageWidth, 0, 180 + arcAngle);

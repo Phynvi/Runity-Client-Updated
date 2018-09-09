@@ -40,6 +40,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import io.battlerune.cache.CacheDownloader;
+import io.battlerune.dumper.ItemDefDumper;
 import io.battlerune.login.LoginRenderer;
 import io.battlerune.login.impl.MainScreen;
 import io.battlerune.login.impl.MainScreen.Loginstate;
@@ -4003,7 +4004,6 @@ public class Client extends GameApplet {
 	public static final RandomAccessFile[] cache_idx = new RandomAccessFile[5];
 
 	public static void main(String args[]) {
-		System.out.println(Configuration.NAME + "(v" + Configuration.GAME_VERSION + ") is now starting up...");
 		loadingTime = new Stopwatch();
 
 		try {
@@ -8326,7 +8326,15 @@ public class Client extends GameApplet {
 
 				aStream_847.writeByte(255);
 
-				aStream_847.writeShort(Configuration.GAME_VERSION);
+				/** Game Version **/
+				/**
+				 * UPDATE By one whenever a client update is pushed. ADAM
+				 */
+				aStream_847.writeShort(5);	
+				/**
+				 * CHECK THIS ABOVE ^ 
+				 * 
+				 */
 
 				aStream_847.writeByte(lowMem ? 1 : 0);
 
@@ -8980,7 +8988,7 @@ public class Client extends GameApplet {
 		/**
 		 * Backup cachedownloader.
 		 */
-	//	CacheDownloader.init(false);
+		CacheDownloader.init(false);
 
 		try {
 			spriteCache.init(Paths.get(Utility.findcachedir(), Configuration.SPRITE_FILE_NAME + ".dat").toFile(),
@@ -9126,7 +9134,7 @@ public class Client extends GameApplet {
 			mapDotClan = new Sprite(streamLoader_2, "mapdots", 5);
 			scrollBar1 = new Sprite(streamLoader_2, "scrollbar", 0);
 			scrollBar2 = new Sprite(streamLoader_2, "scrollbar", 1);
-//			 repackCacheIndex(1);
+     	 repackCacheIndex(1);
 			// repackCacheIndex(2);
 	//		 repackCacheIndex(4);
 			prepareGameFrame();
@@ -9151,6 +9159,7 @@ public class Client extends GameApplet {
 			Varp.unpackConfig(configArchive);
 			Varbit.unpackConfig(configArchive);
 			ItemDefinition.isMembers = isMembers;
+			//new ItemDefDumper(20000).execute();
 			drawSmoothLoading(85, "Loading resources");
 			TextDrawingArea aclass30_sub2_sub1_sub4s[] = { smallFont, regularText, boldText, aTextDrawingArea_1273 };
 			RSInterface.unpack(streamLoader_1, aclass30_sub2_sub1_sub4s, streamLoader_2);
@@ -11441,7 +11450,6 @@ public class Client extends GameApplet {
 						"Memory: " + NumberFormat.getInstance().format(clientMemory) + "k", y, x);
 				smallFont.render(0xffff00, "Coords: " + playerX + ", " + playerY, y + 15, x);
 				smallFont.render(0xffff00, "Resolution: " + frameWidth + "x" + frameHeight, y + 30, x);
-				smallFont.render(0xffff00, "Build: " + Configuration.GAME_VERSION, y + 45, x);
 				smallFont.render(0xffff00, "World: " + Configuration.CONNECTION.name, y + 60, x);
 			}
 		}
