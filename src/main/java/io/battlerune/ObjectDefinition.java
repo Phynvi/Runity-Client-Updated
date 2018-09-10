@@ -176,15 +176,6 @@ public final class ObjectDefinition {
 			def.description = "A machine that manages players.".getBytes();
 			break;
 
-		case 26043:
-			def.name = "Marketplace";
-			def.description = "Buy/sell items using the Player owned shops.".getBytes();
-			def.actions = new String[] { "Access", null, null, null, null };
-			//// def.modelIds = new int[]{55555};
-			def.solid = true;
-//				def.aBoolean779 = false;
-			break;
-
 		case 10090:
 			def.name = "Marketplace Information";
 			def.description = "Information regarding the marketplace.".getBytes();
@@ -216,15 +207,6 @@ public final class ObjectDefinition {
 			def.actions[0] = "Deposit";
 			def.name = "Donator box";
 			def.description = "A donator-only feature which allows members to quick deposit items.".getBytes();
-			break;
-
-		/* Grand exchange desk */
-		case 26044:
-			def.actions = new String[5];
-			def.actions[0] = "Open";
-			def.actions[1] = "Manage";
-			def.name = "Marketplace";
-			def.description = "The marketplace desk.".getBytes();
 			break;
 
 		/* Wilderness Sign */
