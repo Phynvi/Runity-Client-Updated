@@ -3310,21 +3310,21 @@ public class CustomInterface extends RSInterface {
 	}
 
 	public static void serverSetting(TextDrawingArea[] TDA) {
-		RSInterface rsinterface = addInterface(51000);
-		addSprite(51001, 271);
-		addText(51002, "Server Settings", 0x483407, true, false, 52, TDA, 3);
-		addText(51003, "To toggle the client settings click on the settings tab.", 0x483407, true, false, 52, TDA, 0);
-		addHoverButton(51004, 272, 26, 23, "Close", 250, 51005, 3);
-		addHoveredButton(51005, 273, 26, 23, 51006);
+		RSInterface rsinterface = addInterface(57310);
+		addSprite(57311, 271);
+		addText(57312, "Server Settings", 0x483407, true, false, 52, TDA, 3);
+		addText(57313, "To toggle the client settings click on the settings tab.", 0x483407, true, false, 52, TDA, 0);
+		addHoverButton(57314, 272, 26, 23, "Close", 250, 57315, 3);
+		addHoveredButton(57315, 273, 26, 23, 57316);
 
 		rsinterface.totalChildren(6);
-		rsinterface.child(0, 51001, 18, 35);
-		rsinterface.child(1, 51002, 260, 37);
-		rsinterface.child(2, 51003, 260, 281);
-		rsinterface.child(3, 51004, 452, 35);
-		rsinterface.child(4, 51005, 452, 35);
-		rsinterface.child(5, 51010, 0, 60);
-		RSInterface scrollInterface = addTabInterface(51010);
+		rsinterface.child(0, 57311, 18, 35);
+		rsinterface.child(1, 57312, 260, 37);
+		rsinterface.child(2, 57313, 260, 281);
+		rsinterface.child(3, 57314, 452, 35);
+		rsinterface.child(4, 57315, 452, 35);
+		rsinterface.child(5, 51020, 0, 60);
+		RSInterface scrollInterface = addTabInterface(51020);
 		scrollInterface.scrollPosition = 0;
 		scrollInterface.contentType = 0;
 		scrollInterface.width = 456;
@@ -3334,8 +3334,8 @@ public class CustomInterface extends RSInterface {
 		int amountOfLines = 50;
 		scrollInterface.totalChildren(amountOfLines);
 		for (int i = 0; i < amountOfLines; i++) {
-			addHoverText(51011 + i, "", "Toggle setting", TDA, 0, 0x624D23, true, false, 150);
-			scrollInterface.child(i, 51011 + i, 185, y);
+			addHoverText(51021 + i, "", "Toggle setting", TDA, 0, 0x624D23, true, false, 150);
+			scrollInterface.child(i, 51021 + i, 185, y);
 			y += 19;
 		}
 	}
