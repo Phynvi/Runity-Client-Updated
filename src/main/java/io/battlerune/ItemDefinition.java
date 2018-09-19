@@ -273,10 +273,488 @@ public final class ItemDefinition {
 		/* Customs added here? */
 
 		switch (i) {
+		case 13835:
+			itemDef.modelID = 68;
+			itemDef.name = "Sesmic Staff";
+			itemDef.description = "Sesmicy staff";
+			itemDef.modelZoom = 1874;
+			itemDef.modelOffset2 = 2;
+			itemDef.modelOffset1 = -3;
+			itemDef.modelRotationX = 1499;
+			itemDef.modelRotationY = 292;
+			itemDef.maleWield = 69;
+			itemDef.femaleWield = 69;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
+			itemDef.stackable = false;
+
+			break;
+		case 13834: 
+			defaultConfig(itemDef, 66, 67, 67, "Sesmic scythe");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.description = "WOW! Its on fire!";
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			break;
+		case 13833:
+			itemDef.modelID = 60;
+			itemDef.name = "Elder battleaxe";
+			itemDef.description = "Elder battleaxe";
+			itemDef.modelZoom = 1660;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelRotationX = 2020;
+			itemDef.modelRotationY = 420;
+			itemDef.maleWield = 61;
+			itemDef.femaleWield = 61;
+			itemDef.groundActions = new String[] { null, null, "Take", null, null };
+			itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
+			break;
+		case 13832:
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.modelID = 64;
+			itemDef.femaleWield = 65;
+			itemDef.maleWield = 65;
+			itemDef.anInt188 = -1;
+			itemDef.anInt164 = -1;
+			itemDef.modelZoom = 1300;
+			itemDef.modelRotationY = 498;
+			itemDef.modelRotationX = 1300;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = -1;
+			itemDef.name = "Dark Karth longsword";
+			itemDef.description = "A weapon of incredible accuracy.";
+			itemDef.aByte205 = -11;
+			itemDef.aByte154 = -11;
+			break;
+		
+		case 13831:
+			itemDef.name = "Saradomin bow";
+			itemDef.modelID = 58;
+			itemDef.maleWield = 59;
+			itemDef.femaleWield = 59;
+			itemDef.modelZoom = 2000;
+			itemDef.modelRotationY = 720;
+			itemDef.modelRotationX = 1500;
+			itemDef.modelOffset1 = -3;
+			itemDef.modelOffset2 = 1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 90000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+		
+		case 13824:
+			itemDef.modelID = 70;
+			itemDef.description = "";
+			itemDef.name = "Elder Helm";
+			itemDef.maleWield = 71;
+			itemDef.femaleWield = 71;
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		case 13825:
+			itemDef.name = "Elder Platebody";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 72;
+			itemDef.modelZoom = 1312;
+			itemDef.modelRotationY = 272;
+			itemDef.modelRotationX = 2047;
+			itemDef.modelOffset2 = 39;
+			itemDef.modelOffset1 = -2;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 73;
+			itemDef.femaleWield = 73;
+			itemDef.description = "Statius's Platebody, a reward from PVP.";
+			break;
+			
+		case 13826:
+			itemDef.name = "Elder Plateskirt";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 74;
+			itemDef.modelZoom = 1753;
+			itemDef.modelRotationY = 562;
+			itemDef.modelRotationX = 1;
+			itemDef.modelOffset2 = 11;
+			itemDef.modelOffset1 = -3;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 75;
+			itemDef.femaleWield = 75;
+			itemDef.description = "Vesta's Plateskirt, a reward from PVP.";
+		break;
+		
+		case 13805:
+			itemDef.name = "Infernal max cape";
+			itemDef.modelID = 84;
+			itemDef.modelZoom = 2232;
+			itemDef.modelRotationY = 687;
+			itemDef.modelRotationX = 27;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = -5;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 1;
+			itemDef.femaleWield = 84;
+			itemDef.maleWield = 84;
+			break;
+		
+		case 13813:
+			itemDef.name = "Tekton's ring";
+			itemDef.modelID = 53;
+			itemDef.modelZoom = 630;
+			itemDef.modelRotationY = 332;
+			itemDef.modelRotationX = 1904;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = -14;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 10000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+			
+		case 13814:
+			itemDef.name = "Dark Karth's ring";
+			itemDef.modelID = 54;
+			itemDef.modelZoom = 630;
+			itemDef.modelRotationY = 332;
+			itemDef.modelRotationX = 1904;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = -14;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 10000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		case 13815:
+			itemDef.name = "Zaros ring";
+			itemDef.modelID = 55;
+			itemDef.modelZoom = 630;
+			itemDef.modelRotationY = 332;
+			itemDef.modelRotationX = 1904;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = -14;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 10000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+			
+		case 13816: 
+			itemDef.name = "Dark Karth's Boots";
+			itemDef.modelID = 56112;
+			itemDef.maleWield = 9;
+			itemDef.femaleWield = 9;
+			itemDef.modelZoom = 855;
+			itemDef.modelRotationY = 215;
+			itemDef.modelRotationX = 94;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = -32;
+			itemDef.stackable = false;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
+		
+		case 13808:
+			itemDef.modelID = 43;
+			itemDef.description = "";
+			itemDef.name = "Tekton Helm";
+			itemDef.maleWield = 44;
+			itemDef.femaleWield = 44;
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		case 13809:
+			itemDef.name = "Tekton Platebody";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 45;
+			itemDef.modelZoom = 1312;
+			itemDef.modelRotationY = 272;
+			itemDef.modelRotationX = 2047;
+			itemDef.modelOffset2 = 39;
+			itemDef.modelOffset1 = -2;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 46;
+			itemDef.femaleWield = 46;
+			itemDef.description = "Statius's Platebody, a reward from PVP.";
+			break;
+			
+		case 13810:
+			itemDef.name = "Tekton Plateskirt";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 47;
+			itemDef.modelZoom = 1753;
+			itemDef.modelRotationY = 562;
+			itemDef.modelRotationX = 1;
+			itemDef.modelOffset2 = 11;
+			itemDef.modelOffset1 = -3;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 48;
+			itemDef.femaleWield = 48;
+			itemDef.description = "Vesta's Plateskirt, a reward from PVP.";
+		break;
+		
+		case 13811:
+			itemDef.modelID = 49;
+			itemDef.description = "";
+			itemDef.name = "Tekton Gloves";
+			itemDef.maleWield = 50;
+			itemDef.femaleWield = 50;
+			itemDef.modelZoom = 830;
+			itemDef.modelRotationY = 536;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 3;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 10000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		
+		case 13812: 
+			itemDef.name = "Tekton Boots";
+			itemDef.modelID = 51;
+			itemDef.maleWield = 52;
+			itemDef.femaleWield = 52;
+			itemDef.modelZoom = 855;
+			itemDef.modelRotationY = 215;
+			itemDef.modelRotationX = 94;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = -32;
+			itemDef.stackable = false;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
 
 		/** START OF CUSTOMS **/
+		case 13807: 
+			defaultConfig(itemDef, 27, 28, 28, "Zaros scythe");
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			itemDef.description = "WOW! Its on fire!";
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			break;
+		case 13706:
+			itemDef.modelID = 23;
+			itemDef.description = "";
+			itemDef.name = "Zaros Gloves";
+			itemDef.maleWield = 24;
+			itemDef.femaleWield = 24;
+			itemDef.modelZoom = 830;
+			itemDef.modelRotationY = 536;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 3;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 10000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
 		
+		case 13707: 
+			itemDef.name = "Zaros Boots";
+			itemDef.modelID = 26;
+			itemDef.maleWield = 26;
+			itemDef.femaleWield = 26;
+			itemDef.modelZoom = 855;
+			itemDef.modelRotationY = 215;
+			itemDef.modelRotationX = 94;
+			itemDef.modelOffset1 = 4;
+			itemDef.modelOffset2 = -32;
+			itemDef.stackable = false;
+			itemDef.groundActions = new String[5];
+			itemDef.groundActions[2] = "Take";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.itemActions[4] = "Drop";
+			break;
 		
+		case 13708:
+			itemDef.name = "Lion's Bane";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.modelID = 25061;
+			itemDef.modelZoom = 2000;
+			itemDef.modelRotationY = 366;
+			itemDef.modelRotationX = 3;
+			itemDef.modelOffset2 = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 25062;
+			itemDef.femaleWield = 25062;
+			itemDef.description = "Zuriel's Staff, a reward from PVP.";
+		break;
+		case 13709:
+			itemDef.name = "Zamorak bow";
+			itemDef.modelID = 15;
+			itemDef.maleWield = 16;
+			itemDef.femaleWield = 16;
+			itemDef.modelZoom = 2000;
+			itemDef.modelRotationY = 720;
+			itemDef.modelRotationX = 1500;
+			itemDef.modelOffset1 = -3;
+			itemDef.modelOffset2 = 1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 90000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+		
+		case 13715:
+			itemDef.modelID = 56100;
+			itemDef.description = "";
+			itemDef.name = "Dark Karth Helm";
+			itemDef.maleWield = 56101;
+			itemDef.femaleWield = 56101;
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		case 13714:
+			itemDef.name = "Dark Karth Platebody";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 56106;
+			itemDef.modelZoom = 1312;
+			itemDef.modelRotationY = 272;
+			itemDef.modelRotationX = 2047;
+			itemDef.modelOffset2 = 39;
+			itemDef.modelOffset1 = -2;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 56107;
+			itemDef.femaleWield = 56107;
+			itemDef.description = "Statius's Platebody, a reward from PVP.";
+			break;
+		case 13713:
+			itemDef.name = "Dark Karth Twisted bow";
+			itemDef.modelID = 56102;
+			itemDef.modelZoom = 2000;
+			itemDef.modelRotationY = 720;
+			itemDef.modelRotationX = 1500;
+			itemDef.modelOffset1 = -3;
+			itemDef.modelOffset2 = 1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 90000;
+			itemDef.maleWield = 56103;
+			itemDef.femaleWield = 56103;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+		case 13712:
+			itemDef.name = "Dark Karth crossbow";
+			itemDef.modelID = 56104;
+			itemDef.modelZoom = 926;
+			itemDef.modelRotationY = 432;
+			itemDef.modelRotationX = 258;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 9;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 80000;
+			itemDef.maleWield = 56105;
+			itemDef.femaleWield = 56105;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+		case 13711:
+			itemDef.name = "Dark Karth shield";
+			itemDef.modelID = 56108;
+			itemDef.modelZoom = 2022;
+			itemDef.modelRotationY = 540;
+			itemDef.modelRotationX = 123;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 2000000;
+			itemDef.maleWield = 56109;
+			itemDef.femaleWield = 56109;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.itemActions[2] = "Inspect";
+			break;
+		
+		case 13710:
+			itemDef.name = "Dark Karth Plateskirt";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 56110;
+			itemDef.modelZoom = 1753;
+			itemDef.modelRotationY = 562;
+			itemDef.modelRotationX = 1;
+			itemDef.modelOffset2 = 11;
+			itemDef.modelOffset1 = -3;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 56111;
+			itemDef.femaleWield = 56111;
+			itemDef.description = "Vesta's Plateskirt, a reward from PVP.";
+		break;
+			
+			
+			
 		case 7029:
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wield";
@@ -370,7 +848,7 @@ public final class ItemDefinition {
 				itemDef.description = "Vesta's Plateskirt, a reward from PVP.";
 			break;
 
-		/*case 8800:
+		case 13770:
 				itemDef.name = "Vesta's Longsword";
 				itemDef.itemActions = new String[5];
 				itemDef.itemActions[1] = "Wield";
@@ -386,7 +864,7 @@ public final class ItemDefinition {
 				itemDef.description = "Vesta's Longsword, a reward from PVP.";
 			break;
 
-		case 8801:
+		case 13716:
 				itemDef.name = "Vesta's Spear";
 				itemDef.itemActions = new String[5];
 				itemDef.itemActions[1] = "Wield";
@@ -400,7 +878,7 @@ public final class ItemDefinition {
 				itemDef.maleWield = 42614;
 				itemDef.femaleWield = 42614;
 				itemDef.description = "Vesta's Spear, a reward from PVP.";
-			break;*/
+			break;
 
 		case 8802:
 				itemDef.name = "Zuriel's Robe Top";
@@ -434,7 +912,7 @@ public final class ItemDefinition {
 				itemDef.description = "Zuriel's Robe Bottom, a reward from PVP.";
 			break;
 
-		case 8804:
+		case 13768:
 				itemDef.name = "Zuriel's Staff";
 				itemDef.itemActions = new String[5];
 				itemDef.itemActions[1] = "Wield";
@@ -558,6 +1036,21 @@ public final class ItemDefinition {
 			itemDef.maleWield = 42639;
 			itemDef.femaleWield = 42655;
 			itemDef.description = "Statius's Full Helm, a reward from PVP.";
+			break;
+		case 13769:
+			itemDef.name = "Statius's Warhammer";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.modelID = 42577;
+			itemDef.modelZoom = 1360;
+			itemDef.modelRotationY = 507;
+			itemDef.modelRotationX = 27;
+			itemDef.modelOffset2 = 6;
+			itemDef.modelOffset1 = 7;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 42623;
+			itemDef.femaleWield = 42623;
+			itemDef.description = "Statius's Warhammer, a reward from PVP.";
 			break;
 			
 			
@@ -1535,21 +2028,22 @@ public final class ItemDefinition {
 			break;
 
 		case 16664:
-			defaultConfig(itemDef, 47103, 47103, "Infernal boots");
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
+			defaultConfig(itemDef, 39, 40, "Infernal boots");
+			itemDef.modelZoom = 750;
+			itemDef.modelRotationY = 164;
+			itemDef.modelRotationX = 248;
+			itemDef.modelOffset1 = 2;
+			itemDef.modelOffset2 = -5;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 12000;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			itemDef.modelZoom = 964;
-			itemDef.modelRotationY = 498;
-			itemDef.modelRotationX = 1150;
-			itemDef.modelOffset1 = -1;
-			itemDef.modelOffset2 = -1;
 			break;
 		case 16665:
 
-			defaultConfig(itemDef, 47104, 47104, "Infernal gloves");
+			defaultConfig(itemDef, 37, 38, "Infernal gloves");
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
@@ -1563,59 +2057,62 @@ public final class ItemDefinition {
 			break;
 		case 16666:
 
-			defaultConfig(itemDef, 47105, 47105, "Infernal hat");
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
+			defaultConfig(itemDef, 31, 32, "Infernal hat");
+			itemDef.modelZoom = 1236;
+			itemDef.modelRotationY = 118;
+			itemDef.modelRotationX = 10;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = -12;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 45000;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			itemDef.modelZoom = 964;
-			itemDef.modelRotationY = 498;
-			itemDef.modelRotationX = 1150;
-			itemDef.modelOffset1 = -1;
-			itemDef.modelOffset2 = -1;
 			break;
 		case 16667:
 
-			defaultConfig(itemDef, 47106, 47106, "Infernal kiteshield");
+			defaultConfig(itemDef, 41, 42, "Infernal kiteshield");
+			itemDef.modelZoom = 1616;
+			itemDef.modelRotationY = 396;
+			itemDef.modelRotationX = 1050;
+			itemDef.modelOffset2 = -3;
+			itemDef.modelOffset1 = 4;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Drop";
-			itemDef.modelRotationY = 0;
-			itemDef.modelRotationX = 1662;
-			itemDef.modelZoom = 1560;
-			itemDef.modelOffset1 = -9;
-			itemDef.modelOffset2 = 33;
 			break;
 		case 16668:
 
-			defaultConfig(itemDef, 47107, 47107, "Infernal top");
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
+			defaultConfig(itemDef, 33, 34, "Infernal top");
+			itemDef.modelZoom = 1358;
+			itemDef.modelRotationY = 514;
+			itemDef.modelRotationX = 2041;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = -3;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 120000;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			itemDef.modelZoom = 964;
-			itemDef.modelRotationY = 498;
-			itemDef.modelRotationX = 1150;
-			itemDef.modelOffset1 = -1;
-			itemDef.modelOffset2 = -1;
 			break;
 		case 16669:
 
-			defaultConfig(itemDef, 47108, 47108, "Infernal bottoms");
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
+			defaultConfig(itemDef, 35, 36, "Infernal bottoms");
+			itemDef.modelZoom = 1690;
+			itemDef.modelRotationY = 435;
+			itemDef.modelRotationX = 9;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 7;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 80000;
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			itemDef.modelZoom = 964;
-			itemDef.modelRotationY = 498;
-			itemDef.modelRotationX = 1150;
-			itemDef.modelOffset1 = -1;
-			itemDef.modelOffset2 = -1;
 			break;	
 
 
@@ -2732,7 +3229,13 @@ public final class ItemDefinition {
 			itemDef.itemActions[4] = "Drop";
 			break;*/
 		case 290:
-			itemDef.name = "Legendary Mystery Box";
+			itemDef.name = "All Vs One Box";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
+			break;
+		case 7775:
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
 			break;
 		case 20666:
 			itemDef.name = "Pet Yoshi";
