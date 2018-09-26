@@ -49,7 +49,7 @@ public final class Settings {
 	static boolean DISPLAY_NAMES;
 	static boolean DISPLAY_CLAN_TAG = true;
 	static boolean DISPLAY_KILL_FEED = true;
-	static boolean DISPLAY_GROUND_ITEM = true;
+	static boolean DISPLAY_GROUND_ITEM = false;
 	static boolean ITEM_RARITY_COLOR = true;
 	static boolean EXPERIENCE_ORBS = true;
 	static boolean DISPLAY_PING = false;
@@ -58,7 +58,7 @@ public final class Settings {
 	static boolean SHIFT_DROP = true;
 	static boolean DRAW_ITEM_HOVERS = true;
 	static boolean DRAW_OPPONENT_STATS = true;
-	static boolean SPEC_BUTTON = true;
+	static boolean SPEC_BUTTON = false;
 
 	static int COUNTER_SIZE = 1;
 	static int COUNTER_COLOR = 0xffffff;
