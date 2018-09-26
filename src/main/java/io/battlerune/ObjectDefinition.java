@@ -98,6 +98,11 @@ public final class ObjectDefinition {
 			def.actions = new String[5];
 			def.actions[0] = "Attack";
 			break;
+			
+		case 26742:
+			def.actions = new String[5];
+			def.actions[0] = "Enter";
+			break;
 
 		case 3994:
 			def.actions = new String[5];

@@ -539,7 +539,7 @@ public final class NpcDefinition {
 			entityDef.actions = new String[5];
 			entityDef.actions[0] = "Talk-to";
 			entityDef.actions[2] = "Open-interface";
-			entityDef.actions[3] = "Offer-items";
+			entityDef.actions[3] = "Upgrade-items";
 			break;
 		case 1756:
 			entityDef.name = "Void Knight";

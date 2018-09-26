@@ -402,7 +402,9 @@ public final class ItemDefinition {
 		break;
 		
 		case 13805:
-			itemDef.name = "Infernal max cape";
+			itemDef.name = "Dark Karth cape";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
 			itemDef.modelID = 84;
 			itemDef.modelZoom = 2232;
 			itemDef.modelRotationY = 687;
@@ -912,7 +914,7 @@ public final class ItemDefinition {
 				itemDef.description = "Zuriel's Robe Bottom, a reward from PVP.";
 			break;
 
-		case 13768:
+		case 8804:
 				itemDef.name = "Zuriel's Staff";
 				itemDef.itemActions = new String[5];
 				itemDef.itemActions[1] = "Wield";
@@ -1239,96 +1241,7 @@ public final class ItemDefinition {
 			break;
 			
 			
-		case 21256:
-			ItemDefinition def = ItemDefinition.lookup(21256);
-			itemDef.modelID = 47008;
-			itemDef.description = "";
-			itemDef.name = "Mason's Gloves";
-			itemDef.maleWield = 65215;
-			itemDef.femaleWield = 65215;
-			itemDef.modelZoom = 830;
-			itemDef.modelRotationY = 536;
-			itemDef.modelRotationX = 0;
-			itemDef.modelOffset1 = 0;
-			itemDef.modelOffset2 = 3;
-			itemDef.anInt167 = 128;
-			itemDef.anInt192 = 128;
-			itemDef.anInt191 = 128;
-			itemDef.value = 10000;
-			itemDef.itemActions = new String[5];
-			itemDef.itemActions[1] = "Wear";
-			itemDef.originalModelColors = def.originalModelColors;
-			itemDef.modifiedModelColors = new int[1];
-			itemDef.modifiedModelColors[0] = 528;
-			break;
-		case 21258:
-			itemDef.modelID = 47010;
-			itemDef.description = "";
-			itemDef.name = "Masons Full Helm";
-			itemDef.maleWield = 65212;
-			itemDef.femaleWield = 65212;
-			itemDef.modelZoom = 1010;
-			itemDef.modelRotationY = 16;
-			itemDef.modelRotationX = 0;
-			itemDef.modelOffset1 = -2;
-			itemDef.modelOffset2 = -4;
-			itemDef.anInt167 = 128;
-			itemDef.anInt192 = 128;
-			itemDef.anInt191 = 128;
-			itemDef.value = 60000;
-			itemDef.itemActions = new String[5];
-			itemDef.itemActions[1] = "Wear";
-			itemDef.originalModelColors = new int[2];
-			itemDef.modifiedModelColors = new int[2];
-			itemDef.modifiedModelColors[0] = 528;
-			itemDef.originalModelColors[0] = 43297;
-			break;
-		case 21265:
-			itemDef.modelID = 47013;
-			itemDef.description = "";
-			itemDef.name = "Masons Platelegs";
-			itemDef.modelZoom = 1500;
-			itemDef.modelRotationY = 228;
-			itemDef.modelRotationX = 1830;
-			itemDef.modelOffset1 = 5;
-			itemDef.modelOffset2 = -55;
-			itemDef.maleWield = 65214;
-			itemDef.femaleWield = 65214;
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
-			itemDef.itemActions = new String[5];
-			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			itemDef.originalModelColors = new int[2];
-			itemDef.modifiedModelColors = new int[2];
-			itemDef.modifiedModelColors[0] = 528;
-			itemDef.originalModelColors[0] = 43297;
-			itemDef.stackable = false;
-			break;
-		case 21201:
-			itemDef.modelID = 47019;
-			itemDef.maleWield = 65213;
-			itemDef.femaleWield = 65213;
-			itemDef.description = "";
-			itemDef.name = "Masons Platebody";
-			itemDef.modelZoom = 1500;
-			itemDef.modelRotationY = 228;
-			itemDef.modelRotationX = 1830;
-			itemDef.modelOffset1 = 5;
-			itemDef.modelOffset2 = -55;
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
-			itemDef.itemActions = new String[5];
-			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			itemDef.originalModelColors = new int[2];
-			itemDef.modifiedModelColors = new int[2];
-			itemDef.modifiedModelColors[0] = 528;
-			itemDef.originalModelColors[0] = 43297;
-			itemDef.stackable = false;
-			break;
-
-			
+		
 
 		case 13697: 
 			itemDef.modelID = 65253;
@@ -3233,6 +3146,16 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[0] = "Open";
 			break;
+		case 12641:
+			itemDef.name = "Dark Karth Set";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
+			break;
+		case 7959:
+			itemDef.name = "Death Set";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
+			break;
 		case 7775:
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[0] = "Open";
@@ -3473,23 +3396,6 @@ public final class ItemDefinition {
 			itemDef.modelOffset2 = -5;
 			itemDef.maleWield = 65525;
 			itemDef.femaleWield = 65525;
-			itemDef.groundActions = new String[5];
-			itemDef.groundActions[2] = "Take";
-			itemDef.itemActions = new String[5];
-			itemDef.itemActions[1] = "Wear";
-			itemDef.itemActions[4] = "Drop";
-			break;
-		case 14582:
-			itemDef.modelID = 65522;
-			itemDef.name = "Darth Maul Torva Fullhelm";
-			itemDef.description = "It's a darth maul torva fullhelm.";
-			itemDef.modelZoom = 676;
-			itemDef.modelRotationY = 0;
-			itemDef.modelRotationX = 0;
-			itemDef.modelOffset1 = 3;
-			itemDef.modelOffset2 = -14;
-			itemDef.maleWield = 65523;
-			itemDef.femaleWield = 65523;
 			itemDef.groundActions = new String[5];
 			itemDef.groundActions[2] = "Take";
 			itemDef.itemActions = new String[5];
@@ -4651,6 +4557,43 @@ public final class ItemDefinition {
 			itemDef.modifiedModelColors[0] = 528;
 			itemDef.originalModelColors[0] = 17350;
 			break;
+		case 21292:
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.name = "Lime whip (u)"; // Name
+			itemDef.description = "A Lime whip upgraded.";
+			itemDef.modelRotationY = 280;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -1;
+			itemDef.modelOffset2 = 56;
+			itemDef.modelID = 5412;
+			itemDef.maleWield = 5409;
+			itemDef.femaleWield = 5409;
+			itemDef.modelZoom = 840;
+			itemDef.originalModelColors = new int[2];
+			itemDef.modifiedModelColors = new int[2];
+			itemDef.modifiedModelColors[0] = 528;
+			itemDef.originalModelColors[0] = 17350;
+			break;
+		case 21294:
+			itemDef.name = "Ice katana (u)";
+			itemDef.description = "Runity's ninjas only";
+			itemDef.modelID = 25054;
+			itemDef.maleWield = 25054;
+			itemDef.femaleWield = 25054;
+			itemDef.modelZoom = 2105;
+			itemDef.modelRotationY = 431;
+			itemDef.modelRotationX = 768;
+			itemDef.modelOffset1 = 9;
+			itemDef.modelOffset2 = 1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 24000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+
 		case 21226:
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wield";
@@ -4744,6 +4687,11 @@ public final class ItemDefinition {
 			itemDef.modifiedModelColors = new int[2];
 			itemDef.modifiedModelColors[0] = 528;
 			itemDef.originalModelColors[0] = 34770;
+			break;
+		case 12789:
+			itemDef.name = "Starter Box V2";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
 			break;
 		case 6640:
 			itemDef.name = "Blood Crystal";
@@ -4843,6 +4791,18 @@ public final class ItemDefinition {
 			itemDef.stackable = true;
 			break;
 
+		case 12746:
+		case 12748:
+		case 12749:
+		case 12750:
+		case 12751:
+		case 12752:
+		case 12753:
+		case 12754:
+		case 12755:
+		case 12756:
+			itemDef.itemActions[0] = "Claim";
+			break;
 		case 10834:
 			itemDef.name = "@gre@100M Cash Bag";
 			itemDef.itemActions[0] = "Claim";
