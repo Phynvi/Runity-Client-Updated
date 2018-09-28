@@ -9159,7 +9159,6 @@ public class Client extends GameApplet {
 			Varp.unpackConfig(configArchive);
 			Varbit.unpackConfig(configArchive);
 			ItemDefinition.isMembers = isMembers;
-			//new ItemDefDumper(20000).execute();
 			drawSmoothLoading(85, "Loading resources");
 			TextDrawingArea aclass30_sub2_sub1_sub4s[] = { smallFont, regularText, boldText, aTextDrawingArea_1273 };
 			RSInterface.unpack(streamLoader_1, aclass30_sub2_sub1_sub4s, streamLoader_2);
