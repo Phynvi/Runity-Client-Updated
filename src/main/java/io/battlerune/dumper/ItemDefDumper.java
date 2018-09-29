@@ -21,8 +21,11 @@ public class ItemDefDumper {
 		for (int i = 0; i < totalItems; i++) {
 			ItemDefinition def = ItemDefinition.lookup(i);
 			if (def != null) {
-				//if
-				DUMP.add(new ItemDefDumperData(def.id, def.name, def.modifiedModelColors, def.originalModelColors));
+				DUMP.add(new ItemDefDumperData(
+						def.id, 
+						def.name, 
+						def.modifiedModelColors, 
+						def.originalModelColors));
 			}
 		}
 		dump();

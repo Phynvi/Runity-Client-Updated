@@ -104,12 +104,69 @@ public class CustomInterface extends RSInterface {
 		BloodLustMain(textDrawingAreas);
 		bloodlustManagement(textDrawingAreas);
 		bloodlustCreation(textDrawingAreas);
+		upgradeSystem(textDrawingAreas);
 		presets2(textDrawingAreas);
 		toolkit(textDrawingAreas);
 		stopBotting(textDrawingAreas);
 		RuneliteBox(textDrawingAreas);
 	}
 
+	private static void upgradeSystem(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(48270);
+		String dir = "/Upgrade/";
+		
+		addSprite(48271, 0, dir + "SPRITE");
+		
+		addContainer(48275, 0, 4, 5, 2, 3, 80, false, true, false, "Upgrade", null, null, null, null);
+		addContainer(48276, 3, 1, 22, 1, false, true, false, null, null, null, null, null);
+		
+		addHoverButton(48272, dir + "SLOT", 0, 40, 40, "", -1, 48273, 1);
+		addHoveredButton(48273, dir + "SLOT", 1, 40, 40, 48274);
+
+		addHoverButton(48277, dir + "SLOT", 0, 40, 40, "", -1, 48278, 1);
+		addHoveredButton(48278, dir + "SLOT", 1, 40, 40, 48279);
+		
+		addHoverButton(48280, dir + "SLOT", 0, 40, 40, "", -1, 48281, 1);
+		addHoveredButton(48281, dir + "SLOT", 1, 40, 40, 48282);
+		
+		addContainer(48283, 3, 1, 22, 1, false, true, false, null, null, null, null, null);
+		addContainer(48284, 3, 1, 22, 1, false, true, false, null, null, null, null, null);
+		
+		addHoverButton(48285, dir + "BUTTON", 0, 137, 21, "Confirm", -1, 48286, 1);
+		addHoveredButton(48286, dir + "BUTTON", 1, 137, 21, 48287);
+		
+		addText(48288, "Upgrade", tda, 2, 0xff9040, true, true);
+		addText(48289, "Upgradables", tda, 1, 0xff9040, true, true);
+		addText(48290, "Requirements", tda, 1, 0xff9040, true, true);
+		addText(48291, "Upgrade", tda, 1, 0xff9040, true, true);
+		addText(48292, "Chance", tda, 1, 0xff9040, true, true);
+		
+		tab.totalChildren(18);
+		tab.child(0, 48271, 105, 35);
+		tab.child(1, 48272, 325, 105);
+		tab.child(2, 48273, 325, 105);
+		tab.child(3, 48275, 118, 95);
+		tab.child(4, 48276, 325, 105);
+		
+		tab.child(5, 48277, 272, 147);
+		tab.child(6, 48278, 272, 147);
+		
+		tab.child(7, 48280, 370, 147);
+		tab.child(8, 48281, 370, 147);
+		
+		tab.child(9, 48283, 272, 147);
+		tab.child(10, 48284, 370, 147);
+		
+		tab.child(11, 48285, 270, 230);
+		tab.child(12, 48286, 270, 230);
+		
+		tab.child(13, 48288, 265, 45);
+		tab.child(14, 48289, 185, 78);
+		tab.child(15, 48290, 340, 78);
+		tab.child(16, 48291, 340, 232);
+		tab.child(17, 48292, 335, 182);
+	}
+	
 	public static void presets2(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(42500);
 		String dir = "/Preset/SPRITE";
