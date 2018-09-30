@@ -404,6 +404,7 @@ public final class NpcDefinition {
 			entityDef.name = "Clanmaster";
 			entityDef.actions = new String[5];
 			entityDef.actions[0] = "Open";
+			entityDef.actions[1] = "Open-Store";
 			break;
 		/* Clothing */
 		case 534:

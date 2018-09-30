@@ -273,6 +273,80 @@ public final class ItemDefinition {
 		/* Customs added here? */
 
 		switch (i) {
+		
+		case 20049:
+			itemDef.name = "Samurai kasa (u)";
+			itemDef.modelID = 31972;
+			itemDef.modelZoom = 1296;
+			itemDef.modelRotationY = 212;
+			itemDef.modelRotationX = 1408;
+			itemDef.modelOffset1 = -4;
+			itemDef.modelOffset2 = -33;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 4000;
+			itemDef.maleWield = 31756;
+			itemDef.femaleWield = 31830;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		case 13284:
+			itemDef.name = "Samurai shirt (u)";
+			break;
+		case 20055:
+			itemDef.name = "Samurai gloves (u)";
+			itemDef.modelID = 32019;
+			itemDef.modelZoom = 789;
+			itemDef.modelRotationY = 609;
+			itemDef.modelRotationX = 111;
+			itemDef.modelOffset1 = 1;
+			itemDef.modelOffset2 = 1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 3200;
+			itemDef.maleWield = 31776;
+			itemDef.femaleWield = 31847;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		case 20058:
+			itemDef.name = "Samurai greaves (u)";
+			itemDef.modelID = 32018;
+			itemDef.modelZoom = 1720;
+			itemDef.modelRotationY = 450;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 13;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 3200;
+			itemDef.maleWield = 31786;
+			itemDef.femaleWield = 31860;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+			
+		case 20061:	
+			itemDef.name = "Samurai boots (u)";
+			itemDef.modelID = 32046;
+			itemDef.modelZoom = 700;
+			itemDef.modelRotationY = 131;
+			itemDef.modelRotationX = 69;
+			itemDef.modelOffset1 = 3;
+			itemDef.modelOffset2 = -7;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 4500;
+			itemDef.maleWield = 31816;
+			itemDef.femaleWield = 31882;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+			
 		case 13835:
 			itemDef.modelID = 68;
 			itemDef.name = "Sesmic Staff";
