@@ -108,7 +108,7 @@ public class ClientFrame extends Client {
 			/*
 			 * Initialize the jframe which will hold everything
 			 */
-			frame = new JFrame(Configuration.NAME + " - The ultimate OS experience");
+			frame = new JFrame(Configuration.NAME + " - The ultimate RSPS Experience");
 			frame.setLayout(new BorderLayout());
 			frame.setResizable(false);
 			frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

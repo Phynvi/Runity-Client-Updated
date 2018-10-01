@@ -136,12 +136,15 @@ public class CustomInterface extends RSInterface {
 		addHoveredButton(48286, dir + "BUTTON", 1, 137, 21, 48287);
 		
 		addText(48288, "Upgrade", tda, 2, 0xff9040, true, true);
-		addText(48289, "Upgradables", tda, 1, 0xff9040, true, true);
+		addText(48289, "Upgradable Items", tda, 1, 0xff9040, true, true);
 		addText(48290, "Requirements", tda, 1, 0xff9040, true, true);
 		addText(48291, "Upgrade", tda, 1, 0xff9040, true, true);
 		addText(48292, "Chance", tda, 1, 0xff9040, true, true);
 		
-		tab.totalChildren(18);
+		addHoverButton(49293, 252, 21, 21, "Close", -1, 49294, 1);
+		addHoveredButton(49294, 253, 21, 21, 49295);
+		
+		tab.totalChildren(20);
 		tab.child(0, 48271, 105, 35);
 		tab.child(1, 48272, 325, 105);
 		tab.child(2, 48273, 325, 105);
@@ -165,6 +168,9 @@ public class CustomInterface extends RSInterface {
 		tab.child(15, 48290, 340, 78);
 		tab.child(16, 48291, 340, 232);
 		tab.child(17, 48292, 335, 182);
+		tab.child(18, 49293, 392, 43);
+		tab.child(19, 49294, 392, 43);
+
 	}
 	
 	public static void presets2(TextDrawingArea[] tda) {
