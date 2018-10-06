@@ -448,7 +448,7 @@ public class CustomInterface extends RSInterface {
 		RSInterface tab = addInterface(51200);
 		String dir = "TeleSexy/SPRITE";
 
-		tab.totalChildren(38);
+		tab.totalChildren(40);
 		int t = 0;
 		int child = 0;
 		int x = 16;

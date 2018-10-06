@@ -274,6 +274,15 @@ public final class ItemDefinition {
 
 		switch (i) {
 		
+		
+		case 21081:
+			itemDef.name = "15% Drop rate ring";
+			break;
+			
+		case 21143:
+			itemDef.name = "15% Drop rate necklace";
+			break;
+		
 		case 20049:
 			itemDef.name = "Samurai kasa (u)";
 			itemDef.modelID = 31972;
@@ -1649,10 +1658,15 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			itemDef.itemActions[4] = "Drop";
-			itemDef.modelRotationY = 498;
-			itemDef.modelRotationX = 1150;
-			itemDef.modelOffset1 = -1;
-			itemDef.modelOffset2 = -1;
+			itemDef.modelZoom = 2000;
+			itemDef.modelRotationY = 720;
+			itemDef.modelRotationX = 1500;
+			itemDef.modelOffset1 = -3;
+			itemDef.modelOffset2 = 1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 90000;
 			break;
 
 
@@ -3220,6 +3234,11 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[0] = "Open";
 			break;
+		case 6830:
+			itemDef.name = "Inferno Box";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
+			break;
 		case 12641:
 			itemDef.name = "Dark Karth Set";
 			itemDef.itemActions = new String[5];
@@ -3373,19 +3392,6 @@ public final class ItemDefinition {
 			itemDef.groundActions = new String[] { null, null, "Take", null, null };
 			itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
 			break;
-		case 13690:
-			itemDef.modelID = 45001; // 2807;
-			itemDef.name = "American torva pet";
-			itemDef.description = "American torva pet";
-			itemDef.modelZoom = 1250;
-			itemDef.modelOffset2 = 5;
-			itemDef.modelOffset1 = -3;
-			itemDef.modelRotationX = 0;
-			itemDef.modelRotationY = 320;
-			itemDef.groundActions = new String[] { null, null, "Pick Up", null, null };
-			itemDef.itemActions = new String[] { "Summon", null, null, null, "Drop" };
-			break;
-
 		case 13686:
 			itemDef.modelID = 47349;
 			itemDef.name = "Magma shield";

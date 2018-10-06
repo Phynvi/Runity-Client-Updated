@@ -373,7 +373,7 @@ public class RSInterface {
 		opponentStats(textDrawingAreas);
 		achievementPopup(textDrawingAreas);
 		examineTab(textDrawingAreas);
-		refer(textDrawingAreas);
+	//	refer(textDrawingAreas);
 		newAchievementTab(textDrawingAreas);
 		achievementTest(textDrawingAreas);
 		bossMinigame(textDrawingAreas);
@@ -1170,7 +1170,9 @@ public class RSInterface {
 	public boolean isAchievementText = false;
 	public int achievementPercent = 0;
 
-	public static void refer(TextDrawingArea[] tda) {
+	/*Some how this interface conflicted id's with the mystery box interface
+	 * strange - Adam_#6723
+	 * public static void refer(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(59100);
 		String dir = "/Refer/SPRITE";
 		addSprite(59101, 0, dir);
@@ -1226,7 +1228,7 @@ public class RSInterface {
 		scroll.scrollMax = yy;
 		addInputField(59108, 15, 0xffffff, "Enter name", 140, 24, false);
 
-	}
+	}*/
 
 	public static void achievementPopup(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(36000);
