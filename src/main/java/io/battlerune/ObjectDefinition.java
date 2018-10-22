@@ -77,6 +77,7 @@ public final class ObjectDefinition {
 			def.actions = new String[5];
 			def.actions[0] = "Touch";
 			break;
+		case 26044:
 		case 3029:/* Stone of rejuvenation */
 			def.name = "Personal Store Management";
 			def.actions = new String[5];
