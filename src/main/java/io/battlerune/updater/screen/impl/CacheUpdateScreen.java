@@ -7,7 +7,6 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
 import io.battlerune.Client;
-import io.battlerune.Configuration;
 import io.battlerune.updater.screen.UpdateComponent;
 
 public class CacheUpdateScreen extends UpdateComponent {

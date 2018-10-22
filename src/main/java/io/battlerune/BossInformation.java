@@ -21,7 +21,10 @@ public enum BossInformation {
 	CERBERUS("Cerberus", 5862, 318, 750, 42, 4200, 52, -20, BossDrops.CERBERUS_DROPS, 18),
 	VORKATH("Vorkath", 8060, 392, 750, 90, 5200, 52, -20, BossDrops.VORKATH_DROPS, 9),
 	ICEDEMON("Ice Demon", 7585, 318, 650, 42, 3500, 52, -20, BossDrops.ICEDEMON_DROPS, 5),
-	PORAZDIR("Porazdir", 7860, 235, 750, 42, 4000, 52, -20, BossDrops.PORAZDIR_DROPS, 5);
+	PORAZDIR("Porazdir", 7860, 235, 750, 42, 4000, 52, -20, BossDrops.PORAZDIR_DROPS, 5),
+	TARN("Mutant Tarn", 6477, 693, 1200, 65, 4000, 52, -20, BossDrops.MUTANT_TARN_DROPS, 9),
+
+	;
 
 
 	public final String name;

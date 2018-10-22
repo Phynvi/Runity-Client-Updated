@@ -144,7 +144,12 @@ public final class NpcDefinition {
 			 /**
 			  * end of Illerai NPC's.
 			  */
-		
+			 case 1389:
+				    entityDef.name = "Referral Manager";
+					entityDef.actions = new String[5];
+					entityDef.actions[0] = "Talk-to";
+					entityDef.actions[2] = "Trade";
+				 break;
 		case 5129:
 			entityDef.combatLevel = 806;
 			break;
@@ -217,6 +222,14 @@ public final class NpcDefinition {
 			entityDef.modelId = new int[2];
 			entityDef.modelId[0] = 4399;
 			entityDef.modelId[1] = 47112; //MODELID [1] = ROCK CRAB SHELL.
+			break;
+		case 7785:
+            entityDef.actions = new String[5];
+            entityDef.actions[0] = "Talk-to";
+            entityDef.actions[2] = "Pick-up";
+			break;
+		case 6477:
+			entityDef.combatLevel = 693;
 			break;
 			
 		case 770:

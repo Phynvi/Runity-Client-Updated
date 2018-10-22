@@ -40,7 +40,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import io.battlerune.cache.CacheDownloader;
-import io.battlerune.dumper.ItemDefDumper;
 import io.battlerune.login.LoginRenderer;
 import io.battlerune.login.impl.MainScreen;
 import io.battlerune.login.impl.MainScreen.Loginstate;

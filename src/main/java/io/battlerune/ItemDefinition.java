@@ -1,9 +1,6 @@
 package io.battlerune;
 
-import java.util.Arrays;
 import java.util.logging.Logger;
-
-import io.battlerune.dumper.ItemDefDumper;
 
 public final class ItemDefinition {
 
@@ -274,6 +271,136 @@ public final class ItemDefinition {
 
 		switch (i) {
 		
+		
+		case 34:
+			itemDef.modelID = 56159;
+			itemDef.description = "";
+			itemDef.name = "Owl Helm";
+			itemDef.stackable = false;
+			itemDef.maleWield = 56160;
+			itemDef.femaleWield = 56160;
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		case 79:
+			itemDef.name = "Owl Platebody";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 56149;
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1312;
+			itemDef.modelRotationY = 272;
+			itemDef.modelRotationX = 2047;
+			itemDef.modelOffset2 = 39;
+			itemDef.modelOffset1 = -2;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 56148;
+			itemDef.femaleWield = 56148;
+			itemDef.description = "Statius's Platebody, a reward from PVP.";
+			break;
+			
+		case 80:
+			itemDef.name = "Owl legs";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 56151;
+			itemDef.modelZoom = 1753;
+			itemDef.stackable = false;
+			itemDef.modelRotationY = 562;
+			itemDef.modelRotationX = 1;
+			itemDef.modelOffset2 = 11;
+			itemDef.modelOffset1 = -3;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 56150;
+			itemDef.femaleWield = 56150;
+			itemDef.description = "Vesta's Plateskirt, a reward from PVP.";
+		break;
+		case 20005:
+			itemDef.name = "50% Drop Rate Ring";
+			break;
+			
+		case 21752:
+			itemDef.name = "50% Drop Rate Ring";
+			break; 
+			
+		case 9074:
+			itemDef.name = "25% Drop Rate Cape";
+			break;
+		case 20031:
+			itemDef.modelID = 56120;
+			itemDef.description = "";
+			itemDef.name = "Animal Helm";
+			itemDef.maleWield = 56121;
+			itemDef.femaleWield = 56121;
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		case 20043:
+			itemDef.name = "Animal Platebody";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 56123;
+			itemDef.modelZoom = 1312;
+			itemDef.modelRotationY = 272;
+			itemDef.modelRotationX = 2047;
+			itemDef.modelOffset2 = 39;
+			itemDef.modelOffset1 = -2;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 56124;
+			itemDef.femaleWield = 56124;
+			break;
+			
+		case 20052:
+			itemDef.name = "Animal Legs";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 56125;
+			itemDef.modelZoom = 1753;
+			itemDef.modelRotationY = 562;
+			itemDef.modelRotationX = 1;
+			itemDef.modelOffset2 = 11;
+			itemDef.modelOffset1 = -3;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 56125;
+			itemDef.femaleWield = 56125;
+		break;
+		
+		case 20151:
+			itemDef.name = "Animal bow";
+			itemDef.modelID = 56127;
+			itemDef.maleWield = 56126;
+			itemDef.femaleWield = 56126;
+			itemDef.modelZoom = 2000;
+			itemDef.modelRotationY = 720;
+			itemDef.modelRotationX = 1500;
+			itemDef.modelOffset1 = -3;
+			itemDef.modelOffset2 = 1;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 90000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			break;
+			
 		
 		case 21081:
 			itemDef.name = "15% Drop rate ring";
@@ -4775,6 +4902,16 @@ public final class ItemDefinition {
 			break;
 		case 6640:
 			itemDef.name = "Blood Crystal";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
+			break;
+		case 6833:
+			itemDef.name = "All Vs One V3";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
+			break;
+		case 22092:
+			itemDef.itemActions = new String[5];
 			itemDef.itemActions[0] = "Open";
 			break;
 		case 13654:

@@ -72,7 +72,7 @@ public class Console {
 		if (openConsole) {
 			Raster.fillRectangle(0, 0, width, 334, 0x406AA1, 185);
 			Raster.drawPixels(1, 334 - 21, 0, 0xffffff, width);
-			String title = Utility.formatName(Client.instance.myUsername) + "@OSRoyale:";
+			String title = Utility.formatName(Client.instance.myUsername) + "@Runity:";
 			Client.instance.newBoldFont.drawBasicString(title + " ", 5, 334 - 6, 0xACB0B5, 0);
 			Client.instance.newBoldFont.drawBasicString(
 					"<col=ffffff>" + consoleInput + (Client.tick % 20 < 10 ? "|" : ""),

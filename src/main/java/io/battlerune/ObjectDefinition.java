@@ -103,7 +103,9 @@ public final class ObjectDefinition {
 			def.actions = new String[5];
 			def.actions[0] = "Enter";
 			break;
-			
+		case 13618:
+			def.name = "All Vs One V3 Portal!";
+			break;
 		case 13619:
 			def.name = "All Vs One Portal!";
 			break;

@@ -374,6 +374,7 @@ public class RSInterface {
 		achievementPopup(textDrawingAreas);
 		examineTab(textDrawingAreas);
 	//	refer(textDrawingAreas);
+	//   HalloweenDailyReward(textDrawingAreas);
 		newAchievementTab(textDrawingAreas);
 		achievementTest(textDrawingAreas);
 		bossMinigame(textDrawingAreas);
@@ -629,7 +630,56 @@ public class RSInterface {
 		rsi.child(frame++, childId++, 390, 23);
 		childId++;
 	}
+	
+	
+	 /* public static void HalloweenDailyReward(TextDrawingArea[] tda) {
+		  
+	    RSInterface rsI = addInterface(65000);
+	    addSprite(65001, 0, "Interfaces/Halloween/HalloweenEventInterface");
+	    addText(65002, "Runity Daily Rewards", tda, 1, 0xff9040, true, true);
+	    addText(65003, "     Claim", tda, 1, 13849600, false, true);
+	    addText(65004, "Time until next reward", tda, 1, 0xff9040, true, true);
+	    addSprite(65005, 1, "Interfaces/Halloween/HalloweenToken");
+	    
+	    
+		addHoverButton(65006, 252, 21, 21, "Close", -1, 65007, 1);
+		addHoveredButton(65007, 253, 21, 21, 65008);
+	    
+		//addHoverButton(65009, "Interfaces/Halloween/HalloweenToken", 0, 57, 57, "Scratch", -1, 65010, 1);
+		//addHoveredButton(65010, "Interfaces/Halloween/HalloweenToken", 1, 57, 57, 65011);
+		
+		addHoverButton(65009, "Interfaces/Halloween/HalloweenToken", 1, 57, 57, "Claim", -1, 65010, 1);
+		addHoveredButton(65010, "Interfaces/Halloween/HalloweenToken", 1, 57, 57, 65011);
+		
+		addHoverButton(65012, "Interfaces/Halloween/HalloweenToken", 1, 57, 57, "Claim", -1, 65013, 1);
+		addHoveredButton(65013, "Interfaces/Halloween/HalloweenToken", 1, 57, 57, 65014);
+		
+		addHoverButton(65015, "Interfaces/Halloween/HalloweenToken", 1, 57, 57, "Claim", -1, 65016, 1);
+		addHoveredButton(65016, "Interfaces/Halloween/HalloweenToken", 1, 57, 57, 65017);
+		
+		addHoverButton(65019, "Interfaces/Halloween/HalloweenToken", 1, 57, 57, "Claim", -1, 65020, 1);
+		addHoveredButton(65020, "Interfaces/Halloween/HalloweenToken", 1, 57, 57, 65021);
 
+
+
+	    setChildren(13, rsI);
+	    setBounds(65001, 4, 30, 0, rsI);
+	    setBounds(65002, 250, 38, 1, rsI);
+	    setBounds(65003, 350, 294, 2, rsI);
+	    setBounds(65004, 395, 102, 3, rsI);
+	    setBounds(65005, 300, 165, 4, rsI);
+		setBounds(65006, 496, 46, 5, rsI);
+		setBounds(65007, 496, 46, 6, rsI);
+		setBounds(65009, 348, 165, 7, rsI);
+		setBounds(65010, 348, 165, 8, rsI);
+		setBounds(65012, 396, 165, 9, rsI);
+		setBounds(65013, 396, 165, 10, rsI);
+		setBounds(65015, 402, 165, 9, rsI);
+		setBounds(65016, 402, 165, 10, rsI);
+		setBounds(65019, 444, 165, 11, rsI);
+		setBounds(65020, 444, 165, 12, rsI);
+	  }
+*/
 	public static void teleportButtonThing(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(45600);
 		addButton(45601, 18, "TeleSexy/SPRITE", "Teleport");

@@ -90,6 +90,7 @@ public class CustomInterface extends RSInterface {
 		controlTab(textDrawingAreas);
 		customTab(textDrawingAreas);
 		donatorTab(textDrawingAreas);
+		playerPanel(textDrawingAreas);
 		clanBank(textDrawingAreas);
 		constructionBuild(textDrawingAreas);
 		welcome(textDrawingAreas);
@@ -109,7 +110,160 @@ public class CustomInterface extends RSInterface {
 		toolkit(textDrawingAreas);
 		stopBotting(textDrawingAreas);
 		RuneliteBox(textDrawingAreas);
+		storeMenu(textDrawingAreas);
+		storeSettingMenu(textDrawingAreas);
+		personalStores(textDrawingAreas);
+
 	}
+	
+	private static void storeSettingMenu(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(38300);
+		addSprite(38301, 689);
+		addHoverButton(38302, 24, 16, 16, "Close", 250, 38303, 3);
+		addHoveredButton(38303, 25, 16, 16, 38304);
+		addText(38305, "Store Settings", tda, 2, 0xFF9900, true, true);
+		addText(38314, "Press enter on your input field to confirm your choice!", tda, 0, 0xFFFFFF, true, true);
+
+		addText(38306, "Store Name:", tda, 2, 0xFF9900, false, true);
+		addInputField(38307, 15, 0xFF981F, "Enter store name...", 265, 25, false, false, "[A-Za-z0-9 ]");
+		addText(38308, "Store Slogan:", tda, 2, 0xFF9900, false, true);
+		addInputField(38309, 15, 0xFF981F, "Enter store slogan...", 265, 25, false, false, "[A-Za-z0-9 ]");
+		addHoverButton(38310, 393, 77, 32, "Back", 0, 38311, 1);
+		addHoveredButton(38311, 394, 77, 32, 38312);
+		addText(38313, "Back", tda, 1, 0xFF9900, false, true);
+
+		tab.totalChildren(12);
+		tab.child(0, 38301, 110, 40);
+		tab.child(1, 38302, 375, 55);
+		tab.child(2, 38303, 375, 55);
+		tab.child(3, 38305, 257, 52);
+		tab.child(4, 38314, 257, 88);
+
+		tab.child(5, 38306, 125, 100 + 8);
+		tab.child(6, 38307, 125, 125 + 8);
+		tab.child(7, 38308, 125, 165 + 8);
+		tab.child(8, 38309, 125, 195 + 8);
+		tab.child(9, 38310, 220, 235 + 10);
+		tab.child(10, 38311, 220, 235 + 8);
+		tab.child(11, 38313, 240, 241 + 8);
+	}
+
+	private static void storeMenu(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(38200);
+		addSprite(38201, 684);
+		addHoverButton(38202, 24, 16, 16, "Close", 250, 38203, 3);
+		addHoveredButton(38203, 25, 16, 16, 38204);
+		addHoverButton(38215, 298, 119, 135, "View all stores", 0, 38216, 1);
+		addHoveredButton(38216, 685, 119, 135, 38217);
+		addHoverButton(38218, 298, 163, 61, "Collect Coins", 0, 38219, 1);
+		addHoveredButton(38219, 686, 163, 61, 38220);
+		addHoverButton(38221, 298, 163, 74, "Manage Store", 0, 38222, 1);
+		addHoveredButton(38222, 687, 163, 74, 38223);
+		addHoverButton(38224, 298, 282, 61, "Open your store", 0, 38225, 1);
+		addHoveredButton(38225, 688, 282, 61, 38226);
+		addText(38205, "Store Manager", tda, 2, 0xFF9900, true, true);
+		addText(38206, "Collect Coins:", tda, 3, 0xFF9900, true, true);
+		addText(38207, "765,000", tda, 1, 0xFFFFFF, true, true);
+		addText(38208, "Manage Store", tda, 3, 0xFF9900, true, true);
+		addText(38209, "View All Stores", tda, 3, 0xFF9900, true, true);
+		addText(38210, "Active Stores: 32", tda, 0, 0xFFFFFF, true, true);
+		addText(38211, "Last Updated: 2mins", tda, 0, 0xFFFFFF, true, true);
+		addText(38212, "Open Your Store", tda, 2, 0xFF9900, false, true);
+		addText(38213, "Total Sold Worth: 20m", tda, 0, 0xFFFFFF, true, true);
+		tab.totalChildren(20);
+		tab.child(0, 38201, 110, 45);
+		tab.child(1, 38202, 375, 60);
+		tab.child(2, 38203, 375, 60);
+		tab.child(3, 38215, 117, 89);
+		tab.child(4, 38216, 117, 89);
+		tab.child(5, 38218, 236, 89);
+		tab.child(6, 38219, 236, 89);
+		tab.child(7, 38221, 236, 149);
+		tab.child(8, 38222, 236, 149);
+		tab.child(9, 38224, 117, 223);
+		tab.child(10, 38225, 117, 223);
+		tab.child(11, 38205, 255, 57);
+		tab.child(12, 38206, 345, 100);
+		tab.child(13, 38207, 345, 115);
+		tab.child(14, 38208, 305, 175);
+		tab.child(15, 38209, 175, 95);
+		tab.child(16, 38210, 175, 125);
+		tab.child(17, 38211, 175, 140);
+		tab.child(18, 38212, 205, 244);
+		tab.child(19, 38213, 175, 155);
+	}
+
+	private static void personalStores(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(53000);
+		addSprite(53001, 375);
+		addText(53002, "Personal Stores", 0xff9933, true, true, -1, tda, 2);
+		addInputField(53003, 15, 0xFF981F, "Search for player", 122, 25, false, false, "[A-Za-z0-9 ]");
+		addInputField(53004, 15, 0xFF981F, "Search for item", 122, 25, false, false, "[A-Za-z0-9 ]");
+		addText(53005, "Filter: <col=FFB83F>highest price", 0xFF981F, false, true, -1, tda, 0);
+		addText(53006, "Filter: <col=FFB83F>lowest price", 0xFF981F, false, true, -1, tda, 0);
+		addText(53007, "Featured:", 0xff9933, false, true, -1, tda, 2);
+		addText(53023, "Available stores: 0", 0xff9933, false, true, -1, tda, 0);
+		for (int index = 0; index < 10; index++) {
+			addHoverText(53008 + index, "<clan=6> Daniel", "", tda, 0, 0xCF4F0A, false, true, 100);
+		}
+		addText(53018, "Owner:", 0xff9933, false, true, -1, tda, 3);
+		addText(53019, "Caption:", 0xff9933, false, true, -1, tda, 3);
+		addHoverButton(53020, 24, 16, 16, "Close", 250, 53021, 3);
+		addHoveredButton(53021, 25, 16, 16, 53022);
+		addSprite(53024, 248);
+		addConfigButton(53025, 53000, 235, 234, 15, 15, "", 0, 5, 838);
+		addConfigButton(53026, 53000, 235, 234, 15, 15, "", 1, 5, 838);
+		tab.totalChildren(35);
+		tab.child(0, 53001, 9, 6 - 5);
+		tab.child(1, 53002, 255, 10 + 1);
+		tab.child(2, 53003, 16 - 1, 31 + 4);
+		tab.child(3, 53004, 16 - 1, 58 + 4);
+		tab.child(4, 53005, 37, 90 + 5);
+		tab.child(5, 53006, 37, 108 + 5);
+		tab.child(6, 53007, 46, 127 + 5);
+		for (int index = 0, y = 150; index < 10; index++, y += 17) {
+			tab.child(7 + index, 53008 + index, 20, y + 5);
+		}
+		tab.child(17, 53018, 168, 31 + 5);
+		tab.child(18, 53019, 335, 31 + 5);
+		tab.child(19, 53030, -118, 54 + 6);
+		tab.child(20, 53020, 478, 10 + 1);
+		tab.child(21, 53021, 478, 10 + 1);
+		tab.child(22, 53023, 365, 13);
+		tab.child(23, 53024, 17, 164 + 5);
+		tab.child(24, 53024, 17, 181 + 5);
+		tab.child(25, 53024, 17, 198 + 5);
+		tab.child(26, 53024, 17, 215 + 5);
+		tab.child(27, 53024, 17, 232 + 5);
+		tab.child(28, 53024, 17, 249 + 5);
+		tab.child(29, 53024, 17, 266 + 5);
+		tab.child(30, 53024, 17, 283 + 5);
+		tab.child(31, 53024, 17, 300 + 5);
+		tab.child(32, 53024, 17, 317 + 5);
+		tab.child(33, 53025, 20, 88 + 5);
+		tab.child(34, 53026, 20, 106 + 5);
+		RSInterface scrollInterface = addTabInterface(53030);
+		scrollInterface.width = 597;
+		scrollInterface.height = 265;
+		scrollInterface.scrollMax = 563;
+		setChildren(60, scrollInterface);
+		int child = 0;
+		int y = 0;
+		int x = 7;
+		int sprite = 0;
+		for (int i = 0; i < 60; i += 3) {
+			int id = (449 + (sprite % 2 == 0 ? 1 : 0));
+			sprite++;
+			addButton(53031 + i, id, "View store");
+			addText((53031 + (i + 1)), "Daniel", tda, 0, 0xFFB83F, false, true);
+			addText((53031 + (i + 2)), "Best store in town!", tda, 0, 0xFFB83F, false, true);
+			scrollInterface.child(child++, 53031 + i, x + 253, y + -1);
+			scrollInterface.child(child++, (53031 + (i + 1)), x + 260, y + 9);
+			scrollInterface.child(child++, (53031 + (i + 2)), x + 360, y + 9);
+			y += 28;
+		}
+	}
+
 
 	private static void upgradeSystem(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(48270);
@@ -448,7 +602,7 @@ public class CustomInterface extends RSInterface {
 		RSInterface tab = addInterface(51200);
 		String dir = "TeleSexy/SPRITE";
 
-		tab.totalChildren(40);
+		tab.totalChildren(42);
 		int t = 0;
 		int child = 0;
 		int x = 16;
@@ -1040,6 +1194,81 @@ public class CustomInterface extends RSInterface {
 		scrollInterface.child(15, 50441, 30, y);
 		scrollInterface.child(16, 50442, 30, y);
 		scrollInterface.child(17, 50444, 88, y + 7);*/
+
+	}
+
+	
+	private static void playerPanel(TextDrawingArea[] TDA) {
+		RSInterface mainTab = addInterface(60400);
+		mainTab.totalChildren(2);
+		mainTab.child(0, 60000, 0, 0);
+		mainTab.child(1, 60420, 2, 54);
+
+		RSInterface scrollInterface = addTabInterface(60420);
+		scrollInterface.scrollPosition = 0;
+		scrollInterface.contentType = 0;
+		scrollInterface.width = 165;
+		scrollInterface.height = 155;
+		scrollInterface.scrollMax = 300;
+		int y = 5;
+		scrollInterface.totalChildren(12);
+
+		addHoverButton(60421, 391, 118, 32, "@red@Teleport to Donator Zone", 0, 60422, 1);
+		addHoveredButton(60422, 392, 118, 32, 60423);
+		addText(60424, "Donator Zone", TDA, 1, 0xFF9900, true, true);
+
+		addHoverButton(60425, 391, 118, 32, "@red@Manage donator titles", 0, 60426, 1);
+		addHoveredButton(60426, 392, 118, 32, 60427);
+		addText(60428, "Donator Titles", TDA, 1, 0xFF9900, true, true);
+		
+		addHoverButton(60429, 391, 118, 32, "@red@PK Supply Store.", 0, 60430, 1);
+		addHoveredButton(60430, 392, 118, 32, 60431);
+		addText(60432, "Open PK Store", TDA, 1, 0xFF9900, true, true);
+
+		/*addHoverButton(60429, 391, 118, 32, "@red@Open Donator Pet Store", 0, 60430, 1);
+		addHoveredButton(60430, 392, 118, 32, 60431);
+		addText(60432, "Donator Pet Store", TDA, 1, 0xFF9900, true, true);
+
+		addHoverButton(60433, 391, 118, 32, "@red@Re-Juice.", 0, 60434, 1);
+		addHoveredButton(60434, 392, 118, 32, 60435);
+		addText(60436, "Restore HP & Spec", TDA, 1, 0xFF9900, true, true);
+
+		addHoverButton(60437, 391, 118, 32, "@red@PK Supply Store.", 0, 60438, 1);
+		addHoveredButton(60438, 392, 118, 32, 60439);
+		addText(60440, "Open PK Store", TDA, 1, 0xFF9900, true, true);
+
+		addHoverButton(60441, 391, 118, 32, "@red@Spawn a Bank Pet.", 0, 60442, 1);
+		addHoveredButton(60442, 392, 118, 32, 60443);
+		addText(60444, "Spawn a Bank Pet", TDA, 1, 0xFF9900, true, true);*/
+
+		scrollInterface.child(0, 60421, 30, y);
+		scrollInterface.child(1, 60422, 30, y);
+		scrollInterface.child(2, 60424, 88, y + 7);
+
+		y = 45;
+		scrollInterface.child(3, 60425, 30, y);
+		scrollInterface.child(4, 60426, 30, y);
+		scrollInterface.child(5, 60428, 88, y + 7);
+
+		y = 85;
+		scrollInterface.child(6, 60429, 30, y);
+		scrollInterface.child(7, 60430, 30, y);
+		scrollInterface.child(8, 60432, 88, y + 7);
+
+	/*	y = 125;
+		scrollInterface.child(9, 60433, 30, y);
+		scrollInterface.child(10, 60434, 30, y);
+		scrollInterface.child(11, 60436, 88, y + 7);
+
+		y = 165;
+		scrollInterface.child(12, 60437, 30, y);
+		scrollInterface.child(13, 60438, 30, y);
+		scrollInterface.child(14, 60440, 88, y + 7);
+
+		y = 205;
+		scrollInterface.child(15, 60441, 30, y);
+		scrollInterface.child(16, 60442, 30, y);
+		scrollInterface.child(17, 60444, 88, y + 7);*/
 
 	}
 
