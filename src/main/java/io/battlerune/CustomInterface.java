@@ -62,6 +62,7 @@ public class CustomInterface extends RSInterface {
 		colorChanger(textDrawingAreas);
 		slayerMain(textDrawingAreas);
 		slayerDuo(textDrawingAreas);
+		TeleportTab(textDrawingAreas);
 		slayerUnlock(textDrawingAreas);
 		slayerReward(textDrawingAreas);
 		slayerConfirm(textDrawingAreas);
@@ -297,6 +298,8 @@ public class CustomInterface extends RSInterface {
 		
 		addHoverButton(49293, 252, 21, 21, "Close", -1, 49294, 1);
 		addHoveredButton(49294, 253, 21, 21, 49295);
+		
+		
 		
 		tab.totalChildren(20);
 		tab.child(0, 48271, 105, 35);
@@ -1201,7 +1204,7 @@ public class CustomInterface extends RSInterface {
 	private static void playerPanel(TextDrawingArea[] TDA) {
 		RSInterface mainTab = addInterface(60400);
 		mainTab.totalChildren(2);
-		mainTab.child(0, 60000, 0, 0);
+		mainTab.child(0, 50000, 0, 0);
 		mainTab.child(1, 60420, 2, 54);
 
 		RSInterface scrollInterface = addTabInterface(60420);
@@ -1209,37 +1212,49 @@ public class CustomInterface extends RSInterface {
 		scrollInterface.contentType = 0;
 		scrollInterface.width = 165;
 		scrollInterface.height = 155;
-		scrollInterface.scrollMax = 300;
+		scrollInterface.scrollMax = 400;
 		int y = 5;
-		scrollInterface.totalChildren(12);
+		scrollInterface.totalChildren(27);
 
-		addHoverButton(60421, 391, 118, 32, "@red@Teleport to Donator Zone", 0, 60422, 1);
+		addHoverButton(60421, 391, 118, 32, "@red@Teleport To Starter Zone", 0, 60422, 1);
 		addHoveredButton(60422, 392, 118, 32, 60423);
-		addText(60424, "Donator Zone", TDA, 1, 0xFF9900, true, true);
+		addText(60424, "Starter Zone", TDA, 1, 0xFF9900, true, true);
 
-		addHoverButton(60425, 391, 118, 32, "@red@Manage donator titles", 0, 60426, 1);
+		addHoverButton(60425, 391, 118, 32, "@red@Teleport To Medium Zone", 0, 60426, 1);
 		addHoveredButton(60426, 392, 118, 32, 60427);
-		addText(60428, "Donator Titles", TDA, 1, 0xFF9900, true, true);
+		addText(60428, "Medium Zone", TDA, 1, 0xFF9900, true, true);
 		
-		addHoverButton(60429, 391, 118, 32, "@red@PK Supply Store.", 0, 60430, 1);
+		addHoverButton(60429, 391, 118, 32, "@red@Skilling Zones", 0, 60430, 1);
 		addHoveredButton(60430, 392, 118, 32, 60431);
-		addText(60432, "Open PK Store", TDA, 1, 0xFF9900, true, true);
+		addText(60432, "Skilling Zones", TDA, 1, 0xFF9900, true, true);
 
-		/*addHoverButton(60429, 391, 118, 32, "@red@Open Donator Pet Store", 0, 60430, 1);
+		addHoverButton(60429, 391, 118, 32, "@red@Player Guides", 0, 60430, 1);
 		addHoveredButton(60430, 392, 118, 32, 60431);
-		addText(60432, "Donator Pet Store", TDA, 1, 0xFF9900, true, true);
+		addText(60432, "Helpful Guides", TDA, 1, 0xFF9900, true, true);
 
-		addHoverButton(60433, 391, 118, 32, "@red@Re-Juice.", 0, 60434, 1);
+		addHoverButton(60433, 391, 118, 32, "@red@Bosses Teleports", 0, 60434, 1);
 		addHoveredButton(60434, 392, 118, 32, 60435);
-		addText(60436, "Restore HP & Spec", TDA, 1, 0xFF9900, true, true);
+		addText(60436, "Teleports", TDA, 1, 0xFF9900, true, true);
 
-		addHoverButton(60437, 391, 118, 32, "@red@PK Supply Store.", 0, 60438, 1);
+		addHoverButton(60437, 391, 118, 32, "@red@All Vs One", 0, 60438, 1);
 		addHoveredButton(60438, 392, 118, 32, 60439);
-		addText(60440, "Open PK Store", TDA, 1, 0xFF9900, true, true);
+		addText(60440, "All Vs One", TDA, 1, 0xFF9900, true, true);
 
-		addHoverButton(60441, 391, 118, 32, "@red@Spawn a Bank Pet.", 0, 60442, 1);
+		addHoverButton(60441, 391, 118, 32, "@red@AFK-Skilling", 0, 60442, 1);
 		addHoveredButton(60442, 392, 118, 32, 60443);
-		addText(60444, "Spawn a Bank Pet", TDA, 1, 0xFF9900, true, true);*/
+		addText(60444, "AFK-Skills", TDA, 1, 0xFF9900, true, true);
+		
+		addHoverButton(60445, 391, 118, 32, "@red@Additional Teleports", 0, 60446, 1);
+		addHoveredButton(60446, 392, 118, 32, 60447);
+		addText(60448, "Additional Teleports", TDA, 1, 0xFF9900, true, true);
+		
+		addHoverButton(60449, 391, 118, 32, "@red@Money Making Methods", 0, 60450, 1);
+		addHoveredButton(60450, 392, 118, 32, 60451);
+		addText(60452, "Money Making Methods", TDA, 1, 0xFF9900, true, true);
+		
+		addHoverButton(60453, 391, 118, 32, "Return to main tab", 0, 60454, 1);
+		addHoveredButton(60454, 392, 118, 32, 60455);
+		addText(60456, "Close Tab", TDA, 3, 0xF7DC6F, true, true);
 
 		scrollInterface.child(0, 60421, 30, y);
 		scrollInterface.child(1, 60422, 30, y);
@@ -1255,7 +1270,7 @@ public class CustomInterface extends RSInterface {
 		scrollInterface.child(7, 60430, 30, y);
 		scrollInterface.child(8, 60432, 88, y + 7);
 
-	/*	y = 125;
+		y = 125;
 		scrollInterface.child(9, 60433, 30, y);
 		scrollInterface.child(10, 60434, 30, y);
 		scrollInterface.child(11, 60436, 88, y + 7);
@@ -1268,7 +1283,22 @@ public class CustomInterface extends RSInterface {
 		y = 205;
 		scrollInterface.child(15, 60441, 30, y);
 		scrollInterface.child(16, 60442, 30, y);
-		scrollInterface.child(17, 60444, 88, y + 7);*/
+		scrollInterface.child(17, 60444, 88, y + 7);
+		
+		 y = 245;
+		scrollInterface.child(18, 60445, 30, y);
+		scrollInterface.child(19, 60446, 30, y);
+		scrollInterface.child(20, 60448, 88, y + 7);
+		
+		 y = 285;
+		scrollInterface.child(21, 60449, 30, y);
+		scrollInterface.child(22, 60450, 30, y);
+		scrollInterface.child(23, 60452, 88, y + 7);
+		
+		 y = 325;
+		scrollInterface.child(24, 60453, 30, y);
+		scrollInterface.child(25, 60454, 30, y);
+		scrollInterface.child(26, 60456, 88, y + 7);
 
 	}
 
@@ -4152,7 +4182,7 @@ public class CustomInterface extends RSInterface {
 		addText(58005, "Teleportation Menu", tda, 2, 0xff9933, true, true);
 		addHoverButton(58006, 165, 159, 23, "Favorites", -1, 58007, 1);
 		addHoveredButton(58007, 166, 159, 23, 58008);
-		addText(58009, "Cities", tda, 3, 0xff9933, true, true);
+		addText(58009, "Bosses", tda, 3, 0xff9933, true, true);
 		addHoverButton(58010, 165, 159, 23, "Minigames", -1, 58011, 1);
 		addHoveredButton(58011, 166, 159, 23, 58012);
 		addText(58013, "Pk'ing", tda, 3, 0xff9933, true, true);
@@ -4165,7 +4195,7 @@ public class CustomInterface extends RSInterface {
 		addHoverButton(58022, 165, 159, 23, "Player Killing", -1, 58023, 1);
 		addHoveredButton(58023, 166, 159, 23, 58024);
 		addText(58025, "Skilling", tda, 3, 0xff9933, true, true);
-		addHoverButton(58026, 165, 159, 23, "Cities", -1, 58027, 1);
+		addHoverButton(58026, 165, 159, 23, "Bosses", -1, 58027, 1);
 		addHoveredButton(58027, 166, 159, 23, 58028);
 		addText(58029, "Training", tda, 3, 0xff9933, true, true);
 		addText(58031, "2", tda, 3, 0xff9933, true, true);
@@ -4813,7 +4843,7 @@ public class CustomInterface extends RSInterface {
 		addHoveredButton(29411, 293, 18, 18, 29412);
 		addHoverButton(29413, 294, 18, 18, "View Quests", -1, 29414, 1);
 		addHoveredButton(29414, 295, 18, 18, 29415);
-		addHoverButton(29420, dir, 3, 125, 22, "View Player Guide", -1, 29421, 1);
+		addHoverButton(29420, dir, 3, 125, 22, "View Player Panels", -1, 29421, 1);
 		addHoveredButton(29421, dir, 4, 125, 22, 29422);
 		addHoverButton(29423, dir, 0, 88, 22, "View Achievements", -1, 29424, 1);
 		addHoveredButton(29424, dir, 1, 88, 22, 29425);
@@ -4828,7 +4858,7 @@ public class CustomInterface extends RSInterface {
 		addText(29436, "NPC Drops", tda, 0, 0xecc636, true, true);
 		addText(29437, "Presets", tda, 0, 0xecc636, true, true);
 		addText(29438, "Bosses", tda, 0, 0xecc636, true, true);
-		addText(29439, "Player Guide", tda, 0, 0xecc636, true, true);
+		addText(29439, "Player Panels", tda, 0, 0xecc636, true, true);
 
 		addHoverButton(29440, 71, 16, 16, "Refresh quest tab", -1, 29441, 1);
 		addHoveredButton(29441, 72, 16, 16, 29442);
