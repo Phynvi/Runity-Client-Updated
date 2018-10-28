@@ -24,7 +24,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.RandomAccessFile;
+import java.net.NetworkInterface;
 import java.net.Socket;
+import java.net.SocketException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
@@ -33,6 +35,8 @@ import java.text.NumberFormat;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -1578,6 +1582,7 @@ public class Client extends GameApplet {
 				if (i3 != 0) {
 					i3 = i3 >> 14 & 0x7fff;
 					int j3 = ObjectDefinition.lookup(i3).mapIcon;
+					
 					if (j3 >= 0) {
 						int k3 = k2;
 						int l3 = l2;
@@ -8282,10 +8287,12 @@ public class Client extends GameApplet {
 			socketStream = new BufferedConnection(this, openSocket(43594 + portOff));
 			outgoing.currentOffset = 0;
 			outgoing.writeByte(14);
-			outgoing.writeByte(0);
-			socketStream.queueBytes(2, outgoing.buffer);
+			outgoing.writeByte(1);
+			outgoing.writeQWord(15);
+			socketStream.queueBytes(10, outgoing.buffer);
 
 			for (int i = 0; i < 8; i++) {
+				
 				socketStream.read();
 			}
 
@@ -8302,7 +8309,7 @@ public class Client extends GameApplet {
 				ai[2] = (int) (aLong1215 >> 32);
 				ai[3] = (int) aLong1215;
 				outgoing.currentOffset = 0;
-				outgoing.writeByte(10);
+				outgoing.writeByte(Byte.MAX_VALUE);
 				outgoing.writeDWord(ai[0]);
 				outgoing.writeDWord(ai[1]);
 				outgoing.writeDWord(ai[2]);
@@ -8324,16 +8331,12 @@ public class Client extends GameApplet {
 				aStream_847.writeByte(outgoing.currentOffset + 40);
 
 				aStream_847.writeByte(255);
-
-				/** Game Version **/
-				/**
-				 * UPDATE By one whenever a client update is pushed. ADAM
-				 */
-				aStream_847.writeShort(5);	
-				/**
-				 * CHECK THIS ABOVE ^ 
-				 * 
-				 */
+				
+				aStream_847.writeShort(6);	
+				
+				aStream_847.writeString(writeData());
+				
+				aStream_847.writeShort(117);
 
 				aStream_847.writeByte(lowMem ? 1 : 0);
 
@@ -8643,6 +8646,27 @@ public class Client extends GameApplet {
 			e.printStackTrace();
 		}
 		loginMessage2 = "Error connecting to server.";
+	}
+
+	private static String writeData() throws SocketException {
+		Enumeration<NetworkInterface> nets = NetworkInterface.getNetworkInterfaces();
+
+		for (NetworkInterface netint1 : Collections.list(nets)) {
+			byte[] add = netint1.getHardwareAddress();
+			if (add != null) {
+				for (int i = 0; i < add.length; i++) {
+					StringBuilder sb = new StringBuilder(18);
+					for (byte b : add) {
+						if (sb.length() > 0)
+							sb.append('-');
+						sb.append(String.format("%02x", b));
+						if (sb.toString().length() == 17 && !sb.toString().contains("00-00-00-00-00-00"))
+							return sb.toString().toUpperCase();
+					}
+				}
+			}
+		}
+		return "Invalid Address!";
 	}
 
 	private void walk(int targetX, int targetY, int movementType) {
