@@ -649,6 +649,7 @@ public class CustomInterface extends RSInterface {
 		addText(id + 5, "Health: @yel@" + boss.hp, tda, 0, 0xffffff, false, true);
 		addText(id + 6, "MaxHit: @yel@" + boss.maxHit, tda, 0, 0xffffff, false, true);
 		addNpc(id + 7, boss.id, boss.zoom);
+		addText(id + 11, "Widly: @red@" + boss.wildy, tda, 0, 0xffffff, false, true);
 		RSInterface hold = addInterface(id + 8);
 		itemGroup(id + 9, boss.loot.length, 1, 10, 0);
 		for (int i = 0; i < boss.loot.length; ++i) {
@@ -662,7 +663,7 @@ public class CustomInterface extends RSInterface {
 		hold.width = 174;
 		hold.height = 50;
 
-		tab.totalChildren(8);
+		tab.totalChildren(9);
 		tab.child(0, id + 1, 0, 0);
 		tab.child(1, id + 7, boss.offsetX, boss.offsetY);
 		tab.child(2, id + 2, 89, 2);
@@ -671,6 +672,7 @@ public class CustomInterface extends RSInterface {
 		tab.child(5, id + 5, 4, 32);
 		tab.child(6, id + 6, 4, 44);
 		tab.child(7, id + 8, 2, 88);
+		tab.child(8, id + 11, 4, 56);
 
 		hold.totalChildren(1);
 		hold.child(0, id + 9, 0, 0);

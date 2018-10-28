@@ -371,17 +371,17 @@ public class RSInterface {
 		cheapHackCodeGoesHere();
 		itemHoverBox(textDrawingAreas);
 		opponentStats(textDrawingAreas);
-		achievementPopup(textDrawingAreas);
+	//	achievementPopup(textDrawingAreas);
 		examineTab(textDrawingAreas);
 	//	refer(textDrawingAreas);
-	//   HalloweenDailyReward(textDrawingAreas);
+	//  HalloweenDailyReward(textDrawingAreas);
 		newAchievementTab(textDrawingAreas);
 		achievementTest(textDrawingAreas);
-		bossMinigame(textDrawingAreas);
-		petInterface(textDrawingAreas);
+	//	bossMinigame(textDrawingAreas);
+	//	petInterface(textDrawingAreas);
 		teleportButtonThing(textDrawingAreas);
 		goldenScratchCard(textDrawingAreas);
-		dealBoardRewards(textDrawingAreas);
+	//	dealBoardRewards(textDrawingAreas);
 		teleportButtonThing(textDrawingAreas);
 		teleportButtonThing1(textDrawingAreas);
 		teleportButtonThing2(textDrawingAreas);
@@ -474,7 +474,7 @@ public class RSInterface {
 	 * 
 	 * 
 	 */
-	public static void dealBoardRewards(TextDrawingArea[] TDA) {
+/*	public static void dealBoardRewards(TextDrawingArea[] TDA) {
 		RSInterface rsi = addInterface(21365);
 		int childId = 21366;
 
@@ -560,7 +560,7 @@ public class RSInterface {
 		rsi.child(frame++, childId++, 426, 172);
 
 		rsi.child(frame++, childId++, 231, 100);
-	}
+	} */
 
 	public static void goldenScratchCard(TextDrawingArea[] TDA) {
 		RSInterface rsi = addInterface(20011);
@@ -906,7 +906,7 @@ public class RSInterface {
 		}
 	}
 
-	public static void bossMinigame(TextDrawingArea[] tda) {
+/*	public static void bossMinigame(TextDrawingArea[] tda) {
 		RSInterface tab = RSInterface.addInterface(32000);
 //		addText(12504, "Achievement Diary", tda, 2, 0xff9933, false, true);
 		addText(32002, "Current Wave:", 0xffcccc, false, true, 52, tda, 2);
@@ -926,9 +926,9 @@ public class RSInterface {
 		setBounds(32005, 466, 286, 4, tab);
 		setBounds(32006, 346, 306, 5, tab);
 		setBounds(32007, 466, 306, 6, tab);
-	}
+	} */
 
-	private static void petInterface(TextDrawingArea[] tda) {
+	/*private static void petInterface(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(15500);
 
 		setChildren(21, tab);
@@ -984,7 +984,7 @@ public class RSInterface {
 		// addButton(15518, 17, "Interfaces/Pet/SPRITE", "Buy pet", 256);
 		// setBounds(15518, 297, 243, frame++, tab);
 
-	}
+	}*/
 
 	public static void achievementTest(TextDrawingArea[] tda) {
 		RSInterface interface_ = addTabInterface(12500);
@@ -1280,7 +1280,7 @@ public class RSInterface {
 
 	}*/
 
-	public static void achievementPopup(TextDrawingArea[] tda) {
+/*	public static void achievementPopup(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(36000);
 		String dir = "/Achievements/SPRITE";
 		addSprite(36001, 0, dir);
@@ -1346,7 +1346,7 @@ public class RSInterface {
 		scroll.width = 112;
 		scroll.height = 218;
 		scroll.scrollMax = 1304;
-	}
+	} */
 
 	public static void fill(int a) {
 		RSInterface f = interfaceCache[a];

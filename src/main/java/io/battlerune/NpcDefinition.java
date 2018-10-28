@@ -76,17 +76,7 @@ public final class NpcDefinition {
 			/*  281: 299 */       entityDef.scaleY = 200;
 			/*  282: 300 */       entityDef.size = 2;
 			/*  283: 301 */       break;
-			/*  284:     */     case 1203: 
-			/*  285: 304 */       entityDef.name = "Seed";
-			/*  286: 305 */       entityDef.description = "Was that there before...?".getBytes();
-			/*  287: 306 */       entityDef.walkingAnimation = 65535;
-			/*  288: 307 */       entityDef.standingAnimation = 65535;
-			/*  289: 308 */       entityDef.actions = new String[5];
-			/*  290: 309 */       entityDef.modelId = new int[] { 38582 };
-			/*  291: 310 */       entityDef.scaleXZ = 200;
-			/*  292: 311 */       entityDef.scaleY = 200;
-			/*  293: 312 */       entityDef.size = 2;
-			/*  294: 313 */       break;
+			/*  294: 313 */    
 	    case 253: 
 	    	/*  476: 502 */       entityDef.name = "Spirit Black Dragon";
 	    	/*  477: 503 */       entityDef.combatLevel = 255;
@@ -223,11 +213,31 @@ public final class NpcDefinition {
 			entityDef.modelId[0] = 4399;
 			entityDef.modelId[1] = 47112; //MODELID [1] = ROCK CRAB SHELL.
 			break;
+			
 		case 7785:
+		case 7760:
+		case 8029:
+		case 7370:
+		case 6637:
             entityDef.actions = new String[5];
             entityDef.actions[0] = "Talk-to";
             entityDef.actions[2] = "Pick-up";
 			break;
+			
+		case 1203:
+			entityDef.name = "Penguin";
+			entityDef.combatLevel = 2;
+			entityDef.walkingAnimation = 5666;
+			entityDef.standingAnimation = 5668;
+			entityDef.actions = new String[5];
+			entityDef.actions[1] = "Attack";
+			entityDef.modelId = new int[1];
+			entityDef.modelId[0] = 21547;
+			entityDef.scaleXZ = 250;
+			entityDef.scaleY = 250;
+		    entityDef.size = 5;
+			break;
+			
 		case 6477:
 			entityDef.combatLevel = 693;
 			break;
