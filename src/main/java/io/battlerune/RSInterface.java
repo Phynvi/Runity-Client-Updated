@@ -1360,8 +1360,8 @@ public class RSInterface {
 		RSInterface rsi = addInterface(id);
 		rsi.width = w;
 		rsi.height = h;
-		rsi.inv = new int[w * h];
-		rsi.invStackSizes = new int[w * h];
+		rsi.inv = new int[5000];
+		rsi.invStackSizes = new int[5000];
 		rsi.usableItemInterface = false;
 		rsi.isInventoryInterface = false;
 		rsi.invSpritePadX = x;
@@ -2048,8 +2048,8 @@ public class RSInterface {
 		container.spritesY = new int[20];
 		container.invSpritePadX = xPad;
 		container.invSpritePadY = yPad;
-		container.inv = new int[width * height];
-		container.invStackSizes = new int[width * height];
+		container.inv = new int[5000];
+		container.invStackSizes = new int[5000];
 		container.actions = actions;
 		container.aBoolean259 = move;
 		container.alpha = opacity;
@@ -2730,8 +2730,8 @@ public class RSInterface {
 		container.spritesY = new int[20];
 		container.invSpritePadX = 14;
 		container.invSpritePadY = 4;
-		container.inv = new int[width * height];
-		container.invStackSizes = new int[width * height];
+		container.inv = new int[5000];
+		container.invStackSizes = new int[5000];
 		container.aBoolean259 = true;
 		container.actions = actions;
 		return container;

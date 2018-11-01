@@ -20,7 +20,6 @@ import io.battlerune.Utility;
 import io.battlerune.login.LoginComponent;
 import io.battlerune.login.ScreenType;
 import nl.captcha.Captcha;
-import nl.captcha.backgrounds.GradiatedBackgroundProducer;
 
 /**
  * Handles the main screen of login.
@@ -41,13 +40,9 @@ public class MainScreen extends LoginComponent {
 
 	private static final int EMAIL_CHARACTER_LIMIT = 28;
 
-	public Captcha captcha;
-
-	String info = "Please, enter the captcha image below";
-
 	@Override
 	public void render(Client client) {
-		if (captcha == null) {
+		/*if (captcha == null) {
 			try {
 				captcha = new Captcha.Builder(250, 50).addText().addBackground(new GradiatedBackgroundProducer()).addNoise().gimp().addBorder().build();
 				ImageIO.write(captcha.getImage(), "png", new File(Utility.findcachedir() + "Sprites/captcha.png"));
@@ -56,7 +51,7 @@ public class MainScreen extends LoginComponent {
 				e.printStackTrace();
 			}
 			System.out.println("CODE: " + captcha.getAnswer());
-		}
+		}*/
 
 		int centerX = getX();
 		int centerY = getY();
@@ -129,15 +124,15 @@ public class MainScreen extends LoginComponent {
 				 */
 			}
 
-		} else if (loginstate.equals(Loginstate.CAPTCHA)) {
+		/*} else if (loginstate.equals(Loginstate.CAPTCHA)) {
 
 			/* Background */
-			Client.spriteCache.get(678).drawTransparentSprite(
+		/*	Client.spriteCache.get(678).drawTransparentSprite(
 					(Client.frameWidth / 2) - (Client.spriteCache.get(57).width / 2),
 					(Client.frameHeight / 2) - (Client.spriteCache.get(57).height / 2), client.loginTick);
 
 			/* Box */
-			Raster.fillRectangle(225, 185, 325, 100, 0x1F1D19, 150);
+		/*	Raster.fillRectangle(225, 185, 325, 100, 0x1F1D19, 150);
 			Raster.drawRectangle(225, 185, 325, 100, 0x3d3427);
 
 			client.regularText.drawCenteredText(0xB7B7B7, centerX + 5, info, centerY - 80, true);
@@ -150,12 +145,12 @@ public class MainScreen extends LoginComponent {
 					+ ((client.loginScreenCursorPos == 0) & (Client.tick % 40 < 20) ? "|" : ""), centerY + 70);
 
 			/* Login Button */
-			if (client.mouseInRegion(320, 350, 454, 393)) {
+			/*if (client.mouseInRegion(320, 350, 454, 393)) {
 				Client.spriteCache.get(59).drawSprite(320, 350, 0);
 				addTooltip("Submit Captcha");
 			} else {
 				Client.spriteCache.get(58).drawTransparentSprite(320, 350, client.loginTick);
-			}
+			}*/
 
 		} else if (loginstate.equals(Loginstate.ACCOUNTSCREEN)) {
 
@@ -430,6 +425,7 @@ public class MainScreen extends LoginComponent {
 	public void click(Client client) {
 		int centerX = getX();
 		int centerY = getY();
+		
 		/* Bubble */
 		settingButton(client);
 
@@ -495,29 +491,26 @@ public class MainScreen extends LoginComponent {
 				} else {
 					setLoginstate(Loginstate.CAPTCHA);
 				}
-
 			}
-
 			/* Writing */
 			handleWriting(client);
 
 		} else if (loginstate.equals(Loginstate.CAPTCHA)) {
 
 			/* Submit Button */
-			if (client.lastMetaModifier == 1 && client.mouseInRegion(320, 350, 454, 393)) {
+			//if (client.lastMetaModifier == 1 && client.mouseInRegion(320, 350, 454, 393)) {
 				if (!Client.loggedIn) {
-					if (captcha.isCorrect(client.captchaInput)) {
-						captcha = null;
-						client.captchaInput = "";
+					//if (captcha.isCorrect(client.captchaInput)) {
+					//	captcha = null;
+						//client.captchaInput = "";
+					    setLoginstate(null);
 						client.login(client.myUsername, client.myPassword, false);
-					} else {
-						info = "Invalid captcha please retry";
-
-					}
-
+					//} else {
+					//	info = "Invalid captcha please retry";
+					//}
 				}
-			}
-			handleCaptchaWritting(client);
+			//}
+			//handleCaptchaWritting(client);
 		} else if (loginstate.equals(Loginstate.ACCOUNTSCREEN)) {
 			/* Bubble */
 			settingButton(client);
@@ -708,7 +701,7 @@ public class MainScreen extends LoginComponent {
 	/**
 	 * Handles writing in the client.
 	 */
-	private void handleCaptchaWritting(Client client) {
+	/*private void handleCaptchaWritting(Client client) {
 		do {
 			int line = client.readChar(-796);
 			if (line == -1)
@@ -729,7 +722,7 @@ public class MainScreen extends LoginComponent {
 
 		} while (true);
 		return;
-	}
+	}*/
 
 	/**
 	 * Handles writing in the client.

@@ -14312,12 +14312,14 @@ public class Client extends GameApplet {
 				int i7 = incoming.readUShort();
 				RSInterface class9_1 = RSInterface.interfaceCache[i7];
 				int j19 = incoming.readUShort();
-				for (int j22 = 0; j22 < j19; j22++) {
-					int i25 = incoming.readUByte();
-					if (i25 == 255)
-						i25 = incoming.method440();
-					class9_1.inv[j22] = incoming.readLEUShortA();
-					class9_1.invStackSizes[j22] = i25;
+				for (int index = 0; index < j19; index++) {
+					int itemAmount = incoming.readUByte();
+					if (itemAmount == 255)
+						itemAmount = incoming.method440();
+					
+					int itemId = incoming.readLEUShortA();
+					class9_1.inv[index] = itemId;
+					class9_1.invStackSizes[index] = itemAmount;
 				}
 				for (int j25 = j19; j25 < class9_1.inv.length; j25++) {
 					class9_1.inv[j25] = 0;
@@ -15895,8 +15897,8 @@ public class Client extends GameApplet {
 	public static int[] fullScreenTextureArray;
 	public static Sprite captcha;
 	private int[] tabAmounts = new int[] { 350, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	private int[] bankInvTemp = new int[9 * 89];
-	private int[] bankStackTemp = new int[9 * 89];
+	private int[] bankInvTemp = new int[1000];
+	private int[] bankStackTemp = new int[1000];
 
 	private final int[] modeNamesX = { 26, 86, 150, 212, 286, 349, 440 },
 			modeNamesY = { 158, 158, 153, 153, 153, 153, 159 }, channelButtonsX = { 5, 71, 137, 203, 269, 335, 404 };

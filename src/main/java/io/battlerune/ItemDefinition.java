@@ -256,20 +256,20 @@ public final class ItemDefinition {
 	}
 
 
-	public static ItemDefinition lookup(int i) {
+	public static ItemDefinition lookup(long i) {
 		for (int j = 0; j < 10; j++)
 			if (cache[j].id == i)
 				return cache[j];
 
 		cacheIndex = (cacheIndex + 1) % 10;
 		ItemDefinition itemDef = cache[cacheIndex];
-		Buffer.currentOffset = BufferIndices[i];
-		itemDef.id = i;
+		Buffer.currentOffset = BufferIndices[(int) i];
+		itemDef.id = (int) i;
 		itemDef.setDefaults();
 		itemDef.readValues(Buffer);
 		/* Customs added here? */
 
-		switch (i) {
+		switch (itemDef.id) {
 		
 		
 		case 34:
@@ -5170,6 +5170,32 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[1] = "Wear";
 			break;
+		}
+		
+		if (itemDef.name != null) {
+			
+			if (itemDef.name.toLowerCase().contains("jad") || itemDef.name.toLowerCase().contains("corporal") || itemDef.name.toLowerCase().contains("sire")) {
+				System.out.println("Name="+itemDef.name);
+				System.out.println("Id="+itemDef.id);
+				System.out.println("Model="+itemDef.modelID);
+				System.out.println("ModelX="+itemDef.modelRotationX);
+				System.out.println("ModelY="+itemDef.modelRotationY);
+				System.out.println("Zoom="+itemDef.modelZoom);
+				System.out.println("offset1="+itemDef.modelOffset1);
+				System.out.println("offset2="+itemDef.modelOffset2);
+			}
+		
+			
+		}
+		if (itemDef.name != null && itemDef.name.toLowerCase().contains("pet")) {
+			System.out.println("Name="+itemDef.name);
+			System.out.println("Id="+itemDef.id);
+			System.out.println("Model="+itemDef.modelID);
+			System.out.println("ModelX="+itemDef.modelRotationX);
+			System.out.println("ModelY="+itemDef.modelRotationY);
+			System.out.println("Zoom="+itemDef.modelZoom);
+			System.out.println("offset1="+itemDef.modelOffset1);
+			System.out.println("offset2="+itemDef.modelOffset2);
 		}
 
 		if (itemDef.certTemplateID != -1)
