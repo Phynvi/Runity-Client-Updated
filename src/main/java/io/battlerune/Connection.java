@@ -13,7 +13,7 @@ public enum Connection {
 	MANAGEMENT("MGN", "127.0.0.1"),
 
 	/** The development world - used by developers. */
-	DEVELOPMENT("DEV", "35.189.76.102");
+	DEVELOPMENT("DEV", "35.197.131.140");
 
 	/** The connection name. */
 	public final String name;
