@@ -105,8 +105,8 @@ public final class ObjectDefinition {
 			def.actions[0] = "Enter";
 			break;
 		case 13617:
-			def.name = "All Vs One V4 Portal!";
-			def.actions = new String[] { "Enter", "Set Options", null, null, null, null };
+			def.name = "Double Threat Portal!";
+			def.actions = new String[] { "Enter", "Invite Someone", "Reset Partner", null, null, null };
 			break;
 		case 13618:
 			def.name = "All Vs One V3 Portal!";

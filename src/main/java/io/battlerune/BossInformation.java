@@ -8,7 +8,7 @@ public enum BossInformation {
 	DAG_KINGS("Dagannoth Kings", 6497, 303, 750, 35, "False", 2100, 52, -8, BossDrops.DAG_KING_DROPS, 6),
 	CORPOREAL_BEAST("Corporeal Beast", 319, 785, 3500, 50,  "False", 2100, 52, -20, BossDrops.CORP_BEAST_DROPS, 18),
 	LIZARD_SHAMAN("Lizardman Shaman", 6766, 150, 750, 20,"False", 3700, 52, -5, BossDrops.LIZARD_SHAMAN_DROPS, 8),
-	VETION("Vet'ion", 6611, 454, 750, 40,"False", 2400, 64, -10,  BossDrops.VETION_DROPS, 9),
+	VETION("Vet'ion", 6611, 454, 750, 40,"True", 2400, 64, -10,  BossDrops.VETION_DROPS, 9),
 	CHAOS_FANATIC("Chaos Fanatic", 6619, 202, 755, 20,  "True", 1600, 70, -10, BossDrops.FANATIC_DROPS, 18),
 	CRAZY_ARCHAEOLOGIST("Crazy Archaeologist", 6618, 204, 755, 23,"True", 1600, 70, -10, BossDrops.ARCHAEOLOGIST_DROPS, 18),
 	KRAKEN("Kraken", 494, 291, 750, 26, "False", 4000, 52, -15, BossDrops.KRAKEN_DROPS, 19),

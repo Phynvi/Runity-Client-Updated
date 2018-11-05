@@ -270,8 +270,147 @@ public final class ItemDefinition {
 		/* Customs added here? */
 
 		switch (itemDef.id) {
+	    case 11844:
+			  ItemDefinition.defaultConfig(itemDef, 64000, 64001, "Inferno emperor gloves");
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelRotationY = 520;
+		      itemDef.modelRotationX = 0;
+		      itemDef.modelZoom = 1740;
+		      itemDef.modelOffset1 = 0;
+		      itemDef.modelOffset2 = 0;
+			    break;
+
+	    case 11845:
+	    	ItemDefinition.defaultConfig(itemDef, 64002, 64003, "Inferno emperor boots");
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelRotationY = 520;
+		      itemDef.modelRotationX = 0;
+		      itemDef.modelZoom = 1740;
+		      itemDef.modelOffset1 = 0;
+		      itemDef.modelOffset2 = 0;
+			    break;
+
+		    case 11846:
+		    	ItemDefinition.defaultConfig(itemDef, 64005, 64011, "Inferno emperor legs");
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelRotationY = 520;
+		      itemDef.modelRotationX = 0;
+		      itemDef.modelZoom = 1740;
+		      itemDef.modelOffset1 = 0;
+		      itemDef.modelOffset2 = 0;
+			    break;
+
+		    case 11643:
+		      ItemDefinition.defaultConfig(itemDef, 64006, 64007, "Inferno emperor body");
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelRotationY = 520;
+		      itemDef.modelRotationX = 0;
+		      itemDef.modelZoom = 1740;
+		      itemDef.modelOffset1 = 0;
+		      itemDef.modelOffset2 = 0;
+			    break;
+
+			    case 11207:
+		      ItemDefinition.defaultConfig(itemDef, 64008, 64009, "Inferno emperor helm");
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.modelRotationY = 520;
+		      itemDef.modelRotationX = 0;
+		      itemDef.modelZoom = 1740;
+		      itemDef.modelOffset1 = 0;
+		      itemDef.modelOffset2 = 0;
+		    break;
+
+		case 3073:
+			itemDef.modelID = 56157;
+			itemDef.description = "";
+			itemDef.name = "Eto's Helm";
+			itemDef.stackable = false;
+			itemDef.maleWield = 56156;
+			itemDef.femaleWield = 56156;
+			itemDef.modelZoom = 1010;
+			itemDef.modelRotationY = 16;
+			itemDef.modelRotationX = 0;
+			itemDef.modelOffset1 = -2;
+			itemDef.modelOffset2 = -4;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 60000;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			break;
+		case 3074:
+			itemDef.name = "Eto's Platebody";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 56153;
+			itemDef.stackable = false;
+			itemDef.modelZoom = 1312;
+			itemDef.modelRotationY = 272;
+			itemDef.modelRotationX = 2047;
+			itemDef.modelOffset2 = 39;
+			itemDef.modelOffset1 = -2;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 56152;
+			itemDef.femaleWield = 56152;
+			break;
+		case 3075:
+			itemDef.name = "Eto's legs";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 56155;
+			itemDef.modelZoom = 1753;
+			itemDef.stackable = false;
+			itemDef.modelRotationY = 562;
+			itemDef.modelRotationX = 1;
+			itemDef.modelOffset2 = 11;
+			itemDef.modelOffset1 = -3;
+			itemDef.anInt204 = 0;
+			itemDef.maleWield = 56154;
+			itemDef.femaleWield = 56154;
+			break;
+		case 3078:
+			itemDef.name = "Eto's cape";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wear";
+			itemDef.modelID = 56136;
+			itemDef.modelZoom = 2232;
+			itemDef.modelRotationY = 687;
+			itemDef.modelRotationX = 27;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = -5;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 1;
+			itemDef.femaleWield = 56135;
+			itemDef.maleWield = 56135;
+			break;
 		
-		
+		case 3080:
+			itemDef.name = "Bladed Shield";
+			itemDef.modelID = 19550;
+			itemDef.modelZoom = 2022;
+			itemDef.modelRotationY = 540;
+			itemDef.modelRotationX = 123;
+			itemDef.modelOffset1 = 0;
+			itemDef.modelOffset2 = 0;
+			itemDef.anInt167 = 128;
+			itemDef.anInt192 = 128;
+			itemDef.anInt191 = 128;
+			itemDef.value = 2000000;
+			itemDef.maleWield = 19550;
+			itemDef.femaleWield = 19550;
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[1] = "Wield";
+			itemDef.itemActions[2] = "Inspect";
+			break;
+			
 		case 34:
 			itemDef.modelID = 56159;
 			itemDef.description = "";
