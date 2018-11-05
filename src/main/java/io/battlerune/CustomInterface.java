@@ -727,7 +727,6 @@ public class CustomInterface extends RSInterface {
 
 		
 		
-		int x = 8, y = 8;
 		tab.totalChildren(2);
 		tab.child(0, 34501, 0, 0);
 		tab.child(1, 34502, 75, 2);
@@ -2474,6 +2473,7 @@ public class CustomInterface extends RSInterface {
 		scrollInterface.scrollMax = 255;
 		scrollInterface.totalChildren(60);
 		int y = 1;
+		@SuppressWarnings("unused")
 		int child2 = 0;
 		for (int i = 0, child = 0; i < 60; i += 4) {
 			addSprite(46321 + i, 480);

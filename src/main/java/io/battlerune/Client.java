@@ -4532,6 +4532,7 @@ public class Client extends GameApplet {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	private boolean method66(int i, int j, int k) {
 		int i1 = i >> 14 & 0x7fff;
 		int j1 = worldController.method304(plane, k, j, i);
@@ -4691,6 +4692,7 @@ public class Client extends GameApplet {
 		console.openConsole = false;
 		shiftIsDown = false;
 		controlIsDown = false;
+		mainscreen.setLoginstate(Loginstate.LOGINSCREEN);
 		mainscreen.render(this);
 		if (!loggedIn) {
 			resetLogout();
@@ -8442,9 +8444,7 @@ public class Client extends GameApplet {
 					playerOptions[l3] = false;
 				}
 				sendFrame36(429, 1);
-				if(myUsername.equalsIgnoreCase("zac")) {
-					pushMessage("@red@zac is a whore ass nigger", 0, "");
-				}
+				
 				regenHealthStart = System.currentTimeMillis();
 				regenSpecStart = System.currentTimeMillis();
 				initializeGraphicBuffers();
@@ -9047,6 +9047,7 @@ public class Client extends GameApplet {
 			StreamLoader streamLoader = streamLoaderForName(2, "config", "config", expectedCRCs[2], 30);
 			StreamLoader streamLoader_1 = streamLoaderForName(3, "interface", "interface", expectedCRCs[3], 35);
 			StreamLoader streamLoader_2 = streamLoaderForName(4, "2d graphics", "media", expectedCRCs[4], 40);
+			@SuppressWarnings("unused")
 			StreamLoader streamLoader_4 = streamLoaderForName(7, "chat system", "wordenc", expectedCRCs[7], 50);
 			this.mediaStreamLoader = streamLoader_2;
 
@@ -14577,7 +14578,9 @@ public class Client extends GameApplet {
 
 			case 103:
 				try {
+					@SuppressWarnings("unused")
 					int type = incoming.readInt();
+					@SuppressWarnings("unused")
 					int modification = incoming.readInt();
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -15525,10 +15528,13 @@ public class Client extends GameApplet {
 	public int chatTypeView;
 	public int clanChatMode;
 	public int autoCastId = 0;
+	@SuppressWarnings("unused")
 	private GraphicsBuffer leftFrame;
+	@SuppressWarnings("unused")
 	private GraphicsBuffer topFrame;
 	private int ignoreCount;
 	private long aLong824;
+	@SuppressWarnings("unused")
 	private int[][] cost;
 	private int[] friendsNodeIDs;
 	private Deque[][][] groundArray;

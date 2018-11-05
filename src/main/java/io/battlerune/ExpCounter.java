@@ -190,6 +190,7 @@ public class ExpCounter {
 	}
 
 	static class ExpGain {
+		@SuppressWarnings("unused")
 		private int skill;
 		private int xp;
 		private float y;
