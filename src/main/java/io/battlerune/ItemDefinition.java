@@ -5049,6 +5049,16 @@ public final class ItemDefinition {
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[0] = "Open";
 			break;
+		case 6855:
+			itemDef.name = "Double Threat";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
+			break;
+		case 620:
+			itemDef.name = "Donator Ticket";
+			itemDef.itemActions = new String[5];
+			itemDef.itemActions[0] = "Open";
+			break;
 		case 22092:
 			itemDef.itemActions = new String[5];
 			itemDef.itemActions[0] = "Open";
