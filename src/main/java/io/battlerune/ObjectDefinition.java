@@ -70,8 +70,15 @@ public final class ObjectDefinition {
 		def.setDefaults();
 		def.decode(dataBuf);
 		/* Custom/Modified Objects */
+		
+		
 		switch (i) {
 
+		case 31858:
+			def.actions[3] = def.actions[4] = null;
+			
+			break;
+			
 		case 10738:/* Stone of rejuvenation */
 			def.name = "Stone of teleportation";
 			def.actions = new String[5];
